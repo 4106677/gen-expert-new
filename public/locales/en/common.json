@@ -1,0 +1,935 @@
+{
+  "metadata": {
+    "title": "Gen Expert",
+    "description": "New and used gas-powered generators turnkey."
+  },
+  "menu": {
+    "equipment": "Equipment",
+    "why": "Why GPU",
+    "about": "About Us",
+    "calculator": "Calculator",
+    "contacts": "Contacts",
+    "useful": "Useful",
+    "cooperation": "Cooperation",
+    "industries_title": "Energy Solutions for Industries"
+  },
+  "industries": {
+    "benefitLabel": "GPU/CHP Benefits:",
+    "advantagesLabel": "Advantages:",
+    "greenhouse": {
+      "icon": "🌿",
+      "title": "Greenhouse Agriculture",
+      "description": "Cheap energy and CO₂ for greenhouses that increase yield.",
+      "subsectors": [
+        "Greenhouse complex",
+        "Plant farm",
+        "Garden center"
+      ],
+      "benefit": "CO₂ from GPU fertilizes plants, increasing yield by 20%.",
+      "advantages": "Energy 30-50% cheaper, avoiding network tariffs, stability."
+    },
+    "food": {
+      "icon": "🍴",
+      "title": "Food Industry",
+      "description": "Heat, electricity, and steam for energy-intensive productions.",
+      "subsectors": [
+        "Confectionery factory",
+        "Meat processing",
+        "Breweries",
+        "Cheese factory"
+      ],
+      "benefit": "Cogeneration reduces costs for steam and heat without transmission fees.",
+      "advantages": "Reduction of kW cost by up to 50%, stable tariffs, uninterrupted supply."
+    },
+    "agriculture": {
+      "icon": "🌾",
+      "title": "Livestock and Agriculture",
+      "description": "Energy and biogas for farms and agricultural complexes.",
+      "subsectors": [
+        "Pig farm",
+        "Poultry farm",
+        "Dairy farm",
+        "Vegetable farming"
+      ],
+      "benefit": "Cogeneration provides cheap energy without network tariffs.",
+      "advantages": "Savings up to 60%, energy independence, increased yields."
+    },
+    "industrial": {
+      "icon": "🏭",
+      "title": "Industrial Production",
+      "description": "Energy for heavy industrial processes.",
+      "subsectors": [
+        "Cardboard and paper factories",
+        "Metallurgy",
+        "Textiles",
+        "Ceramics"
+      ],
+      "benefit": "Cogeneration provides efficiency up to 95% (electricity + heat), without energy transmission costs.",
+      "advantages": "Cheaper energy by 30-50%, stability, efficiency."
+    },
+    "waste": {
+      "icon": "♻️",
+      "title": "Waste Processing",
+      "description": "Energy from biogas to reduce costs.",
+      "subsectors": [
+        "Landfill site",
+        "Wastewater treatment plants",
+        "Food waste"
+      ],
+      "benefit": "Converts waste to energy, eliminating network fees.",
+      "advantages": "Cost reduction up to 60%, additional income, competitiveness."
+    },
+    "chemical": {
+      "icon": "⚗️",
+      "title": "Chemical and Pharmaceutical Industry",
+      "description": "Reliable energy for complex processes.",
+      "subsectors": [
+        "Chemical plant",
+        "Pharmaceutical enterprise",
+        "Petrochemicals"
+      ],
+      "benefit": "Cogeneration provides stable heat without network tariffs.",
+      "advantages": "Savings up to 50%, uninterrupted operation, flexibility."
+    },
+    "energy": {
+      "icon": "⚡",
+      "title": "Energy Infrastructure",
+      "description": "Flexible energy for large facilities.",
+      "subsectors": [
+        "Industrial park",
+        "District network",
+        "Biogas station"
+      ],
+      "benefit": "Microgrids from GPU reduce energy transmission costs.",
+      "advantages": "Revenue from energy sales, savings up to 40%, flexibility."
+    },
+    "datacenter": {
+      "icon": "💻",
+      "title": "Data Centers",
+      "description": "Electricity and cooling for data centers.",
+      "subsectors": [
+        "Data center",
+        "Server farm",
+        "Cloud computing"
+      ],
+      "benefit": "Trigeneration provides affordable energy with 99.995% reliability.",
+      "advantages": "Reduced kW cost, avoided tariffs, stability."
+    },
+    "logistics": {
+      "icon": "🚚",
+      "title": "Logistics and Commercial Real Estate",
+      "description": "Energy for warehouses and shopping centers.",
+      "subsectors": [
+        "Logistics warehouse",
+        "Shopping center",
+        "Residential complex"
+      ],
+      "benefit": "Cogeneration reduces heating costs without network fees.",
+      "advantages": "Savings up to 30%, stable tariffs, comfort."
+    },
+    "healthcare": {
+      "icon": "🏥",
+      "title": "Healthcare and Education",
+      "description": "Energy for critical facilities.",
+      "subsectors": [
+        "Hospital",
+        "University",
+        "Medical facility"
+      ],
+      "benefit": "GPU provides backup power, bypassing network tariffs.",
+      "advantages": "Uninterrupted operation, savings up to 50%, safety."
+    },
+    "hotel": {
+      "icon": "🏨",
+      "title": "Hotel and Tourism Sector",
+      "description": "Energy for guest comfort.",
+      "subsectors": [
+        "Hotel",
+        "Resort",
+        "Restaurant"
+      ],
+      "benefit": "Cogeneration provides heat for hotel infrastructure without transmission fees.",
+      "advantages": "Cost reduction, stability, attractive image."
+    },
+    "transport": {
+      "icon": "✈️",
+      "title": "Transport and Aviation Infrastructure",
+      "description": "Energy for airports and hubs.",
+      "subsectors": [
+        "Airport",
+        "Logistics hub",
+        "Railway station"
+      ],
+      "benefit": "GPU supports critical systems without network costs.",
+      "advantages": "Savings up to 40%, reliability, stability."
+    },
+    "mining": {
+      "icon": "⛏️",
+      "title": "Mining and Oil & Gas Industry",
+      "description": "Energy for remote operations.",
+      "subsectors": [
+        "Mining enterprise",
+        "Oil and gas platform",
+        "Quarry"
+      ],
+      "benefit": "GPU provides autonomy, savings, eliminating network fees.",
+      "advantages": "Cost reduction, flexibility, reliability."
+    },
+    "other": {
+      "icon": "🛠️",
+      "title": "Other Industrial Sectors",
+      "description": "Energy for equipment manufacturing.",
+      "subsectors": [
+        "Engineering company",
+        "Equipment manufacturing"
+      ],
+      "benefit": "GPU reduces energy costs for machines without tariff charges.",
+      "advantages": "Savings up to 50%, uninterrupted operation, efficiency."
+    },
+    "commercial": {
+      "icon": "🏬",
+      "title": "Commercial and Residential Real Estate",
+      "description": "Energy for comfort and savings.",
+      "subsectors": [
+        "Business center",
+        "Residential complex",
+        "Shopping and entertainment center"
+      ],
+      "benefit": "Trigeneration provides heat and electricity without transmission fees.",
+      "advantages": "Reduced kW cost, stable tariffs, comfort."
+    }
+  },
+  "about_main_page": {
+    "header": "About Us",
+    "title": "Analytics, international experience, energy project expertise, and attention to your needs — the key to the perfect solution.",
+    "subtitle": "We provide Ukrainian businesses with new and proven gas piston units from world leaders.",
+    "link": "Partnership with GenExpert",
+    "desc": " — the energy future for your business. We offer new and proven gas piston units, covering selection, logistics, design, installation, commissioning, and co-financing. Our solutions are the key to your savings and success."
+  },
+  "why_main_page": {
+    "title": "Why is a gas piston unit the best solution for your business?",
+    "list": [
+      {
+        "id": 1,
+        "title": "\uD83D\uDCB0 Savings up to 50%",
+        "text": "on electricity — tariff up to 4.5 UAH/kWh, no transmission or distribution fees",
+        "icon": ""
+      },
+      {
+        "id": 2,
+        "title": "\uD83D\uDCA1 100% energy independence",
+        "text": "— uninterrupted operation even during blackouts",
+        "icon": ""
+      },
+      {
+        "id": 3,
+        "title": "\uD83D\uDD0B Low cost",
+        "text": "of electricity — a strong competitive advantage",
+        "icon": ""
+      },
+      {
+        "id": 4,
+        "title": "\uD83D\uDD27 Minimal operating costs",
+        "text": "— smooth operation, less wear",
+        "icon": ""
+      },
+      {
+        "id": 5,
+        "title": "\uD83D\uDD25 Cogeneration",
+        "text": "— simultaneous production of heat and electricity with efficiency up to 90%",
+        "icon": ""
+      },
+      {
+        "id": 6,
+        "title": "\uD83D\uDE80 Turnkey solutions",
+        "text": "— new and used units with a warranty, fully equipped to meet your needs",
+        "icon": ""
+      },
+      {
+        "id": 7,
+        "title": "Partnership with Genexpert",
+        "text": " — from selecting a gas piston unit to logistics, installation, commissioning, and joint financing — a full cycle for your energy independence."
+      }
+
+    ]
+  },
+  "equipment": {
+    "title": "The best offers on the gas piston equipment market",
+    "button": "Details",
+    "modal": {
+      "purpose": "Get an offer",
+      "files": "Documentation"
+    },
+    "filters": {
+      "title": "Filter by",
+      "hideFilters": "Hide filters",
+      "showFilters": "Show filters",
+      "items": {
+        "power": "Power",
+        "manufacturer": "Manufacturer",
+        "voltage": "Voltage",
+        "condition": "Condition",
+        "release": "Year of manufacture",
+        "model": "Model",
+        "bodyType": "Body",
+        "genType": "Type",
+        "price": "Price",
+        "working": "Operating hours",
+        "sorting": {
+          "title": "Sorting",
+          "reset": "Reset",
+          "search": "Search",
+          "values": {
+            "priceToLow": "Cheapest first",
+            "priceToHigh": "Most expensive first",
+            "powerToLow": "By power ↑",
+            "powerToHigh": "By power ↓",
+            "latest": "Recently added"
+          }
+        }
+      }
+    }
+  },
+  "why": {
+    "title": "Why is a GPU the best choice for your business?",
+    "benefits": {
+      "economy": "💰 Savings on electricity up to 50% – reduced tariffs, no transmission or distribution fees.",
+      "blackouts": "💡 No blackouts = grid independence – stable operation even during network failures.",
+      "stability": "⚙ Your business always runs – autonomous power supply without interruptions.",
+      "efficiency": "🔋 Efficiency = competitive advantage – low electricity costs give you a strong market edge.",
+      "profitability": "🌍 Higher profitability than diesel generators due to cheaper fuel (gas is 3-4 times cheaper than diesel), with 80% fewer NOₓ and CO₂ emissions.",
+      "lowCost": "\uD83D\uDD27 Low operating costs – gas fuel ensures smoother engine operation and reduces wear.",
+      "stableCost": "✅ Stable fuel costs – natural gas has lower price volatility compared to electricity and diesel.",
+      "cogeneration": "🔥 Combined electricity and heat production – cogeneration allows simultaneous generation of electricity and heat, boosting unit efficiency up to 90%!",
+      "solution": "🚀 Optimal solution for your tasks and budget – new and used GPUs in excellent condition."
+    },
+    "bestFor": {
+      "title": "GPU is the best solution for these facilities:",
+      "industrial": "🏭 Manufacturing plants",
+      "business": "🏢 Business centers",
+      "trade": "🏪 Trade and logistics centers",
+      "medical": "\uD83C\uDFE2 Data processing centers",
+      "greenhouse": "🏡 Greenhouse complexes"
+    },
+    "savings": {
+      "title": "💡 How to save $1,000,000 a year on electricity? 💡",
+      "intro": "If your business consumes 1 MW of electricity per hour around the clock, you spend nearly 80 million UAH annually on bills. But there’s a solution that cuts these costs almost in half!",
+      "solution": "🚀 A gas piston unit (GPU) allows you to generate electricity at 4.63 UAH/kWh instead of 9 UAH/kWh – without overpaying for transmission and distribution.",
+      "comparison": "What’s more profitable: paying a supplier or generating electricity yourself?",
+      "table": {
+        "parameter": "Parameter",
+        "grid": "Grid electricity",
+        "gpu": "Gas piston unit (GPU)",
+        "pricePerKWh": "Price per 1 kWh",
+        "monthlyExpenses": "Monthly expenses",
+        "yearlyExpenses": "Yearly expenses",
+        "monthlySavings": "Monthly savings",
+        "yearlySavings": "Yearly savings"
+      },
+      "conclusion": "📉 GPU reduces costs by almost half!",
+      "payback": {
+        "title": "Payback and benefits",
+        "price": "💰 Price of a 1 MW GPU ≈ $200,000 - $450,000 (8 - 17.55 million UAH)",
+        "period": "✅ Payback – just 3 - 6 months!",
+        "afterPayback": "✅ After that – pure savings of millions of UAH annually!"
+      },
+      "noBlackouts": {
+        "title": "Now imagine no blackouts",
+        "description": "🔋 Production doesn’t stop, equipment doesn’t idle, employees keep working – you’re no longer dependent on grid outages.",
+        "question": "💡 One question: are you ready to keep paying double for electricity, or do you want to start saving now?"
+      },
+      "cta": "📞 Leave a request – we’ll calculate the benefits for your business"
+    }
+  },
+  "calculator": {
+    "title": "Calculate the benefits of self-generation",
+    "subtitle": "Assess savings, profitability, and payback period for GPU investments.",
+    "params": {
+      "elecProd": "Electricity consumption (kWh)",
+      "elecPrice": "Electricity purchase price (per 1 kWh, UAH)",
+      "gasPrice": "Gas purchase price (per 1 m³, UAH)",
+      "hourlyHeat": "Heat energy consumption (kWh)",
+      "yearlyHeat": "Heat energy consumption in months",
+      "chp": "Cogeneration"
+    },
+    "estimate": {
+      "title": "Annual expenses",
+      "subtitle": "Advantages of self-generation over a year",
+      "params": {
+        "gas_gen_price": "Cost of 1 kW of generation",
+        "selfGeneration": "Costs with self-generation",
+        "supplierPurchase": "Costs when buying from a supplier",
+        "annualSavings": "Annual savings",
+        "avgAnnualCost": "Average annual cost of electricity production",
+        "gpuPaybackPeriod": "GPU payback period",
+        "chpPaybackPeriod": "CHP payback period"
+      },
+      "button": "Contact us"
+    },
+    "unit": {
+      "kw": "kW",
+      "mw": "MW",
+      "uah": "UAH",
+      "month": "months",
+      "years_1": "year",
+      "years_2": "years (2-4)",
+      "years_3": "years (5+)"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "",
+    "description": "We offer businesses in Ukraine access to new and proven used gas piston units from leading global manufacturers. Analytics, international expertise, and attention to detail – this is how we select solutions for your needs.",
+
+    "whyChooseUs": {
+      "title": "Why choose us",
+
+      "advantage1": {
+        "title": "Precise selection for your facility",
+        "point1": "We analyze load, goals, and site parameters",
+        "point2": "We consider operating modes, heat recovery, and grid limitations"
+      },
+
+      "advantage2": {
+        "title": "Access to the world’s best offers",
+        "point1": "We work directly with factories, traders, and platforms",
+        "point2": "New and used units: Jenbacher, MWM, CAT, MTU, and more"
+      },
+
+      "advantage3": {
+        "title": "Verified equipment and documentation",
+        "point1": "We check resource, technical condition, and operational history",
+        "point2": "We provide full documentation and expertise"
+      },
+
+      "advantage4": {
+        "title": "Comprehensive support",
+        "point1": "On-site inspection (Europe, Asia, USA)",
+        "point2": "Selection, logistics, customs, commissioning",
+        "point3": "Post-warranty support and service"
+      },
+
+      "advantage5": {
+        "title": "Savings up to 50% and reduced risks",
+        "point1": "You get only verified and cost-effective offers",
+        "point2": "You reduce electricity costs and increase profitability"
+      },
+
+      "advantage6": {
+        "title": "Solutions for all scales",
+        "point1": "From small businesses to industrial holdings",
+        "point2": "Individual approach and flexible terms"
+      }
+    },
+
+    "mission": {
+      "title": "Our mission",
+      "description": "Promoting distributed generation in Ukraine – a path to energy independence and sustainable growth.",
+      "goalTitle": "Our goal is to give Ukrainian businesses a powerful tool for growth:",
+      "goal1": "Generation of their own electricity and heat.",
+      "goal2": "Reduction of production costs and expenses.",
+      "goal3": "Independence from high tariffs and unstable grids.",
+      "goal4": "Cleaner energy with low emissions.",
+      "goal5": "Flexible solutions tailored to real business needs."
+    },
+
+    "results": {
+      "title": "Results for the client:",
+      "point1": "reliable equipment with a verified history and the best price",
+      "point2": "cost minimization",
+      "point3": "expense control",
+      "point4": "full energy independence"
+    },
+
+    "slogan": "With us, generation becomes a business tool⚡"
+  },
+  "useful": {
+    "title": "Useful Information about Gas Piston Units",
+    "keyQuestions": "Key questions:",
+    "tip": "Tip:",
+    "whatToConsider": "What to consider?",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low",
+    "good": "Good",
+    "excellent": "Excellent",
+    "economical": "Economical",
+    "complexLogistics": "Complex logistics",
+    "limited": "Limited",
+    "consultationCTA": "Get a consultation",
+
+    "whatIsGPU": {
+      "title": "What is a Gas-Piston Unit? Operating Principle",
+      "definition": {
+        "title": "What is a Gas-Piston Unit?",
+        "description": "A gas-piston power plant is an autonomous unit that produces electricity and heat by burning gas in an internal combustion engine. It can use natural gas, biogas, mine gas, or synthetic gas."
+      },
+      "structure": {
+        "title": "Design and Systems",
+        "typesIntro": "Gas-piston units come in different configurations:",
+        "type1": "Open design (all components on a frame)",
+        "type2": "Enclosed (in a container or sound-insulated housing)",
+        "componentsIntro": "Key systems of a GPU:",
+        "component1": "Gas and oil supply",
+        "component2": "Starting and control system",
+        "component3": "Exhaust and ventilation",
+        "component4": "Cooling and heat utilization",
+        "component5": "AC generator",
+        "component6": "Automation and signaling",
+        "component7": "Internal combustion engine"
+      },
+      "principle": {
+        "title": "Operating Principle",
+        "step1": {
+          "title": "🔹 1. Gas Supply to the Engine and Combustion Process",
+          "description": "🔸 Gas (natural, biogas, etc.) is supplied from the gas pipeline through:",
+          "point1": "Gas filter (to remove impurities)",
+          "point2": "Pressure regulator (maintains stable supply pressure)",
+          "point3": "Gas valve (controls flow)",
+          "point4": "Gas mixer/carburetor (mixes gas with air)",
+          "point5": "The mixture then enters the cylinders of the internal combustion engine",
+          "point6": "Ignition of the mixture creates pressure on the pistons"
+        },
+        "step2": {
+          "title": "🔹 2. Crankshaft Rotation",
+          "description": "Pistons transfer force to the crankshaft, which:",
+          "point1": "Converts linear motion into rotational motion",
+          "point2": "Rotates the flywheel and clutch connected to the generator"
+        },
+        "step3": {
+          "title": "🔹 3. Electricity Generation",
+          "description": "⚡ AC generator (synchronous or asynchronous):",
+          "point1": "Is driven by rotational motion",
+          "point2": "Generates electricity based on electromagnetic induction",
+          "point3": "The signal is sent to the automation system which manages current distribution, parallel operation with the grid, and overload protection"
+        },
+        "step4": {
+          "title": "🔹 4. Heat Recovery from the Engine through Heat Exchangers",
+          "description": "During combustion, a large amount of heat is released:",
+          "point1": "🔥 From the engine cooling jacket",
+          "point2": "🔥 From the oil (through an oil heat exchanger)",
+          "point3": "🔥 From exhaust gases"
+        },
+        "step5": {
+          "title": "🔹 5. Using Heat for Heating or Hot Water Supply",
+          "description": "Heated water or steam is transferred to:",
+          "point1": "🔁 Heating system (premises, production facilities)",
+          "point2": "💧 Hot water supply (showers, restrooms, technological needs)",
+          "point3": "If there is excess heat — it's diverted to a cooling tower or dry cooler"
+        },
+        "step6": {
+          "title": "🔹 6. Trigeneration: Producing Cold from Heat",
+          "description": "Part of the thermal energy is supplied to:",
+          "point1": "❄️ Absorption refrigeration machine (ABHM)",
+          "point2": "Hot water or steam acts as an energy source in this process",
+          "point3": "Water cooling occurs (without using electricity)",
+          "point4": "Chilled water is supplied to the air conditioning system or for technological equipment cooling"
+        }
+      },
+      "indicators": {
+        "title": "Technical and Economic Indicators",
+        "point1": "Electrical efficiency — up to 45%",
+        "point2": "Total efficiency — up to 90%",
+        "point3": "Share of recovered heat — up to 45%",
+        "point4": "Savings compared to separate production — up to 50%",
+        "point5": "Reduction of energy losses — up to 60%"
+      },
+      "cogeneration": {
+        "title": "Cogeneration = Electricity + Heat",
+        "formula": "Formula: η total = η electrical + η thermal ≈ 45% + 45% = up to 90%",
+        "sourcesIntro": "Heat sources:",
+        "source1": "Cooling system",
+        "source2": "Exhaust gases"
+      },
+      "trigeneration": {
+        "title": "Trigeneration = Electricity + Heat + Cold",
+        "description": "An absorption refrigeration machine (ABHM) converts heat into cold. Instead of electricity, hot water or steam is used as the energy source.",
+        "examples": "Examples:",
+        "example1": "1 MW of hot water → up to 800 kW of cooling capacity",
+        "example2": "1 MW of steam → up to 1400 kW of cooling capacity"
+      },
+      "carriers": {
+        "gas": "Natural gas",
+        "heating": "Heat carrier",
+        "electricity": "Electricity",
+        "coolant": "Coolant",
+        "exhaust": "Exhaust gases"
+      }
+    },
+
+    "howToChooseGPU": {
+      "title": "How to Choose the Right Gas-Piston Unit (GPU)",
+      "intro1": "Gas-piston units (GPUs) are an effective solution for autonomous power supply, reducing electricity costs, and increasing business energy independence.",
+      "intro2": "However, to choose the optimal GPU, it's important to consider many technical parameters and characteristics of the facility where it will be installed. In this article, we'll discuss what to pay attention to when choosing a gas-piston unit to achieve maximum efficiency and reliability.",
+
+      "parameter1": {
+        "title": "1. Determining Power Capacity and Operating Mode",
+        "description": "Before purchasing a GPU, it's necessary to accurately calculate the power consumption of the facility and choose a unit with appropriate characteristics.",
+        "point1": "What are the peak and average daily loads at the facility?",
+        "point2": "Will the GPU be used as the primary or backup power source?",
+        "point3": "Is it necessary to consider the possibility of parallel operation of several units?",
+        "tip": "If the unit will be used as the main power source, choose a GPU with a power reserve of 10-15% to account for load variations. If the GPU will work in parallel with the grid or as a backup, you can calculate the capacity more precisely based on critical loads."
+      },
+
+      "parameter2": {
+        "title": "2. Fuel Efficiency and Gas Consumption",
+        "description": "The efficiency of a GPU is measured in electrical efficiency, thermal efficiency, and total efficiency (cogeneration). The higher the efficiency, the lower the operating costs.",
+        "point1": "Electrical efficiency (%) – shows how much energy from gas is converted into electricity. In good models, this indicator is 38-46%.",
+        "point2": "Thermal efficiency (%) – if heat utilization is planned, it's important to consider thermal efficiency (usually 40-48%).",
+        "point3": "Total efficiency (%) – in combined production of electricity and heat (cogeneration), efficiency can reach 90% or higher.",
+        "point4": "Gas consumption – measured in m³/MW el and affects the cost of electricity production.",
+        "tip": "Choose a unit with maximum total efficiency (for example, Jenbacher, MWM, Bergen, Wärtsilä) for cogeneration solutions. If heat is not utilized, you should focus on electrical efficiency."
+      },
+
+      "parameter3": {
+        "title": "3. Gas Supply and Pressure at the Facility",
+        "description": "One of the most important factors is the ability to supply the necessary amount of gas with the required pressure parameters.",
+        "point1": "Is there a connection to the gas network?",
+        "point2": "Is the gas pressure sufficient? (usually from 100 mbar to 5 bar is required, depending on the model)",
+        "point3": "Is the gas supply stable? (important for uninterrupted operation)",
+        "point4": "Possibility of installing a gas pressure regulator to bring gas parameters to the required standard.",
+        "consumptionTable": {
+          "title": "Average Gas Consumption (m³/MWel)",
+          "headers": {
+            "model": "Unit Type",
+            "efficiency": "Electrical Efficiency",
+            "consumption": "Gas Consumption (m³/MWel)"
+          },
+          "rows": [
+            {
+              "model": "Jenbacher J420",
+              "efficiency": "43%",
+              "consumption": "220-240"
+            },
+            {
+              "model": "MWM TCG 2020",
+              "efficiency": "42%",
+              "consumption": "235-245"
+            },
+            {
+              "model": "MTU 16V4000",
+              "efficiency": "40%",
+              "consumption": "250-260"
+            },
+            {
+              "model": "Caterpillar G3516",
+              "efficiency": "38%",
+              "consumption": "250-270"
+            },
+            {
+              "model": "Cummins QSK60",
+              "efficiency": "37%",
+              "consumption": "270-280"
+            }
+          ]
+        },
+        "tip": "If the gas pressure at the facility is unstable, installation of a pressure regulator or compressor station is required, which will increase the initial costs."
+      },
+
+      "parameter4": {
+        "title": "4. Reliability, Service Life, and Maintenance Frequency",
+        "description": "Different manufacturers offer GPUs with varying engine life and maintenance intervals.",
+        "point1": "Service life until major overhaul – top brands (Jenbacher, MWM, Bergen, Wärtsilä) offer 70,000 – 100,000 hours.",
+        "point2": "Maintenance frequency – affects maintenance costs (Jenbacher, Wärtsilä require maintenance every 1,500 - 2,000 hours, while CAT, Cummins – 3,000 - 4,000 hours).",
+        "point3": "Availability of spare parts and service support – European brands may require complex maintenance, while American and Asian brands are more accessible in this regard."
+      },
+
+      "parameter5": {
+        "title": "5. Operating Conditions and Site Characteristics",
+        "description": "Before installing a GPU, it's important to consider the conditions at the site.",
+        "point1": "Fuel availability – is there a stable supply of natural gas with the required pressure?",
+        "point2": "Temperature conditions – in low temperatures, a heating system should be considered.",
+        "point3": "Noise restrictions – if the GPU is located near residential buildings, sound insulation is important.",
+        "point4": "Dimensions and weight – is there enough space at the facility for installing and servicing the unit?",
+        "point5": "Emission restrictions – do NOx, CO, and CO₂ emissions comply with environmental standards?",
+        "tip": "Before purchasing, conduct a site audit – this will help choose the right unit option and minimize costs for site preparation."
+      },
+
+      "parameter6": {
+        "title": "6. Importance of Transformer and Power Coordination",
+        "description": "When connecting a GPU to the power grid, it's important to consider the availability of a transformer and the permitted power capacity at the facility.",
+        "point1": "Permitted power capacity of the facility – can the GPU be connected to the existing power system?",
+        "point2": "Availability of a transformer – if the GPU generates 400V, and the grid accepts 6-10 kV, a transformer will be required.",
+        "point3": "Type of grid connection – will the facility consume all electricity itself or sell part of it to the grid?",
+        "point4": "Documents for electricity sales – permission for parallel operation with the grid is required.",
+        "tip": "If electricity sales to the grid are planned, it's important to coordinate power limits with the grid operator in advance, and install an automatic generation regulation system (AGR)."
+      },
+
+      "parameter7": {
+        "title": "7. Choosing the Type of Gas-Piston Unit (GPU or CHP)",
+        "description": "There are different types of gas-piston units depending on the energy produced.",
+        "point1": "GPU (gas-piston units) – generate only electricity.",
+        "point2": "CHP (cogeneration units) – produce both electricity and heat.",
+        "point3": "Trigeneration – produce electricity, heat, and cooling.",
+        "tip": "If you have a need for heat (for example, building heating, technological processes), choose CHP – this will reduce the cost of energy."
+      },
+
+      "parameter8": {
+        "title": "8. Budget and Payback Calculation",
+        "description": "The cost of a GPU varies from $100,000 to several million dollars, so it's important to consider not only the purchase price but also operating costs.",
+        "costTable": {
+          "title": "Approximate GPU Installation Costs",
+          "headers": {
+            "factor": "Factor",
+            "cost": "Cost ($)"
+          },
+          "rows": [
+            {
+              "factor": "Gas-piston unit (1 MW)",
+              "cost": "200,000 – 900,000"
+            },
+            {
+              "factor": "Installation and connection",
+              "cost": "30,000 – 150,000"
+            },
+            {
+              "factor": "Gas pipeline and pressure regulator",
+              "cost": "10,000 – 50,000"
+            },
+            {
+              "factor": "Transformer and electrical connection",
+              "cost": "10,000 – 100,000"
+            },
+            {
+              "factor": "Annual maintenance",
+              "cost": "10,000 – 50,000"
+            }
+          ]
+        },
+        "tip": "Use a payback calculator to compare the cost of purchasing electricity from the grid and producing it with a GPU. For example, with a gas price of 18.5 UAH/m³ and grid electricity at 9 UAH/kWh, you can save up to 50% on electricity."
+      },
+
+      "parameter9": {
+        "title": "9. Service Support and Warranty",
+        "description": "When choosing a GPU, it's important to understand what service offerings the manufacturer or its official representatives provide.",
+        "point1": "Availability of service centers in the region – affects the efficiency of maintenance.",
+        "point2": "Manufacturer's warranty – usually from 1 to 5 years, but it's better to choose models with the possibility of warranty extension.",
+        "point3": "Availability of remote monitoring system – allows remote management and diagnostics of the unit.",
+        "tip": "Choose a GPU with a long-term warranty and remote monitoring capability to reduce maintenance costs."
+      },
+
+      "summary": {
+        "title": "Summary: How to Choose the Optimal Gas-Piston Unit?",
+        "point1": "Calculate the required power and determine the operating mode (primary/backup).",
+        "point2": "Evaluate the operating conditions and characteristics of the site for GPU placement: availability of electrical and gas infrastructure for connection, as well as the necessary space.",
+        "point3": "Compare efficiency and fuel consumption of different models.",
+        "point4": "Consider service life and maintenance intervals.",
+        "point5": "Determine the budget and calculate payback.",
+        "point6": "Check the availability of service support in your region.",
+        "point7": "Choose between GPU or CHP if cogeneration is required.",
+        "conclusion": "The right choice of a gas-piston unit will provide reliable power supply, minimize fuel and maintenance costs, and accelerate investment payback."
+      }
+    },
+
+    "serviceLife": {
+      "title": "Service Life of Generators by Brand, Maintenance Intervals, and Types",
+      "table": {
+        "manufacturer": "Manufacturer",
+        "electricalEfficiency": "Electrical Efficiency (%)",
+        "thermalEfficiency": "Thermal Efficiency (%)",
+        "totalEfficiency": "Total Efficiency (%)",
+        "reliability": "Reliability",
+        "fuelConsumption": "Fuel Consumption",
+        "partsAvailability": "Parts Availability",
+        "serviceLifeHours": "Service Life to Overhaul (h)",
+        "maintenanceInterval": "Maintenance Interval (h)",
+        "gasConsumption": "Gas Consumption per 1 MW el.",
+        "overhaul30000Hours": "30,000 Hours Maintenance (Mid-life Overhaul)",
+        "overhaul60000Hours": "60,000 Hours Maintenance (Major Overhaul)"
+      },
+      "serviceInterval": {
+        "title": "Main Types of Gas Piston Unit Maintenance:",
+        "regular": {
+          "title": "Regular Maintenance",
+          "subtitle": "",
+          "desc": " – performed every 1,500–3,000 operating hours. Includes oil, filter, and spark plug replacement, as well as diagnostics of the main equipment components."
+        },
+        "middle": {
+          "title": "Midlife Overhaul",
+          "subtitle": "",
+          "desc": " – carried out after 25,000–30,000 operating hours. Involves a more thorough inspection and replacement of worn engine components."
+        },
+        "major": {
+          "title": "Major Overhaul",
+          "subtitle": "",
+          "desc": " – conducted after 55,000–60,000 operating hours. Includes complete engine disassembly, replacement of major components, and restoration of the unit's resources to the level of a new one."
+        }
+      },
+      "maintenanceTypes": {
+        "standardTitle": "Standard Maintenance Procedures (1,500–3,000 hours)",
+        "component": "Component",
+        "works": "Work Performed",
+        "oil": "Engine Oil",
+        "oilChange": "Complete engine oil replacement",
+        "oilFilters": "Oil Filters",
+        "oilFiltersChange": "Oil filter replacement",
+        "airFilters": "Air Filters",
+        "airFiltersChange": "Air filter replacement or cleaning",
+        "sparkPlugs": "Spark Plugs",
+        "sparkPlugsChange": "Replacement (often at every maintenance or every other service)",
+        "engineDiagnostics": "Engine Diagnostics",
+        "engineDiagnosticsCheck": "Checking oil pressure, temperatures, vibrations",
+        "oilAnalysis": "Oil Analysis",
+        "oilAnalysisCheck": "Checking for metal particles and wear indicators",
+        "coolant": "Coolant",
+        "coolantCheck": "Level check, top-up or replacement if needed",
+        "gasValve": "Gas Valve and Fuel System",
+        "gasValveCheck": "Inspection, leak test, purging",
+        "generator": "Generator",
+        "generatorCheck": "Insulation check, load testing, brush inspection (if applicable)",
+        "automation": "Automation and Safety Systems",
+        "automationCheck": "Testing, log updates, control system communication check",
+        "fasteners": "Fasteners and Connections",
+        "fastenersCheck": "Bolt tightening, vibration mount inspection",
+
+        "midLifeTitle": "Mid-Life Overhaul (at ~30,000 operating hours)",
+        "midLifeDescription": "Purpose: extend engine life until major overhaul, address wear of critical components. Usually performed on-site, duration — 3–10 days.",
+        "mainWorks": "Main procedures:",
+        "midLife": {
+          "point1": "Replacement of pistons or piston rings",
+          "point2": "Inspection/replacement of crankshaft bearings",
+          "point3": "Replacement or overhaul of cylinder heads",
+          "point4": "Cleaning and inspection of the turbocharger",
+          "point5": "Inspection and replacement of injectors, spark plugs, fuel system components",
+          "point6": "Replacement of gaskets, seals, filters",
+          "point7": "Inspection of oil system, cooling system, gas valves",
+          "point8": "Generator and control system diagnostics",
+          "point9": "Balancing of rotating elements"
+        },
+
+        "majorTitle": "Major Overhaul (at ~60,000 operating hours)",
+        "majorDescription": "Purpose: complete engine rebuild extending service life by another 60,000 hours. Often conducted at specialized facilities or manufacturer plants, duration — 2–4 weeks.",
+        "includes": "Includes:",
+        "major": {
+          "point1": "Complete engine disassembly",
+          "point2": "Crankshaft grinding or replacement",
+          "point3": "Cylinder block inspection/replacement",
+          "point4": "Complete cylinder set replacement (liners, pistons, connecting rods)",
+          "point5": "Repair/replacement of turbocharger, pumps, radiators, thermostats",
+          "point6": "Updating gas, oil, and cooling systems",
+          "point7": "Generator diagnostics, brush/bearing replacement",
+          "point8": "Control system software updates (optional)"
+        },
+
+        "averageCosts": "Average costs:",
+        "standardCost": "Standard Maintenance: $5,000 - $10,000",
+        "midLifeCost": "Mid-Life Overhaul: $100,000 - $200,000",
+        "majorCost": "Major Overhaul: $200,000 - $400,000"
+      }
+    },
+
+    "brands": {
+      "title": "Popular manufacturers",
+      "jenbacher": "Austrian manufacturer, a market leader. Jenbacher is renowned for high reliability and adaptability to various gas types (natural gas, biogas, landfill gas, mine gas, and even hydrogen blends). The units offer one of the highest efficiencies on the market – up to 90% in cogeneration, making them an excellent choice for industry and utilities. However, the high equipment cost requires careful payback calculation.",
+      "mwm": "German brand with a 150-year history. MWM offers units with optimized fuel consumption, reducing operating costs. High automation and remote monitoring. Premium segment with a high price.",
+      "mtu": "German manufacturer of premium solutions (Rolls-Royce). Modular units for hybrid systems. Ideal for facilities with high reliability demands. Downsides – frequent maintenance and expensive parts.",
+      "cat": "American industrial giant. CAT GPU advantages include a wide service network, parts availability, and high power. However, efficiency and performance lag behind European counterparts, with above-average fuel consumption.",
+      "bergen": "Norwegian brand of large units. Known for enhanced reliability and long engine life (up to 100,000 hours). Downsides: high cost and complex service.",
+      "wartsila": "Finnish manufacturer for large-scale generation. Flexible with various fuel types. High efficiency and durability. Downsides: high price and service complexity.",
+      "cummins": "American manufacturer of affordable and reliable GPUs. Simple design and parts availability. Lags behind European brands in efficiency and service life, with higher fuel consumption.",
+      "doosan": "South Korean corporation, popular in Asia and Eastern Europe. Affordable price and good performance. Shorter service life until overhaul and lower efficiency than premium brands.",
+      "himoinsa": "Spanish brand of compact and mobile GPUs. Suitable for small facilities and backup power. Relatively short service life and lower efficiency.",
+      "gentec": "Manufacturer of mid-range GPUs with flexible customization. Service support is limited compared to major brands.",
+      "mitsubishi": "Japanese manufacturer with innovative solutions. Enhanced reliability, long service life, and efficiency. Downsides: high cost and service complexity."
+    },
+
+    "programs": {
+      "title": "Distributed generation strategy in Ukraine",
+      "paragraph1": "Ukraine is rapidly developing a distributed generation program, which involves installing independent energy sources directly at enterprises and communities. Gas piston units (GPUs) play a key role as an efficient and reliable solution for producing electricity and heat.",
+      "paragraph2": "GPUs reduce reliance on centralized grids, cut energy costs, and ensure energy independence during peak loads or crises. The government supports this direction through regulatory mechanisms and incentives for businesses to adopt local generation sources, especially relevant amid energy system instability.",
+      "currentPrograms": "Current programs and tariffs:",
+      "psoDescription": "Currently, Resolution No. 222 of the Cabinet of Ministers of Ukraine (PSO agreement) applies to electricity producers using gas piston units:",
+      "psoPoint1": "* under the PSO agreement for electricity producers on GPUs – price of 14 UAH per 1 m³ until 31.10.2025",
+      "psoPoint2": "* under the PSO agreement for electricity and heat producers on GPUs – price of 18 UAH per 1 m³ until 31.10.2025",
+      "loansDescription": "Preferential loan rates of 5-7-9% per annum, approved by the Cabinet of Ministers of Ukraine, are currently available for purchasing energy equipment (including gas piston units):",
+      "link1": "Ministry of Energy: Development of distributed generation",
+      "link2": "Entrepreneurship Development Fund (5-7-9% Program)",
+      "link3": "ZMINYE: Energy awareness for business",
+      "link4": "Documentation and specifics of GPU and CHP connection"
+    }
+  },
+  "cooperation": {
+    "title": "Cooperation",
+    "intro": {
+      "p1": "If you’ve decided to switch to self-generation, become energy-independent, and significantly cut costs – we’re ready to be your partner on this journey.",
+      "p2": "Gen Expert offers not only equipment selection and supply but also project support, implementation assistance, and the possibility of co-financing.",
+      "p3": "We’re open to partnership, where our expertise, equipment, and market knowledge complement your initiative and readiness to implement effective solutions."
+    },
+    "start": {
+      "title": "Where to start?",
+      "intro": "To evaluate the project and prepare an offer, we ask you to provide basic information:",
+      "requestForm": {
+        "title": "The request form on the website includes:",
+        "companyName": "Company name",
+        "businessDescription": "Brief description of the business and industry",
+        "location": "Facility location (city, region)",
+        "sitePlan": "Site plan of the industrial area.",
+        "landBoundaries": "Land boundaries.",
+        "ecologyPermits": "Ecology, emission permits.",
+        "availableSpace": "Available space for equipment placement – approximate area, access conditions",
+        "chosenGPU": "Selected GPU model (optional) – from our catalog",
+        "contactInfo": "Contact information – name, position, phone, email"
+      },
+      "electrical": {
+        "title": "Electrical infrastructure:",
+        "point1": "Single-line electrical diagram;",
+        "point2": "Contracted electrical power, kW;",
+        "point3": "Electrical power for the facility’s own needs, kW;",
+        "point4": "Electricity consumption schedule by month for the last year and the last 3 months, kW;",
+        "point5": "Daily consumption schedule for the last 3 months, kW;",
+        "point6": "Technical conditions for connecting the facility to the grid;",
+        "point7": "Specify the maximum possible power generation into the grid with existing energy networks connected to the facility, kW;",
+        "point8": "Grid operator conditions for increasing power generation into the grid."
+      },
+      "gas": {
+        "title": "Availability of gas infrastructure:",
+        "point1": "Technical conditions for connecting the facility to the gas network (if available);",
+        "point2": "Gas distribution network operator;",
+        "point3": "Gas pipeline (main/distribution, gas pressure provision, MPa, throughput m³/h, operating mode (active, reserve, mothballed));",
+        "point4": "Maximum possible gas order volume at the connection point, m³/h."
+      },
+      "heat": {
+        "title": "Heat demand:",
+        "point1": "Heat consumption schedule by month for the last year and the last 3 months, kW;",
+        "point2": "Availability of existing heat-generating units;",
+        "point3": "Current deficit (surplus) in heat supply."
+      },
+      "submitInfo": "You can fill out the form online on this page or download a Word template, fill it out, and send it to us via email."
+    },
+    "submit": {
+      "downloadLink": "Download the form to fill out (.docx)",
+      "onlineLink": "Submit data online"
+    },
+    "benefits": {
+      "title": "What you’ll get",
+      "point1": "Personalized equipment selection",
+      "point2": "Energy and economic project model",
+      "point3": "Detailed commercial offer and launch plan",
+      "point4": "Opportunity to implement the project in partnership with us"
+    },
+    "cta": {
+      "text": "Your path to energy independence starts with one step – fill out the form, and we’ll prepare the best offer for you."
+    }
+  },
+  "contactsModal": {
+    "contactUs": "Contact Us",
+    "fullName": "Full Name",
+    "companyName": "Company Name",
+    "contactPhone": "Contact Phone",
+    "email": "Email",
+    "comment": "Comment",
+    "enterFullName": "Enter your full name",
+    "enterCompanyName": "Enter company name",
+    "enterContactPhone": "Enter contact phone",
+    "enterWorkEmail": "Enter work email",
+    "enterComment": "Enter your comment",
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "cancel": "Cancel",
+    "close": "Close",
+    "required": "Required field",
+    "invalidEmail": "Invalid email format",
+    "formSubmissionSuccess": "Form submitted successfully",
+    "formSubmissionError": "Error submitting form"
+  }
+}
