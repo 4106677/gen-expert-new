@@ -1,0 +1,42 @@
+.possibilities-container {
+    padding: 90px 100px;
+}
+
+.possibilities-header {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 46px;
+}
+
+.possibilities-main {
+
+}
+
+.possibilities-left {
+    width: 542px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.possibilities-left__item {
+    background-color: #F6F6F9;
+    border-radius: 12px;
+    position: relative;
+    padding: 26px 242px 26px 26px;
+    width: 100%;
+    height: 232px;
+}
+
+.possibilities-left__item-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+.possibilities-right {
+
+}

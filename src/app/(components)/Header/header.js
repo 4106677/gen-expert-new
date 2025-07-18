@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
-import styles from "./header.css";
 import { useLanguage } from "@/app/context";
 import "@/i18n";
 import Image from "next/image";
@@ -77,13 +76,7 @@ export default function Header() {
 	if (!isMounted) {
 		return (
 			<header className="header">
-				<nav className="nav container">
-					<Link href="/" className="logoLink">
-						<span className="logoGen">GEN</span>
-						<span className="logoExpert">EXPERT</span>
-					</Link>
-					<div className="nav-placeholder">Loading...</div>
-				</nav>
+
 			</header>
 		);
 	}
@@ -92,8 +85,7 @@ export default function Header() {
 		<header className="header">
 			<nav className="nav container">
 				<Link href="/" className="logoLink">
-					<span className="logoGen">GEN</span>
-					<span className="logoExpert">EXPERT</span>
+					<Image src='/images/logo.png' width={218} height={72} alt='Genexpert Site'></Image>
 				</Link>
 
 				{/* Burger Menu Button (shows on small screens) */}
@@ -131,11 +123,27 @@ export default function Header() {
 					</div>
 
 					<ul className="nav-list">
+						<li className="dropdown">
+							<Link href="/cooperation" onClick={() => setMenuOpen(false)}>{t("menu.cooperation")}
+								<Image src="/images/chevron-down.svg" alt="Arrow down" width={11} height={6} className="arrow-icon"/>
+							</Link>
+
+							<ul className="dropdown-menu">
+								<li><Link href="/cooperation/subpage1" onClick={() => setMenuOpen(false)}>Підсторінка
+									1</Link></li>
+								<li><Link href="/cooperation/subpage2" onClick={() => setMenuOpen(false)}>Підсторінка
+									2</Link></li>
+							</ul>
+						</li>
+						<li><Link href="/sectors" onClick={() => setMenuOpen(false)}>{t("menu.sectors")}</Link></li>
 						<li><Link href="/equipment" onClick={() => setMenuOpen(false)}>{t("menu.equipment")}</Link></li>
-						<li><Link href="/why" onClick={() => setMenuOpen(false)}>{t("menu.why")}</Link></li>
-						<li><Link href="/useful" onClick={() => setMenuOpen(false)}>{t("menu.useful")}</Link></li>
-						<li><Link href="/calculator" onClick={() => setMenuOpen(false)}>{t("menu.calculator")}</Link></li>
-						<li><Link href="/cooperation" onClick={() => setMenuOpen(false)}>{t("menu.cooperation")}</Link></li>
+						<li><Link href="/blog" onClick={() => setMenuOpen(false)}>{t("menu.blog")}</Link></li>
+						{/*<li><Link href="/why" onClick={() => setMenuOpen(false)}>{t("menu.why")}</Link></li>*/}
+						{/*<li><Link href="/useful" onClick={() => setMenuOpen(false)}>{t("menu.useful")}</Link></li>*/}
+						<li><Link href="/calculate" onClick={() => setMenuOpen(false)}>{t("menu.calculate")}</Link>
+						{/*<li><Link href="/calculator" onClick={() => setMenuOpen(false)}>{t("menu.calculator")}</Link>*/}
+						</li>
+
 					</ul>
 
 					<div className="mobile-extras">
@@ -146,29 +154,31 @@ export default function Header() {
 
 				{/* Desktop-only language and contacts */}
 				<div className="desktop-extras">
+					<button className='btn btn_green'>{t("menu.callback")}</button>
+					<div className="contacts">
+						<a href="tel:+380732370045">+38(073)237-00-45</a>
+						<a href="mailto:info@genexpert.com.ua">info@genexpert.com.ua</a>
+					</div>
 					<div className="language" onClick={(e) => {
 						e.stopPropagation();
 						setLangBox(!langBox);
 					}}>
 						<Image
 							aria-hidden
-							src="/globe.svg"
+							src="/images/globe-new.svg"
 							alt="Globe icon"
-							width={16}
-							height={16}
+							width={24}
+							height={24}
 						/>
 						<span className="rounder">{lang.toUpperCase()}</span>
-						<ul className="selector" style={{ display: langBox ? "flex" : "none" }}>
+						<ul className="selector" style={{display: langBox ? "flex" : "none"}}>
 							<li onClick={(e) => onLangBoxClick(e, "ru")}>RU</li>
 							<li onClick={(e) => onLangBoxClick(e, "ua")}>UA</li>
 							<li onClick={(e) => onLangBoxClick(e, "en")}>EN</li>
 						</ul>
 					</div>
 
-					<div className="contacts">
-						<a href="tel:+380732370045">+38(073)237-00-45</a>
-						<a href="mailto:info@genexpert.com.ua">info@genexpert.com.ua</a>
-					</div>
+
 				</div>
 			</nav>
 		</header>

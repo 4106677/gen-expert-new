@@ -2,7 +2,9 @@
   --background: #fff;
   --foreground: #000;;
   --font-caviar-dreams: var(--font-caviar-dreams);
+  --font-caviar-dreams-bold: var(--font-caviar-dreams-bold);
   --font-roboto: var(--font-roboto);
+  --font-inter: var(--font-inter);
 }
 
 /*@media (prefers-color-scheme: dark) {*/
@@ -25,7 +27,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-roboto), sans-serif;
+  font-family: var(--font-inter), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
@@ -71,6 +73,27 @@ input {
   -moz-user-select: none;    /* для Firefox */
   -ms-user-select: none;     /* для IE/Edge */
   user-select: none;         /* для современных браузеров */
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 11px;
+}
+
+.btn_white{
+  background-color: white;
+  color: black;
+  border: none;
+}
+
+.btn_outline{
+  border: 1px solid white;
+  background-color: transparent;
+}
+
+.btn_green{
+  background-color: #41A747;
+  border: none;
 }
 
 

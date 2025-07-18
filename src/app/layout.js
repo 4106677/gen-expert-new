@@ -17,6 +17,12 @@ const roboto = localFont({
     display: "swap",
 });
 
+const inter = localFont({
+    src: "../../public/fonts/Inter/Inter-Variable.ttf",
+    variable: "--font-inter",
+    display: "swap",
+});
+
 const caviarDreams = localFont({
     src: "../../public/fonts/caviar_dreams/CaviarDreams.ttf",
     variable: "--font-caviar-dreams",
@@ -34,13 +40,13 @@ export const metadata = {
   description: "Новые и б/у газопоршневые генераторы под ключ.",
 };
 
-export default async function RootLayout({children, params}) {
+export default async function RootLayout({children}) {
     return (
         <html lang="en">
         <head>
             <GoogleTagManager/>
         </head>
-        <body className={`${caviarDreams.variable} ${caviarDreamsBold.variable} ${roboto.variable}`}>
+        <body className={`${caviarDreams.variable} ${caviarDreamsBold.variable} ${roboto.variable} ${inter.variable}`}>
         <GoogleTagManagerNoScript/>
         <ClientLayout>
             <SheetDataProvider>
