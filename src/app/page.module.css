@@ -10,71 +10,9 @@
   justify-items: center;
   display: flex;
   flex-direction: column;
-  text-align: center;
   padding-top: 40px;
 }
 
-.slide {
-  /*position: relative;*/
-}
-
-.carousel .control-prev.control-arrow:before {
-  border-right: 8px solid #000 !important;
-}
-
-.arrowStyles {
-  position: absolute;
-  z-index: 2;
-  top: calc(50% - 15px);
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  /*background-color: #0070f3;*/
-}
-
-.logo {
-  width: 100%;
-  /*height: auto;*/
-  opacity: 0.8;
-  object-fit: contain;
-}
-
-.description {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 стовпці */
-  grid-auto-rows: auto; /* автоматична висота рядків */
-  gap: 8px 16px; /* вертикальний і горизонтальний відступ між елементами */
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  height: auto;
-  background: #0000004f;
-  color: white;
-  min-width: calc(100% - 900px);
-  padding: 20px;
-  text-align: left;
-  font-size: 1.2rem;
-
-  .details {
-    width: max-content;
-    display: flex;
-    align-items: center;
-
-    &:first-child {
-      grid-column: span 2;
-
-      margin: 0 auto;
-    }
-
-    .svg {
-      width: 20px;
-      margin-right: 8px;
-  }
-  }
-}
 
 @media (max-width: 1249px) {
   .page {

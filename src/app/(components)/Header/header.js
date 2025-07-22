@@ -7,6 +7,7 @@ import "@/i18n";
 import Image from "next/image";
 import { Footer } from "@/app/(components)/Footer/footer";
 import footerStyles from "@/app/(components)/Footer/footer.module.css";
+import './header.css'
 
 export default function Header() {
 	const { t } = useTranslation("common");
@@ -83,7 +84,7 @@ export default function Header() {
 
 	return (
 		<header className="header">
-			<nav className="nav container">
+			<nav className="header-nav container">
 				<Link href="/" className="logoLink">
 					<Image src='/images/logo.png' width={218} height={72} alt='Genexpert Site'></Image>
 				</Link>
@@ -154,7 +155,7 @@ export default function Header() {
 
 				{/* Desktop-only language and contacts */}
 				<div className="desktop-extras">
-					<button className='btn btn_green'>{t("menu.callback")}</button>
+					<button className='btn btn_green' style={{height: '41px'}}>{t("menu.callback")}</button>
 					<div className="contacts">
 						<a href="tel:+380732370045">+38(073)237-00-45</a>
 						<a href="mailto:info@genexpert.com.ua">info@genexpert.com.ua</a>

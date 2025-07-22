@@ -13,7 +13,7 @@ const Fields = () => {
 					<Image className='fields-left__image' src='/images/mainPage/fields.jpg' height={604} width={505} alt='Hero GPU'></Image>
 				</div>
 				<div className='fields-right'>
-					<Link href='/' className='fields-right__item'>
+					<Link href='/public' className='fields-right__item'>
 						<h4 className='fields-right__item-header'>Сільське господарство та теплиці</h4>
 						<span className='fields-right__item-description'>Дешева енергія та CO₂ для теплиць, що збільшує врожайність. Удобрює рослини, підвищуючи врожайність на 20% та економію 30-50% на електроенергії</span>
 						<Image className='fields-right__item-image' src='/images/arrow-right.svg' alt='Arrow right' width={14} height={14}></Image>

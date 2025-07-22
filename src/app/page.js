@@ -4,9 +4,15 @@ import "../i18n";
 import {fetchGoogleSheetData} from "@/services/google";
 import {useEffect, useState} from "react";
 import {useLanguage} from "@/app/context";
-import Hero from "@/app/(components)/Hero/hero";
-import Fields from "@/app/(components)/Fields/fields";
-import Possibilities from "@/app/(components)/Possibilities/possibilities";
+import Hero from "@/app/(components)/MainPage/Hero/hero";
+import Fields from "@/app/(components)/MainPage/Fields/fields";
+import Possibilities from "@/app/(components)/MainPage/Possibilities/possibilities";
+import Team from "@/app/(components)/MainPage/Team/team";
+import Banner from "@/app/(components)/MainPage/Banner/banner";
+import Consultation from "@/app/(components)/MainPage/Consultation/consultation";
+import Tips from "@/app/(components)/MainPage/Tips/tips";
+import Blog from "@/app/(components)/MainPage/Blog/blog";
+import ContactForm from "@/app/(components)/MainPage/ContactForm/contactForm";
 
 export default function Home() {
     const [data, setData] = useState(null);
@@ -14,6 +20,7 @@ export default function Home() {
     // const { showModal, setShowModal } = useModal();
     // const router = useRouter();
     const { lang } = useLanguage();
+
 
     // useEffect(() => {
     //     const checkIfMobile = () => {
@@ -28,7 +35,7 @@ export default function Home() {
         async function loadSheetData() {
             setLoading(true)
             try {
-                const sheetData = await fetchGoogleSheetData(`TOP5${lang.toUpperCase()}`);
+                const sheetData = await fetchGoogleSheetData(`TOP5${lang.toUpperCase()}`);;
                 setData(sheetData);
             } catch (error) {
                 console.error("Failed to fetch sheet data:", error.message);
@@ -36,14 +43,24 @@ export default function Home() {
             }
         }
 
-        loadSheetData().then(r => setLoading(false));
+        loadSheetData().then(() => setLoading(false));
     }, [lang]);
+
+    if (loading) {
+        return <></>
+    }
 
     return (
         <div className={styles.page}>
             <Hero/>
             <Fields/>
             <Possibilities/>
+            <Team/>
+            <Banner/>
+            <Consultation/>
+            <Tips data={data}  />
+            <Blog/>
+            <ContactForm/>
         </div>
     );
 }
