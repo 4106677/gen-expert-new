@@ -1,16 +1,17 @@
 .main_banner {
-    margin-bottom: 55px;
+    /*margin-bottom: 55px;*/
     position: relative;
     width: 100vw;
-    height: 335px;
+    /*height: 335px;*/
     background-color: #50AE55;
     padding: 80px 0;
 }
 
 .main_banner_image {
     position: absolute;
-    left: 0;
-    top: 0;
+    /*left: 0;*/
+    /*top: 0;*/
+    object-fit: cover;
 }
 
 .main_banner_container {

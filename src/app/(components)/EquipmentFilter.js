@@ -17,13 +17,13 @@ export default function EquipmentFilter({
 	const [showStates, setShowStates] = useState({
 		power: true,
 		manufacturer: true,
-		models: false,
+		// models: false,
 		voltage: true,
 		condition: true,
 		bodyType: true,
 		genType: true,
-		year: true,
-		price: true
+		// year: true,
+		// price: true
 	});
 
 	// Determine if we're on mobile view
@@ -35,13 +35,13 @@ export default function EquipmentFilter({
 			setShowStates({
 				power: true,
 				manufacturer: true,
-				models: true,
+				// models: true,
 				voltage: true,
 				condition: true,
 				bodyType: true,
 				genType: true,
-				year: true,
-				price: true
+				// year: true,
+				// price: true
 			});
 		}
 	}, [isMobile, windowWidth]); // Add windowWidth to dependencies to handle resizing
@@ -55,24 +55,35 @@ export default function EquipmentFilter({
 
 	return (
 		<ul className={`${styles.left} ${isFilterVisible ? styles.visible : ''}`}>
-			<h2 className={styles.left_title}>{t("equipment.filters.title")}</h2>
-
+			<div className={styles.left_top}>
+				<h2 className={styles.left_title}>{t("equipment.filters.title")}</h2>
+				<button
+					className="btn btn_outline"
+					style={{color: "#94A3B8", fontSize: "14px", borderColor: "#94A3B8", height: "40px"}}
+					// className={styles.sortWrapper_button}
+					type="button"
+					// disabled={selectedSorting === '' && search === ''}
+					// onClick={handleResetSorting}
+				>
+					{t("equipment.filters.items.sorting.reset")}
+				</button>
+			</div>
 			{/* Power Filter */}
 			<li className={`${styles.left_li} ${!showStates.power && styles.left_li__hide} ${styles.filter_power}`}>
 				<h3
 					className={styles.left_h3}
-					onClick={() => toggleFilterSection('power')}
+					onClick={() => toggleFilterSection("power")}
 				>
 					{t("equipment.filters.items.power")}
 					{!isMobile && (
 						<Image
 							aria-hidden
-							src="/bottom.svg"
+							src="/images/rounder-right.svg"
 							alt="Arrow icon"
-							width={20}
-							height={20}
+							width={24}
+							height={24}
 							className={styles.h3_icon}
-							style={{transform: `rotate(${showStates.power ? 180 : 0}deg)`}}
+							style={{transform: `rotate(${showStates.power ? 0 : 180}deg)`}}
 						/>
 					)}
 				</h3>
@@ -103,7 +114,16 @@ export default function EquipmentFilter({
 									key={`max-${filters.filterPower.max}`}
 									placeholder="Max power"
 								/>
-								<button type="submit" className={styles.inputFilters_button}>OK</button>
+								<button type="submit"
+								        className='btn btn_outline'
+								        style={{
+											color: '#50AE55',
+									        borderColor: '#50AE55',
+									        padding: '10px 17px',
+									        height: '40px',
+									        marginLeft: '8px'
+								        }}
+								>OK</button>
 							</div>
 						</form>
 						<div className={styles.sliderContainer}>
@@ -125,7 +145,7 @@ export default function EquipmentFilter({
 			</li>
 
 			{/* Manufacturer Filter */}
-			<li className={`${styles.checkboxes} ${!showStates.manufacturer && styles.left_li__hide} ${styles.filter_manufacturer}`}>
+			<li className={`${styles.left_li} ${!showStates.manufacturer && styles.left_li__hide} ${styles.filter_manufacturer}`}>
 				<h3
 					className={styles.left_h3}
 					onClick={() => toggleFilterSection('manufacturer')}
@@ -134,10 +154,10 @@ export default function EquipmentFilter({
 					{!isMobile && (
 						<Image
 							aria-hidden
-							src="/bottom.svg"
+							src="/images/rounder-right.svg"
 							alt="Arrow icon"
-							width={20}
-							height={20}
+							width={24}
+							height={24}
 							className={styles.h3_icon}
 							style={{transform: `rotate(${showStates.manufacturer ? 180 : 0}deg)`}}
 						/>
@@ -161,40 +181,40 @@ export default function EquipmentFilter({
 			</li>
 
 			{/* Model Filter - Filtered by selected manufacturers */}
-			<li className={`${styles.checkboxes} ${!showStates.models && styles.left_li__hide} ${styles.filter_model}`}>
-				<h3
-					className={styles.left_h3}
-					onClick={() => toggleFilterSection('models')}
-				>
-					{t("equipment.filters.items.model")}
-					{!isMobile && (
-						<Image
-							aria-hidden
-							src="/bottom.svg"
-							alt="Arrow icon"
-							width={20}
-							height={20}
-							className={styles.h3_icon}
-							style={{transform: `rotate(${showStates.models ? 180 : 0}deg)`}}
-						/>
-					)}
-				</h3>
-				{showStates.models && (
-					<>
-						{filters.availableModels.map((item, index) => (
-							<div key={index} className={styles.left_input__text}>
-								<input
-									className={styles.checkboxes_input}
-									type="checkbox"
-									onChange={() => filters.onModelInputClick(item)}
-									checked={filters.filterModel.includes(item)}
-								/>
-								{item}
-							</div>
-						))}
-					</>
-				)}
-			</li>
+			{/*<li className={`${styles.left_li} ${!showStates.models && styles.left_li__hide} ${styles.filter_model}`}>*/}
+			{/*	<h3*/}
+			{/*		className={styles.left_h3}*/}
+			{/*		onClick={() => toggleFilterSection('models')}*/}
+			{/*	>*/}
+			{/*		{t("equipment.filters.items.model")}*/}
+			{/*		{!isMobile && (*/}
+			{/*			<Image*/}
+			{/*				aria-hidden*/}
+			{/*				src="/images/rounder-right.svg"*/}
+			{/*				alt="Arrow icon"*/}
+			{/*				width={24}*/}
+			{/*				height={24}*/}
+			{/*				className={styles.h3_icon}*/}
+			{/*				style={{transform: `rotate(${showStates.models ? 180 : 0}deg)`}}*/}
+			{/*			/>*/}
+			{/*		)}*/}
+			{/*	</h3>*/}
+			{/*	{showStates.models && (*/}
+			{/*		<>*/}
+			{/*			{filters.availableModels.map((item, index) => (*/}
+			{/*				<div key={index} className={styles.left_input__text}>*/}
+			{/*					<input*/}
+			{/*						className={styles.checkboxes_input}*/}
+			{/*						type="checkbox"*/}
+			{/*						onChange={() => filters.onModelInputClick(item)}*/}
+			{/*						checked={filters.filterModel.includes(item)}*/}
+			{/*					/>*/}
+			{/*					{item}*/}
+			{/*				</div>*/}
+			{/*			))}*/}
+			{/*		</>*/}
+			{/*	)}*/}
+			{/*</li>*/}
 
 			{/* Voltage Filter */}
 			<li className={`${styles.left_li} ${!showStates.voltage && styles.left_li__hide} ${styles.filter_voltage}`}>
@@ -206,10 +226,10 @@ export default function EquipmentFilter({
 					{!isMobile && (
 						<Image
 							aria-hidden
-							src="/bottom.svg"
+							src="/images/rounder-right.svg"
 							alt="Arrow icon"
-							width={20}
-							height={20}
+							width={24}
+							height={24}
 							className={styles.h3_icon}
 							style={{transform: `rotate(${showStates.voltage ? 180 : 0}deg)`}}
 						/>
@@ -242,7 +262,15 @@ export default function EquipmentFilter({
 									key={`max-${filters.filterVoltage.max}`}
 									placeholder="Max voltage"
 								/>
-								<button type="submit" className={styles.inputFilters_button}>OK</button>
+								<button type="submit"
+								        className='btn btn_outline'
+								        style={{
+									        color: '#50AE55',
+									        borderColor: '#50AE55',
+									        padding: '10px 17px',
+									        height: '40px',
+									        marginLeft: '8px'
+								        }}>OK</button>
 							</div>
 						</form>
 						<div className={styles.sliderContainer}>
@@ -264,7 +292,7 @@ export default function EquipmentFilter({
 			</li>
 
 			{/* Condition Filter */}
-			<li className={`${styles.checkboxes} ${!showStates.condition && styles.left_li__hide} ${styles.filter_condition}`}>
+			<li className={`${styles.left_li} ${!showStates.condition && styles.left_li__hide} ${styles.filter_condition}`}>
 				<h3
 					className={styles.left_h3}
 					onClick={() => toggleFilterSection('condition')}
@@ -273,10 +301,10 @@ export default function EquipmentFilter({
 					{!isMobile && (
 						<Image
 							aria-hidden
-							src="/bottom.svg"
+							src="/images/rounder-right.svg"
 							alt="Arrow icon"
-							width={20}
-							height={20}
+							width={24}
+							height={24}
 							className={styles.h3_icon}
 							style={{transform: `rotate(${showStates.condition ? 180 : 0}deg)`}}
 						/>
@@ -300,7 +328,7 @@ export default function EquipmentFilter({
 			</li>
 
 			{/* Body Type Filter */}
-			<li className={`${styles.checkboxes} ${!showStates.bodyType && styles.left_li__hide} ${styles.filter_bodyType}`}>
+			<li className={`${styles.left_li} ${!showStates.bodyType && styles.left_li__hide} ${styles.filter_bodyType}`}>
 				<h3
 					className={styles.left_h3}
 					onClick={() => toggleFilterSection('bodyType')}
@@ -309,10 +337,10 @@ export default function EquipmentFilter({
 					{!isMobile && (
 						<Image
 							aria-hidden
-							src="/bottom.svg"
+							src="/images/rounder-right.svg"
 							alt="Arrow icon"
-							width={20}
-							height={20}
+							width={24}
+							height={24}
 							className={styles.h3_icon}
 							style={{transform: `rotate(${showStates.bodyType ? 180 : 0}deg)`}}
 						/>
@@ -336,7 +364,7 @@ export default function EquipmentFilter({
 			</li>
 
 			{/* Generator Type Filter */}
-			<li className={`${styles.checkboxes} ${!showStates.genType && styles.left_li__hide} ${styles.filter_genType}`}>
+			<li className={`${styles.left_li} ${!showStates.genType && styles.left_li__hide} ${styles.filter_genType}`}>
 				<h3
 					className={styles.left_h3}
 					onClick={() => toggleFilterSection('genType')}
@@ -345,10 +373,10 @@ export default function EquipmentFilter({
 					{!isMobile && (
 						<Image
 							aria-hidden
-							src="/bottom.svg"
+							src="/images/rounder-right.svg"
 							alt="Arrow icon"
-							width={20}
-							height={20}
+							width={24}
+							height={24}
 							className={styles.h3_icon}
 							style={{transform: `rotate(${showStates.genType ? 180 : 0}deg)`}}
 						/>
@@ -372,138 +400,156 @@ export default function EquipmentFilter({
 			</li>
 
 			{/* Year Filter */}
-			<li className={`${styles.left_li} ${!showStates.year && styles.left_li__hide} ${styles.filter_year}`}>
-				<h3
-					className={styles.left_h3}
-					onClick={() => toggleFilterSection('year')}
-				>
-					{t("equipment.filters.items.release")}
-					{!isMobile && (
-						<Image
-							aria-hidden
-							src="/bottom.svg"
-							alt="Arrow icon"
-							width={20}
-							height={20}
-							className={styles.h3_icon}
-							style={{transform: `rotate(${showStates.year ? 180 : 0}deg)`}}
-						/>
-					)}
-				</h3>
-				{showStates.year && (
-					<div className={styles.inputFilters}>
-						<form onSubmit={(e) => {
-							e.preventDefault();
-							filters.applyYearFilter(
-								e.target.elements.minYear.value,
-								e.target.elements.maxYear.value
-							);
-						}}>
-							<div className={styles.inputs}>
-								<input
-									className={styles.inputFilters_input}
-									type="number"
-									name="minYear"
-									defaultValue={filters.filterYear.min}
-									key={`min-${filters.filterYear.min}`}
-									placeholder="Min year"
-								/>
-								<span className={styles.inputFilters_span}>-</span>
-								<input
-									className={styles.inputFilters_input}
-									type="number"
-									name="maxYear"
-									defaultValue={filters.filterYear.max}
-									key={`max-${filters.filterYear.max}`}
-									placeholder="Max year"
-								/>
-								<button type="submit" className={styles.inputFilters_button}>OK</button>
-							</div>
-						</form>
-						<div className={styles.sliderContainer}>
-							<Slider
-								range
-								min={filters.yearRange.min}
-								max={filters.yearRange.max}
-								value={[filters.filterYear.min, filters.filterYear.max]}
-								onChange={(value) => {
-									const [min, max] = value;
-									filters.setFilterYear({min, max});
-								}}
-								step={1}
-								allowCross={false}
-							/>
-						</div>
-					</div>
-				)}
-			</li>
+			{/*<li className={`${styles.left_li} ${!showStates.year && styles.left_li__hide} ${styles.filter_year}`}>*/}
+			{/*	<h3*/}
+			{/*		className={styles.left_h3}*/}
+			{/*		onClick={() => toggleFilterSection('year')}*/}
+			{/*	>*/}
+			{/*		{t("equipment.filters.items.release")}*/}
+			{/*		{!isMobile && (*/}
+			{/*			<Image*/}
+			{/*				aria-hidden*/}
+			{/*				src="/images/rounder-right.svg"*/}
+			{/*				alt="Arrow icon"*/}
+			{/*				width={24}*/}
+			{/*				height={24}*/}
+			{/*				className={styles.h3_icon}*/}
+			{/*				style={{transform: `rotate(${showStates.year ? 180 : 0}deg)`}}*/}
+			{/*			/>*/}
+			{/*		)}*/}
+			{/*	</h3>*/}
+			{/*	{showStates.year && (*/}
+			{/*		<div className={styles.inputFilters}>*/}
+			{/*			<form onSubmit={(e) => {*/}
+			{/*				e.preventDefault();*/}
+			{/*				filters.applyYearFilter(*/}
+			{/*					e.target.elements.minYear.value,*/}
+			{/*					e.target.elements.maxYear.value*/}
+			{/*				);*/}
+			{/*			}}>*/}
+			{/*				<div className={styles.inputs}>*/}
+			{/*					<input*/}
+			{/*						className={styles.inputFilters_input}*/}
+			{/*						type="number"*/}
+			{/*						name="minYear"*/}
+			{/*						defaultValue={filters.filterYear.min}*/}
+			{/*						key={`min-${filters.filterYear.min}`}*/}
+			{/*						placeholder="Min year"*/}
+			{/*					/>*/}
+			{/*					<span className={styles.inputFilters_span}>-</span>*/}
+			{/*					<input*/}
+			{/*						className={styles.inputFilters_input}*/}
+			{/*						type="number"*/}
+			{/*						name="maxYear"*/}
+			{/*						defaultValue={filters.filterYear.max}*/}
+			{/*						key={`max-${filters.filterYear.max}`}*/}
+			{/*						placeholder="Max year"*/}
+			{/*					/>*/}
+			{/*					<button type="submit"*/}
+			{/*					        className="btn btn_outline"*/}
+			{/*					        style={{*/}
+			{/*						        color: "#50AE55",*/}
+			{/*						        borderColor: "#50AE55",*/}
+			{/*						        padding: "10px 17px",*/}
+			{/*						        height: "40px",*/}
+			{/*						        marginLeft: "8px"*/}
+			{/*					        }}>OK*/}
+			{/*					</button>*/}
+			{/*				</div>*/}
+			{/*			</form>*/}
+			{/*			<div className={styles.sliderContainer}>*/}
+			{/*				<Slider*/}
+			{/*					range*/}
+			{/*					min={filters.yearRange.min}*/}
+			{/*					max={filters.yearRange.max}*/}
+			{/*					value={[filters.filterYear.min, filters.filterYear.max]}*/}
+			{/*					onChange={(value) => {*/}
+			{/*						const [min, max] = value;*/}
+			{/*						filters.setFilterYear({min, max});*/}
+			{/*					}}*/}
+			{/*					step={1}*/}
+			{/*					allowCross={false}*/}
+			{/*				/>*/}
+			{/*			</div>*/}
+			{/*		</div>*/}
+			{/*	)}*/}
+			{/*</li>*/}
 
 			{/* Price Filter */}
-			<li className={`${styles.left_li} ${!showStates.price && styles.left_li__hide} ${styles.filter_price}`}>
-				<h3
-					className={styles.left_h3}
-					onClick={() => toggleFilterSection('price')}
-				>
-					{t("equipment.filters.items.price")}
-					{!isMobile && (
-						<Image
-							aria-hidden
-							src="/bottom.svg"
-							alt="Arrow icon"
-							width={20}
-							height={20}
-							className={styles.h3_icon}
-							style={{transform: `rotate(${showStates.price ? 180 : 0}deg)`}}
-						/>
-					)}
-				</h3>
-				{showStates.price && (
-					<div className={styles.inputFilters}>
-						<form onSubmit={(e) => {
-							e.preventDefault();
-							filters.applyPriceFilter(
-								e.target.elements.minPrice.value,
-								e.target.elements.maxPrice.value
-							);
-						}}>
-							<div className={styles.inputs}>
-								<input
-									className={styles.inputFilters_input}
-									type="number"
-									name="minPrice"
-									defaultValue={filters.filterPrice.min}
-									key={`min-${filters.filterPrice.min}`}
-									placeholder="Min price"
-								/>
-								<span className={styles.inputFilters_span}>-</span>
-								<input
-									className={styles.inputFilters_input}
-									type="number"
-									name="maxPrice"
-									defaultValue={filters.filterPrice.max}
-									key={`max-${filters.filterPrice.max}`}
-									placeholder="Max price"
-								/>
-								<button type="submit" className={styles.inputFilters_button}>OK</button>
-							</div>
-						</form>
-						<div className={styles.sliderContainer}>
-							<Slider
-								range
-								min={filters.priceRange.min}
-								max={filters.priceRange.max}
-								value={[filters.filterPrice.min, filters.filterPrice.max]}
-								onChange={(value) => {
-									const [min, max] = value;
-									filters.setFilterPrice({min, max});
-								}}
-								step={1}
-								allowCross={false}
-							/>
-						</div>
-					</div>
-				)}
-			</li>
+			{/*<li className={`${styles.left_li} ${!showStates.price && styles.left_li__hide} ${styles.filter_price}`}>*/}
+			{/*	<h3*/}
+			{/*		className={styles.left_h3}*/}
+			{/*		onClick={() => toggleFilterSection('price')}*/}
+			{/*	>*/}
+			{/*		{t("equipment.filters.items.price")}*/}
+			{/*		{!isMobile && (*/}
+			{/*			<Image*/}
+			{/*				aria-hidden*/}
+			{/*				src="/images/rounder-right.svg"*/}
+			{/*				alt="Arrow icon"*/}
+			{/*				width={24}*/}
+			{/*				height={24}*/}
+			{/*				className={styles.h3_icon}*/}
+			{/*				style={{transform: `rotate(${showStates.price ? 180 : 0}deg)`}}*/}
+			{/*			/>*/}
+			{/*		)}*/}
+			{/*	</h3>*/}
+			{/*	{showStates.price && (*/}
+			{/*		<div className={styles.inputFilters}>*/}
+			{/*			<form onSubmit={(e) => {*/}
+			{/*				e.preventDefault();*/}
+			{/*				filters.applyPriceFilter(*/}
+			{/*					e.target.elements.minPrice.value,*/}
+			{/*					e.target.elements.maxPrice.value*/}
+			{/*				);*/}
+			{/*			}}>*/}
+			{/*				<div className={styles.inputs}>*/}
+			{/*					<input*/}
+			{/*						className={styles.inputFilters_input}*/}
+			{/*						type="number"*/}
+			{/*						name="minPrice"*/}
+			{/*						defaultValue={filters.filterPrice.min}*/}
+			{/*						key={`min-${filters.filterPrice.min}`}*/}
+			{/*						placeholder="Min price"*/}
+			{/*					/>*/}
+			{/*					<span className={styles.inputFilters_span}>-</span>*/}
+			{/*					<input*/}
+			{/*						className={styles.inputFilters_input}*/}
+			{/*						type="number"*/}
+			{/*						name="maxPrice"*/}
+			{/*						defaultValue={filters.filterPrice.max}*/}
+			{/*						key={`max-${filters.filterPrice.max}`}*/}
+			{/*						placeholder="Max price"*/}
+			{/*					/>*/}
+			{/*					<button type="submit"*/}
+			{/*					        className="btn btn_outline"*/}
+			{/*					        style={{*/}
+			{/*						        color: "#50AE55",*/}
+			{/*						        borderColor: "#50AE55",*/}
+			{/*						        padding: "10px 17px",*/}
+			{/*						        height: "40px",*/}
+			{/*						        marginLeft: "8px"*/}
+			{/*					        }}>OK*/}
+			{/*					</button>*/}
+			{/*				</div>*/}
+			{/*			</form>*/}
+			{/*			<div className={styles.sliderContainer}>*/}
+			{/*				<Slider*/}
+			{/*					range*/}
+			{/*					min={filters.priceRange.min}*/}
+			{/*					max={filters.priceRange.max}*/}
+			{/*					value={[filters.filterPrice.min, filters.filterPrice.max]}*/}
+			{/*					onChange={(value) => {*/}
+			{/*						const [min, max] = value;*/}
+			{/*						filters.setFilterPrice({min, max});*/}
+			{/*					}}*/}
+			{/*					step={1}*/}
+			{/*					allowCross={false}*/}
+			{/*				/>*/}
+			{/*			</div>*/}
+			{/*		</div>*/}
+			{/*	)}*/}
+			{/*</li>*/}
 		</ul>
 	);
 }

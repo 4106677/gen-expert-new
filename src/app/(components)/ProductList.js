@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useTranslation } from "react-i18next";
 import styles from "../equipment/equipment.module.css";
 import { bbExtractor } from "@/helpers/bbExtractor";
+import CustomLink from "@/app/(components)/CustomLink/customLink";
 
 export default function ProductList({ products, onOpenModal }) {
 	const {t} = useTranslation("common");
@@ -30,24 +31,25 @@ export default function ProductList({ products, onOpenModal }) {
 					<div className={styles.productsSection}>
 						<h3 className={styles.product_h3}>{item.manufacturer} {item.model}</h3>
 						<ul className={styles.productDescription}>
-							<li>{item.power} {item.powerUnit}</li>
-							<li>{item.price} {item.priceUnit}</li>
-							<li>{item.voltage} {item.voltageUnit}</li>
-							<li>{item.condition}</li>
-							<li>{item.year}</li>
-							<li>{item.hours} {item.hoursUnit}</li>
+							<li className={styles.productDescription_item}><span className={styles.productDescription_itemSpan}>Електрична потужність:</span>{item.power} {item.powerUnit}</li>
+							<li className={styles.productDescription_item}><span className={styles.productDescription_itemSpan}>Напруга:</span>{item.price} {item.priceUnit}</li>
+							<li className={styles.productDescription_item}><span className={styles.productDescription_itemSpan}>Text</span>{item.voltage} {item.voltageUnit}</li>
+							<li className={styles.productDescription_item}><span className={styles.productDescription_itemSpan}>Text</span>{item.condition}</li>
+							<li className={styles.productDescription_item}><span className={styles.productDescription_itemSpan}>Text</span>{item.year}</li>
+							<li className={styles.productDescription_item}><span className={styles.productDescription_itemSpan}>Text</span>{item.hours} {item.hoursUnit}</li>
 						</ul>
-						<p
-							dangerouslySetInnerHTML={{__html: item.description}}
-							className={styles.productsSection_p}
-						/>
-						<button
-							type="button"
-							className={styles.product_button}
-							onClick={(event) => onOpenModal(item, event)}
-						>
-							{t("equipment.button")}
-						</button>
+						<CustomLink href={`/equipment/${item.article}`} text='Детально' height={40} style={{border: '1px solid #50AE55', width: 'max-content', marginTop: '15px'}}></CustomLink>
+						{/*<p*/}
+						{/*	dangerouslySetInnerHTML={{__html: item.description}}*/}
+						{/*	className={styles.productsSection_p}*/}
+						{/*/>*/}
+						{/*<button*/}
+						{/*	type="button"*/}
+						{/*	className={styles.product_button}*/}
+						{/*	onClick={(event) => onOpenModal(item, event)}*/}
+						{/*>*/}
+						{/*	{t("equipment.button")}*/}
+						{/*</button>*/}
 					</div>
 				</li>
 			))}

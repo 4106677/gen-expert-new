@@ -1,21 +1,7 @@
 import './hero.css';
+import Stripe from "@/app/(components)/Stripe/stripe";
 
 export default function Hero() {
-	const brandLogos = [
-		'weichai.png',
-		'mwm.png',
-		'guascor.png',
-		'jenbacher.png',
-		'man.png',
-		'mtu.png',
-		'bergen.png',
-		'cat.png',
-		'mitsubishi.png',
-		'wartsila.png',
-		'perkins.png',
-		'supermaly.png',
-	];
-
 	return <div className='hero-container'>
 		<div className="hero-main">
 			<div className="video-wrapper">
@@ -62,27 +48,6 @@ export default function Hero() {
 				</li>
 			</ul>
 		</div>
-		<div className="hero-brands">
-			<div className="brands-track">
-				{/* Первый набор логотипов */}
-				{brandLogos.map((logo, index) => (
-					<img
-						key={`first-${index}`}
-						src={`/images/brands/${logo}`}
-						alt={`Brand ${index + 1}`}
-						className="brand-logo"
-					/>
-				))}
-				{/* Дублируем логотипы для бесшовной анимации */}
-				{brandLogos.map((logo, index) => (
-					<img
-						key={`second-${index}`}
-						src={`/images/brands/${logo}`}
-						alt={`Brand ${index + 1}`}
-						className="brand-logo"
-					/>
-				))}
-			</div>
-		</div>
+		<Stripe/>
 	</div>
 }

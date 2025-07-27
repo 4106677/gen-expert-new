@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import './customLink.css';
 
-const CustomLink = ({ text = 'Text', href = '/', height = 48 }) => {
+const CustomLink = ({ text = 'Text', href = '/', height = 48, style }) => {
 	const getStyles = (height) => {
 		switch (height) {
 			case 48:
@@ -42,7 +42,7 @@ const CustomLink = ({ text = 'Text', href = '/', height = 48 }) => {
 	const styles = getStyles(height);
 
 	return (
-		<Link href={href} className='customLink' style={styles}>
+		<Link href={href} className='customLink' style={{...styles, ...style}}>
 			{text}
 			<Image
 				className='customLink-image'

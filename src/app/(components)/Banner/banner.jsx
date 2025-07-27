@@ -2,14 +2,31 @@ import styles from './banner.module.css'
 import React from "react";
 import Image from "next/image"
 
-const Banner = () => {
+const Banner = ({header, direction = 'default', style}) => {
 	return (
-		<div className={styles.main_banner}>
+		<div className={styles.main_banner} style={{
+			height: direction === 'reverse' ? '397px' : '335px', ...style
+		}}>
 			<div className="container">
-				<Image className={styles.main_banner_image} src='/images/MainPage/gpu.webp' alt='GPU' width={703}
-				       height={390}></Image>
-				<div className={styles.main_banner_container}>
-					<h3 className={styles.main_banner_header}>Гнучкі можливості співпраці</h3>
+				<Image
+					style={{
+						transform: direction === "reverse"  ? "scaleX(-1)" : '',
+						right: direction === "reverse" ? 0 : "auto",
+						left: direction === "reverse" ? "auto" : 0,
+						height: direction === "reverse" ? '302px' : "390px",
+						top: direction === "reverse" ? '62px' : 0,
+					}}
+					className={styles.main_banner_image}
+					src='/images/MainPage/gpu.webp' alt='GPU'
+					width={703}
+					height={390}>
+				</Image>
+				<div
+					className={styles.main_banner_container}
+					style={{
+						marginLeft: direction === "reverse" ? 0 : "auto",
+					}}>
+					<h3 className={styles.main_banner_header}>{header || 'Гнучкі можливості співпраці'}</h3>
 					<div className={styles.main_banner_items}>
 						<div className={styles.main_banner_item}>
 							<Image src='/images/check-verified.svg' width={25} height={25} alt='check verified'></Image>

@@ -1,6 +1,7 @@
 .hero-container {
     width: 100%;
     padding: 0 32px;
+    margin-bottom: 100px;
 }
 
 .hero-main {
@@ -9,6 +10,8 @@
     width: 100%;
     height: 582px;
     overflow: hidden;
+    margin-bottom: 24px;
+
 }
 
 .video-wrapper {
@@ -79,43 +82,4 @@
 .hero-description__bold {
     font-weight: 600;
     font-size: 24px;
-}
-
-.hero-brands {
-    height: 66px;
-    margin-top: 24px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: visible;
-    margin-bottom: 100px;
-}
-
-.brands-track {
-    display: flex;
-    align-items: center;
-    animation: scroll-brands 30s linear infinite;
-    white-space: nowrap;
-}
-
-.brand-logo {
-    height: 40px;
-    width: auto;
-    margin: 0 40px;
-    object-fit: contain;
-    transition: opacity 0.3s ease;
-}
-
-.brand-logo:hover {
-    opacity: 1;
-    filter: grayscale(0%);
-}
-
-@keyframes scroll-brands {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
 }

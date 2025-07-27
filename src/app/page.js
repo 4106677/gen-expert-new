@@ -8,7 +8,7 @@ import Hero from "@/app/(components)/MainPage/Hero/hero";
 import Fields from "@/app/(components)/MainPage/Fields/fields";
 import Possibilities from "@/app/(components)/MainPage/Possibilities/possibilities";
 import Team from "@/app/(components)/MainPage/Team/team";
-import Banner from "@/app/(components)/MainPage/Banner/banner";
+import Banner from "@/app/(components)/Banner/banner";
 import Consultation from "@/app/(components)/MainPage/Consultation/consultation";
 import Tips from "@/app/(components)/MainPage/Tips/tips";
 import Blog from "@/app/(components)/MainPage/Blog/blog";
@@ -56,7 +56,7 @@ export default function Home() {
             <Fields/>
             <Possibilities/>
             <Team/>
-            <Banner/>
+            <Banner header='Гнучкі можливості співпраці' style={{ marginBottom: '55px'}}/>
             <Consultation/>
             <Tips data={data}  />
             <Blog/>

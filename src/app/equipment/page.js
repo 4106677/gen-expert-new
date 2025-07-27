@@ -13,23 +13,25 @@ import { useResponsive } from "./hooks/useResponsive";
 import SortingHeader from "@/app/(components)/SortingHeader";
 import EquipmentFilter from "@/app/(components)/EquipmentFilter";
 import ProductList from "@/app/(components)/ProductList";
+import Banner from "@/app/(components)/Banner/banner";
+import Stripe from "@/app/(components)/Stripe/stripe";
 
 
 export default function Equipment({ modalId }) {
 	const [data, setData] = useState(null);
 	const { t } = useTranslation("common");
 	const { lang } = useLanguage();
-	const { showModal, setShowModal } = useModal();
+	// const { showModal, setShowModal } = useModal();
 
 	// Use our custom hooks
 	const { windowWidth, isFilterVisible, toggleFilter, isMounted } = useResponsive();
 	const filters = useEquipmentFilters(data);
 
 	// Handle modal open
-	const handleOpenModal = (item, event) => {
-		event.preventDefault();
-		setShowModal(item);
-	};
+	// const handleOpenModal = (item, event) => {
+	// 	event.preventDefault();
+	// 	setShowModal(item);
+	// };
 
 	// Fetch data from Google Sheets
 	useEffect(() => {
@@ -56,33 +58,40 @@ export default function Equipment({ modalId }) {
 
 	return (
 		<div className={styles.main}>
-			<h1 className={styles.title}>{t("equipment.title")}</h1>
+			<div className={`${styles.wrapper} container`}>
+				<Banner header='Каталог ГПУ під потреби бізнесу та держ установ'
+				        direction='reverse'
+				        style={{ marginBottom: '46px' }} />
+				<Stripe style={{ marginBottom: '46px' }} />
+				{/*<h1 className={styles.title}>{t("equipment.title")}</h1>*/}
 
-			{/* Sorting and Search Header */}
-			<SortingHeader
-				search={filters.search}
-				setSearch={filters.setSearch}
-				selectedSorting={filters.selectedSorting}
-				setSelectedSorting={filters.setSelectedSorting}
-				handleResetSorting={filters.handleResetSorting}
-				isFilterVisible={isFilterVisible}
-				toggleFilter={toggleFilter}
-			/>
+				{/* Sorting and Search Header */}
 
-			<div className={styles.container}>
-				{/* Filter Sidebar */}
-				<EquipmentFilter
-					filters={filters}
-					isFilterVisible={isFilterVisible}
-					windowWidth={windowWidth}
-				/>
 
-				{/* Product List Section */}
-				<div className={styles.right}>
-					<ProductList
-						products={filters.filterData}
-						onOpenModal={handleOpenModal}
+				<div className={styles.container}>
+					{/* Filter Sidebar */}
+					<EquipmentFilter
+						filters={filters}
+						isFilterVisible={isFilterVisible}
+						windowWidth={windowWidth}
 					/>
+
+					{/* Product List Section */}
+					<div className={styles.right}>
+						<SortingHeader
+							search={filters.search}
+							setSearch={filters.setSearch}
+							// selectedSorting={filters.selectedSorting}
+							// setSelectedSorting={filters.setSelectedSorting}
+							// handleResetSorting={filters.handleResetSorting}
+							isFilterVisible={isFilterVisible}
+							toggleFilter={toggleFilter}
+						/>
+						<ProductList
+							products={filters.filterData}
+							// onOpenModal={handleOpenModal}
+						/>
+					</div>
 				</div>
 			</div>
 		</div>

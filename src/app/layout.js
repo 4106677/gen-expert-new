@@ -4,8 +4,8 @@ import Header from "@/app/(components)/Header/header";
 import Container from "@/app/(components)/Container/container";
 import SheetDataProvider from "@/app/(components)/SheetDataProvider";
 import ClientLayout from "./ClientLayout";
-import Modal from "@/app/(components)/Modal/modal";
-import {ContactsModal} from "@/app/(components)/ContactsModal/contactsModal";
+// import Modal from "@/app/(components)/Modal/modal";
+// import {ContactsModal} from "@/app/(components)/ContactsModal/contactsModal";
 import {Footer} from "@/app/(components)/Footer/footer";
 import styles from "@/app/(components)/Footer/footer.module.css";
 import GoogleTagManagerNoScript from "@/app/(components)/GoogleTagManagerNoScript";
@@ -54,9 +54,9 @@ export default async function RootLayout({children}) {
                 <Container>
                     <main>{children}</main>
                 </Container>
-                <Footer className={styles.mainFooter}/>
-                <Modal/>
-                <ContactsModal/>
+                <Footer/>
+                {/*<Modal/>*/}
+                {/*<ContactsModal/>*/}
             </SheetDataProvider>
         </ClientLayout>
         </body>

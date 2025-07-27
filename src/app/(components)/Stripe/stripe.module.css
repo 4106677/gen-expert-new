@@ -1,0 +1,37 @@
+.brands {
+    height: 66px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    /*margin-bottom: 100px;*/
+}
+
+.brands_track {
+    display: flex;
+    align-items: center;
+    animation: scroll_brands 30s linear infinite;
+    white-space: nowrap;
+}
+
+.brand_logo {
+    height: 40px;
+    width: auto;
+    margin: 0 40px;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+.brand_logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+@keyframes scroll_brands {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

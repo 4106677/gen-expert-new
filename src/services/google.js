@@ -5,6 +5,10 @@ const SHEET_ID = "1NzNqQsCbNPYqT6IyxrwDabslauegh_QQg8TSLJY7Ydo";
 const RESERVE_API_KEY = "AIzaSyBl591hnUwv_D80UgQetNPiiJC5f5QfERI";
 const RESERVE_SHEET_ID = "1ORLwDrBJ2ZkihqqAiByJ3zSfMkLuQW7-YydGuQdHTQo";
 
+// Cache для зберігання даних
+const cache = new Map();
+const CACHE_DURATION = 5 * 60 * 1000; // 5 хвилин
+
 const processSheetData = (data) => {
 	return (
 		data.values
@@ -46,7 +50,38 @@ const processSheetData = (data) => {
 	);
 };
 
+// Функція для перевірки чи кеш актуальний
+const isCacheValid = (cacheEntry) => {
+	return cacheEntry && (Date.now() - cacheEntry.timestamp) < CACHE_DURATION;
+};
+
+// Функція для отримання даних з кешу
+const getCachedData = (cacheKey) => {
+	const cacheEntry = cache.get(cacheKey);
+	if (isCacheValid(cacheEntry)) {
+		console.log(`Data loaded from cache for ${cacheKey}`);
+		return cacheEntry.data;
+	}
+	return null;
+};
+
+// Функція для збереження даних в кеш
+const setCachedData = (cacheKey, data) => {
+	cache.set(cacheKey, {
+		data,
+		timestamp: Date.now()
+	});
+};
+
 export async function fetchGoogleSheetData(sheet) {
+	const cacheKey = `${sheet}_${SHEET_ID}`;
+
+	// Спробуємо отримати дані з кешу
+	const cachedData = getCachedData(cacheKey);
+	if (cachedData) {
+		return cachedData;
+	}
+
 	const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${sheet}${SHEET_RANGE}?key=${API_KEY}`;
 	const reserveUrl = `https://sheets.googleapis.com/v4/spreadsheets/${RESERVE_SHEET_ID}/values/${sheet}${SHEET_RANGE}?key=${RESERVE_API_KEY}`;
 
@@ -61,12 +96,35 @@ export async function fetchGoogleSheetData(sheet) {
 	};
 
 	try {
-		return await fetchData(url, "primary");
+		const data = await fetchData(url, "primary");
+		setCachedData(cacheKey, data);
+		return data;
 	} catch (error) {
 		try {
-			return await fetchData(reserveUrl, "reserve");
+			const data = await fetchData(reserveUrl, "reserve");
+			setCachedData(cacheKey, data);
+			return data;
 		} catch (reserveError) {
 			return [];
 		}
 	}
 }
+
+// Функція для примусового очищення кешу (якщо потрібно)
+export const clearCache = () => {
+	cache.clear();
+	console.log('Cache cleared');
+};
+
+// Функція для отримання статусу кешу
+export const getCacheStatus = () => {
+	const status = {};
+	cache.forEach((value, key) => {
+		status[key] = {
+			isValid: isCacheValid(value),
+			age: Date.now() - value.timestamp,
+			itemsCount: value.data.length
+		};
+	});
+	return status;
+};
