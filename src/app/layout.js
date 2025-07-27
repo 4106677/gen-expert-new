@@ -2,7 +2,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/app/(components)/Header/header";
 import Container from "@/app/(components)/Container/container";
-import SheetDataProvider from "@/app/(components)/SheetDataProvider";
 import ClientLayout from "./ClientLayout";
 // import Modal from "@/app/(components)/Modal/modal";
 // import {ContactsModal} from "@/app/(components)/ContactsModal/contactsModal";
@@ -10,6 +9,7 @@ import {Footer} from "@/app/(components)/Footer/footer";
 import styles from "@/app/(components)/Footer/footer.module.css";
 import GoogleTagManagerNoScript from "@/app/(components)/GoogleTagManagerNoScript";
 import GoogleTagManager from "@/app/(components)/GoogleTagManager";
+import {SheetDataProvider} from "@/context/SheetDataContext";
 
 const roboto = localFont({
     src: "../../public/fonts/Roboto.ttf",

@@ -1,11 +1,9 @@
 // src/app/equipment/page.js
 'use client';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/app/context";
-import { useModal } from "@/context/ModalContext";
 import styles from "./equipment.module.css";
-import { fetchGoogleSheetData } from "@/services/google";
 
 // Import custom hooks and components
 import { useEquipmentFilters } from "./hooks/useEquipmentFilters";
@@ -15,43 +13,45 @@ import EquipmentFilter from "@/app/(components)/EquipmentFilter";
 import ProductList from "@/app/(components)/ProductList";
 import Banner from "@/app/(components)/Banner/banner";
 import Stripe from "@/app/(components)/Stripe/stripe";
-
+import {useSheetData} from "@/context/SheetDataContext";
 
 export default function Equipment({ modalId }) {
-	const [data, setData] = useState(null);
 	const { t } = useTranslation("common");
 	const { lang } = useLanguage();
-	// const { showModal, setShowModal } = useModal();
+	const { data, loading, error, fetchData } = useSheetData();
 
 	// Use our custom hooks
 	const { windowWidth, isFilterVisible, toggleFilter, isMounted } = useResponsive();
 	const filters = useEquipmentFilters(data);
 
-	// Handle modal open
-	// const handleOpenModal = (item, event) => {
-	// 	event.preventDefault();
-	// 	setShowModal(item);
-	// };
-
-	// Fetch data from Google Sheets
+	// Завантажуємо або оновлюємо дані при зміні мови
 	useEffect(() => {
-		async function loadSheetData() {
-			try {
-				const sheetData = await fetchGoogleSheetData(lang.toUpperCase());
-				setData(sheetData);
-			} catch (error) {
-				console.error("Failed to fetch sheet data:", error.message);
-				setData([]);
-			}
+		if (lang && isMounted) {
+			fetchData(lang);
 		}
-		loadSheetData();
-	}, [lang]);
+	}, [lang, isMounted, fetchData]);
 
 	// Show loading state
-	if (!isMounted) {
+	if (!isMounted || loading) {
 		return (
 			<div className={styles.main}>
-				<h1>Loading...</h1>
+				<div className={styles.loading}>
+					<h1>Loading...</h1>
+				</div>
+			</div>
+		);
+	}
+
+	// Show error state
+	if (error) {
+		return (
+			<div className={styles.main}>
+				<div className={styles.error}>
+					<h1>Error loading data: {error}</h1>
+					<button onClick={() => fetchData(lang)}>
+						Try again
+					</button>
+				</div>
 			</div>
 		);
 	}
@@ -59,14 +59,12 @@ export default function Equipment({ modalId }) {
 	return (
 		<div className={styles.main}>
 			<div className={`${styles.wrapper} container`}>
-				<Banner header='Каталог ГПУ під потреби бізнесу та держ установ'
-				        direction='reverse'
-				        style={{ marginBottom: '46px' }} />
+				<Banner
+					header='Каталог ГПУ під потреби бізнесу та держ установ'
+					direction='reverse'
+					style={{ marginBottom: '46px' }}
+				/>
 				<Stripe style={{ marginBottom: '46px' }} />
-				{/*<h1 className={styles.title}>{t("equipment.title")}</h1>*/}
-
-				{/* Sorting and Search Header */}
-
 
 				<div className={styles.container}>
 					{/* Filter Sidebar */}
@@ -81,15 +79,11 @@ export default function Equipment({ modalId }) {
 						<SortingHeader
 							search={filters.search}
 							setSearch={filters.setSearch}
-							// selectedSorting={filters.selectedSorting}
-							// setSelectedSorting={filters.setSelectedSorting}
-							// handleResetSorting={filters.handleResetSorting}
 							isFilterVisible={isFilterVisible}
 							toggleFilter={toggleFilter}
 						/>
 						<ProductList
 							products={filters.filterData}
-							// onOpenModal={handleOpenModal}
 						/>
 					</div>
 				</div>

@@ -5,14 +5,14 @@ import {fetchGoogleSheetData} from "@/services/google";
 import {useEffect, useState} from "react";
 import {useLanguage} from "@/app/context";
 import Hero from "@/app/(components)/MainPage/Hero/hero";
-import Fields from "@/app/(components)/MainPage/Fields/fields";
+import Fields from "@/app/(components)/Fields/fields";
 import Possibilities from "@/app/(components)/MainPage/Possibilities/possibilities";
 import Team from "@/app/(components)/MainPage/Team/team";
 import Banner from "@/app/(components)/Banner/banner";
 import Consultation from "@/app/(components)/MainPage/Consultation/consultation";
 import Tips from "@/app/(components)/MainPage/Tips/tips";
 import Blog from "@/app/(components)/MainPage/Blog/blog";
-import ContactForm from "@/app/(components)/MainPage/ContactForm/contactForm";
+import ContactForm from "@/app/(components)/ContactForm/contactForm";
 
 export default function Home() {
     const [data, setData] = useState(null);
@@ -58,7 +58,7 @@ export default function Home() {
             <Team/>
             <Banner header='Гнучкі можливості співпраці' style={{ marginBottom: '55px'}}/>
             <Consultation/>
-            <Tips data={data}  />
+            <Tips />
             <Blog/>
             <ContactForm/>
         </div>

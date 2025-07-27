@@ -3,8 +3,10 @@ import styles from "./tips.module.css";
 import Image from "next/image"
 import CustomLink from "@/app/(components)/CustomLink/customLink";
 import {bbExtractor} from "@/helpers/bbExtractor";
+import {useSheetData} from "@/context/SheetDataContext";
 
-const Tips = ({data}) => {
+const Tips = ({ header='ГПУ від 250-4500 кВт'}) => {
+	const { data } = useSheetData();
 	const [currentSlide, setCurrentSlide] = useState(0);
 	const itemsPerSlide = 3;
 	const totalSlides = Math.ceil(data?.length / itemsPerSlide) || 0;
@@ -27,7 +29,7 @@ const Tips = ({data}) => {
 		<div className={styles.tips}>
 			<div className={`${styles.tips_container} container`}>
 				<div className={styles.tips_heading}>
-					<h2 className={styles.tips_header}>ГПУ від 250-4500 кВт</h2>
+					<h2 className={styles.tips_header}>{header}</h2>
 					<CustomLink href='/equipment' height={48} text='Всі ГПУ'/>
 				</div>
 

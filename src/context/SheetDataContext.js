@@ -46,8 +46,22 @@ export function SheetDataProvider({ children }) {
 
 	// Функція для отримання одного елемента по ID
 	const getItemById = (id) => {
-		if (!data) return null;
-		return data.find(item => item.id === id || item.id === parseInt(id));
+		if (!data || !id) return null;
+
+		// Пробуємо знайти по точному збігу
+		let item = data.find(item => item.id === id);
+
+		// Якщо не знайдено, пробуємо порівняти як рядки
+		if (!item) {
+			item = data.find(item => String(item.article) === String(id));
+		}
+
+		// Якщо не знайдено, пробуємо порівняти як числа (якщо можливо)
+		if (!item && !isNaN(id)) {
+			item = data.find(item => item.id === parseInt(id) || String(item.id) === id);
+		}
+
+		return item;
 	};
 
 	// Функція для очищення кешу (якщо потрібно)
