@@ -83,4 +83,21 @@
     object-fit: cover;
     border-radius: 16px;
     overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.news_item {
+    display: flex;
+    flex-direction: column;
+}
+
+.news_item__header {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.news_item__span {
+    color: #475569;
+    margin-bottom: 16px;
 }

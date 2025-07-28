@@ -94,15 +94,19 @@ const BlogPage = () => {
 							.map(({id, image, title, subtitle, href}, index) => (
 								<React.Fragment key={index + id}>
 									{href !== item.href &&
-										<div key={id || index} className={styles.news_list__item}>
+										<div key={id || index} className={styles.news_item}>
 											<Image className={styles.news_image}
 											       src={image}
 											       alt={title}
 											       width={385}
 											       height={233}/>
-											<h4 className={styles.list__itemHeader}>{title}</h4>
-											<span className={styles.list__itemSpan}>{subtitle}</span>
-											<CustomLink href={href} height={40} text={t("blog.details")}/>
+											<h4 className={styles.news_item__header}>{title}</h4>
+											<span className={styles.news_item__span}>{subtitle}</span>
+											<CustomLink href={`/blog/${href}`} height={40} text={t("blog.details")} style={{
+												marginTop: "auto",
+												border: '1px solid #50AE55',
+												width: 'max-content',
+											}}/>
 										</div>
 									}
 								</React.Fragment>
