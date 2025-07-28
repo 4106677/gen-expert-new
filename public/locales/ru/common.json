@@ -19,31 +19,53 @@
   },
   "blog": {
     "title": "Блог",
+    "pageTitle": "Чому ГПУ – це найкращий вибір для вашого бізнесу?",
     "button": "Всі новини",
+    "pageSlug": "Що нового",
     "details": "Детальніше",
     "data": [
       {
         "id": "1",
+        "href": "bestchoice",
         "image": "/images/blog/bestchoice.jpg",
         "title": "Чому ГПУ – це найкращий вибір для вашого бізнесу?",
+        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. \nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. \n\nIt was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "detailsHeader": "Обґрунтування 1",
+        "description": "Сільськогосподарські підприємства генерують значні обсяги органічних відходів (гній, рослинні залишки, відходи переробки), які можна переробляти в біогаз шляхом анаеробного зброджування. Ці сектори потребують електроенергію для обладнання, тепло для обігріву приміщень або теплиць, а також гарячу воду для технологічних процесів. \n\nКогенераційні системи забезпечують енергоефективність, знижуючи витрати та сприяючи сталому розвитку. Наприклад, молочні ферми можуть використовувати тепло для пастеризації молока, а рослинницькі ферми – CO₂ для підвищення врожайності. Використання біогазу з відходів дозволяє досягти енергетичної незалежності, що особливо важливо для віддалених сільських регіонів.",
+        "descriptionHeader": "Обґрунтування 2",
         "subtitle": "Економія на електроенергії до 50% – знижені тарифи, відсутність платежів за передачу і розподіл..."
       },
       {
         "id": "2",
+        "href": "selection",
         "image": "/images/blog/selection.jpg",
         "title": "Як правильно вибрати газопоршневу установку",
+        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. \nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. \n\nIt was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "detailsHeader": "Обґрунтування",
+        "description": "Сільськогосподарські підприємства генерують значні обсяги органічних відходів (гній, рослинні залишки, відходи переробки), які можна переробляти в біогаз шляхом анаеробного зброджування. Ці сектори потребують електроенергію для обладнання, тепло для обігріву приміщень або теплиць, а також гарячу воду для технологічних процесів. \n\nКогенераційні системи забезпечують енергоефективність, знижуючи витрати та сприяючи сталому розвитку. Наприклад, молочні ферми можуть використовувати тепло для пастеризації молока, а рослинницькі ферми – CO₂ для підвищення врожайності. Використання біогазу з відходів дозволяє досягти енергетичної незалежності, що особливо важливо для віддалених сільських регіонів.",
+        "descriptionHeader": "Обґрунтування",
         "subtitle": "це ефективне рішення для автономного енергопостачання, зниження витрат..."
       },
       {
         "id": "3",
+        "href": "lifetime",
         "image": "/images/blog/lifetime.jpg",
         "title": "Строки служби генераторів за брендами",
+        "details": "",
+        "detailsHeader": "Обґрунтування",
+        "description": "",
+        "descriptionHeader": "Обґрунтування",
         "subtitle": "Основні види технічного обслуговування газопоршневих установок.."
       },
       {
         "id": "4",
+        "href": "strategy",
         "image": "/images/blog/strategy.jpg",
         "title": "Стратегія розподіленої генерації в Україні",
+        "details": "",
+        "detailsHeader": "Обґрунтування",
+        "description": "",
+        "descriptionHeader": "Обґрунтування",
         "subtitle": "В Україні стрімко розвивається програма розподіленої генерації, яка передбачає встановлення..."
       }
     ]
