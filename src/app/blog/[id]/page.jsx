@@ -45,8 +45,6 @@ const BlogPage = () => {
 		}
 	}, [lang, id, t]);
 
-	console.log(item)
-
 	if (loading || itemLoading) {
 		return (
 			<div >
