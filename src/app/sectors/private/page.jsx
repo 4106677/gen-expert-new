@@ -13,6 +13,8 @@ const PrivateSector = () => {
 	const tips = t('sectors.private.top_tips', { returnObjects: true });
 	const hero_tips = Object.values(t('sectors.private.hero.tips', {returnObjects: true}) || {});
 	const solar_tips = Object.values(t('sectors.private.solar.tips', {returnObjects: true}) || {});
+	const tech_type = Object.values(t('sectors.private.tech.type', {returnObjects: true}) || {});
+	const tech_body = Object.values(t('sectors.private.tech.body', {returnObjects: true}) || {});
 
 	return (
 		<>
@@ -33,8 +35,8 @@ const PrivateSector = () => {
 				</div>
 				{/*Зеленка*/}
 				<div className={styles.hero}>
-					<h3 className={styles.hero_title}>{t('sectors.private.hero.title')}</h3>
-					<span className={styles.hero_subtitle}>{t('sectors.private.hero.subtitle')}</span>
+					<h3 className={`${styles.hero_title} ${styles.title}`}>{t('sectors.private.hero.title')}</h3>
+					<span className={`${styles.hero_subtitle} ${styles.subtitle}`}>{t('sectors.private.hero.subtitle')}</span>
 					<div className={styles.hero_tips}>
 						{hero_tips?.filter(item => item && typeof item === "object")
 							.map(({image, title, subtitle}, index) => (
@@ -51,8 +53,8 @@ const PrivateSector = () => {
 				</div>
 				{/*Solar*/}
 				<div className={styles.solar}>
-					<h3 className={styles.solar_title}>{t('sectors.private.solar.title')}</h3>
-					<span className={styles.solar_subtitle}>{t('sectors.private.solar.subtitle')}</span>
+					<h3 className={`${styles.solar_title} ${styles.title}`}>{t('sectors.private.solar.title')}</h3>
+					<span className={`${styles.solar_subtitle} ${styles.subtitle}`}>{t('sectors.private.solar.subtitle')}</span>
 					<div className={styles.solar_tips}>
 						{solar_tips?.filter(item => item && typeof item === "object")
 							.map(({image, title, subtitle}, index) => (
@@ -69,6 +71,48 @@ const PrivateSector = () => {
 					<Image className={styles.solar_image}
 					       src='/images/sectors/solar.webp' alt='Hero GPU'
 					       width={1235} height={459}/>
+				</div>
+				{/*конфігурації*/}
+				<div className={styles.tech}>
+					<h3 className={`${styles.tech_title} ${styles.title}`}>{t('sectors.private.tech.title')}</h3>
+					<span
+						className={`${styles.tech_subtitle} ${styles.subtitle}`}>{t('sectors.private.tech.subtitle')}</span>
+					<div className={styles.tech_grid}>
+						<div className={styles.tech_grid__column}>
+							{tech_type?.filter(item => item && typeof item === "object")
+								.map(({image, title, subtitle, tips}, index) => (
+									<div className={styles.tech_grid__column_item} key={index + title}>
+										<h4 className={styles.tech_grid__column_title}>{title}</h4>
+										{subtitle !== "" &&
+											<span className={styles.tech_grid__column_subtitle}>{subtitle}</span>
+										}
+										<ul className={styles.tech_grid__column_list}>
+											{tips.map((i) =>
+												<li key={i}>{i}</li>
+											)}
+										</ul>
+										<Image className={styles.tech_grid__column_image} src={image} alt={title} width={240} height={230}/>
+									</div>
+								))}
+						</div>
+						<div className={styles.tech_grid__column}>
+							{tech_body?.filter(item => item && typeof item === "object")
+								.map(({image, title, subtitle, tips}, index) => (
+									<div className={`${styles.tech_grid__column_item} ${styles.tech_grid__column_custom}`} key={index + title}>
+										<h4 className={styles.tech_grid__column_title}>{title}</h4>
+										{subtitle !== "" &&
+											<span className={styles.tech_grid__column_subtitle}>{subtitle}</span>
+										}
+										<ul className={styles.tech_grid__column_list}>
+											{tips.map((i) =>
+												<li key={i}>{i}</li>
+											)}
+										</ul>
+										<Image className={styles.tech_grid__column_image} src={image} alt={title} width={375} height={400}/>
+									</div>
+								))}
+						</div>
+					</div>
 				</div>
 			</div>
 			<Tips/>
