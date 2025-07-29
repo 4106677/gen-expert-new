@@ -13,3 +13,17 @@
     font-size: 40px;
     line-height: 100%;
 }
+
+.tips {
+    display: grid;
+    gap: 25px 60px ;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 48px;
+    width: max-content;
+}
+
+.tips_item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

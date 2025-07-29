@@ -136,6 +136,8 @@ input {
   box-shadow: none !important;
 }
 
+span {display: inline-block}
+
 /*.rc-slider {*/
 /*  width: calc(100% - 14px) !important;*/
 /*  margin-left: 7px !important;*/

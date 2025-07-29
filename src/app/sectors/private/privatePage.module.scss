@@ -1,0 +1,178 @@
+.page {
+  padding: 65px 100px 100px;
+  color: #191A1D;
+  width: 100%;
+}
+
+.for {
+  &_header {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+.box {
+  display: flex;
+  gap: 20px;
+
+  &_item {
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    padding: 30px;
+
+    &__image {
+      border-radius: 18px;
+      overflow: hidden;
+      flex-shrink: 0;
+      margin-bottom: 40px;
+    }
+
+    &__header {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 100%;
+      margin-bottom: 24px;
+    }
+
+    &__span {
+      color: #475569;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 100%;
+      display: inline-block;
+    }
+  }
+}
+
+.hero {
+  margin-top: 100px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #4DAC52;
+  padding: 50px 30px;
+  margin-bottom: 190px;
+  position: relative;
+  color: white;
+  height: 834px;
+
+  &_title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+    width: 600px;
+    margin-bottom: 30px;
+  }
+
+  &_subtitle {
+    font-size: 18px;
+    line-height: 1;
+    width: 340px;
+  }
+
+  &_tips {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 50px;
+    width: 752px;
+    position: absolute;
+    right: 38px;
+    top: 160px;
+
+    &__item {
+
+      &_header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    &__title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    &__subtitle {
+      margin-left: 40px;
+      margin-top: 10px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 100%;
+      color: #C7F6CA;
+
+    }
+  }
+
+  &_image {
+    position: absolute;
+    bottom: -73px;
+    left: 0;
+  }
+}
+
+.solar {
+  width: 100%;
+  border-radius: 20px;
+  background-color: #F6F6F6;
+  padding: 54px 30px;
+  margin-bottom: 173px;
+  position: relative;
+  color: #191A1D;
+  height: 809px;
+
+  &_title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+    width: 300px;
+    margin-bottom: 26px;
+  }
+
+  &_subtitle {
+    font-size: 18px;
+    line-height: 1;
+    width: 350px;
+    color: #475569
+  }
+
+  &_tips {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 752px;
+    position: absolute;
+    right: 38px;
+    top: 160px;
+
+    &__item {
+
+      &_header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    &__title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    &__subtitle {
+      margin-left: 40px;
+      margin-top: 10px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 100%;
+      color: #475569
+    }
+  }
+
+  &_image {
+    position: absolute;
+    bottom: -90px;
+    left: 0;
+  }
+}

@@ -1,236 +1,78 @@
 /* ./src/app/cooperation/cooperation.module.css */
-.hero_image{
-    object-fit: cover;
-    margin-top: 40px;
-    opacity: 0.9;
-    object-position: 50% 20%;
-}
-
 .container {
-    margin: 2rem auto;
-    padding: 1.5rem;
-    font-family: sans-serif;
-    color: #000000;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 60px 100px 100px;
+    width: 100%;
+    color: #191A1D;
 }
 
-.section {
-    margin-bottom: 2.5rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #eaeceb;
+.subtitle {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
-.section:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-.mainTitle,
-.sectionTitle {
-    color: #333; /* Чуть мягче черного */
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem; /* Пространство между иконкой и текстом */
-}
-
-.mainTitle {
-    font-size: 1.8em;
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    color: #000000;
-}
-
-.sectionTitle {
-    font-size: 1.5em;
-    color: #1a1a1a;
-}
-
-.icon {
+.description {
+    color: #475569;
+    font-size: 18px;
+    font-weight: 400;
+    width: 607px;
     display: inline-block;
-    font-size: 1.2em; /* Размер иконки относительно текста */
 }
 
-.container p {
-    line-height: 1.7;
-    margin-bottom: 1rem;
-    color: #333;
-    font-size: 18px;
-}
-
-.infoBlock {
-    background-color: #f8f9fa; /* Очень светлый фон для блока информации */
-    padding: 1.5rem;
-    border-radius: 6px;
-    border: 1px solid #eaeceb; /* Серая рамка */
-    margin-top: 1.5rem;
-}
-
-.infoBlockTitle {
-    font-size: 1.3em;
-    margin-bottom: 1rem;
-    color: #000000;
+.sectors {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
 }
 
-.infoList,
-.subList {
-    font-size: 18px;
-    list-style: none;
-    padding-left: 0;
-}
-
-.infoList > li {
-    margin-bottom: 0.8rem;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.infoList > li::before {
-    content: '•'; /* Маркер списка */
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #85e28f; /* Акцентный цвет маркера */
-    font-size: 1.2em;
-    line-height: 1.7;
-}
-
-.subSection {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    padding-left: 0 !important; /* Убираем отступ родителя */
-}
-.subSection::before {
-    content: none !important; /* Убираем маркер родителя */
-}
-
-
-.subSectionTitle {
-    font-size: 1.1em;
-    margin-bottom: 0.75rem;
-    color: #555;
-    font-weight: 600;
-}
-
-.subList > li {
-    margin-bottom: 0.5rem;
-    padding-left: 1rem;
-    position: relative;
-    font-size: 18px;
-    /*font-size: 0.95em;*/
-}
-.subList > li::before {
-    content: '•'; /* Маркер списка */
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #85e28f; /* Акцентный цвет маркера */
-    font-size: 1.2em;
-    line-height: 1.7;
-}
-
-
-.submitOptions {
-    margin-top: 2rem;
+.sector {
+    background-color: #F6F6F6;
+    padding: 40px;
+    border-radius: 20px;
+    overflow: hidden;
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap; /* Перенос на мобильных */
-    justify-content: center;
-}
+    gap: 75px;
 
-.downloadButton,
-.onlineButton {
-    display: inline-flex; /* Используем flex для выравнивания иконки и текста */
-    align-items: center;
-    gap: 0.5rem; /* Пространство между иконкой и текстом */
-    padding: 0.8rem 1.5rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
+    &:last-child {
+        flex-direction: row-reverse;
 
-.downloadButton {
-    background-color: #ffffff;
-    color: #85e28f; /* Акцентный цвет */
-    border: 2px solid #85e28f; /* Акцентный бордер */
-}
-
-.downloadButton:hover {
-    background-color: #e6fcec; /* Светлый акцентный фон */
-    box-shadow: 0 2px 5px rgba(133, 226, 143, 0.3);
-}
-
-.onlineButton {
-    background-color: #85e28f; /* Акцентный фон */
-    color: #000000; /* Черный текст */
-    border: 2px solid #85e28f;
-}
-
-.onlineButton:hover {
-    background-color: #72c97d; /* Чуть темнее акцентный */
-    border-color: #72c97d;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.benefitsList {
-    list-style: none;
-    padding-left: 0;
-}
-
-.benefitsList > li {
-    margin-bottom: 0.8rem;
-    padding-left: 2rem;
-    position: relative;
-    font-size: 18px;
-    /*font-size: 1.05em;*/
-}
-
-.benefitsList > li::before {
-    content: '✓'; /* Галочка */
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #85e28f; /* Акцентный цвет */
-    font-size: 1.2em;
-    font-weight: bold;
-    line-height: 1.7;
-}
-
-.ctaSection {
-    text-align: center;
-    font-size: 1.1em;
-    font-weight: 500;
-}
-
-.ctaSection p {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    background-color: #e6fcec; /* Светлый акцентный фон */
-    padding: 1rem 1.5rem;
-    border-radius: 6px;
-    color: #1a1a1a;
-    font-size: 19px;
-}
-
-@media (max-width: 1249px) {
-    .hero_image {
-        margin-top: 0;
-        height: 200px;
-        width: 100%;
-        object-fit: cover;
+        .sector_details {
+            margin-right: auto;
+        }
     }
-    .container {
-        border: none;
-        margin-top: 0}
+}
+
+.sector_image {
+    flex-shrink: 0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.sector_details {
+    display: flex;
+    flex-direction: column;
+    padding-top: calc(205px - 40px);
+}
+
+.sector_header {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.sector_span {
+    color: #475569;
+    line-height: 1;
+    width: 340px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sector_button {
+    width: max-content;
+    margin-top: auto;
 }

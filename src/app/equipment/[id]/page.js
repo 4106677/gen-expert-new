@@ -8,7 +8,7 @@ import { useSheetData } from "@/context/SheetDataContext";
 import { decodeEquipmentId, createEquipmentUrl } from "@/utils/urlUtils";
 import Fields from "@/app/(components)/Fields/fields";
 import Consultation from "@/app/(components)/MainPage/Consultation/consultation";
-import Tips from "@/app/(components)/MainPage/Tips/tips";
+import Tips from "@/app/(components)/Tips/tips";
 import styles from './EquipmentDetailPage.module.css'
 import Image from "next/image"
 import {bbExtractor} from "@/helpers/bbExtractor";

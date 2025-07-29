@@ -10,7 +10,7 @@ import Possibilities from "@/app/(components)/MainPage/Possibilities/possibiliti
 import Team from "@/app/(components)/MainPage/Team/team";
 import Banner from "@/app/(components)/Banner/banner";
 import Consultation from "@/app/(components)/MainPage/Consultation/consultation";
-import Tips from "@/app/(components)/MainPage/Tips/tips";
+import Tips from "@/app/(components)/Tips/tips";
 import Blog from "@/app/(components)/MainPage/Blog/blog";
 import ContactForm from "@/app/(components)/ContactForm/contactForm";
 
