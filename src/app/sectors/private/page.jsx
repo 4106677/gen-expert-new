@@ -15,6 +15,7 @@ const PrivateSector = () => {
 	const solar_tips = Object.values(t('sectors.private.solar.tips', {returnObjects: true}) || {});
 	const tech_type = Object.values(t('sectors.private.tech.type', {returnObjects: true}) || {});
 	const tech_body = Object.values(t('sectors.private.tech.body', {returnObjects: true}) || {});
+	const cooperation_tips = Object.values(t('sectors.private.cooperation.tips', {returnObjects: true}) || {});
 
 	return (
 		<>
@@ -112,6 +113,30 @@ const PrivateSector = () => {
 									</div>
 								))}
 						</div>
+					</div>
+				</div>
+				{/*види співпраці*/}
+				<div className={styles.cooperation}>
+					<h3 className={`${styles.title} ${styles.cooperation_title}`}>{t('sectors.private.hero.title')}</h3>
+					<div className={styles.cooperation_container}>
+						{cooperation_tips.map(({title, subtitle, advantages, slug, tips}, index) => (
+							<div className={styles.cooperation_item} key={index + title}>
+								<Image
+									src='/images/check-verified-green.svg'
+									width={30}
+									height={30}
+									alt='check verified'/>
+								<h4 className={styles.cooperation_item__title}>{title}</h4>
+								<h5 className={styles.cooperation_item__subtitle}>{subtitle}</h5>
+								<h6 className={styles.cooperation_item__advantages}>{advantages}</h6>
+								<span className={styles.cooperation_item__slug}>{slug}</span>
+								<ul className={styles.cooperation_item__list}>
+									{tips.map((i) =>
+										<li key={i}>{i}</li>
+									)}
+								</ul>
+							</div>
+						))}
 					</div>
 				</div>
 			</div>
