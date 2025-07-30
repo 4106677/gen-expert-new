@@ -354,3 +354,56 @@
     }
   }
 }
+
+.realization {
+  padding: 0 100px;
+
+  &_title {
+
+  }
+
+  &_container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  &_item {
+    padding: 30px 20px 30px 40px;
+    border-radius: 20px;
+    color: white;
+    width: 610px;
+
+    &__header {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 36px;
+      margin-bottom: 30px;
+      width: 350px;
+    }
+
+    &__subtitle {
+      color: #C7F6CA;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.4;
+      margin-bottom: 30px;
+    }
+
+    &__list {
+      list-style: disc;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding-left: 18px;
+    }
+
+    &:first-child {
+      background-color: #0E221D;
+    }
+
+    &:last-child {
+      background-color: #50AE55;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Consultation from "@/app/(components)/MainPage/Consultation/consultation";
 import Realisation from "@/app/(components)/Realisation/Realisation";
 import Tips from "@/app/(components)/Tips/tips";
@@ -16,7 +16,18 @@ const PrivateSector = () => {
 	const tech_type = Object.values(t('sectors.private.tech.type', {returnObjects: true}) || {});
 	const tech_body = Object.values(t('sectors.private.tech.body', {returnObjects: true}) || {});
 	const cooperation_tips = Object.values(t('sectors.private.cooperation.tips', {returnObjects: true}) || {});
+	const [isMounted, setIsMounted] = useState(false);
 
+	useEffect(() => {
+		setIsMounted(true);
+	}, []);
+
+	if (!isMounted) {
+		return (
+			<div>
+			</div>
+		);
+	}
 	return (
 		<>
 			<GreenBox text={t('sectors.private.title')} tips={tips}/>
@@ -117,31 +128,59 @@ const PrivateSector = () => {
 				</div>
 				{/*види співпраці*/}
 				<div className={styles.cooperation}>
-					<h3 className={`${styles.title} ${styles.cooperation_title}`}>{t('sectors.private.hero.title')}</h3>
+					<h3 className={`${styles.title} ${styles.cooperation_title}`}>{t('sectors.private.cooperation.title')}</h3>
 					<div className={styles.cooperation_container}>
-						{cooperation_tips.map(({title, subtitle, advantages, slug, tips}, index) => (
-							<div className={styles.cooperation_item} key={index + title}>
-								<Image
-									src='/images/check-verified-green.svg'
-									width={30}
-									height={30}
-									alt='check verified'/>
-								<h4 className={styles.cooperation_item__title}>{title}</h4>
-								<h5 className={styles.cooperation_item__subtitle}>{subtitle}</h5>
-								<h6 className={styles.cooperation_item__advantages}>{advantages}</h6>
-								<span className={styles.cooperation_item__slug}>{slug}</span>
-								<ul className={styles.cooperation_item__list}>
-									{tips.map((i) =>
-										<li key={i}>{i}</li>
-									)}
-								</ul>
-							</div>
-						))}
+						{cooperation_tips?.map(({title, subtitle, advantages, slug, tips}, index) => {
+							const key = (title && slug) ? `${title}-${slug}` : `cooperation-${index}`;
+							return (
+								<div className={styles.cooperation_item} key={key}>
+									<Image src='/images/check-verified-green.svg' width={30} height={30} alt='check verified'/>
+									<h4 className={styles.cooperation_item__title}>{title}</h4>
+									<h5 className={styles.cooperation_item__subtitle}>{subtitle}</h5>
+									<h6 className={styles.cooperation_item__advantages}>{advantages}</h6>
+									<span className={styles.cooperation_item__slug}>{slug}</span>
+									<ul className={styles.cooperation_item__list}>
+										{tips?.map((i) => (
+											<li key={i}>{i}</li>
+										))}
+									</ul>
+								</div>
+							);
+						})}
 					</div>
 				</div>
+
 			</div>
 			<Tips/>
 			<Realisation/>
+			{/*напрями реалізації*/}
+			<div className={`${styles.realization} container`}>
+				<h3 className={`${styles.title} ${styles.realization_title}`}>{t('sectors.private.hero.title')}</h3>
+				<div className={styles.realization_container}>
+					<div className={styles.realization_item}>
+						<h4 className={styles.realization_item__header}>{t('sectors.private.realization.usage.title')}</h4>
+						<span className={styles.realization_item__subtitle}>{t('sectors.private.realization.usage.subtitle')}</span>
+						<ul className={styles.realization_item__list}>
+							{Array.isArray(t('sectors.private.realization.usage.tips', { returnObjects: true })) ?
+								t('sectors.private.realization.usage.tips', { returnObjects: true }).map((tip, index) => (
+									<li key={index}>{tip}</li>
+								)) : null
+							}
+						</ul>
+					</div>
+					<div className={styles.realization_item}>
+						<h4 className={styles.realization_item__header}>{t('sectors.private.realization.sale.title')}</h4>
+						<span className={styles.realization_item__subtitle}>{t('sectors.private.realization.sale.subtitle')}</span>
+						<ul className={styles.realization_item__list}>
+							{Array.isArray(t('sectors.private.realization.usage.tips', { returnObjects: true })) ?
+								t('sectors.private.realization.sale.tips', { returnObjects: true }).map((tip, index) => (
+									<li key={index}>{tip}</li>
+								)) : null
+							}
+						</ul>
+					</div>
+				</div>
+			</div>
 			<Consultation/>
 		</>
 	);
