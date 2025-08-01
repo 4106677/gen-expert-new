@@ -1,0 +1,27 @@
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  color: #50AE55;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+  border-radius: 80px;
+  height: 40px;
+  min-width: 106px;
+
+  &:hover {
+    //background-color: #F6F6F6;
+    outline: 1px solid #50AE55;;
+  }
+}
+
+
+.back_image {
+  transform: rotate(-135deg);
+  margin-right: 10px;
+  height: 14px;
+  width: 14px;
+}

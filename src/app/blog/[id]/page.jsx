@@ -9,10 +9,10 @@ import GreenBox from "@/app/(components)/GreenBox/GreenBox";
 import {useSheetData} from "@/context/SheetDataContext";
 import Image from "next/image";
 import CustomLink from "@/app/(components)/CustomLink/customLink";
+import BackButton from "@/app/(components)/BackButton/BackButton";
 
 const BlogPage = () => {
 	const { id } = useParams();
-	const router = useRouter();
 	const { t } = useTranslation("common");
 	const { lang } = useLanguage();
 	const { loading } = useSheetData()
@@ -59,17 +59,18 @@ const BlogPage = () => {
 		<div>
 			<GreenBox text={item?.title}/>
 			<div className={`${styles.container} container`}>
-				<button type="button" className={styles.back}
-				        onClick={() => router.back()}>
-					<Image
-						src="/images/arrow-up-right.svg"
-						alt="arrow-up-right"
-						width={20}
-						height={20}
-						className={styles.back_image}
-					/>
-					Назад
-				</button>
+				{/*<button type="button" className={styles.back}*/}
+				{/*        onClick={() => router.back()}>*/}
+				{/*	<Image*/}
+				{/*		src="/images/arrow-up-right.svg"*/}
+				{/*		alt="arrow-up-right"*/}
+				{/*		width={20}*/}
+				{/*		height={20}*/}
+				{/*		className={styles.back_image}*/}
+				{/*	/>*/}
+				{/*	Назад*/}
+				{/*</button>*/}
+				<BackButton/>
 				<div className={styles.main}>
 					<Image className={styles.main_image} src={item.image} alt={item.title} width={525} height={618}/>
 					<div className={styles.details}>

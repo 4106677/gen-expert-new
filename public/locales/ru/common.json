@@ -12,7 +12,8 @@
     "calculator": "Калькулятор",
     "contacts": "Контакты",
     "cooperation": "Сотрудничество",
-    "details": "Детальніше"
+    "details": "Детальніше",
+    "back": "Назад"
   },
   "blog": {
     "title": "Блог",
@@ -69,6 +70,12 @@
   },
   "sectors": {
     "title": "Енергонезалежність \nдля кожної галузі",
+    "headers": {
+      "sub_sectors": "Підсектори",
+      "justification": "Обґрунтування",
+      "advantages": "Переваги",
+      "principle": "Принцип роботи:"
+    },
     "public": {
       "title": "Державний сектор",
       "subtitle": "Для кого",
@@ -312,91 +319,548 @@
         "name": "Сільське господарство та тваринництво",
         "description": "Переробка органічних відходів (гній, рослинні залишки, відходи переробки) у біогаз шляхом анаеробного зброджування.",
         "slug": "silgosp",
-        "image": "/images/sectors/industries/silgosp.webp"
+        "image": "/images/sectors/industries/silgosp.webp",
+        "details": {
+          "sub_sectors": {
+            "tips": [
+              "Свиноферми, птахофабрики, інкубатори",
+              "Молочні ферми та сироварні",
+              "Агрокомплекси з вирощування культур (кукурудза, пшениця тощо)",
+              "Овочівництво та плодівництво",
+              "Рослинницькі ферми",
+              "Садові центри"
+            ],
+            "paragraph": [
+              "Сільськогосподарські підприємства генерують значні обсяги органічних відходів (гній, рослинні залишки, відходи переробки), які можна переробляти в біогаз шляхом анаеробного зброджування. Ці сектори потребують електроенергію для обладнання, тепло для обігріву приміщень або теплиць, а також гарячу воду для технологічних процесів.",
+              "Когенераційні системи забезпечують енергоефективність, знижуючи витрати та сприяючи сталому розвитку. Наприклад, молочні ферми можуть використовувати тепло для пастеризації молока, а рослинницькі ферми – CO₂ для підвищення врожайності. Використання біогазу з відходів дозволяє досягти енергетичної незалежності, що особливо важливо для віддалених сільських регіонів."
+            ]
+          },
+          "perks":[
+            {
+              "title": "",
+              "text": ""
+            }
+          ],
+          "principle": [
+            ""
+          ]
+        },
+
+        "images": {
+          "preview": "/images/sectors/industries/silgosp.webp",
+          "hero": "/images/sectors/industries/silgosp.webp",
+          "banner": {
+            "desktop": "",
+            "mobile":""
+          }
+        }
       },
       {
         "name": "Тепличне господарство",
         "description": "Когенераційні та газопоршневі установки (КГУ та ГПУ) забезпечують енергію та оптимальні умови для росту рослин.",
         "slug": "teplytsi",
-        "image": "/images/sectors/industries/teplytsi.webp"
+        "image": "/images/sectors/industries/teplytsi.webp",
+        "details": {
+
+          "sub_sectors": {
+
+            "tips": [
+              ""
+            ],
+            "paragraph": [
+              ""
+            ]
+          },
+          "perks": [
+            {
+              "title": "",
+              "text": ""
+            }
+          ],
+          "principle": [
+            ""
+          ]
+        },
+
+        "images": {
+          "preview": "",
+          "hero": "",
+          "banner": {
+            "desktop": "",
+            "mobile": ""
+          }
+        }
       },
       {
         "name": "Харчова промисловість",
         "description": "Енергоємна галузь, що потребує електроенергію для обладнання, тепло для пастеризації, варіння чи сушіння, а також холод для зберігання продуктів.",
         "slug": "kharchova",
-        "image": "/images/sectors/industries/kharchova.webp"
+        "image": "/images/sectors/industries/kharchova.webp",
+        "details": {
+
+          "sub_sectors": {
+
+            "tips": [
+              ""
+            ],
+            "paragraph": [
+              ""
+            ]
+          },
+          "perks": [
+            {
+              "title": "",
+              "text": ""
+            }
+          ],
+          "principle": [
+            ""
+          ]
+        },
+
+        "images": {
+          "preview": "",
+          "hero": "",
+          "banner": {
+            "desktop": "",
+            "mobile": ""
+          }
+        }
       },
       {
         "name": "Переробка відходів",
         "description": "Виробництво біогазу з органічних відходів, осаду стічних вод чи відходів харчової промисловості (наприклад, барди з дистиляції).",
         "slug": "vidhody",
-        "image": "/images/sectors/industries/vidhody.webp"
+        "image": "/images/sectors/industries/vidhody.webp",
+        "details": {
+
+          "sub_sectors": {
+
+            "tips": [
+              ""
+            ],
+            "paragraph": [
+              ""
+            ]
+          },
+          "perks": [
+            {
+              "title": "",
+              "text": ""
+            }
+          ],
+          "principle": [
+            ""
+          ]
+        },
+
+        "images": {
+          "preview": "",
+          "hero": "",
+          "banner": {
+            "desktop": "",
+            "mobile": ""
+          }
+        }
       },
       {
         "name": "Промислове виробництво",
         "description": "Високе енергоспоживання для плавлення, сушіння чи виробництва пари.",
         "slug": "promyslovist",
-        "image": "/images/sectors/industries/promyslovist.webp"
+        "image": "/images/sectors/industries/promyslovist.webp",
+        "details": {
+
+          "sub_sectors": {
+
+            "tips": [
+              ""
+            ],
+            "paragraph": [
+              ""
+            ]
+          },
+          "perks": [
+            {
+              "title": "",
+              "text": ""
+            }
+          ],
+          "principle": [
+            ""
+          ]
+        },
+
+        "images": {
+          "preview": "",
+          "hero": "",
+          "banner": {
+            "desktop": "",
+            "mobile": ""
+          }
+        }
       },
       {
         "name": "Хімічна та фармацевтична промисловість",
         "description": "Потребують електроенергію, пару та охолодження для хімічних реакцій, виробництва ліків чи переробки сировини.",
         "slug": "khimiya",
-        "image": "/images/sectors/industries/khimiya.webp"
+        "image": "/images/sectors/industries/khimiya.webp",
+        "details": {
+
+          "sub_sectors": {
+
+            "tips": [
+              ""
+            ],
+            "paragraph": [
+              ""
+            ]
+          },
+          "perks": [
+            {
+              "title": "",
+              "text": ""
+            }
+          ],
+          "principle": [
+            ""
+          ]
+        },
+
+        "images": {
+          "preview": "",
+          "hero": "",
+          "banner": {
+            "desktop": "",
+            "mobile": ""
+          }
+        }
       },
       {
         "name": "Центри обробки даних (ЦОД)",
         "description": "Споживають значну кількість електроенергії для серверів та охолодження, потребуючи високої надійності.",
         "slug": "tsod",
-        "image": "/images/sectors/industries/tsod.webp"
+        "image": "/images/sectors/industries/tsod.webp",
+        "details": {
+
+          "sub_sectors": {
+
+            "tips": [
+              ""
+            ],
+            "paragraph": [
+              ""
+            ]
+          },
+          "perks": [
+            {
+              "title": "",
+              "text": ""
+            }
+          ],
+          "principle": [
+            ""
+          ]
+        },
+
+        "images": {
+          "preview": "",
+          "hero": "",
+          "banner": {
+            "desktop": "",
+            "mobile": ""
+          }
+        }
       },
       {
         "name": "Логістика та комерційна нерухомість",
         "description": "Потребують стабільного електропостачання для освітлення, обладнання, опалення та охолодження.",
         "slug": "lohistyka",
-        "image": "/images/sectors/industries/lohistyka.webp"
+        "image": "/images/sectors/industries/lohistyka.webp",
+        "details": {
+
+          "sub_sectors": {
+
+            "tips": [
+              ""
+            ],
+            "paragraph": [
+              ""
+            ]
+          },
+          "perks": [
+            {
+              "title": "",
+              "text": ""
+            }
+          ],
+          "principle": [
+            ""
+          ]
+        },
+
+        "images": {
+          "preview": "",
+          "hero": "",
+          "banner": {
+            "desktop": "",
+            "mobile": ""
+          }
+        }
       },
       {
         "name": "Енергетична інфраструктура",
         "description": "Потребує гнучких, масштабованих та ефективних енергетичних рішень для великих чи віддалених об’єктів.",
         "slug": "enerhetyka",
-        "image": "/images/sectors/industries/enerhetyka.webp"
+        "image": "/images/sectors/industries/enerhetyka.webp",
+        "details": {
+
+          "sub_sectors": {
+
+            "tips": [
+              ""
+            ],
+            "paragraph": [
+              ""
+            ]
+          },
+          "perks": [
+            {
+              "title": "",
+              "text": ""
+            }
+          ],
+          "principle": [
+            ""
+          ]
+        },
+
+        "images": {
+          "preview": "",
+          "hero": "",
+          "banner": {
+            "desktop": "",
+            "mobile": ""
+          }
+        }
       },
       {
         "name": "Охорона здоров’я та освіта",
         "description": "Лікарні та університети потребують надійного енергопостачання для обладнання, опалення, охолодження та стерилізації.",
         "slug": "okhorona",
-        "image": "/images/sectors/industries/okhorona.webp"
+        "image": "/images/sectors/industries/okhorona.webp",
+        "details": {
+
+          "sub_sectors": {
+
+            "tips": [
+              ""
+            ],
+            "paragraph": [
+              ""
+            ]
+          },
+          "perks": [
+            {
+              "title": "",
+              "text": ""
+            }
+          ],
+          "principle": [
+            ""
+          ]
+        },
+
+        "images": {
+          "preview": "",
+          "hero": "",
+          "banner": {
+            "desktop": "",
+            "mobile": ""
+          }
+        }
       },
       {
         "name": "Готельно-туристичний сектор",
         "description": "Готелі потребують постійного енергопостачання для освітлення, опалення, охолодження та гарячої води.",
         "slug": "hoteli",
-        "image": "/images/sectors/industries/hoteli.webp"
+        "image": "/images/sectors/industries/hoteli.webp",
+        "details": {
+
+          "sub_sectors": {
+
+            "tips": [
+              ""
+            ],
+            "paragraph": [
+              ""
+            ]
+          },
+          "perks": [
+            {
+              "title": "",
+              "text": ""
+            }
+          ],
+          "principle": [
+            ""
+          ]
+        },
+
+        "images": {
+          "preview": "",
+          "hero": "",
+          "banner": {
+            "desktop": "",
+            "mobile": ""
+          }
+        }
       },
       {
         "name": "Транспортна та авіаційна інфраструктура",
         "description": "Аеропорти та логістичні хаби потребують значної кількості електроенергії для освітлення, обладнання, опалення та охолодження.",
         "slug": "transport",
-        "image": "/images/sectors/industries/transport.webp"
+        "image": "/images/sectors/industries/transport.webp",
+        "details": {
+
+          "sub_sectors": {
+
+            "tips": [
+              ""
+            ],
+            "paragraph": [
+              ""
+            ]
+          },
+          "perks": [
+            {
+              "title": "",
+              "text": ""
+            }
+          ],
+          "principle": [
+            ""
+          ]
+        },
+
+        "images": {
+          "preview": "",
+          "hero": "",
+          "banner": {
+            "desktop": "",
+            "mobile": ""
+          }
+        }
       },
       {
         "name": "Гірничодобувна та нафтогазова промисловість",
         "description": "Потребують надійного енергопостачання для видобутку, переробки та транспортування ресурсів у віддалених районах.",
         "slug": "hirnytstvo",
-        "image": "/images/sectors/industries/hirnytstvo.webp"
+        "image": "/images/sectors/industries/hirnytstvo.webp",
+        "details": {
+
+          "sub_sectors": {
+
+            "tips": [
+              ""
+            ],
+            "paragraph": [
+              ""
+            ]
+          },
+          "perks": [
+            {
+              "title": "",
+              "text": ""
+            }
+          ],
+          "principle": [
+            ""
+          ]
+        },
+
+        "images": {
+          "preview": "",
+          "hero": "",
+          "banner": {
+            "desktop": "",
+            "mobile": ""
+          }
+        }
       },
       {
         "name": "Інші промислові сектори",
         "description": "Потребують електроенергію та тепло для виробництва чи тестування обладнання. Когенераційні системи забезпечують економію та надійність.",
         "slug": "inshi",
-        "image": "/images/sectors/industries/inshi.webp"
+        "image": "/images/sectors/industries/inshi.webp",
+        "details": {
+
+          "sub_sectors": {
+
+            "tips": [
+              ""
+            ],
+            "paragraph": [
+              ""
+            ]
+          },
+          "perks": [
+            {
+              "title": "",
+              "text": ""
+            }
+          ],
+          "principle": [
+            ""
+          ]
+        },
+
+        "images": {
+          "preview": "",
+          "hero": "",
+          "banner": {
+            "desktop": "",
+            "mobile": ""
+          }
+        }
       },
       {
         "name": "Державні установи, комунальні об’єкти та критична інфраструктура",
         "description": "Потребують стабільного й економічного енергопостачання.",
         "slug": "derzhava",
-        "image": "/images/sectors/industries/derzhava.webp"
+        "image": "/images/sectors/industries/derzhava.webp",
+        "details": {
+          "sub_sectors": {
+            "tips": [
+              "Свиноферми, птахофабрики, інкубатори",
+              "Молочні ферми та сироварні",
+              "Агрокомплекси з вирощування культур (кукурудза, пшениця тощо)",
+              "Овочівництво та плодівництво",
+              "Рослинницькі ферми",
+              "Садові центри"
+            ],
+            "paragraph": [
+              ""
+            ]
+          },
+          "perks": [
+            {
+              "title": "",
+              "text": ""
+            }
+          ],
+          "principle": [
+            ""
+          ]
+        },
+
+        "images": {
+          "preview": "",
+          "hero": "",
+          "banner": {
+            "desktop": "",
+            "mobile": ""
+          }
+        }
       }
     ],
     "list": [

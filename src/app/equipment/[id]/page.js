@@ -12,6 +12,7 @@ import Tips from "@/app/(components)/Tips/tips";
 import styles from './EquipmentDetailPage.module.css'
 import Image from "next/image"
 import {bbExtractor} from "@/helpers/bbExtractor";
+import BackButton from "@/app/(components)/BackButton/BackButton";
 
 export default function EquipmentDetailPage() {
 	const { id: rawId } = useParams();
@@ -147,17 +148,18 @@ export default function EquipmentDetailPage() {
 		<div >
 			<div className={styles.page}>
 				<div className={`${styles.container} container`}>
-					<button type='button' className={styles.back}
-					        onClick={() => router.back()}>
-						<Image
-							src='/images/arrow-up-right.svg'
-							alt='arrow-up-right'
-							width={20}
-							height={20}
-							className={styles.back_image}
-						/>
-						Назад
-					</button>
+					{/*<button type='button' className={styles.back}*/}
+					{/*        onClick={() => router.back()}>*/}
+					{/*	<Image*/}
+					{/*		src='/images/arrow-up-right.svg'*/}
+					{/*		alt='arrow-up-right'*/}
+					{/*		width={20}*/}
+					{/*		height={20}*/}
+					{/*		className={styles.back_image}*/}
+					{/*	/>*/}
+					{/*	Назад*/}
+					{/*</button>*/}
+					<BackButton hover='white'/>
 					<div className={styles.wrapper}>
 						<div className={styles.image_box}>
 							{mainImage && <Image className={styles.image} src={mainImage} alt={item.model} width={610} height={388}></Image>}

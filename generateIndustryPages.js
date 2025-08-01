@@ -19,7 +19,7 @@ const industries = [
 	{ slug: "derzhava" }
 ];
 
-const baseDir = path.join(__dirname, "app", "sectors");
+const baseDir = path.join(__dirname, "src", "app", "sectors");
 
 industries.forEach(({ slug }) => {
 	const folderPath = path.join(baseDir, slug);
