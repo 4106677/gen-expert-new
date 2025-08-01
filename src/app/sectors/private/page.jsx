@@ -152,10 +152,9 @@ const PrivateSector = () => {
 
 			</div>
 			<Tips/>
-			<Realisation/>
 			{/*напрями реалізації*/}
 			<div className={`${styles.realization} container`}>
-				<h3 className={`${styles.title} ${styles.realization_title}`}>{t('sectors.private.hero.title')}</h3>
+				<h3 className={`${styles.title} ${styles.realization_title}`}>{t('sectors.private.realization.title')}</h3>
 				<div className={styles.realization_container}>
 					<div className={styles.realization_item}>
 						<h4 className={styles.realization_item__header}>{t('sectors.private.realization.usage.title')}</h4>
@@ -167,6 +166,7 @@ const PrivateSector = () => {
 								)) : null
 							}
 						</ul>
+						<Image className={styles.realization_item__image} src={"/images/sectors/private/usage.webp"} width={610} height={270} alt={t('sectors.private.realization.usage.title')}/>
 					</div>
 					<div className={styles.realization_item}>
 						<h4 className={styles.realization_item__header}>{t('sectors.private.realization.sale.title')}</h4>
@@ -178,9 +178,11 @@ const PrivateSector = () => {
 								)) : null
 							}
 						</ul>
+						<Image className={styles.realization_item__image} src={"/images/sectors/private/sale.webp"} width={610} height={270} alt={t('sectors.private.realization.sale.title')}/>
 					</div>
 				</div>
 			</div>
+			<Realisation/>
 			<Consultation/>
 		</>
 	);

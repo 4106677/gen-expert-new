@@ -1,27 +1,7 @@
 /* src/app/components/Header/header.css */
 .header {
-    /*background-color: #eaeceb;*/
     width: 100%;
     position: relative;
-    /*&:before {*/
-    /*    content: "";*/
-    /*    height: 40px;*/
-    /*    background-color: var(--background);*/
-    /*    width: 100%;*/
-    /*    display: block;*/
-    /*}*/
-
-    /*&:after {*/
-    /*    content: "";*/
-    /*    position: absolute;*/
-    /*    top: 0;*/
-    /*    left: calc(50% + 430px);*/
-    /*    margin-top: 40px;*/
-    /*    width: 100vw;*/
-    /*    height: 80px;*/
-    /*    background-color: #85e28f;*/
-    /*    clip-path: polygon(23px 0, 0 100%, 100% 100%, 100% 0);*/
-    /*}*/
     padding-bottom: 8px;
 }
 

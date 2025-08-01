@@ -24,7 +24,6 @@ export default function Header() {
 		if (typeof window !== 'undefined') {
 			setWindowWidth(window.innerWidth);
 
-			// Close menu when screen size changes to desktop
 			const handleResize = () => {
 				setWindowWidth(window.innerWidth);
 				if (window.innerWidth >= 1250 && menuOpen) {
@@ -49,22 +48,18 @@ export default function Header() {
 
 	const toggleMenu = () => {
 		setMenuOpen(!menuOpen);
-		// When opening the menu, close the language selector
 		if (!menuOpen) {
 			setLangBox(false);
 			setMobileLangBox(false);
 		}
 	};
 
-	// Close menus when clicking outside
 	useEffect(() => {
 		const handleClickOutside = (event) => {
-			// Close mobile language selector when clicking outside
 			if (mobileLangBox && !event.target.closest('.nav-container .language')) {
 				setMobileLangBox(false);
 			}
 
-			// Close desktop language selector when clicking outside
 			if (langBox && !event.target.closest('.desktop-extras .language')) {
 				setLangBox(false);
 			}
@@ -130,10 +125,12 @@ export default function Header() {
 							</Link>
 
 							<ul className="dropdown-menu">
-								<li><Link href="/cooperation/subpage1" onClick={() => setMenuOpen(false)}>Підсторінка
-									1</Link></li>
-								<li><Link href="/cooperation/subpage2" onClick={() => setMenuOpen(false)}>Підсторінка
-									2</Link></li>
+								<li><Link href="/sectors/public" onClick={() => setMenuOpen(false)}>
+									{t("sectors.public.title")}
+								</Link></li>
+								<li><Link href="/sectors/private" onClick={() => setMenuOpen(false)}>
+									{t("sectors.private.title")}
+								</Link></li>
 							</ul>
 						</li>
 						<li><Link href="/sectors" onClick={() => setMenuOpen(false)}>{t("menu.sectors")}</Link></li>

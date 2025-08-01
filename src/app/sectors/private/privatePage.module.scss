@@ -357,9 +357,10 @@
 
 .realization {
   padding: 0 100px;
+  margin-top: 100px;
 
   &_title {
-
+    margin-bottom: 40px;
   }
 
   &_container {
@@ -373,6 +374,8 @@
     border-radius: 20px;
     color: white;
     width: 610px;
+    position: relative;
+    height: max-content;
 
     &__header {
       font-size: 32px;
@@ -398,12 +401,21 @@
       padding-left: 18px;
     }
 
+    &__image {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     &:first-child {
       background-color: #0E221D;
+      padding-bottom: 311px;
     }
 
     &:last-child {
       background-color: #50AE55;
+      padding-bottom: 292px;
     }
   }
 }

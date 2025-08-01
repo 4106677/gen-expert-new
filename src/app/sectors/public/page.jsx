@@ -11,8 +11,6 @@ import Image from "next/image";
 const PublicSector = () => {
 	const { t } = useTranslation('common');
 
-	// {t('sectors.public.title')}
-
 	return (
 		<>
 			<GreenBox text={t('sectors.public.title')}/>
