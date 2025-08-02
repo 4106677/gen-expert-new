@@ -138,7 +138,7 @@ export default function Header() {
 						<li><Link href="/blog" onClick={() => setMenuOpen(false)}>{t("menu.blog")}</Link></li>
 						{/*<li><Link href="/why" onClick={() => setMenuOpen(false)}>{t("menu.why")}</Link></li>*/}
 						{/*<li><Link href="/useful" onClick={() => setMenuOpen(false)}>{t("menu.useful")}</Link></li>*/}
-						<li><Link href="/calculate" onClick={() => setMenuOpen(false)}>{t("menu.calculate")}</Link>
+						<li><Link href="/calculator" onClick={() => setMenuOpen(false)}>{t("menu.calculate")}</Link>
 						{/*<li><Link href="/calculator" onClick={() => setMenuOpen(false)}>{t("menu.calculator")}</Link>*/}
 						</li>
 

@@ -1,0 +1,134 @@
+.how {
+  margin-top: 100px;
+}
+
+.header {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 100%;
+  margin-bottom: 23px;
+}
+
+.title {
+  margin-bottom: 23px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.subtitle {
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+
+  &Item {
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #E8F4EA;
+
+    &:hover {
+      background-color: #50AE55;
+
+      .gridItem_description, .gridItem_header {
+        color: white;
+      }
+
+      .gridItem_rounder {
+        background-color: white;
+        color: #50AE55;;
+      }
+    }
+
+    &:nth-child(odd) {
+      background-color: #F7FBF7;
+      border-color: #F7FBF7;
+
+      &:hover {
+        background-color: #50AE55;
+
+        .gridItem_description, .gridItem_header {
+          color: white;
+        }
+
+        .gridItem_rounder {
+          background-color: white;
+          color: #50AE55;;
+        }
+      }
+    }
+
+    &:nth-child(1) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    &:nth-child(2) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    &:nth-child(3) {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    &:nth-child(4) {
+      grid-column: 3;
+      grid-row: 2;
+    }
+
+    &:nth-child(5) {
+      grid-column: 1;
+      grid-row: 3;
+    }
+
+    &:nth-child(6) {
+      grid-column: 2;
+      grid-row: 3;
+    }
+
+    &:nth-child(7) {
+      grid-column: 2;
+      grid-row: 4;
+    }
+
+    &:nth-child(8) {
+      grid-column: 3;
+      grid-row: 4;
+    }
+
+    &_rounder {
+      width: 30px;
+      height: 30px;
+      background-color: #50AE55;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      font-weight: 600;
+    }
+
+    &_header {
+      color: #50AE55;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1;
+      margin-top: 16px;
+    }
+
+    &_description {
+      color: #475569;
+      margin-top: 16px;
+      line-height: 1;
+    }
+
+  }
+}

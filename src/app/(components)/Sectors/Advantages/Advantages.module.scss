@@ -9,5 +9,137 @@
 
   &_grid {
     margin-top: 40px;
+    display: grid;
+    gap: 20px;
+
+    &[data-count="4"] {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+
+      .advantages_gridItem {
+        background-color: white;
+        justify-content: flex-start;
+
+        &:hover {
+          border-color: #50AE55;
+        }
+
+        &:last-child {
+          background-color: #50AE55;
+          color: white;
+
+          &:hover {
+            background-color: white;
+            color: #191A1D;
+
+            .advantages_gridItem__description {
+              color: #475569;
+            }
+          }
+
+          .advantages_gridItem__description {
+            color: #C7F6CA;
+          }
+        }
+      }
+    }
+
+    &[data-count="5"] {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+
+      .advantages_gridItem {
+        background-color: white;
+
+        &:hover {
+          border-color: #50AE55;
+        }
+
+        &:nth-child(3) {
+          grid-column: 3;
+          grid-row: 1 / 3;
+          background-color: #50AE55;
+          color: white;
+          justify-content: flex-start;
+
+          &:hover {
+            border: 1px solid #E8F4EA;
+            background-color: white;
+            color: #191A1D;
+
+            .advantages_gridItem__description {
+              color: #475569;
+            }
+          }
+
+          .advantages_gridItem__description {
+            color: #C7F6CA;
+          }
+        }
+      }
+    }
+
+    &[data-count="7"] {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+
+      .advantages_gridItem {
+        background-color: white;
+
+        &:hover {
+          border-color: #50AE55;
+        }
+
+        &:nth-child(3) {
+          grid-column: 3;
+          grid-row: 1 / 4;
+          background-color: #50AE55;
+          color: white;
+          justify-content: flex-start;
+
+          &:hover {
+            background-color: white;
+            color: #191A1D;
+
+            .advantages_gridItem__description {
+              color: #475569;
+            }
+          }
+
+         .advantages_gridItem__description {
+            color: #C7F6CA;
+          }
+        }
+      }
+    }
+
+    &Item {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      border: 1px solid #E8F4EA;
+      border-radius: 20px;
+      min-height: 240px;
+
+
+
+      &__header {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 100%;
+        max-width: 272px;
+        min-height: 48px;
+      }
+
+      &__description {
+        margin-top: 16px;
+        color: #475569;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+      }
+    }
   }
 }

@@ -1,0 +1,37 @@
+.solution {
+  background-color: #F7FBF7;
+  border-radius: 20px;
+  padding: 40px;
+  min-height: 375px;
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  gap: 130px;
+}
+
+.header {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 100%;
+  margin-bottom: 30px;
+
+  &_span {
+    color: #50AE55;
+  }
+}
+
+.description {
+  color: #475569;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  margin-top: 16px;
+}
+
+.image {
+  border-radius: 20px;
+  overflow: hidden;
+  object-fit: cover;
+  flex-shrink: 0;
+}

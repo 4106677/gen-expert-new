@@ -5,10 +5,10 @@ import styles from './SectorPage.module.scss'
 import GreenBox from "@/app/(components)/GreenBox/GreenBox";
 import {useTranslation} from "react-i18next";
 import {useParams} from "next/navigation";
-import Image from "next/image";
 import SectorHead from "@/app/(components)/Sectors/Head/SectorHead";
 import Advantages from "@/app/(components)/Sectors/Advantages/Advantages";
 import Consultation from "@/app/(components)/MainPage/Consultation/consultation";
+import Principle from "@/app/(components)/Sectors/Principle/Principle";
 
 const SectorPage = () => {
 	const {slug} = useParams();
@@ -31,6 +31,7 @@ const SectorPage = () => {
 				<BackButton/>
 				<SectorHead sector={sector} headers={headers}/>
 				<Advantages sector={sector} headers={headers}/>
+				<Principle sector={sector} headers={headers}/>
 			</div>
 			<Consultation/>
 		</div>

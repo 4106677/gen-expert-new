@@ -3,15 +3,15 @@ import Stripe from "@/app/(components)/Stripe/stripe";
 
 export default function Hero() {
 	return <div className='hero-container'>
-		<div className="hero-main">
-			<div className="video-wrapper">
+		<div className="hero-main container">
+			<div className="video-wrapper ">
 				<video src="/images/hero/hero.mp4"
 				       autoPlay
 				       muted
 				       loop
 				       playsInline
 				       controls={false}
-				       className='hero-video'/>
+				       className='hero-video '/>
 
 			</div>
 			<div className="video-text-container">
