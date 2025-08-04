@@ -107,6 +107,10 @@ main {
   align-items: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -138,6 +142,37 @@ input {
   }
 
 }
+
+.recharts-wrapper {
+  .recharts-surface {
+
+    .recharts-layer {
+
+      .recharts-bar {
+        .recharts-rectangle {
+          border-radius: 18px;
+          overflow: hidden;
+        }
+      }
+    }
+
+  }
+
+  .recharts-cartesian-axis-line {
+    display: none;
+  }
+
+  .xAxis {
+    .recharts-cartesian-axis-tick-line {
+      display: none;
+    }
+  }
+
+.recharts-cartesian-axis-tick-value {
+  /*margin-top: 20px;*/
+}
+}
+
 
 span {display: inline-block}
 

@@ -1,19 +1,19 @@
 'use client'
 import styles from './calculator.module.scss'
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import "rc-slider/assets/index.css";
-import {BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Rectangle} from "recharts";
-import dynamic from "next/dynamic";
-import {useContactsModal} from "@/context/ContactsModalContext";
+import {BarChart, Bar, XAxis, YAxis, ResponsiveContainer} from "recharts";
+import dynamic from "next/dynamic"
 import GreenBox from "@/app/(components)/GreenBox/GreenBox";
+import Consultation from "@/app/(components)/MainPage/Consultation/consultation";
 const Slider = dynamic(() => import('rc-slider'), { ssr: false });
 
 export default function Calculator () {
 	const [elecProd, setElecProd] = useState(1000)
 	const [elecPrice, setElecPrice] = useState(8.5)
 	const [gasPrice, setGasPrice] = useState(17.5)
-	const [hourlyHeat, setHourlyHeat] = useState(10)
+	// const [hourlyHeat, setHourlyHeat] = useState(10)
 	const [yearlyHeat, setYearlyHeat] = useState(6)
 	const [chp, setChp] = useState(false)
 	const [isMounted, setIsMounted] = useState(false);
@@ -23,9 +23,9 @@ export default function Calculator () {
 	const gas_gen_price = gasPrice * elecProd * avg / elecProd
 	const yearly_elec_price = elecProd * elecPrice * 30 * 12 * 18
 	const yearly_gen_price = elecProd * gas_gen_price * 30 * 12 * 18
-	const gpu_costs = gas_gen_price * 1000 * 18 *30 * 12
+	// const gpu_costs = gas_gen_price * 1000 * 18 *30 * 12
 	const yearly_econom = (elecPrice - gas_gen_price) * elecProd * 30 * 12 * 18
-	const yearly_econom_chp = yearly_econom + 1 * elecProd * 18 * 30 * yearlyHeat
+	const yearly_econom_chp = yearly_econom + elecProd * 18 * 30 * yearlyHeat
 	const gpuPaybackPeriod = elecProd * 460 * 44 / yearly_econom * 12
 	const chpPaybackPeriod = elecProd * 510 * 44 / yearly_econom_chp * 12
 
@@ -236,70 +236,72 @@ export default function Calculator () {
 						<div className={styles.calculated_wrapper}>
 							<div className={styles.calculator}>
 								<h2 className={styles.calculator_title}>{t("calculator.estimate.subtitle")}</h2>
-								<ul>
+								<ul className={styles.calculator_list}>
 									<li className={styles.calculator_list_item}>
 										<h4 className={styles.calculator_list_item_h4}>{t("calculator.estimate.params.gas_gen_price")}</h4>
-										<span>{gas_gen_price.toFixed(3)} {t("calculator.unit.uah")}</span>
+										<span className={styles.calculator_list_item__span}>{gas_gen_price.toFixed(3)} {t("calculator.unit.uah")}</span>
 									</li>
 									<li className={styles.calculator_list_item}>
 										<h4 className={styles.calculator_list_item_h4}>
 											<div className={`${styles.rounder} `}
-											     style={{backgroundColor: "#8884d8"}}></div>
+											     style={{backgroundColor: "#24852A"}}></div>
 											{t("calculator.estimate.params.selfGeneration")}
 										</h4>
-										<span>{Math.round(yearly_gen_price).toLocaleString("ru-RU")} {t("calculator.unit.uah")}</span>
+										<span className={styles.calculator_list_item__span}>{Math.round(yearly_gen_price).toLocaleString("ru-RU")} {t("calculator.unit.uah")}</span>
 									</li>
 									<li className={styles.calculator_list_item}>
 										<h4 className={styles.calculator_list_item_h4}>
 											<div className={`${styles.rounder} `}
-											     style={{backgroundColor: "#ffc658"}}></div>
+											     style={{backgroundColor: "#E9EFF1"}}></div>
 											{t("calculator.estimate.params.supplierPurchase")}
 										</h4>
-										<span>{yearly_elec_price.toLocaleString("ru-RU")} {t("calculator.unit.uah")}</span>
+										<span className={styles.calculator_list_item__span}>{yearly_elec_price.toLocaleString("ru-RU")} {t("calculator.unit.uah")}</span>
 									</li>
 									<li className={styles.calculator_list_item}>
 										<h4 className={styles.calculator_list_item_h4}>
 											<div className={`${styles.rounder} `}
-											     style={{backgroundColor: "#82ca9d"}}></div>
+											     style={{backgroundColor: "#89C539"}}></div>
 											{t("calculator.estimate.params.annualSavings")}
 										</h4>
-										<span>{Math.round(chp ? yearly_econom_chp : yearly_econom).toLocaleString('ru-RU')} {t("calculator.unit.uah")}</span>
+										<span className={styles.calculator_list_item__span}>{Math.round(chp ? yearly_econom_chp : yearly_econom).toLocaleString('ru-RU')} {t("calculator.unit.uah")}</span>
 									</li>
 									<li className={styles.calculator_list_item}>
 										<h4 className={styles.calculator_list_item_h4}>{t("calculator.estimate.params.gpuPaybackPeriod")}</h4>
-										<span>{Math.round(gpuPaybackPeriod)} {t("calculator.unit.month")}</span>
+										<span className={styles.calculator_list_item__span}>{Math.round(gpuPaybackPeriod)} {t("calculator.unit.month")}</span>
 									</li>
 									{chp && <li className={styles.calculator_list_item}>
 										<h4 className={styles.calculator_list_item_h4}>{t("calculator.estimate.params.chpPaybackPeriod")}</h4>
-										<span>{Math.round(chpPaybackPeriod)} {t("calculator.unit.month")}</span>
+										<span className={styles.calculator_list_item__span}>{Math.round(chpPaybackPeriod)} {t("calculator.unit.month")}</span>
 									</li>}
 								</ul>
 							</div>
-							<ResponsiveContainer width="100%" height={300}>
+							<ResponsiveContainer  height={300}>
 								<BarChart data={chart_data}
-								          width={200}
+								          // width={170}
 								          margin={{
-									          top: 5,
-									          right: 30,
-									          left: 20,
-									          bottom: 5,
-								          }}>
-									<XAxis dataKey="name"/>
+									          top: 0,
+									          right: 0,
+									          left: 30,
+									          bottom: 0,
+								          }}
+								          barGap={8}
+								          barSize={170}
+								>
+									<XAxis lineType dataKey="name" />
 									<YAxis/>
-									{/*<Tooltip />*/}
-									{/*<Bar dataKey="1" fill="#82E58F" activeBar={<Rectangle fill="pink" stroke="blue" />} />*/}
-									{/*<Bar dataKey="2" fill="#8884d8" activeBar={<Rectangle fill="gold" stroke="purple" />} />*/}
-									<Bar dataKey="pv" stackId="a" fill="#8884d8"/>
-									<Bar dataKey="amt" stackId="a" fill="#82ca9d"/>
-									<Bar dataKey="uv" fill="#ffc658"/>
+									<Bar dataKey="pv" stackId="a" fill="#24852A" radius={[0, 0, 16, 16]}/>
+									<Bar dataKey="amt" stackId="b" fill="#89C539"radius={[16, 16, 0, 0]}/>
+									<Bar dataKey="uv" fill="#E9EFF1" radius={16}/>
 								</BarChart>
 							</ResponsiveContainer>
-							<button className={styles.contact_us}
+							{/*<button className={styles.contact_us}*/}
+							<button className={`btn btn_green ${styles.contact_us}`}
 							        onClick={() => setContactsShowModal(true)}>{t("calculator.estimate.button")}</button>
 						</div>
 					</div>
 				</div>
 			</div>
+			<Consultation/>
 		</>
 	)
 }

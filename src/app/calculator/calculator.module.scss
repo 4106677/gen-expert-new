@@ -1,5 +1,6 @@
 .main {
     padding: 60px 100px 80px;
+    width: 100%;
 }
 
 .title {
@@ -28,12 +29,14 @@
     display: grid;
     grid-template-columns: 3fr 3fr;
     gap: 20px;
-    background-color: white;
-    border-radius: 20px;
-    padding: 28px 30px;
+
 }
 
 .sliderList {
+    background-color: white;
+    border-radius: 20px;
+    padding: 28px 30px;
+
     .sliderList_item {
         display: flex;
         align-items: center;
@@ -150,7 +153,7 @@
 
     .slider_stint {
         display: flex;
-        justify-content: space-between;
+        //justify-content: space-between;
         color: #94A3B8;
         font-weight: 500;
         font-size: 16px;
@@ -162,9 +165,9 @@
 
 .calculated_wrapper {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 20px;
+    padding: 28px 30px;
     color: black;
-    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -172,48 +175,65 @@
 }
 
 .calculator {
-    margin-bottom: 15px;
+    margin-bottom: auto;
+
+    &_list {
+
+    }
 }
 
 .calculator_title {
-    font-weight: normal;
-    margin-bottom: 10px;
-    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .calculator_list_item {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 18px;
-    margin-bottom: 5px;
-    padding-bottom: 5px;
+    color: #94A3B8;
+    font-size: 16px;
+    font-weight: 500;
+    //margin-bottom: 5px;
+    //padding-bottom: 5px;
+    height: 40px;
+
+    &__span {
+        color: #475569;
+    }
 
     &:not(:last-child) {
         border-bottom: 1px solid #eaeceb;
     }
 
-    //.calculator_list_item_h4 {
-    //    display: flex;
-    //}
+    .calculator_list_item_h4 {
+        display: flex;
+        align-items: center;
+    }
 
     .rounder {
         margin-right: 10px;
-         width: 20px;
-        height: 20px;
-        border-radius: 3px;
+        width: 12px;
+        height: 12px;
+        border-radius: 2px;
     }
 }
 
 .contact_us {
     color: white;
     font-size: 18px;
-    background-color: black;
-    height: 40px;
-    padding: 2px 30px;
-    border: none;
-    margin: 0 auto;
-    display: block;
+    font-weight: 600;
+    //margin-left: auto;
+    //margin-top: 49px;
+    //background-color: black;
+    //height: 40px;
+    //padding: 2px 30px;
+    //border: none;
+    //margin: 33px auto 0 325px;
+    //display: block;
+    margin-left: 136px;
+    width: 348px;
 }
 
 

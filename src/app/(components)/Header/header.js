@@ -8,33 +8,45 @@ import Image from "next/image";
 import { Footer } from "@/app/(components)/Footer/footer";
 import footerStyles from "@/app/(components)/Footer/footer.module.css";
 import './header.css'
+import {usePathname} from "next/navigation";
 
 export default function Header() {
 	const { t } = useTranslation("common");
+	const pathname = usePathname();
 	const { lang, setLang } = useLanguage();
 	const [langBox, setLangBox] = useState(false);
 	const [mobileLangBox, setMobileLangBox] = useState(false);
 	const [isMounted, setIsMounted] = useState(false);
 	const [menuOpen, setMenuOpen] = useState(false);
-	const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
+	// const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
-	useEffect(() => {
-		setIsMounted(true);
+	// useEffect(() => {
+	// 	setIsMounted(true);
+	//
+	// 	if (typeof window !== 'undefined') {
+	// 		setWindowWidth(window.innerWidth);
+	//
+	// 		const handleResize = () => {
+	// 			setWindowWidth(window.innerWidth);
+	// 			if (window.innerWidth >= 1250 && menuOpen) {
+	// 				setMenuOpen(false);
+	// 			}
+	// 		};
+	//
+	// 		window.addEventListener('resize', handleResize);
+	// 		return () => window.removeEventListener('resize', handleResize);
+	// 	}
+	// }, [menuOpen]);
 
-		if (typeof window !== 'undefined') {
-			setWindowWidth(window.innerWidth);
-
-			const handleResize = () => {
-				setWindowWidth(window.innerWidth);
-				if (window.innerWidth >= 1250 && menuOpen) {
-					setMenuOpen(false);
-				}
-			};
-
-			window.addEventListener('resize', handleResize);
-			return () => window.removeEventListener('resize', handleResize);
+	const handleClick = (e) => {
+		if (pathname === "/") {
+			e.preventDefault();
+			const anchor = document.getElementById("contactForm");
+			if (anchor) {
+				anchor.scrollIntoView({ behavior: "smooth" });
+			}
 		}
-	}, [menuOpen]);
+	};
 
 	const onLangBoxClick = (event, selectedLang) => {
 		event.stopPropagation();
@@ -152,7 +164,21 @@ export default function Header() {
 
 				{/* Desktop-only language and contacts */}
 				<div className="desktop-extras">
-					<button className='btn btn_green' style={{height: '41px'}}>{t("menu.callback")}</button>
+					{/*<button*/}
+					{/*	className='btn btn_green'*/}
+					{/*	style={{height: '41px'}}*/}
+					{/*	onClick={() => {*/}
+					{/*		const anchor = document.getElementById('contactForm'); // або будь-який id*/}
+					{/*		if (anchor) {*/}
+					{/*			anchor.scrollIntoView({ behavior: 'smooth' });*/}
+					{/*		}*/}
+					{/*	}}*/}
+					{/*>{t("menu.callback")}</button>*/}
+					<Link href="/#contactForm" onClick={handleClick}>
+						<button className="btn btn_green" style={{ height: '41px' }}>
+							{t("menu.callback")}
+						</button>
+					</Link>
 					<div className="contacts">
 						<a href="tel:+380732370045">+38(073)237-00-45</a>
 						<a href="mailto:info@genexpert.com.ua">info@genexpert.com.ua</a>
@@ -175,8 +201,6 @@ export default function Header() {
 							<li onClick={(e) => onLangBoxClick(e, "en")}>EN</li>
 						</ul>
 					</div>
-
-
 				</div>
 			</nav>
 		</header>

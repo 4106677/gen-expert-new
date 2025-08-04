@@ -15,7 +15,7 @@ import Blog from "@/app/(components)/MainPage/Blog/blog";
 import ContactForm from "@/app/(components)/ContactForm/contactForm";
 
 export default function Home() {
-    const [data, setData] = useState(null);
+    // const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false)
     // const { showModal, setShowModal } = useModal();
     // const router = useRouter();
@@ -30,6 +30,16 @@ export default function Home() {
     //     window.addEventListener('resize', checkIfMobile);
     //     return () => window.removeEventListener('resize', checkIfMobile);
     // }, []);
+    useEffect(() => {
+        if (typeof window !== "undefined" && window.location.hash) {
+            const el = document.querySelector(window.location.hash);
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    }, []);
+
+
 
     useEffect(() => {
         async function loadSheetData() {

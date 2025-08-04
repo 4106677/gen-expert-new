@@ -9,7 +9,7 @@ import {useTranslation} from "react-i18next";
 
 const ContactForm = () => {
 	const [submitStatus, setSubmitStatus] = useState(null);
-	const { t } = useTranslation('common');
+	// const { t } = useTranslation('common');
 
 	const initialValues = {
 		fullName: '',
@@ -35,7 +35,7 @@ const ContactForm = () => {
 	};
 
 	return (
-		<div className={`${styles.container} container`}>
+		<div className={`${styles.container} container`} id="contactForm">
 			<div className={styles.left}>
 				<h2 className={styles.left_header}>Скорочуйте витрати! Ми зробимо все під ключ</h2>
 				<span className={styles.left_description}>Надійний партнер у переході до власної генерації. Скоротіть витрати на енергію до 50% та забезпечте стабільність роботи вашого бізнесу.</span>
