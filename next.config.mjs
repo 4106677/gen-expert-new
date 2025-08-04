@@ -15,7 +15,6 @@ const nextConfig = {
 	experimental: {
 		disableOptimizedLoading: true,
 	},
-	output: 'export',
 	trailingSlash: true,
 };
 
