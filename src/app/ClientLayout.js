@@ -9,7 +9,7 @@ import {SheetDataProvider} from "@/context/SheetDataContext";
 
 export default function ClientLayout({ children }) {
 	const [showModal, setShowModal] = useState(false);
-	const [showContactsModal, setContactsShowModal] = useState(false);
+	// const [showContactsModal, setContactsShowModal] = useState(false);
 
 	return (
 		<I18nextProvider i18n={i18n}>
