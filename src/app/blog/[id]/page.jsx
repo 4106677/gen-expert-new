@@ -10,15 +10,7 @@ import {useSheetData} from "@/context/SheetDataContext";
 import Image from "next/image";
 import CustomLink from "@/app/(components)/CustomLink/customLink";
 import BackButton from "@/app/(components)/BackButton/BackButton";
-import {getAllBlogIds} from "@/utils/getBlogIds";
 
-export async function generateStaticParams() {
-	const blogIds = getAllBlogIds();
-
-	return blogIds.map((id) => ({
-		id: id,
-	}));
-}
 
 const BlogPage = () => {
 	const { id } = useParams();

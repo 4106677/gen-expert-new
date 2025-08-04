@@ -2,8 +2,8 @@
 import styles from "./page.module.css";
 import "../i18n";
 // import {fetchGoogleSheetData} from "@/services/google";
-import {useEffect, useState} from "react";
-import {useLanguage} from "@/app/context";
+import {useEffect} from "react";
+// import {useLanguage} from "@/app/context";
 import Hero from "@/app/(components)/MainPage/Hero/hero";
 import Fields from "@/app/(components)/Fields/fields";
 import Possibilities from "@/app/(components)/MainPage/Possibilities/possibilities";
