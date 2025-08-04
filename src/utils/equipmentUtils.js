@@ -12,7 +12,6 @@ export async function getEquipmentData(language = 'EN') {
 	}
 }
 
-// Функция для получения всех ID оборудования
 export async function getAllEquipmentIds() {
 	try {
 		const languages = ['EN', 'UK'];
@@ -26,7 +25,6 @@ export async function getAllEquipmentIds() {
 					.filter(item => item && (item.id || item.article))
 					.forEach(item => {
 						try {
-							// Вариант 1: Используем вашу функцию createEquipmentUrl
 							const encodedId = createEquipmentUrl(
 								item.id || item.article,
 								item.manufacturer || '',
@@ -61,26 +59,19 @@ export async function getAllEquipmentIds() {
 		return Array.from(allEquipmentIds);
 	} catch (error) {
 		console.error('Error getting all equipment IDs:', error);
-		// Возвращаем пустой массив в случае ошибки
 		return [];
 	}
 }
 
-// Альтернативный вариант: захардкодить проблемные ID
 export function getStaticEquipmentIds() {
-	// Добавьте сюда все проблемные ID которые Next.js не может найти
 	return [
-		'GE-RU%200113', // проблемный ID из ошибки
-		'GE-RU 0113',   // не закодированная версия
-		// Добавьте сюда ВСЕ ID из ваших данных если проблем много:
-		// Запустите npm run build и скопируйте все недостающие ID из ошибок
+		'GE-RU%200113',
+		'GE-RU 0113',
 	];
 }
 
-// Функция для отладки - показывает как генерируются ID
 export async function debugEquipmentIds() {
 	const equipmentData = await getEquipmentData('EN');
-	console.log('Sample equipment data:', equipmentData.slice(0, 3));
 
 	equipmentData.slice(0, 10).forEach(item => {
 		console.log('Item:', {
