@@ -1,5 +1,5 @@
 // const repoName = '/gen-expert';
-const repoName = '/gen-expert-new';
+const repoName = '/gen-expert-new/';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
