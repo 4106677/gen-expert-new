@@ -1,4 +1,5 @@
-import React from "react";
+'use client'
+import React, {useEffect, useState} from "react";
 import styles from "./blog.module.css";
 import CustomLink from "@/app/(components)/CustomLink/customLink";
 import {useTranslation} from "react-i18next";
@@ -6,6 +7,18 @@ import Image from "next/image";
 
 const Blog = () => {
 	const { t } = useTranslation('common');
+	const [isMounted, setIsMounted] = useState(false);
+
+	useEffect(() => {
+		setIsMounted(true);
+	}, []);
+
+	if (!isMounted) {
+		return (
+			<div>
+			</div>
+		);
+	}
 
 	return (
 		<div className={styles.blog}>

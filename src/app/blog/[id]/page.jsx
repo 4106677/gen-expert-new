@@ -3,13 +3,22 @@ import React, {useEffect, useState} from "react";
 import styles from './BlogPage.module.css'
 import {useLanguage} from "@/app/context";
 import {useTranslation} from "react-i18next";
-import {useParams, useRouter} from "next/navigation";
+import {useParams} from "next/navigation";
 import Consultation from "@/app/(components)/MainPage/Consultation/consultation";
 import GreenBox from "@/app/(components)/GreenBox/GreenBox";
 import {useSheetData} from "@/context/SheetDataContext";
 import Image from "next/image";
 import CustomLink from "@/app/(components)/CustomLink/customLink";
 import BackButton from "@/app/(components)/BackButton/BackButton";
+import {getAllBlogIds} from "@/utils/getBlogIds";
+
+export async function generateStaticParams() {
+	const blogIds = getAllBlogIds();
+
+	return blogIds.map((id) => ({
+		id: id,
+	}));
+}
 
 const BlogPage = () => {
 	const { id } = useParams();

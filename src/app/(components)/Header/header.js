@@ -18,25 +18,25 @@ export default function Header() {
 	const [mobileLangBox, setMobileLangBox] = useState(false);
 	const [isMounted, setIsMounted] = useState(false);
 	const [menuOpen, setMenuOpen] = useState(false);
-	// const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
+	const [, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
-	// useEffect(() => {
-	// 	setIsMounted(true);
-	//
-	// 	if (typeof window !== 'undefined') {
-	// 		setWindowWidth(window.innerWidth);
-	//
-	// 		const handleResize = () => {
-	// 			setWindowWidth(window.innerWidth);
-	// 			if (window.innerWidth >= 1250 && menuOpen) {
-	// 				setMenuOpen(false);
-	// 			}
-	// 		};
-	//
-	// 		window.addEventListener('resize', handleResize);
-	// 		return () => window.removeEventListener('resize', handleResize);
-	// 	}
-	// }, [menuOpen]);
+	useEffect(() => {
+		setIsMounted(true);
+
+		if (typeof window !== 'undefined') {
+			setWindowWidth(window.innerWidth);
+
+			const handleResize = () => {
+				setWindowWidth(window.innerWidth);
+				if (window.innerWidth >= 1250 && menuOpen) {
+					setMenuOpen(false);
+				}
+			};
+
+			window.addEventListener('resize', handleResize);
+			return () => window.removeEventListener('resize', handleResize);
+		}
+	}, [menuOpen]);
 
 	const handleClick = (e) => {
 		if (pathname === "/") {

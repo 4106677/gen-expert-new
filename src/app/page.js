@@ -1,7 +1,7 @@
 'use client'
 import styles from "./page.module.css";
 import "../i18n";
-import {fetchGoogleSheetData} from "@/services/google";
+// import {fetchGoogleSheetData} from "@/services/google";
 import {useEffect, useState} from "react";
 import {useLanguage} from "@/app/context";
 import Hero from "@/app/(components)/MainPage/Hero/hero";
@@ -16,10 +16,10 @@ import ContactForm from "@/app/(components)/ContactForm/contactForm";
 
 export default function Home() {
     // const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(false)
+    // const [loading, setLoading] = useState(false)
     // const { showModal, setShowModal } = useModal();
     // const router = useRouter();
-    const { lang } = useLanguage();
+    // const { lang } = useLanguage();
 
 
     // useEffect(() => {
@@ -41,24 +41,24 @@ export default function Home() {
 
 
 
-    useEffect(() => {
-        async function loadSheetData() {
-            setLoading(true)
-            try {
-                const sheetData = await fetchGoogleSheetData(`TOP5${lang.toUpperCase()}`);;
-                setData(sheetData);
-            } catch (error) {
-                console.error("Failed to fetch sheet data:", error.message);
-                setData([]);
-            }
-        }
+    // useEffect(() => {
+    //     async function loadSheetData() {
+    //         setLoading(true)
+    //         try {
+    //             const sheetData = await fetchGoogleSheetData(`TOP5${lang.toUpperCase()}`);;
+    //             setData(sheetData);
+    //         } catch (error) {
+    //             console.error("Failed to fetch sheet data:", error.message);
+    //             setData([]);
+    //         }
+    //     }
+    //
+    //     loadSheetData().then(() => setLoading(false));
+    // }, [lang]);
 
-        loadSheetData().then(() => setLoading(false));
-    }, [lang]);
-
-    if (loading) {
-        return <></>
-    }
+    // if (loading) {
+    //     return <></>
+    // }
 
     return (
         <div className={styles.page}>
