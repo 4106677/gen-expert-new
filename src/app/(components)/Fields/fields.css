@@ -54,6 +54,9 @@
 .fields-right__item-header {
     margin-bottom: 6px;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .fields-right__item-description {
@@ -62,8 +65,8 @@
 }
 
 .fields-right__item-image {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    transform: translate(-50%, -50%);
+    /*position: absolute;*/
+    /*top: 25px;*/
+    /*right: 25px;*/
+    /*transform: translate(-50%, -50%);*/
 }

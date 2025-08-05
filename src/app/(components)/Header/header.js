@@ -8,7 +8,7 @@ import Image from "next/image";
 import { Footer } from "@/app/(components)/Footer/footer";
 import footerStyles from "@/app/(components)/Footer/footer.module.css";
 import './header.css'
-import {usePathname} from "next/navigation";
+import {usePathname, useRouter} from "next/navigation";
 
 export default function Header() {
 	const { t } = useTranslation("common");
@@ -19,32 +19,53 @@ export default function Header() {
 	const [isMounted, setIsMounted] = useState(false);
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
+	const router = useRouter();
 
 	useEffect(() => {
 		setIsMounted(true);
-
 		if (typeof window !== 'undefined') {
 			setWindowWidth(window.innerWidth);
-
 			const handleResize = () => {
 				setWindowWidth(window.innerWidth);
 				if (window.innerWidth >= 1250 && menuOpen) {
 					setMenuOpen(false);
 				}
 			};
-
 			window.addEventListener('resize', handleResize);
 			return () => window.removeEventListener('resize', handleResize);
 		}
 	}, [menuOpen]);
 
-	const handleClick = (e) => {
-		if (pathname === "/") {
-			e.preventDefault();
+	const scrollToContactForm = () => {
+		const maxAttempts = 50;
+		let attempts = 0;
+
+		const tryScroll = () => {
 			const anchor = document.getElementById("contactForm");
 			if (anchor) {
 				anchor.scrollIntoView({ behavior: "smooth" });
+				return;
 			}
+
+			attempts++;
+			if (attempts < maxAttempts) {
+				setTimeout(tryScroll, 100);
+			}
+		};
+
+		tryScroll();
+	};
+
+	const handleClick = (e) => {
+		e.preventDefault();
+
+		if (pathname === "/") {
+			scrollToContactForm();
+		} else {
+			router.push("/");
+			setTimeout(() => {
+				scrollToContactForm();
+			}, 500);
 		}
 	};
 
@@ -148,10 +169,7 @@ export default function Header() {
 						<li><Link href="/sectors" onClick={() => setMenuOpen(false)}>{t("menu.sectors")}</Link></li>
 						<li><Link href="/equipment" onClick={() => setMenuOpen(false)}>{t("menu.equipment")}</Link></li>
 						<li><Link href="/blog" onClick={() => setMenuOpen(false)}>{t("menu.blog")}</Link></li>
-						{/*<li><Link href="/why" onClick={() => setMenuOpen(false)}>{t("menu.why")}</Link></li>*/}
-						{/*<li><Link href="/useful" onClick={() => setMenuOpen(false)}>{t("menu.useful")}</Link></li>*/}
 						<li><Link href="/calculator" onClick={() => setMenuOpen(false)}>{t("menu.calculate")}</Link>
-						{/*<li><Link href="/calculator" onClick={() => setMenuOpen(false)}>{t("menu.calculator")}</Link>*/}
 						</li>
 
 					</ul>
@@ -164,17 +182,7 @@ export default function Header() {
 
 				{/* Desktop-only language and contacts */}
 				<div className="desktop-extras">
-					{/*<button*/}
-					{/*	className='btn btn_green'*/}
-					{/*	style={{height: '41px'}}*/}
-					{/*	onClick={() => {*/}
-					{/*		const anchor = document.getElementById('contactForm'); // або будь-який id*/}
-					{/*		if (anchor) {*/}
-					{/*			anchor.scrollIntoView({ behavior: 'smooth' });*/}
-					{/*		}*/}
-					{/*	}}*/}
-					{/*>{t("menu.callback")}</button>*/}
-					<Link href="/#contactForm" onClick={handleClick}>
+									<Link href="/#contactForm" onClick={handleClick}>
 						<button className="btn btn_green" style={{ height: '41px' }}>
 							{t("menu.callback")}
 						</button>
@@ -194,12 +202,13 @@ export default function Header() {
 							width={24}
 							height={24}
 						/>
-						<span className="rounder">{lang.toUpperCase()}</span>
-						<ul className="selector" style={{display: langBox ? "flex" : "none"}}>
+						{langBox ? <ul className="selector" style={{display: langBox ? "flex" : "none"}}>
 							<li onClick={(e) => onLangBoxClick(e, "ru")}>RU</li>
 							<li onClick={(e) => onLangBoxClick(e, "ua")}>UA</li>
 							<li onClick={(e) => onLangBoxClick(e, "en")}>EN</li>
-						</ul>
+						</ul> : <span className="rounder">{lang.toUpperCase()}</span>}
+
+
 					</div>
 				</div>
 			</nav>

@@ -1,8 +1,14 @@
 import SectorPageClient from "@/app/sectors/[slug]/SectorPageClient";
-import data from '/public/locales/en/common.json'
+import { readFileSync } from 'fs';
+import { join } from 'path';
 
 export async function generateStaticParams() {
 	try {
+		// Читаем файл через file system
+		const filePath = join(process.cwd(), 'public', 'locales', 'en', 'common.json');
+		const fileContents = readFileSync(filePath, 'utf8');
+		const data = JSON.parse(fileContents);
+
 		const sectorIds = data?.sectors?.industries || [];
 
 		return sectorIds.map(({slug}) => ({

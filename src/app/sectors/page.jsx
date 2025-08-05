@@ -10,7 +10,6 @@ import Consultation from "@/app/(components)/MainPage/Consultation/consultation"
 const SectorsPage = () => {
 	const { t } = useTranslation('common');
 	const industries = Object.values(t('sectors.industries', { returnObjects: true }) || {});
-	console.log(industries);
 
 	return (
 		<>

@@ -99,12 +99,6 @@
 }
 
 .desktop-extras button {
-
-    /*border: none;*/
-    /*border-radius: 11px;*/
-    /*height: 41px;*/
-    /*width: 170px;*/
-    /*font-weight: 500;*/
 }
 
 .desktop-extras .rounder {
@@ -115,13 +109,14 @@
 
 .desktop-extras .selector {
     height: 60px;
-    background-color: #85e28f;
-    position: absolute;
-    width: 60px;
+    /*background-color: #85e28f;*/
+    /*position: absolute;*/
+    /*width: 60px;*/
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
+    margin-left: 8px;
 }
 
 .desktop-extras .selector li {
