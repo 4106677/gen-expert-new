@@ -3,8 +3,8 @@ const repoName = '/gen-expert-new/';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	basePath: repoName,
-	assetPrefix: repoName,
+	// basePath: repoName,
+	// assetPrefix: repoName,
 	images: {
 		unoptimized: true,
 		domains: [
