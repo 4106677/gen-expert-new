@@ -17,7 +17,7 @@ const Banner = ({header, direction = 'default', style}) => {
 						top: direction === "reverse" ? '62px' : 0,
 					}}
 					className={styles.main_banner_image}
-					src='images/MainPage/gpu.webp' alt='GPU'
+					src='/images/mainPage/gpu.webp' alt='GPU'
 					width={703}
 					height={390}>
 				</Image>
