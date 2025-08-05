@@ -19,7 +19,7 @@ export async function getAllEquipmentIds() {
 
 			if (Array.isArray(equipmentData)) {
 				equipmentData
-					.filter(item => item && (item.id || item.article))
+					.filter(item => item && (item.article))
 					.forEach(item => {
 						try {
 							const encodedId = createEquipmentUrl(
@@ -27,17 +27,8 @@ export async function getAllEquipmentIds() {
 							if (encodedId) {
 								allEquipmentIds.add(encodedId);
 							}
-
-							if (item.id) {
-								allEquipmentIds.add(String(item.id));
-								allEquipmentIds.add(encodeURIComponent(String(item.id)));
-							}
-
 						} catch (error) {
 							console.warn(`Failed to create URL for item:`, item, error);
-							if (item.id) {
-								allEquipmentIds.add(String(item.id));
-							}
 						}
 					});
 			}
@@ -55,18 +46,4 @@ export function getStaticEquipmentIds() {
 		'GE-RU%200113',
 		'GE-RU 0113',
 	];
-}
-
-export async function debugEquipmentIds() {
-	const equipmentData = await getEquipmentData('EN');
-
-	equipmentData.slice(0, 10).forEach(item => {
-		console.log('Item:', {
-			id: item.id,
-			manufacturer: item.manufacturer,
-			model: item.model,
-			createEquipmentUrl: createEquipmentUrl(item.id || item.article, item.manufacturer || '', item.model || ''),
-			encoded: encodeURIComponent(`${item.manufacturer || ''}-${item.model || ''}`.trim())
-		});
-	});
 }
