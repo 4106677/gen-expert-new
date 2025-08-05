@@ -2,7 +2,7 @@
 export const createEquipmentUrl = (id) => {
 	if (!id) return '/equipment';
 	const encodedId = encodeURIComponent(String(id));
-	return `/${encodedId}`;
+	return `${encodedId}`;
 };
 
 export const decodeEquipmentId = (encodedId) => {
