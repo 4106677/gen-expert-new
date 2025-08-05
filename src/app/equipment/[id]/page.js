@@ -1,8 +1,5 @@
 // src/app/equipment/[id]/page.js
 import EquipmentDetailPageClient from "@/app/equipment/[id]/EquipmentDetailPageClient";
-import { getAllEquipmentIds } from "@/utils/equipmentUtils";
-
-import EquipmentDetailPageClient from "@/app/equipment/[id]/EquipmentDetailPageClient";
 import { getAllEquipmentIds, getStaticEquipmentIds } from "@/utils/equipmentUtils";
 
 export async function generateStaticParams() {

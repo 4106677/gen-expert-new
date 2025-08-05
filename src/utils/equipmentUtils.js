@@ -14,11 +14,8 @@ export async function getEquipmentData(language = 'EN') {
 
 export async function getAllEquipmentIds() {
 	try {
-		const languages = ['EN', 'UK'];
 		const allEquipmentIds = new Set();
-
-		for (const lang of languages) {
-			const equipmentData = await getEquipmentData(lang);
+			const equipmentData = await getEquipmentData('RU');
 
 			if (Array.isArray(equipmentData)) {
 				equipmentData
@@ -26,22 +23,13 @@ export async function getAllEquipmentIds() {
 					.forEach(item => {
 						try {
 							const encodedId = createEquipmentUrl(
-								item.id || item.article,
-								item.manufacturer || '',
-								item.model || ''
-							);
+								item.article);
 							if (encodedId) {
 								allEquipmentIds.add(encodedId);
 							}
 
-							const simpleId = encodeURIComponent(`${item.manufacturer || ''}-${item.model || ''}`.trim());
-							if (simpleId && simpleId !== '-') {
-								allEquipmentIds.add(simpleId);
-							}
-
 							if (item.id) {
 								allEquipmentIds.add(String(item.id));
-								// Также добавляем URL-encoded версию
 								allEquipmentIds.add(encodeURIComponent(String(item.id)));
 							}
 
@@ -53,7 +41,6 @@ export async function getAllEquipmentIds() {
 						}
 					});
 			}
-		}
 
 		console.log('Generated equipment IDs:', Array.from(allEquipmentIds));
 		return Array.from(allEquipmentIds);
