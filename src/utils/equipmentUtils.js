@@ -15,23 +15,23 @@ export async function getEquipmentData(language = 'EN') {
 export async function getAllEquipmentIds() {
 	try {
 		const allEquipmentIds = new Set();
-			const equipmentData = await getEquipmentData('RU');
+		const equipmentData = await getEquipmentData('RU');
 
-			if (Array.isArray(equipmentData)) {
-				equipmentData
-					.filter(item => item && (item.article))
-					.forEach(item => {
-						try {
-							const encodedId = createEquipmentUrl(
-								item.article);
-							if (encodedId) {
-								allEquipmentIds.add(encodedId);
-							}
-						} catch (error) {
-							console.warn(`Failed to create URL for item:`, item, error);
+		if (Array.isArray(equipmentData)) {
+			equipmentData
+				.filter(item => item && (item.article))
+				.forEach(item => {
+					try {
+						// createEquipmentUrl now returns the raw ID without encoding
+						const id = createEquipmentUrl(item.article);
+						if (id) {
+							allEquipmentIds.add(id);
 						}
-					});
-			}
+					} catch (error) {
+						console.warn(`Failed to create URL for item:`, item, error);
+					}
+				});
+		}
 
 		console.log('Generated equipment IDs:', Array.from(allEquipmentIds));
 		return Array.from(allEquipmentIds);
@@ -43,7 +43,7 @@ export async function getAllEquipmentIds() {
 
 export function getStaticEquipmentIds() {
 	return [
-		'GE-RU%200113',
-		'GE-RU 0113',
+		'GE-RU 0113', // Use unencoded IDs
+		'GE-BF 0110', // Add this one if it's missing
 	];
 }

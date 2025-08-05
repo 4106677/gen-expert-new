@@ -1,15 +1,22 @@
 // src/utils/urlUtils.js
 export const createEquipmentUrl = (id) => {
 	if (!id) return '/equipment';
-	const encodedId = encodeURIComponent(String(id));
-	return `${encodedId}`;
+	// Don't encode here - Next.js will handle URL encoding automatically
+	return String(id);
 };
 
 export const decodeEquipmentId = (encodedId) => {
 	if (!encodedId) return null;
 
+	// Next.js already decodes URL parameters, so we might not need to decode again
+	// But let's handle both cases
 	try {
-		return decodeURIComponent(encodedId);
+		// If it's still encoded, decode it
+		if (encodedId.includes('%')) {
+			return decodeURIComponent(encodedId);
+		}
+		// If it's already decoded, return as is
+		return encodedId;
 	} catch (error) {
 		console.error('Error decoding ID:', error);
 		return encodedId;
