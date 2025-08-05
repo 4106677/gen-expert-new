@@ -1,5 +1,5 @@
 'use client'
-import React from "react";
+import React, {useEffect, useState} from "react";
 import GreenBox from "@/app/(components)/GreenBox/GreenBox";
 import styles from './blog.module.css'
 import Image from "next/image"
@@ -8,7 +8,19 @@ import {useTranslation} from "react-i18next";
 import CustomLink from "@/app/(components)/CustomLink/customLink";
 
 const Blog = () => {
+	const [isMounted, setIsMounted] = useState(false);
 	const { t } = useTranslation('common');
+
+	useEffect(() => {
+		setIsMounted(true);
+	}, []);
+
+	if (!isMounted) {
+		return (
+			<div>
+			</div>
+		);
+	}
 
 	return (
 		<>

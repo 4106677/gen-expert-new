@@ -142,14 +142,11 @@ input {
     border-color: #50AE55;
     box-shadow: none ;
   }
-
 }
 
 .recharts-wrapper {
   .recharts-surface {
-
     .recharts-layer {
-
       .recharts-bar {
         .recharts-rectangle {
           border-radius: 18px;
@@ -157,7 +154,6 @@ input {
         }
       }
     }
-
   }
 
   .recharts-cartesian-axis-line {
@@ -169,10 +165,25 @@ input {
       display: none;
     }
   }
-
-.recharts-cartesian-axis-tick-value {
-  /*margin-top: 20px;*/
 }
+
+/* Для WebKit-браузерів (Chrome, Safari, Edge) */
+.custom-scroll {
+  scrollbar-width: thin; /* для Firefox */
+  scrollbar-color: #142e22 transparent; /* колір ползунка і фону в Firefox */
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent; /* без підложки */
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #142e22;
+  border-radius: 2px;
 }
 
 

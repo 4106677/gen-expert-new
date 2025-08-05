@@ -13,8 +13,10 @@ import Consultation from "@/app/(components)/MainPage/Consultation/consultation"
 import Tips from "@/app/(components)/Tips/tips";
 import Blog from "@/app/(components)/MainPage/Blog/blog";
 import ContactForm from "@/app/(components)/ContactForm/contactForm";
+import {useTranslation} from "react-i18next";
 
 export default function Home() {
+    const { t } = useTranslation("common");
     // const [data, setData] = useState(null);
     // const [loading, setLoading] = useState(false)
     // const { showModal, setShowModal } = useModal();
@@ -66,9 +68,9 @@ export default function Home() {
             <Fields/>
             <Possibilities/>
             <Team/>
-            <Banner header='Гнучкі можливості співпраці' style={{ marginBottom: '55px'}}/>
+            <Banner header={t('main_page.banner.title')} style={{ marginBottom: '55px'}}/>
             <Consultation/>
-            <Tips />
+            <Tips header={t('main_page.tips.title')}/>
             <Blog/>
             <ContactForm/>
         </div>

@@ -3,9 +3,23 @@ import './hero.css';
 import Stripe from "@/app/(components)/Stripe/stripe";
 import Link from "next/link";
 import {useTranslation} from "react-i18next";
+import {useEffect, useState} from "react";
 
 export default function Hero() {
-	const { t } = useTranslation("common");
+	const [isMounted, setIsMounted] = useState(false);
+	const { t } = useTranslation('common');
+
+	useEffect(() => {
+		setIsMounted(true);
+	}, []);
+
+	if (!isMounted) {
+		return (
+			<div>
+			</div>
+		);
+	}
+
 	const aspects = Object.values(t('main_page.hero.aspects', { returnObjects: true }) || {});
 
 	return <div className='hero-container'>

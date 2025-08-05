@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import styles from "./contactForm.module.css";
 import Image from "next/image";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
@@ -9,7 +9,13 @@ import {useTranslation} from "react-i18next";
 
 const ContactForm = () => {
 	const [submitStatus, setSubmitStatus] = useState(null);
-	// const { t } = useTranslation('common');
+	const [isMounted, setIsMounted] = useState(false);
+	const { t } = useTranslation('common');
+	const tips = t("contact_form.tips", { returnObjects: true }) || [];
+
+	useEffect(() => {
+		setIsMounted(true);
+	}, []);
 
 	const initialValues = {
 		fullName: '',
@@ -20,13 +26,11 @@ const ContactForm = () => {
 
 	const validationSchema = Yup.object({
 		fullName: Yup.string()
-			.min(2, 'Імʼя повинно містити мінімум 2 символи')
-			.required('Імʼя є обовʼязковим полем'),
+			.min(2, t('contact_form.form.yup.name')),
 		workEmail: Yup.string()
-			.email('Введіть коректний email')
-			.required('Email є обовʼязковим полем'),
+			.email(t('contact_form.form.yup.email')),
 		contactPhone: Yup.string()
-			.matches(/^[\d\s\+\-\(\)]+$/, 'Введіть коректний номер телефону'),
+			.matches(/^[\d\s\+\-\(\)]+$/, t('contact_form.form.yup.phone')),
 		comment: Yup.string(),
 	});
 
@@ -34,42 +38,40 @@ const ContactForm = () => {
 		submitContactForm(values, { ...formikBag, setSubmitStatus });
 	};
 
+	if (!isMounted) {
+		return (
+			<div>
+			</div>
+		);
+	}
+
 	return (
 		<div className={`${styles.container} container`} id="contactForm">
 			<div className={styles.left}>
-				<h2 className={styles.left_header}>Скорочуйте витрати! Ми зробимо все під ключ</h2>
-				<span className={styles.left_description}>Надійний партнер у переході до власної генерації. Скоротіть витрати на енергію до 50% та забезпечте стабільність роботи вашого бізнесу.</span>
+				<h2 className={styles.left_header}>{t("contact_form.title")}</h2>
+				<span className={styles.left_description}>{t("contact_form.subtitle")}</span>
 				<div className={styles.tips_items}>
-					<div className={styles.tips_item}>
-						<Image src='/images/check-verified-green.svg' width={30} height={30} alt='check verified'></Image>
-						<h5 className={styles.tips_item_text}>Повний цикл «під ключ»</h5>
-					</div>
-					<div className={styles.tips_item}>
-						<Image src='/images/check-verified-green.svg' width={30} height={30} alt='check verified'></Image>
-						<h5 className={styles.tips_item_text}>Проектування та супровід</h5>
-					</div>
-					<div className={styles.tips_item}>
-						<Image src='/images/check-verified-green.svg' width={30} height={30} alt='check verified'></Image>
-						<h5 className={styles.tips_item_text}>Спільне фінансування</h5>
-					</div>
-					<div className={styles.tips_item}>
-						<Image src='/images/check-verified-green.svg' width={30} height={30} alt='check verified'></Image>
-						<h5 className={styles.tips_item_text}>Купівля обладнання</h5>
-					</div>
+					{Array.isArray(tips) && tips?.map((tip, index) => (
+						<div className={styles.tips_item} key={index}>
+							<Image src="/images/check-verified-green.svg" width={30} height={30}
+							       alt="check verified"></Image>
+							<h5 className={styles.tips_item_text}>{tip}</h5>
+						</div>
+					))}
 				</div>
 			</div>
 			<div className={styles.right}>
-				<h3 className={styles.right_header}>Отримати консультацію</h3>
+				<h3 className={styles.right_header}>{t("contact_form.form.header")}</h3>
 
 				{submitStatus === 'success' && (
 					<div className={styles.successMessage}>
-						Дякуємо! Ваша заявка успішно відправлена. Ми звʼяжемося з вами найближчим часом.
+						{t("contact_form.form.messages.success")}
 					</div>
 				)}
 
 				{submitStatus === 'error' && (
 					<div className={styles.errorMessage}>
-						Виникла помилка при відправці форми. Будь ласка, спробуйте ще раз.
+						{t("contact_form.form.messages.error")}
 					</div>
 				)}
 
@@ -86,7 +88,7 @@ const ContactForm = () => {
 										type="text"
 										name="fullName"
 										className={styles.input}
-										placeholder="Імʼя*"
+										placeholder={t("contact_form.form.name")}
 									/>
 									<ErrorMessage name="fullName" component="div" className={styles.error} />
 								</div>
@@ -96,7 +98,7 @@ const ContactForm = () => {
 										type="email"
 										name="workEmail"
 										className={styles.input}
-										placeholder="Email*"
+										placeholder={t("contact_form.form.email")}
 									/>
 									<ErrorMessage name="workEmail" component="div" className={styles.error} />
 								</div>
@@ -106,7 +108,7 @@ const ContactForm = () => {
 										type="tel"
 										name="contactPhone"
 										className={styles.input}
-										placeholder="Телефон"
+										placeholder={t("contact_form.form.phone")}
 									/>
 									<ErrorMessage name="contactPhone" component="div" className={styles.error} />
 								</div>
@@ -116,7 +118,7 @@ const ContactForm = () => {
 										as="textarea"
 										name="comment"
 										className={styles.textarea}
-										placeholder="Деталі"
+										placeholder={t("contact_form.form.details")}
 									/>
 									<ErrorMessage name="comment" component="div" className={styles.error} />
 								</div>
@@ -124,10 +126,10 @@ const ContactForm = () => {
 								<button
 									type='submit'
 									className='btn btn_green'
-									style={{fontSize: '18px', fontWeight: 600, width: '144px', marginLeft: 'auto', height: '54px'}}
+									style={{fontSize: '18px', fontWeight: 600, width: 'max-content', marginLeft: 'auto', height: '54px'}}
 									disabled={isSubmitting}
 								>
-									{isSubmitting ? 'Відправляємо...' : 'Звʼязатися'}
+									{isSubmitting ? t("contact_form.form.sending") : t("contact_form.form.button")}
 								</button>
 							</Form>
 						)}

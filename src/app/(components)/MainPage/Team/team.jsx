@@ -1,49 +1,55 @@
-import React from "react";
-import Image from "next/image"
-import './team.css'
+'use client';
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import './team.css';
+import { useTranslation } from "react-i18next";
 
 const Team = () => {
+	const [isMounted, setIsMounted] = useState(false);
+	const { t } = useTranslation("common");
+	const units = Object.values(t('main_page.team.units', { returnObjects: true }) || {});
+
+	useEffect(() => {
+		setIsMounted(true);
+	}, []);
+
+	if (!isMounted) {
+		return <div></div>;
+	}
+
 	return (
 		<div className='team'>
 			<div className="team-container container">
-				<h5 className='team-header'>Досвідчена команда інженерів та менеджерів </h5>
-				<span className='team-description'>Комплексне обслуговування та постачання ГПУ та сонячних панелей для енергетичної незалежності вашого бізнесу</span>
+				<h5 className='team-header'>{t("main_page.team.title")}</h5>
+				<span className='team-description'>{t('main_page.team.subtitle')}</span>
 				<ul className='team-list'>
-					<li className='team-list__item'>
-						<Image className='team-list__item-image' width={348} height={295} src="/images/mainPage/team/dovgal.jpg" alt="Team Manager Dovgal"/>
-						<div className="team-list__item-text">
-							<h6 className='team-list__item-text__header'>Віталій Довгаль</h6>
-							<div className='team-list__item-text-description'>
-								<span className='team-list__item-text-span'>Очолював «Центренерго», лідер стратегічного управління енергетичними підприємствами </span>з
-								досвідом понад 25 років. Експерт із керівництва стратегічними підприємствами
-								енергетичної системи України.
-							</div>
-						</div>
-					</li>
-					<li className="team-list__item">
-						<Image className='team-list__item-image' width={348} height={295} src="/images/mainPage/team/egorc.jpg"
-						       alt="Team Manager Danylo"/>
-						<div className="team-list__item-text">
-							<h6 className='team-list__item-text__header'>Данило Єгорченко</h6>
-							<div className='team-list__item-text-description'>
-								<span className='team-list__item-text-span'>Понад 10 років досвіду в енергетиці, </span>постачання енергоресурсів для
-								приватного та комунального секторів України. Провідний експерт з енергогенеруючого
-								обладнання (ГПУ/КГУ) у міжнародній донорській організації.
-							</div>
-						</div>
-					</li>
-					<li className="team-list__item">
-						<Image className='team-list__item-image' width={348} height={295} src="/images/mainPage/team/konon.jpg"
-						       alt="Team Manager Oleksij"/>
-						<div className="team-list__item-text">
-							<h6 className='team-list__item-text__header'>Олексій Кононенко</h6>
-							<div className='team-list__item-text-description'>
-								<span className='team-list__item-text-span'>15 років досвіду в комунальному господарстві та проектному менеджменті </span>у
-								сфері критичної інфраструктури, енергетики, та впровадженні рішень для життєзабезпечення
-								громад.
-							</div>
-						</div>
-					</li>
+					{units &&
+						units.map(({ title, subtitle, text, image }, index) => {
+							const safeTitle = title || `no-title-${index}`;
+							const safeSubtitle = subtitle || `no-subtitle-${index}`;
+							// Only render if image is a non-empty string
+							if (typeof image === 'string' && image.trim() !== '') {
+								return (
+									<li className="team-list__item" key={`${safeTitle}-${safeSubtitle}`}>
+										<Image
+											className="team-list__item-image"
+											width={348}
+											height={295}
+											src={image}
+											alt={safeTitle}
+										/>
+										<div className="team-list__item-text">
+											<h6 className="team-list__item-text__header">{safeTitle}</h6>
+											<div className="team-list__item-text-description">
+												<span className="team-list__item-text-span">{safeSubtitle}</span>
+												{text}
+											</div>
+										</div>
+									</li>
+								);
+							}
+							return null;
+						})}
 				</ul>
 			</div>
 		</div>

@@ -1,431 +1,535 @@
 {
   "metadata": {
     "title": "Gen Expert",
-    "description": "Новые и б/у газопоршневые генераторы под ключ."
+    "description": "New and used gas piston generators, turnkey solutions."
   },
   "menu": {
-    "equipment": "Оборудование",
-    "sectors": "Отрасли",
-    "blog": "Блог",
-    "calculate": "Прорахувати проект",
-    "callback": "Замовити дзвінок",
-    "calculator": "Калькулятор",
-    "contacts": "Контакты",
-    "cooperation": "Сотрудничество",
-    "details": "Детальніше",
-    "back": "Назад"
+    "equipment": "Equipment",
+    "sectors": "Sectors",
+    "blog": "Blog",
+    "calculate": "Calculate Project",
+    "callback": "Request a Callback",
+    "calculator": "Calculator",
+    "contacts": "Contacts",
+    "cooperation": "Cooperation",
+    "details": "Details",
+    "back": "Back"
+  },
+  "units": {
+    "power": "Power",
+    "manufacturer": "Manufacturer",
+    "voltage": "Voltage",
+    "frequency": "Frequency",
+    "release": "Year of Manufacture",
+    "working": "Operating Hours",
+    "bodyType": "Design Type",
+    "condition": "Condition",
+    "model": "Model"
   },
   "main_page": {
     "hero": {
-      "title": "Незалежна енергія без ризику зупинок",
-      "subtitle": "Когенераційні рішення для тих, хто не може дозволити зупини процесс. Гарантована автономія для держустанов і бізнесу",
-      "contact": "Звʼязатися",
-      "calculate": "Прорахувати проект",
+      "title": "Independent Energy Without Downtime Risks",
+      "subtitle": "Cogeneration solutions for those who cannot afford process interruptions. Guaranteed autonomy for public institutions and businesses.",
+      "contact": "Contact Us",
+      "calculate": "Calculate Project",
       "aspects": [
         {
-          "title": "до 50%",
-          "subtitle": "економія на електроенергії"
+          "title": "Up to 50%",
+          "subtitle": "Savings on electricity"
         },
         {
-          "title": "250–4500 кВт",
-          "subtitle": "нові та вживані ГПУ"
+          "title": "250–4500 kW",
+          "subtitle": "New and used gas piston units"
         },
         {
           "title": "100+",
-          "subtitle": "варіантів ГПУ/ КГУ"
+          "subtitle": "Options for gas piston/cogeneration units"
         },
         {
           "title": "15-20%",
-          "subtitle": "економія на вартості ГПУ/КГУ"
+          "subtitle": "Savings on gas piston/cogeneration unit costs"
         },
         {
-          "title": "25+ років",
-          "subtitle": "досвіду в енергетиці"
+          "title": "25+ years",
+          "subtitle": "Experience in the energy sector"
         }
       ]
     },
     "fields": {
-      "title": "Енергонезалежність для кожного сектору",
-      "subtitle": "Комплексне обслуговування та постачання ГПУ та сонячних панелей для енергетичної незалежності вашого бізнесу",
+      "title": "Energy Independence for Every Sector",
+      "subtitle": "Comprehensive service and supply of gas piston units and solar panels for your business’s energy independence.",
       "tips": [
         {
-          "title": "Сільське господарство та теплиці",
-          "subtitle": "Дешева енергія та CO₂ для теплиць, що збільшує врожайність. Удобрює рослини, підвищуючи врожайність на 20% та економію 30-50% на електроенергії",
-          "href": "silgosp"
+          "title": "Agriculture and Greenhouses",
+          "subtitle": "Affordable energy and CO₂ for greenhouses, increasing crop yields by 20% and saving 30-50% on electricity.",
+          "slug": "agriculture"
         },
         {
-          "title": "Харчова промисловість",
-          "subtitle": "Тепло, електрика та пар для енергоємних виробництв. Зниження вартості кВт до 50%, стабільні тарифи",
-          "href": "kharchova"
+          "title": "Food Industry",
+          "subtitle": "Heat, electricity, and steam for energy-intensive production. Reduces kW costs by up to 50%, with stable tariffs.",
+          "slug": "food"
         },
         {
-          "title": "Переробка відходів",
-          "subtitle": "Перетворює відходи на енергію, усуваючи плату за мережі. Зниження витрат до 60%",
-          "href": "vidhody"
+          "title": "Waste Processing",
+          "subtitle": "Converts waste into energy, eliminating network fees. Reduces costs by up to 60%.",
+          "slug": "waste"
         },
         {
-          "title": "Промислове виробництво",
-          "subtitle": "Енергія для важких промислових процесів. Когенерація забезпечує ККД до 95%, без витрат на передачу енергії.",
-          "href": "promyslovist"
+          "title": "Industrial Production",
+          "subtitle": "Energy for heavy industrial processes. Cogeneration provides up to 95% efficiency, with no energy transmission costs.",
+          "slug": "industry"
         },
         {
-          "title": "Хімічна та фармацевтична промисловість",
-          "subtitle": "Гарантує точне тепло, пар і холод для стерилізації, дистиляції та реакцій у лабораторно чистих умовах",
-          "href": "khimiya"
+          "title": "Chemical and Pharmaceutical Industry",
+          "subtitle": "Ensures precise heat, steam, and cooling for sterilization, distillation, and reactions in laboratory-clean conditions.",
+          "slug": "chemical"
         },
         {
-          "title": "Центри обробки даних",
-          "subtitle": "Електрика та охолодження для дата-центрів. Зниження вартості кВт, уникнення тарифів, стабільність.",
-          "href": "tsod"
+          "title": "Data Centers",
+          "subtitle": "Electricity and cooling for data centers. Reduces kW costs, avoids tariffs, and ensures stability.",
+          "slug": "datacenters"
+        },
+        {
+          "title": "Logistics and Commercial Real Estate",
+          "subtitle": "Energy for warehouses and shopping centers. Saves up to 30%, ensures stable tariffs, and enhances comfort.",
+          "slug": "logistics"
+        },
+        {
+          "title": "Energy Infrastructure",
+          "subtitle": "Flexible energy for large facilities. Generates revenue from energy sales, saves up to 40%, and offers flexibility.",
+          "slug": "energy"
+        },
+        {
+          "title": "Healthcare and Education",
+          "subtitle": "Backup power, bypassing network tariffs. Ensures reliability, up to 50% savings, and safety.",
+          "slug": "healthcare"
+        },
+        {
+          "title": "Hospitality and Tourism",
+          "subtitle": "Provides heat for hotel infrastructure without transmission fees. Reduces costs, ensures stability, and enhances brand image.",
+          "slug": "hospitality"
+        },
+        {
+          "title": "Mining and Oil & Gas Industry",
+          "subtitle": "Ensures autonomy and savings, eliminating network fees for remote operations.",
+          "slug": "mining"
+        },
+        {
+          "title": "Public Sector and Critical Infrastructure",
+          "subtitle": "Reliable and continuous operation for critical services, providing heat, energy, and cooling based on institutional needs.",
+          "slug": "public"
         }
       ]
+    },
+    "possibilities": {
+      "title": "Flexible Solutions for Your Business",
+      "cog": {
+        "title": "Cogeneration",
+        "subtitle": "Optimizes heating, pasteurization, and cooking with a single system. High efficiency and product quality preservation."
+      },
+      "co2": {
+        "title": "CO₂ Module",
+        "subtitle": "Optimizes heating, pasteurization, and cooking with a single system. High efficiency and product quality preservation."
+      },
+      "container": {
+        "title": "Containerized and Open-Type Designs",
+        "subtitle": "Optimizes heating, pasteurization, and cooking with a single system. High efficiency and product quality preservation."
+      },
+      "3gen": {
+        "title": "Trigeneration",
+        "subtitle": "All from one unit—electricity, heating, and cooling. Up to 90% efficiency, especially effective in summer and for air-conditioned facilities."
+      }
+    },
+    "team": {
+      "title": "Experienced Team of Engineers and Managers",
+      "subtitle": "Comprehensive service and supply of gas piston units and solar panels for your business’s energy independence.",
+      "units": [
+        {
+          "title": "Vitaliy Dovgal",
+          "subtitle": "Former head of Centrenergo, a leader in strategic energy enterprise management.",
+          "text": "With over 25 years of experience. Expert in managing strategic energy enterprises in Ukraine.",
+          "image": "/images/mainPage/team/dovgal.jpg"
+        },
+        {
+          "title": "Danylo Yehorchenko",
+          "subtitle": "Over 10 years of experience in the energy sector,",
+          "text": "supplying energy resources for private and public sectors in Ukraine. Leading expert in energy-generating equipment (gas piston/cogeneration units) at an international donor organization.",
+          "image": "/images/mainPage/team/egorc.jpg"
+        },
+        {
+          "title": "Oleksiy Kononenko",
+          "subtitle": "15 years of experience in municipal management and project management,",
+          "text": "in critical infrastructure, energy, and implementing solutions for community sustainability.",
+          "image": "/images/mainPage/team/konon.jpg"
+        }
+      ]
+    },
+    "banner": {
+      "title": "Flexible Cooperation Options",
+      "tips": [
+        "Full turnkey cycle",
+        "Design and support",
+        "Co-financing",
+        "Equipment purchase"
+      ]
+    },
+    "consultation": {
+      "title": "Need a Consultation?",
+      "subtitle": "Our engineers will select the best solution for your needs and challenges.",
+      "form_header": "Leave your phone number for a callback",
+      "placeholder": "Contact number",
+      "button": "Contact Us"
+    },
+    "tips": {
+      "title": "Gas Piston Units from 250–4500 kW",
+      "button": "All Gas Piston Units"
     }
   },
   "blog": {
-    "title": "Блог",
-    "pageTitle": "Чому ГПУ – це найкращий вибір для вашого бізнесу?",
-    "button": "Всі новини",
-    "pageSlug": "Що нового",
-    "details": "Детальніше",
+    "title": "Blog",
+    "pageTitle": "Why Gas Piston Units Are the Best Choice for Your Business?",
+    "button": "All News",
+    "pageSlug": "What’s New",
+    "details": "Details",
     "data": [
       {
         "id": "1",
         "href": "bestchoice",
         "image": "/images/blog/bestchoice.jpg",
-        "title": "Чому ГПУ – це найкращий вибір для вашого бізнесу?",
-        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. \nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. \n\nIt was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "detailsHeader": "Обґрунтування 1",
-        "description": "Сільськогосподарські підприємства генерують значні обсяги органічних відходів (гній, рослинні залишки, відходи переробки), які можна переробляти в біогаз шляхом анаеробного зброджування. Ці сектори потребують електроенергію для обладнання, тепло для обігріву приміщень або теплиць, а також гарячу воду для технологічних процесів. \n\nКогенераційні системи забезпечують енергоефективність, знижуючи витрати та сприяючи сталому розвитку. Наприклад, молочні ферми можуть використовувати тепло для пастеризації молока, а рослинницькі ферми – CO₂ для підвищення врожайності. Використання біогазу з відходів дозволяє досягти енергетичної незалежності, що особливо важливо для віддалених сільських регіонів.",
-        "descriptionHeader": "Обґрунтування 2",
-        "subtitle": "Економія на електроенергії до 50% – знижені тарифи, відсутність платежів за передачу і розподіл..."
+        "title": "Why Gas Piston Units Are the Best Choice for Your Business?",
+        "details": "Gas piston units (GPUs) offer a reliable and efficient solution for businesses seeking energy independence. They provide electricity and heat simultaneously, reducing dependency on external grids and lowering operational costs. With high efficiency and flexibility, GPUs are ideal for various industries, from agriculture to manufacturing, ensuring uninterrupted operations and significant savings.",
+        "detailsHeader": "Reason 1",
+        "description": "Agricultural enterprises generate significant amounts of organic waste (manure, crop residues, processing waste), which can be converted into biogas through anaerobic digestion. These sectors require electricity for equipment, heat for heating premises or greenhouses, and hot water for technological processes. Cogeneration systems ensure energy efficiency, reducing costs and promoting sustainable development. For example, dairy farms can use heat for milk pasteurization, while crop farms can use CO₂ to boost yields. Using biogas from waste enables energy independence, which is especially critical for remote rural areas.",
+        "descriptionHeader": "Reason 2",
+        "subtitle": "Up to 50% savings on electricity – reduced tariffs, no transmission or distribution fees..."
       },
       {
         "id": "2",
         "href": "selection",
         "image": "/images/blog/selection.jpg",
-        "title": "Як правильно вибрати газопоршневу установку",
-        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. \nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. \n\nIt was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "detailsHeader": "Обґрунтування",
-        "description": "Сільськогосподарські підприємства генерують значні обсяги органічних відходів (гній, рослинні залишки, відходи переробки), які можна переробляти в біогаз шляхом анаеробного зброджування. Ці сектори потребують електроенергію для обладнання, тепло для обігріву приміщень або теплиць, а також гарячу воду для технологічних процесів. \n\nКогенераційні системи забезпечують енергоефективність, знижуючи витрати та сприяючи сталому розвитку. Наприклад, молочні ферми можуть використовувати тепло для пастеризації молока, а рослинницькі ферми – CO₂ для підвищення врожайності. Використання біогазу з відходів дозволяє досягти енергетичної незалежності, що особливо важливо для віддалених сільських регіонів.",
-        "descriptionHeader": "Обґрунтування",
-        "subtitle": "це ефективне рішення для автономного енергопостачання, зниження витрат..."
+        "title": "How to Choose the Right Gas Piston Unit",
+        "details": "Selecting the right gas piston unit (GPU) involves evaluating power needs, fuel availability, and operational requirements. Consider factors like efficiency, maintenance costs, and compatibility with existing infrastructure. GPUs offer flexibility with natural gas or biogas, making them suitable for diverse applications, from industrial plants to greenhouses, ensuring cost savings and reliability.",
+        "detailsHeader": "Reason",
+        "description": "Agricultural enterprises generate significant amounts of organic waste (manure, crop residues, processing waste), which can be converted into biogas through anaerobic digestion. These sectors require electricity for equipment, heat for heating premises or greenhouses, and hot water for technological processes. Cogeneration systems ensure energy efficiency, reducing costs and promoting sustainable development. For example, dairy farms can use heat for milk pasteurization, while crop farms can use CO₂ to boost yields. Using biogas from waste enables energy independence, which is especially critical for remote rural areas.",
+        "descriptionHeader": "Reason",
+        "subtitle": "An efficient solution for autonomous energy supply, reducing costs..."
       },
       {
         "id": "3",
         "href": "lifetime",
         "image": "/images/blog/lifetime.jpg",
-        "title": "Строки служби генераторів за брендами",
-        "details": "",
-        "detailsHeader": "Обґрунтування",
-        "description": "",
-        "descriptionHeader": "Обґрунтування",
-        "subtitle": "Основні види технічного обслуговування газопоршневих установок.."
+        "title": "Service Life of Generators by Brand",
+        "details": "The service life of gas piston generators varies by brand, maintenance practices, and operating conditions. High-quality brands can operate for over 10 years with proper care. Regular maintenance, such as oil changes and component checks, extends lifespan and ensures reliable performance for critical applications.",
+        "detailsHeader": "Reason",
+        "description": "Regular maintenance is critical for maximizing the lifespan of gas piston units. Key maintenance tasks include timely oil changes, inspection of engine components, and monitoring exhaust systems to ensure compliance with environmental standards. Proper care ensures consistent performance and minimizes downtime.",
+        "descriptionHeader": "Reason",
+        "subtitle": "Main types of maintenance for gas piston units..."
       },
       {
         "id": "4",
         "href": "strategy",
         "image": "/images/blog/strategy.jpg",
-        "title": "Стратегія розподіленої генерації в Україні",
-        "details": "",
-        "detailsHeader": "Обґрунтування",
-        "description": "",
-        "descriptionHeader": "Обґрунтування",
-        "subtitle": "В Україні стрімко розвивається програма розподіленої генерації, яка передбачає встановлення..."
+        "title": "Distributed Generation Strategy in Ukraine",
+        "details": "Distributed generation is gaining traction in Ukraine, enabling businesses and communities to produce energy locally. This approach reduces reliance on centralized grids, enhances energy security, and promotes sustainability through the use of gas piston units and renewable sources like biogas and solar.",
+        "detailsHeader": "Reason",
+        "description": "Ukraine is rapidly developing a distributed generation program, which involves installing gas piston units and renewable energy systems. This strategy enhances energy independence, reduces transmission losses, and supports economic growth by providing reliable power to businesses and public institutions.",
+        "descriptionHeader": "Reason",
+        "subtitle": "Ukraine is rapidly advancing its distributed generation program..."
       }
     ]
   },
   "sectors": {
-    "title": "Енергонезалежність \nдля кожної галузі",
+    "title": "Energy Independence for Every Industry",
     "headers": {
-      "sub_sectors": "Підсектори",
-      "justification": "Обґрунтування",
-      "advantages": "Переваги",
-      "principle": "Принцип роботи:"
+      "sub_sectors": "Sub-sectors",
+      "justification": "Justification",
+      "advantages": "Advantages",
+      "principle": "Operating Principle:"
     },
     "public": {
-      "title": "Державний сектор",
-      "subtitle": "Для кого",
+      "title": "Public Sector",
+      "subtitle": "Target Audience",
       "for": [
         {
-          "title": "Підприємства критичної інфраструктури та комунальні об’єкти:",
-          "subtitle": "Дитячі садочки, заклади освіти, підприємства тепло-водопрстачання, очисні споруди, сміттєві полігони, лікарні та заклади терапії та хірургії.",
+          "title": "Critical Infrastructure and Municipal Facilities:",
+          "subtitle": "Kindergartens, educational institutions, water and heat supply enterprises, wastewater treatment plants, landfills, hospitals, and therapy and surgical facilities.",
           "image": "/images/sectors/public/gov_for.jpg"
         }
       ],
       "for_cooperation": {
-        "title": "В держсекторі варіанти співпраці:",
-        "subtitle": "Для державного сектору, обʼєктів критичної інфраструктури та комунального сектору, ми пропонуємо гнучкі моделі співпраці:",
+        "title": "Cooperation Options in the Public Sector:",
+        "subtitle": "For the public sector, critical infrastructure, and municipal facilities, we offer flexible cooperation models:",
         "list": [
           {
-            "title": "Продаж електроенергії споживачу:",
-            "subtitle": "Після введення СЕС, ГПЕС в експлуатацію укладається прямий договір постачання електроенергії на 1 рік з подальшою пролонгаією за формулою, при якій ціна на ел енергію буде гарантовано дешевна ніж у Постачальника.",
+            "title": "Direct Electricity Sales to Consumers:",
+            "subtitle": "After commissioning solar or gas piston power plants, a one-year direct electricity supply contract is signed with automatic renewal, ensuring electricity prices are lower than those of the supplier.",
             "image": "/images/sectors/public/gov_sale.jpg"
           },
           {
-            "title": "ЕСКО-контракт:",
-            "subtitle": "Розрахунок за електроенергію протягом 10-15 років за формулою: Ц_ее = 0.9 × Ц, де Ц — загальна вартість електроенергії з урахуванням тарифів на розподіл і транспортування. Після закінчення договору СЕС переходить на баланс споживача",
+            "title": "ESCO Contract:",
+            "subtitle": "Payment for electricity over 10-15 years based on the formula: P_ee = 0.9 × P, where P is the total electricity cost, including distribution and transmission tariffs. After the contract term, the solar power plant is transferred to the consumer’s balance.",
             "image": "/images/sectors/public/gov_ecko.jpg"
           }
         ]
       },
       "purpose": {
-        "title": "Що пропонуємо",
-        "subtitle": "Максимальна ефективність для кожної галузі",
+        "title": "What We Offer",
+        "subtitle": "Maximum efficiency for every industry",
         "gpu": {
-          "title": "Газопоршневої електростанції (ГПЕС) та когенераційні установки:",
-          "aspect": "З ККД 88-93% і потужністю від 250 до 4500 кВт.",
-          "subtitle": "ПЕС забезпечують надійне та безперебійне постачання електроенергії та тепла. Ці установки швидко розгортаються, мають термін служби понад 10 років і суттєво зменшують навантаження на мережі.",
-          "post": "Варіанти виконання: відкритого типу, контейнеризовані."
+          "title": "Gas Piston Power Plants (GPP) and Cogeneration Units:",
+          "aspect": "With 88-93% efficiency and power from 250 to 4500 kW.",
+          "subtitle": "GPPs provide reliable and uninterrupted electricity and heat supply. These units are quickly deployed, have a service life of over 10 years, and significantly reduce grid load.",
+          "post": "Design options: open type, containerized."
         },
         "solar": {
-          "title": "Мережеві та гібридні сонячні електростанції (СЕС)",
-          "subtitle": "Оснащені акумуляторними групами залежно від графіка споживання, вони виробляють чисту енергію, знижують залежність від викопного палива та зменшують витрати на електроенергію на 10-50%."
+          "title": "Grid and Hybrid Solar Power Plants",
+          "subtitle": "Equipped with battery storage based on consumption patterns, they generate clean energy, reduce reliance on fossil fuels, and cut electricity costs by 10-50%."
         },
         "hybrid": {
-          "title": "Комбінований варіант",
-          "aspect": "ГПЕС+СЕС",
-          "subtitle": "Ми готові адаптувати ці рішення до потреб державного сектору, промислових і комерційних підприємств, забезпечуючи швидке впровадження та довгострокову підтримку."
+          "title": "Combined Solution",
+          "aspect": "GPP + Solar",
+          "subtitle": "We are ready to adapt these solutions to the needs of the public sector, industrial, and commercial enterprises, ensuring rapid deployment and long-term support."
         }
       }
     },
     "private": {
-      "title": "Приватний сектор",
+      "title": "Private Sector",
       "top_tips": [
-        "До 50% економії на ел енергії",
-        "Надійне джерело постачання навіть при блекауті і тд",
-        "Надійне джерело постачання навіть при блекауті і тд",
-        "До 50% економії на ел енергії"
+        "Up to 50% savings on electricity",
+        "Reliable power source even during blackouts",
+        "Reliable power source even during blackouts",
+        "Up to 50% savings on electricity"
       ],
-      "subtitle": "Для кого",
+      "subtitle": "Target Audience",
       "for": [
         {
-          "title": "Підприємства ",
-          "subtitle": "з високою часткою енерговитрат. Енергія — ключовий фактор вашої конкурентоспроможності.",
+          "title": "Enterprises",
+          "subtitle": "With high energy costs. Energy is a key factor in your competitiveness.",
           "image": "/images/sectors/private/man.jpg"
         },
         {
-          "title": "Виробництва",
-          "subtitle": "зі стабільною потребою в електропостачанні та теплі. Забезпечте безперебійну роботу навіть під час криз.",
+          "title": "Manufacturing",
+          "subtitle": "With stable needs for electricity and heat. Ensure uninterrupted operations even during crises.",
           "image": "/images/sectors/private/food.jpg"
         },
         {
-          "title": "Об'єкти",
-          "subtitle": "з доступом до газу чи біогазу. Використовуйте доступні ресурси для максимальної вигоди.",
+          "title": "Facilities",
+          "subtitle": "With access to gas or biogas. Utilize available resources for maximum benefits.",
           "image": "/images/sectors/private/green.jpg"
         }
       ],
       "hero": {
-        "title": "Газопоршневі електростанції (ГПУ/КГУ)",
-        "subtitle": "з високою часткою енерговитрат\nЕнергія — ключовий фактор вашої конкурентоспроможності",
+        "title": "Gas Piston Power Plants (GPP/CHP)",
+        "subtitle": "With high energy costs\nEnergy is a key factor in your competitiveness",
         "tips": [
           {
-            "title": "ККД 88–93%",
-            "subtitle": "Одночасне виробництво електроенергії та тепла."
+            "title": "88–93% Efficiency",
+            "subtitle": "Simultaneous production of electricity and heat."
           },
           {
-            "title": "Потужність 500–4500 кВт",
-            "subtitle": "Підбір під потреби громади."
+            "title": "500–4500 kW Power",
+            "subtitle": "Tailored to community needs."
           },
           {
-            "title": "Швидке розгортання та запуск",
-            "subtitle": "Готовність до експлуатації у стислі терміни."
+            "title": "Fast Deployment and Launch",
+            "subtitle": "Ready for operation in a short time."
           },
           {
-            "title": "Тривалий термін експлуатації ",
-            "subtitle": "Понад 10 років безперервної роботи з мінімальним обслуговуванням."
+            "title": "Long Service Life",
+            "subtitle": "Over 10 years of continuous operation with minimal maintenance."
           },
           {
-            "title": "Підтримка мереж",
-            "subtitle": "Наявність сучасної інфраструктури приваблює бізнес та інвесторів."
+            "title": "Grid Support",
+            "subtitle": "Modern infrastructure attracts businesses and investors."
           },
           {
-            "title": "Легкий монтаж на існуючій інфраструктурі",
-            "subtitle": "Встановлюються безпосередньо на об’єкті."
+            "title": "Easy Installation on Existing Infrastructure",
+            "subtitle": "Installed directly at the facility."
           }
         ]
       },
       "solar": {
-        "title": "Сонячні електростанції",
-        "subtitle": "Доповнення для підвищення енергетичної автономності. Мережеві та гібридні сонячні електростанції. ",
+        "title": "Solar Power Plants",
+        "subtitle": "Complementary solutions for enhanced energy autonomy. Grid and hybrid solar power plants.",
         "tips": [
           {
-            "title": "Легкий монтаж на існуючій інфраструктурі",
-            "subtitle": "Встановлюються безпосередньо на об’єктах критичної інфраструктури (лікарні, школи, адміністративні будівлі)."
+            "title": "Easy Installation on Existing Infrastructure",
+            "subtitle": "Installed directly at critical infrastructure facilities (hospitals, schools, administrative buildings)."
           },
           {
-            "title": "Підтримка мереж",
-            "subtitle": "Забезпечують додаткове джерело енергії та зменшують навантаження на мережу."
+            "title": "Grid Support",
+            "subtitle": "Provides an additional energy source and reduces grid load."
           }
         ]
       },
       "tech": {
-        "title": "Технології та конфігурації ГПУ",
-        "subtitle": "Максимальна ефективність для кожної галузі",
+        "title": "Technologies and Configurations of GPP",
+        "subtitle": "Maximum efficiency for every industry",
         "type": [
           {
-            "title": "Когенерація",
-            "subtitle": "Електроенергія + Тепло",
+            "title": "Cogeneration",
+            "subtitle": "Electricity + Heat",
             "image": "/images/sectors/private/tech/cog.webp",
             "tips": [
-              "Контури теплообміну",
-              "Промислове тепло",
-              "ККД до 90%"
+              "Heat exchange circuits",
+              "Industrial heat",
+              "Up to 90% efficiency"
             ]
           },
           {
-            "title": "Тригенерація",
-            "subtitle": "Електроенергія + Тепло",
+            "title": "Trigeneration",
+            "subtitle": "Electricity + Heat + Cooling",
             "image": "/images/sectors/private/tech/tri.webp",
             "tips": [
-              "Промисловий холод",
-              "Охолодження складів",
-              "Круглорічна ефективність"
+              "Industrial cooling",
+              "Warehouse cooling",
+              "Year-round efficiency"
             ]
           },
           {
-            "title": "Модуль CO₂",
+            "title": "CO₂ Module",
             "subtitle": "",
             "image": "/images/sectors/private/tech/co2.webp",
             "tips": [
-              "Для теплиць",
-              "Підвищення врожайності"
+              "For greenhouses",
+              "Increased crop yields"
             ]
           }
         ],
         "body": [
           {
-            "title": "Контейнерне виконання",
-            "subtitle": "Готове рішення для вуличного монтажу",
+            "title": "Containerized Design",
+            "subtitle": "Ready solution for outdoor installation",
             "image": "/images/sectors/private/tech/container.webp",
             "tips": [
-              "Швидкий монтаж та запуск",
-              "Мобільність та гнучкість",
-              "Захист від погодних умов"
+              "Quick installation and launch",
+              "Mobility and flexibility",
+              "Weather protection"
             ]
           },
           {
-            "title": "Відкритий монтаж",
-            "subtitle": "Монтаж в приміщеннях підприємства",
+            "title": "Open Installation",
+            "subtitle": "Installation in enterprise premises",
             "image": "/images/sectors/private/tech/open.webp",
             "tips": [
-              "Інтеграція в існуючу інфраструктуру",
-              "Оптимальне використання простору",
-              "Легкий доступ для обслуговування"
+              "Integration into existing infrastructure",
+              "Optimal space utilization",
+              "Easy maintenance access"
             ]
           }
         ]
       },
       "cooperation": {
-        "title": "Види співпраці",
+        "title": "Types of Cooperation",
         "tips": [
           {
-            "title": "Повний цикл «під ключ»",
-            "subtitle": "Підбір ГПУ, логістика, проєкт, монтаж, пуско-наладка — ми беремо все на себе!",
-            "advantages": "Переваги",
-            "slug": "Максимальна економія та мінімум турбот",
+            "title": "Full Turnkey Cycle",
+            "subtitle": "Selection of GPP, logistics, design, installation, and commissioning—we handle everything!",
+            "advantages": "Advantages",
+            "slug": "Maximum savings and minimal hassle",
             "tips": [
-              "Економія до 70% на енергії",
-              "Відсутність витрат за передачу електроенергії",
-              "100% енергонезалежність (Робота без перебоїв при блекаутах)",
-              "Вартість від 400 тис. EURO"
+              "Up to 70% energy savings",
+              "No transmission costs",
+              "100% energy independence (operation during blackouts)",
+              "Starting from 400,000 EURO"
             ]
           },
           {
-            "title": "Спільне фінансування",
-            "subtitle": "Партнерство для зменшення ризиків",
-            "advantages": "Переваги",
-            "slug": "20-50% беремо на себе.",
+            "title": "Co-financing",
+            "subtitle": "Partnership to reduce risks",
+            "advantages": "Advantages",
+            "slug": "We cover 20-50% of costs",
             "tips": [
-              "Економія до 50% на енергії",
-              "Відсутність витрат за передачу електроенергії",
-              "100% енергонезалежність (Робота без перебоїв при блекаутах)",
-              "Надійне партнерство"
+              "Up to 50% energy savings",
+              "No transmission costs",
+              "100% energy independence (operation during blackouts)",
+              "Reliable partnership"
             ]
           },
           {
-            "title": "Постачання обладнання",
-            "subtitle": "Підбір ГПУ, логістика, проєкт, монтаж, пуско-наладка — ми беремо все на себе!",
-            "advantages": "Переваги",
-            "slug": "Точний підбір рішення під ваші потреби",
+            "title": "Equipment Supply",
+            "subtitle": "Selection of GPP, logistics, design, installation, and commissioning—we handle everything!",
+            "advantages": "Advantages",
+            "slug": "Precise solution tailored to your needs",
             "tips": [
-              "Найкращі ціни на ринку України",
-              "Асортимент нових та вживаних установок",
-              "Генерація електроенергії, когенерація, тригенерація",
-              "Ціни від 50 тис. EURO"
+              "Best prices on the Ukrainian market",
+              "Range of new and used units",
+              "Electricity generation, cogeneration, trigeneration",
+              "Prices starting from 50,000 EURO"
             ]
           }
         ]
       },
       "realization": {
-        "title": "Напрями реалізації енергії",
+        "title": "Energy Utilization Directions",
         "usage": {
-          "title": "Забезпечення власних потреб",
-          "subtitle": "Генеруйте енергію для власного споживання та отримуйте максимальну економію",
+          "title": "Meeting Own Needs",
+          "subtitle": "Generate energy for your consumption and maximize savings",
           "tips": [
-            "Дешевша електроенергія за рахунок генерації на ГПУ",
-            "Відсутність плати за тариф на передачу",
-            "Відсутність плати за тариф на розподіл",
-            "Економія на послугах постачальника",
-            "Собівартість від 4,14 грн/кВт"
+            "Cheaper electricity through GPP generation",
+            "No transmission tariff fees",
+            "No distribution tariff fees",
+            "Savings on supplier services",
+            "Cost from 4.14 UAH/kW"
           ]
         },
         "sale": {
-          "title": "Продаж в мережу",
-          "subtitle": "Генеруйте більше енергії та продавайте надлишки в загальну мережу",
+          "title": "Selling to the Grid",
+          "subtitle": "Generate excess energy and sell it to the grid",
           "tips": [
-            "Додатковий дохід від продажу електроенергії",
-            "Можливість масштабування генерації",
-            "Швидка окупність інвестицій"
+            "Additional income from electricity sales",
+            "Scalable generation potential",
+            "Fast return on investment"
           ]
         }
       }
     },
     "industries": [
       {
-        "name": "Сільське господарство та тваринництво",
-        "description": "Переробка органічних відходів (гній, рослинні залишки, відходи переробки) у біогаз шляхом анаеробного зброджування.",
-        "slug": "silgosp",
+        "name": "Agriculture and Livestock",
+        "description": "Processing organic waste (manure, crop residues, processing waste) into biogas through anaerobic digestion.",
+        "slug": "agriculture",
         "image": "/images/sectors/industries/silgosp.webp",
         "details": {
           "sub_sectors": {
             "tips": [
-              "Свиноферми, птахофабрики, інкубатори",
-              "Молочні ферми та сироварні",
-              "Агрокомплекси з вирощування культур (кукурудза, пшениця тощо)",
-              "Овочівництво та плодівництво",
-              "Рослинницькі ферми",
-              "Садові центри"
+              "Pig farms, poultry farms, incubators",
+              "Dairy farms and cheese factories",
+              "Agricultural complexes for crop cultivation (corn, wheat, etc.)",
+              "Vegetable and fruit farming",
+              "Crop farms",
+              "Garden centers"
             ],
             "paragraph": [
-              "Сільськогосподарські підприємства генерують значні обсяги органічних відходів (гній, рослинні залишки, відходи переробки), які можна переробляти в біогаз шляхом анаеробного зброджування. Ці сектори потребують електроенергію для обладнання, тепло для обігріву приміщень або теплиць, а також гарячу воду для технологічних процесів.",
-              "Когенераційні системи забезпечують енергоефективність, знижуючи витрати та сприяючи сталому розвитку. Наприклад, молочні ферми можуть використовувати тепло для пастеризації молока, а рослинницькі ферми – CO₂ для підвищення врожайності. Використання біогазу з відходів дозволяє досягти енергетичної незалежності, що особливо важливо для віддалених сільських регіонів."
+              "Agricultural enterprises generate significant amounts of organic waste (manure, crop residues, processing waste), which can be converted into biogas through anaerobic digestion. These sectors require electricity for equipment, heat for heating premises or greenhouses, and hot water for technological processes.",
+              "Cogeneration systems ensure energy efficiency, reducing costs and promoting sustainable development. For example, dairy farms can use heat for milk pasteurization, while crop farms can use CO₂ to boost yields. Using biogas from waste enables energy independence, which is especially critical for remote rural areas."
             ]
           },
-          "perks":[
+          "perks": [
             {
-              "title": "Еергетична незалежність:",
-              "text": "Зменшення залежності від зовнішніх електромереж, що критично для віддалених ферм."
+              "title": "Energy Independence:",
+              "text": "Reduces reliance on external grids, critical for remote farms."
             },
             {
-              "title": "Екологічність:",
-              "text": "Переробка відходів у біогаз знижує викиди метану та сприяє круговій економіці."
+              "title": "Environmental Sustainability:",
+              "text": "Converting waste into biogas reduces methane emissions and supports a circular economy."
             },
             {
-              "title": "Підвищення врожайності:",
-              "text": "CO₂ з вихлопних газів стимулює ріст рослин у теплицях чи рослинницьких фермах."
+              "title": "Increased Yields:",
+              "text": "CO₂ from exhaust gases stimulates plant growth in greenhouses or crop farms."
             },
             {
-              "title": "Економія: ",
-              "text": "До 50% зниження витрат на енергію завдяки ефективному використанню біогазу чи природного газу."
+              "title": "Savings:",
+              "text": "Up to 50% reduction in energy costs through efficient use of biogas or natural gas."
             },
             {
-              "title": "Додатковий дохід:",
-              "text": "Надлишкову електроенергію можна продавати в мережу, а дигестат використовувати як добриво."
+              "title": "Additional Income:",
+              "text": "Excess electricity can be sold to the grid, and digestate can be used as fertilizer."
             }
           ],
           "principle": [
-            "Газопоршневий двигун працює на природному газі або біогазі, отриманому \nз органічних відходів.",
-            "Двигун генерує електроенергію для живлення обладнання, а тепло від охолодження та вихлопних газів використовується для обігріву чи гарячої води. \nУ тригенераційних системах тепло перетворюється на холод для холодильних установок. CO₂ з вихлопних газів очищається та подається для удобрення рослин, що підвищує врожайність у теплицях чи садових центрах."
+            "The gas piston engine runs on natural gas or biogas from organic waste.",
+            "The engine generates electricity for equipment, and heat from cooling and exhaust gases is used for heating or hot water. In trigeneration systems, heat is converted into cooling for refrigeration units. CO₂ from exhaust gases is purified and used to fertilize plants, increasing yields in greenhouses or garden centers."
           ]
         },
         "images": {
@@ -438,93 +542,92 @@
         }
       },
       {
-        "name": "Тепличне господарство",
+        "name": "Greenhouse Farming",
         "headers": {
-          "sub_sectors": "Підсектори",
-          "justification": "Когенерація для тепличних комплексів",
-          "advantages": "Переваги когенерації \nдля тепличних комплексів",
-          "principle": "Чому когенерація важлива \nдля теплиць",
-          "solution": "Рішення від",
-          "how_it_works": "Як працює когенерація \nв теплицях"
+          "sub_sectors": "Sub-sectors",
+          "justification": "Cogeneration for Greenhouse Complexes",
+          "advantages": "Advantages of Cogeneration for Greenhouses",
+          "principle": "Why Cogeneration is Important for Greenhouses",
+          "solution": "Solutions from",
+          "how_it_works": "How Cogeneration Works in Greenhouses"
         },
-        "description": "Когенераційні та газопоршневі установки (КГУ та ГПУ) забезпечують енергію та оптимальні умови для росту рослин.",
-        "slug": "teplytsi",
+        "description": "Cogeneration and gas piston units (CHPs and GPPs) provide energy and optimal conditions for plant growth.",
+        "slug": "greenhouses",
         "image": "/images/sectors/industries/teplytsi-preview.webp",
         "details": {
           "sub_sectors": {
             "tips": [
-              "Тепличні комплекси з штучним освітленням",
-              "Рослинницькі ферми",
-              "Садові центри"
+              "Greenhouse complexes with artificial lighting",
+              "Crop farms",
+              "Garden centers"
             ],
             "paragraph": [
-              "Когенераційні та газопоршневі установки (КГУ та ГПУ) відкривають нові можливості для тепличних господарств, забезпечуючи не лише енергію, а й оптимальні умови для росту рослин.",
-              "Ці системи дозволяють одночасно виробляти електроенергію, тепло та CO₂, що сприяє підвищенню врожайності та зниженню витрат."
+              "Cogeneration and gas piston units (CHPs and GPPs) open new opportunities for greenhouse farming, providing not only energy but also optimal conditions for plant growth.",
+              "These systems simultaneously produce electricity, heat, and CO₂, increasing yields and reducing costs."
             ]
           },
           "perks": [
             {
-              "title": "Цілорічна ефективність:",
-              "text": "Системи з акумуляцією тепла дозволяють підтримувати оптимальні умови в теплицях незалежно від зовнішньої температури, забезпечуючи стабільний ріст рослин навіть узимку."
+              "title": "Year-round Efficiency:",
+              "text": "Heat storage systems maintain optimal greenhouse conditions regardless of external temperatures, ensuring stable plant growth even in winter."
             },
             {
-              "title": "Надійність і безпека:",
-              "text": "Сучасні системи управління забезпечують стабільну роботу та безпеку. Інтегровані датчики контролюють освітлення, температуру та рівень викидів, створюючи оптимальні умови для рослин і персоналу."
+              "title": "Reliability and Safety:",
+              "text": "Modern control systems ensure stable operation and safety. Integrated sensors monitor lighting, temperature, and emissions, creating optimal conditions for plants and staff."
             },
             {
-              "title": "Енергетична автономність",
-              "text": "Когенерація звільняє тепличні комплекси від залежності від регіональних електромереж і зростання тарифів. Компактне розміщення установок поруч із теплицями усуває потребу в дорогих підвідних мережах, а можливість регулювання потужності забезпечує гнучкість."
+              "title": "Energy Autonomy:",
+              "text": "Cogeneration frees greenhouse complexes from reliance on regional grids and rising tariffs. Compact unit placement eliminates the need for expensive transmission networks, and power regulation ensures flexibility."
             },
             {
-              "title": "Зниження витрат на енергію:",
-              "text": "Когенераційні установки дозволяють економити 40–60% на електроенергії та теплі порівняно з постачанням від зовнішніх мереж. Завдяки цьому інвестиції в систему окупаються за 2–4 роки залежно від масштабу та умов експлуатації."
+              "title": "Reduced Energy Costs:",
+              "text": "Cogeneration units save 40–60% on electricity and heat compared to external grid supply. Investments typically pay off in 2–4 years, depending on scale and operating conditions."
             },
             {
-              "title": "Екологічність:",
-              "text": "Технології низьковикидного спалювання палива (DLE) та очищення вихлопів знижують рівень шкідливих викидів. Використання біогазу, отриманого з органічних відходів, додатково зменшує вуглецевий слід і сприяє сталому розвитку."
+              "title": "Environmental Sustainability:",
+              "text": "Low-emission combustion technologies (DLE) and exhaust treatment reduce harmful emissions. Using biogas from organic waste further reduces the carbon footprint and supports sustainability."
             },
             {
-              "title": "Висока ефективність:",
-              "text": "Загальний коефіцієнт використання палива досягає 90%: електроенергія виробляється з ККД до 47%, а разом із теплом – до 90%. Системи швидко запускаються (за 2–3 хвилини), що дозволяє оперативно реагувати на потреби господарства."
+              "title": "High Efficiency:",
+              "text": "Total fuel utilization efficiency reaches 90%: electricity is generated with up to 47% efficiency, and combined with heat, up to 90%. Systems start quickly (2–3 minutes), enabling rapid response to farm needs."
             },
             {
-              "title": "Додатковий дохід:",
-              "text": "Надлишок електроенергії, виробленої установкою, можна продавати в загальну мережу, що створює додаткове джерело доходу для тепличного господарства."
+              "title": "Additional Income:",
+              "text": "Excess electricity can be sold to the grid, creating an additional revenue stream for greenhouse farms."
             }
           ],
           "principle": [
-            "Рослини в теплицях активно поглинають CO₂ під час фотосинтезу, особливо за умов інтенсивного штучного освітлення. Підвищення рівня CO₂ в атмосфері теплиці (до 700–1000 ppm) може збільшити врожайність на 20–30%, що особливо актуально для вирощування томатів, огірків, перцю чи декоративних рослин.",
-            "Когенераційні установки забезпечують стабільне постачання CO₂, тепла й електроенергії, створюючи ідеальні умови для цілорічного виробництва."
+            "Plants in greenhouses actively absorb CO₂ during photosynthesis, especially under intensive artificial lighting. Increasing CO₂ levels in the greenhouse atmosphere (to 700–1000 ppm) can boost yields by 20–30%, particularly for tomatoes, cucumbers, peppers, or ornamental plants.",
+            "Cogeneration units provide stable CO₂, heat, and electricity supply, creating ideal conditions for year-round production."
           ],
           "solution": [
-            "Genexpert пропонує інноваційні когенераційні та газопоршневі установки, які забезпечують тепличні комплекси електроенергією, теплом і CO₂ для підвищення врожайності. Наші рішення адаптуються до індивідуальних потреб господарства, працюючи на природному газі чи біогазі.",
-            "Ми гарантуємо високу ефективність, економію ресурсів і відповідність екологічним стандартам, допомагаючи вам досягти максимальної продуктивності та зниження витрат."
+            "Genexpert offers innovative cogeneration and gas piston units that provide greenhouse complexes with electricity, heat, and CO₂ to increase yields. Our solutions are tailored to individual farm needs, operating on natural gas or biogas.",
+            "We guarantee high efficiency, resource savings, and compliance with environmental standards, helping you achieve maximum productivity and cost reduction."
           ],
           "how_it_works": {
-            "title": "Когенерація – це технологія комбінованого виробництва електроенергії та тепла, яка ідеально підходить для тепличних комплексів. Система базується на газопоршневих двигунах, що працюють на природному газі або біогазі.",
-            "subtitle": "Ось як це відбувається крок за кроком:",
-            "description": "Цей комплексний підхід дозволяє тепличним господарствам отримувати три ключові ресурси – електроенергію, тепло та CO₂ – з одного джерела, значно підвищуючи ефективність.",
+            "title": "Cogeneration is a technology for combined electricity and heat production, ideal for greenhouse complexes. The system is based on gas piston engines running on natural gas or biogas.",
+            "subtitle": "Here’s how it works step by step:",
+            "description": "This comprehensive approach allows greenhouse farms to obtain three key resources—electricity, heat, and CO₂—from a single source, significantly improving efficiency.",
             "tips": [
               {
-                "title": "Виробництво енергії",
-                "subtitle": "Газопоршневий двигун спалює паливо, генеруючи електроенергію для живлення систем освітлення, вентиляції чи насосів у теплицях. Це забезпечує стабільну роботу обладнання навіть у періоди пікового навантаження."
+                "title": "Energy Production",
+                "subtitle": "The gas piston engine burns fuel to generate electricity for lighting, ventilation, or pumps in greenhouses, ensuring stable equipment operation even during peak loads."
               },
               {
-                "title": "Використання тепла",
-                "subtitle": "Під час роботи двигуна утворюється тепло, яке уловлюється через теплообмінники. Це тепло використовується для обігріву теплиць, підтримання оптимальної температури для рослин або нагрівання води для технологічних потреб."
+                "title": "Heat Utilization",
+                "subtitle": "Heat generated during engine operation is captured through heat exchangers and used to heat greenhouses, maintain optimal plant temperatures, or heat water for technological needs."
               },
               {
-                "title": "Збагачення CO₂",
-                "subtitle": "Вихлопні гази двигуна містять діоксид вуглецю (CO₂), який є важливим для фотосинтезу. Після очищення за допомогою систем селективного каталітичного відновлення (SCR) та окислення гази охолоджуються до безпечної температури (приблизно 50°C) і подаються в теплиці. На кожен кубічний метр спаленого природного газу виробляється до 1,8 кг CO₂, що сприяє швидшому росту рослин."
+                "title": "CO₂ Enrichment",
+                "subtitle": "Engine exhaust gases contain CO₂, vital for photosynthesis. After purification through selective catalytic reduction (SCR) and oxidation systems, gases are cooled to a safe temperature (around 50°C) and supplied to greenhouses. Each cubic meter of burned natural gas produces up to 1.8 kg of CO₂, promoting faster plant growth."
               },
               {
-                "title": "Контроль і безпека",
-                "subtitle": "Спеціальні системи моніторингу постійно перевіряють склад вихлопних газів, щоб забезпечити безпеку для рослин і відповідність екологічним стандартам. Це гарантує, що CO₂, який подається в теплиці, є чистим і не містить шкідливих домішок."
+                "title": "Control and Safety",
+                "subtitle": "Special monitoring systems continuously check exhaust gas composition to ensure safety for plants and compliance with environmental standards, guaranteeing clean CO₂ supply."
               }
             ]
           }
         },
-
         "images": {
           "preview": "/images/sectors/industries/teplytsi-preview.webp",
           "hero": "/images/sectors/industries/teplytsi-hero.webp",
@@ -536,49 +639,49 @@
         }
       },
       {
-        "name": "Харчова промисловість",
-        "description": "Енергоємна галузь, що потребує електроенергію для обладнання, тепло для пастеризації, варіння чи сушіння, а також холод для зберігання продуктів.",
-        "slug": "kharchova",
+        "name": "Food Industry",
+        "description": "An energy-intensive sector requiring electricity for equipment, heat for pasteurization, cooking, or drying, and cooling for product storage.",
+        "slug": "food",
         "image": "/images/sectors/industries/kharchova.webp",
         "details": {
           "sub_sectors": {
             "tips": [
-              "Кондитерські фабрики",
-              "Цукрові заводи",
-              "М’ясопереробні підприємства, ковбасні цехи, консервні заводи",
-              "Виробництво напоїв (пивоварні, лікеро-горілчані заводи, соки, мінеральна вода)",
-              "Виробництво макаронних виробів",
-              "Переробка м’яса (ковбаси, копченості, бійні)",
-              "Молочні ферми",
-              "Сироробні",
-              "Виробництво молочних продуктів (йогурти, масло, сухе молоко)"
+              "Confectionery factories",
+              "Sugar factories",
+              "Meat processing plants, sausage factories, canning plants",
+              "Beverage production (breweries, distilleries, juices, mineral water)",
+              "Pasta production",
+              "Meat processing (sausages, smoked products, slaughterhouses)",
+              "Dairy farms",
+              "Cheese factories",
+              "Dairy product manufacturing (yogurt, butter, powdered milk)"
             ],
             "paragraph": [
-              "Харчова промисловість є енергоємною, потребуючи електроенергію для обладнання, тепло для пастеризації, варіння чи сушіння, а також холод для зберігання продуктів.",
-              "Когенераційні та тригенераційні системи забезпечують усі ці види енергії з одного джерела, знижуючи витрати та підвищуючи ефективність. Біогаз із відходів (наприклад, п{OR}пивоварної чи м’ясної промисловості) може бути додатковим джерелом палива. Наприклад, пивоварні використовують пару для варіння, а молочні заводи – тепло для пастеризації та холод для зберігання, що забезпечує якість і безпеку продуктів."
+              "The food industry is energy-intensive, requiring electricity for equipment, heat for pasteurization, cooking, or drying, and cooling for product storage.",
+              "Cogeneration and trigeneration systems provide all these energy types from a single source, reducing costs and increasing efficiency. Biogas from waste (e.g., from brewing or meat processing) can serve as an additional fuel source. For example, breweries use steam for brewing, while dairy plants use heat for pasteurization and cooling for storage, ensuring product quality and safety."
             ]
           },
           "perks": [
             {
-              "title": "Економія: ",
-              "text": "До 50% зниження витрат на енергію завдяки ККД до 95%."
+              "title": "Savings:",
+              "text": "Up to 50% reduction in energy costs thanks to up to 95% efficiency."
             },
             {
-              "title": "Екологічність: ",
-              "text": "Використання біогазу знижує викиди CO₂."
+              "title": "Environmental Sustainability:",
+              "text": "Using biogas reduces CO₂ emissions."
             },
             {
-              "title": "Гнучкість:",
-              "text": "Надає пар, гарячу воду, холод чи контроль вологості для різних процесів."
+              "title": "Flexibility:",
+              "text": "Provides steam, hot water, cooling, or humidity control for various processes."
             },
             {
-              "title": "Надійність:",
-              "text": "Безперебійне енергопостачання для збереження якості продуктів."
+              "title": "Reliability:",
+              "text": "Uninterrupted energy supply to maintain product quality."
             }
           ],
           "principle": [
-            "Газопоршневий двигун працює на природному газі або біогазі, генеруючи електроенергію для обладнання. Тепло від двигуна використовується для виробництва пари, гарячої води чи перегрітої води для пастеризації, миття чи сушіння. У тригенераційних системах тепло перетворюється на холод через абсорбційні чилери для охолодження складів чи кондиціонування. ",
-            "Системи забезпечують високу ефективність і універсальність для потреб харчової промисловості."
+            "The gas piston engine runs on natural gas or biogas, generating electricity for equipment. Heat from the engine is used to produce steam, hot water, or superheated water for pasteurization, washing, or drying. In trigeneration systems, heat is converted into cooling via absorption chillers for storage or air conditioning.",
+            "These systems ensure high efficiency and versatility for the food industry’s needs."
           ]
         },
         "images": {
@@ -591,48 +694,47 @@
         }
       },
       {
-        "name": "Переробка відходів",
-        "description": "Виробництво біогазу з органічних відходів, осаду стічних вод чи відходів харчової промисловості (наприклад, барди з дистиляції).",
-        "slug": "vidhody",
+        "name": "Waste Processing",
+        "description": "Producing biogas from organic waste, sewage sludge, or food industry waste (e.g., distillery byproducts).",
+        "slug": "waste",
         "image": "/images/sectors/industries/vidhody.webp",
         "details": {
           "sub_sectors": {
             "tips": [
-              "Полігони твердих побутових відходів (ТПВ) та сміттєзвалища",
-              "Центри збору органічних відходів",
-              "Очисні споруди (переробка стічних вод)",
-              "Переробка відходів харчової промисловості (дистиляція, пивоваріння)"
+              "Municipal solid waste landfills",
+              "Organic waste collection centers",
+              "Wastewater treatment plants",
+              "Food industry waste processing (distillation, brewing)"
             ],
             "paragraph": [
-              "Підприємства з переробки відходів виробляють біогаз із органічних відходів, осаду стічних вод чи відходів харчової промисловості (наприклад, барди з дистиляції). Цей біогаз використовується для живлення газопоршневих двигунів, перетворюючи відходи на цінний енергетичний ресурс.",
-              "Когенераційні системи знижують витрати на утилізацію та викиди, забезпечуючи електроенергію і тепло для власних потреб. Наприклад, очисні споруди можуть використовувати біогаз для аерації та обігріву дигестерів, підвищуючи ефективність.",
-              "Системи також допомагають відповідати екологічним нормам, зменшуючи викиди метану."
+              "Waste processing enterprises produce biogas from organic waste, sewage sludge, or food industry waste (e.g., distillery byproducts). This biogas fuels gas piston engines, turning waste into a valuable energy resource.",
+              "Cogeneration systems reduce disposal and emission costs, providing electricity and heat for internal needs. For example, wastewater treatment plants can use biogas for aeration and digester heating, improving efficiency.",
+              "These systems also help meet environmental regulations by reducing methane emissions."
             ]
           },
           "perks": [
             {
-              "title": "Переробка відходів: ",
-              "text": "Біогаз із відходів перетворюється на електроенергію та тепло."
+              "title": "Waste Conversion:",
+              "text": "Biogas from waste is converted into electricity and heat."
             },
             {
-              "title": "Екологічність: ",
-              "text": "Зниження викидів метану та CO₂, відповідність нормам."
+              "title": "Environmental Sustainability:",
+              "text": "Reduces methane and CO₂ emissions, meeting regulations."
             },
             {
-              "title": "Економія:",
-              "text": "Зменшення витрат на енергію та утилізацію відходів."
+              "title": "Savings:",
+              "text": "Reduces energy and waste disposal costs."
             },
             {
-              "title": "Дохід:",
-              "text": "Продаж надлишкової електроенергії в мережу."
+              "title": "Income:",
+              "text": "Excess electricity can be sold to the grid."
             }
           ],
           "principle": [
-            "Біогаз, отриманий шляхом анаеробного зброджування, спалюється в газопоршневому двигуні для виробництва електроенергії. Тепло від двигуна використовується для нагріву чи сушіння.",
-            "Системи очищення вихлопних газів (DeNOx SCR, регенеративні термічні оксидатори) забезпечують екологічність. Цей підхід перетворює переробку відходів на стале джерело енергії."
+            "Biogas, obtained through anaerobic digestion, is burned in a gas piston engine to produce electricity. Heat from the engine is used for heating or drying.",
+            "Exhaust treatment systems (DeNOx SCR, regenerative thermal oxidizers) ensure environmental compliance. This approach transforms waste processing into a sustainable energy source."
           ]
         },
-
         "images": {
           "preview": "/images/sectors/industries/vidhody.webp",
           "hero": "/images/sectors/industries/vidhody.webp",
@@ -643,49 +745,48 @@
         }
       },
       {
-        "name": "Промислове виробництво",
-        "description": "Високе енергоспоживання для плавлення, сушіння чи виробництва пари.",
-        "slug": "promyslovist",
+        "name": "Industrial Production",
+        "description": "High energy consumption for smelting, drying, or steam production.",
+        "slug": "industry",
         "image": "/images/sectors/industries/promyslovist.webp",
         "details": {
           "sub_sectors": {
             "tips": [
-              "Металургійні та ливарні заводи",
-              "Паперово-целюлозні фабрики",
-              "Текстильна та швейна промисловість",
-              "Керамічна та цегельна промисловість",
-              "Пластикова промисловість",
-              "Виробництво будівельних матеріалів"
+              "Metallurgical and foundry plants",
+              "Pulp and paper factories",
+              "Textile and garment industry",
+              "Ceramic and brick industry",
+              "Plastic industry",
+              "Construction materials production"
             ],
             "paragraph": [
-              "Промислові підприємства мають високе енергоспоживання для плавлення, сушіння чи виробництва пари.",
-              "Когенераційні системи забезпечують стабільне постачання електроенергії та тепла, знижуючи витрати та підвищуючи ефективність. Наприклад, паперово-целюлозні фабрики використовують пару для сушіння паперу, а металургійні заводи – тепло для плавлення. Системи можуть працювати у віддалених місцях, забезпечуючи безперебійне виробництво. Сучасні технології очищення вихлопів роблять їх придатними для галузей із суворими екологічними вимогами."
+              "Industrial enterprises have high energy consumption for smelting, drying, or steam production.",
+              "Cogeneration systems provide stable electricity and heat supply, reducing costs and increasing efficiency. For example, pulp and paper factories use steam for paper drying, while metallurgical plants use heat for smelting. These systems can operate in remote locations, ensuring uninterrupted production. Modern exhaust treatment technologies make them suitable for industries with strict environmental requirements."
             ]
           },
           "perks": [
             {
-              "title": "Ефективність:",
-              "text": "До 95% загальної ефективності завдяки комбінованому виробництву."
+              "title": "Efficiency:",
+              "text": "Up to 95% total efficiency through combined production."
             },
             {
-              "title": "Економія:",
-              "text": "Зниження витрат на енергію та уникнення простоїв."
+              "title": "Savings:",
+              "text": "Reduced energy costs and downtime avoidance."
             },
             {
-              "title": "Надійність:",
-              "text": "Безперебійне енергопостачання для безперервного виробництва."
+              "title": "Reliability:",
+              "text": "Uninterrupted energy supply for continuous production."
             },
             {
-              "title": "Екологічність:",
-              "text": "Зниження викидів завдяки ефективному використанню палива та системам очищення (RTO, SCR)."
+              "title": "Environmental Sustainability:",
+              "text": "Reduced emissions through efficient fuel use and treatment systems (RTO, SCR)."
             }
           ],
           "principle": [
-            "Газопоршневий двигун спалює природний газ, виробляючи електроенергію та тепло для промислових процесів, таких як виробництво пари чи сушіння. У тригенераційних системах тепло перетворюється на холод для кондиціонування чи охолодження обладнання. ",
-            "Системи адаптуються до специфічних потреб, наприклад, високотемпературного тепла для кераміки чи діатермічної олії для пластику."
+            "The gas piston engine burns natural gas, producing electricity and heat for industrial processes like steam production or drying. In trigeneration systems, heat is converted into cooling for air conditioning or equipment cooling.",
+            "The systems adapt to specific needs, such as high-temperature heat for ceramics or diathermic oil for plastics."
           ]
         },
-
         "images": {
           "preview": "/images/sectors/industries/promyslovist.webp",
           "hero": "/images/sectors/industries/promyslovist.webp",
@@ -696,46 +797,45 @@
         }
       },
       {
-        "name": "Хімічна та фармацевтична промисловість",
-        "description": "Потребують електроенергію, пару та охолодження для хімічних реакцій, виробництва ліків чи переробки сировини.",
-        "slug": "khimiya",
+        "name": "Chemical and Pharmaceutical Industry",
+        "description": "Require electricity, steam, and cooling for chemical reactions, drug production, or raw material processing.",
+        "slug": "chemical",
         "image": "/images/sectors/industries/khimiya.webp",
         "details": {
           "sub_sectors": {
             "tips": [
-              "Хімічні заводи",
-              "Фармацевтичні підприємства",
-              "Нафтохімічна промисловість"
+              "Chemical plants",
+              "Pharmaceutical enterprises",
+              "Petrochemical industry"
             ],
             "paragraph": [
-              "Ці галузі потребують значної кількості електроенергії, пари та охолодження для хімічних реакцій, виробництва ліків чи переробки сировини.",
-              "Когенераційні системи забезпечують надійне та ефективне енергопостачання, знижуючи витрати та відповідаючи суворим екологічним стандартам. Наприклад, фармацевтичні підприємства використовують пару для стерилізації, а хімічні заводи – тепло для дистиляції. Використання біогазу чи низьковуглецевих палив сприяє сталому розвитку."
+              "These industries require significant amounts of electricity, steam, and cooling for chemical reactions, drug production, or raw material processing.",
+              "Cogeneration systems provide reliable and efficient energy supply, reducing costs and meeting strict environmental standards. For example, pharmaceutical enterprises use steam for sterilization, while chemical plants use heat for distillation. Using biogas or low-carbon fuels supports sustainability."
             ]
           },
           "perks": [
             {
-              "title": "Економія:",
-              "text": "До 50% зниження витрат на енергію завдяки високій ефективності."
+              "title": "Savings:",
+              "text": "Up to 50% reduction in energy costs through high efficiency."
             },
             {
-              "title": "Надійність:",
-              "text": "Безперебійне постачання для чутливих процесів."
+              "title": "Reliability:",
+              "text": "Uninterrupted supply for sensitive processes."
             },
             {
-              "title": "Екологічність:",
-              "text": "Зниження викидів CO₂ та NOx завдяки системам очищення."
+              "title": "Environmental Sustainability:",
+              "text": "Reduced CO₂ and NOx emissions through treatment systems."
             },
             {
-              "title": "Гнучкість:",
-              "text": "Надає пар, гарячу воду чи холод для різних потреб."
+              "title": "Flexibility:",
+              "text": "Provides steam, hot water, or cooling for various needs."
             }
           ],
           "principle": [
-            "Газопоршневий двигун генерує електроенергію, а тепло використовується для виробництва пари чи гарячої води для хімічних реакцій чи стерилізації. У тригенераційних системах тепло перетворюється на холод для кондиціонування чи охолодження.",
-            "Системи очищення вихлопів (SCR-реактори) забезпечують відповідність екологічним нормам."
+            "The gas piston engine generates electricity, and heat is used to produce steam or hot water for chemical reactions or sterilization. In trigeneration systems, heat is converted into cooling for air conditioning or cooling processes.",
+            "Exhaust treatment systems (SCR reactors) ensure compliance with environmental regulations."
           ]
         },
-
         "images": {
           "preview": "/images/sectors/industries/khimiya.webp",
           "hero": "/images/sectors/industries/khimiya.webp",
@@ -746,47 +846,46 @@
         }
       },
       {
-        "name": "Центри обробки даних (ЦОД)",
-        "description": "Споживають значну кількість електроенергії для серверів та охолодження, потребуючи високої надійності.",
-        "slug": "tsod",
+        "name": "Data Centers",
+        "description": "Consume significant electricity for servers and cooling, requiring high reliability.",
+        "slug": "datacenters",
         "image": "/images/sectors/industries/tsod.webp",
         "details": {
           "sub_sectors": {
             "tips": [
-              "Дата-центри",
-              "Серверні ферми",
-              "Хмарні обчислення"
+              "Data centers",
+              "Server farms",
+              "Cloud computing"
             ],
             "paragraph": [
-              "Центри обробки даних споживають величезну кількість електроенергії для серверів та охолодження, потребуючи високої надійності.",
-              "Когенераційні та тригенераційні системи забезпечують стабільне постачання електрики та холоду, знижуючи витрати та викиди.",
-              "Системи можуть працювати в острівному режимі під час відключень мережі, забезпечуючи безперервність роботи. Наприклад, великі хмарні обчислювальні центри використовують тригенерацію для охолодження серверних приміщень."
+              "Data centers consume vast amounts of electricity for servers and cooling, requiring high reliability.",
+              "Cogeneration and trigeneration systems provide stable electricity and cooling supply, reducing costs and emissions.",
+              "These systems can operate in island mode during grid outages, ensuring operational continuity. For example, large cloud computing centers use trigeneration for server room cooling."
             ]
           },
           "perks": [
             {
-              "title": "Надійність:",
-              "text": "Безперебійне постачання для критичних операцій."
+              "title": "Reliability:",
+              "text": "Uninterrupted supply for critical operations."
             },
             {
-              "title": "Економія:",
-              "text": "До 95% ефективності знижує витрати на електроенергію та охолодження."
+              "title": "Savings:",
+              "text": "Up to 95% efficiency reduces electricity and cooling costs."
             },
             {
-              "title": "Екологічність:",
-              "text": "Зменшення викидів CO₂."
+              "title": "Environmental Sustainability:",
+              "text": "Reduced CO₂ emissions."
             },
             {
-              "title": "Гнучкість:",
-              "text": "Операція в острівному режимі під час відключень мережі."
+              "title": "Flexibility:",
+              "text": "Operation in island mode during grid outages."
             }
           ],
           "principle": [
-            "Газопоршневий двигун виробляє електроенергію для серверів, а тепло перетворюється на холод через абсорбційні чилери для охолодження приміщень.",
-            "Система може працювати паралельно з мережею або автономно, забезпечуючи надійність. Сучасні системи керування оптимізують енерговиробництво відповідно до потреб ЦОД."
+            "The gas piston engine produces electricity for servers, and heat is converted into cooling via absorption chillers for room cooling.",
+            "The system can operate in parallel with the grid or autonomously, ensuring reliability. Modern control systems optimize energy production based on data center needs."
           ]
         },
-
         "images": {
           "preview": "/images/sectors/industries/tsod.webp",
           "hero": "/images/sectors/industries/tsod.webp",
@@ -797,45 +896,45 @@
         }
       },
       {
-        "name": "Логістика та комерційна нерухомість",
-        "description": "Потребують стабільного електропостачання для освітлення, обладнання, опалення та охолодження.",
-        "slug": "lohistyka",
+        "name": "Logistics and Commercial Real Estate",
+        "description": "Require stable electricity for lighting, equipment, heating, and cooling.",
+        "slug": "logistics",
         "image": "/images/sectors/industries/lohistyka.webp",
         "details": {
           "sub_sectors": {
             "tips": [
-              "Логістичні склади",
-              "Розподільчі центри",
-              "Торгові центри",
-              "Житлові комплекси"
+              "Logistics warehouses",
+              "Distribution centers",
+              "Shopping centers",
+              "Residential complexes"
             ],
             "paragraph": [
-              "Логістичні та комерційні об’єкти потребують стабільного електропостачання для освітлення, обладнання, опалення та охолодження.",
-              "Когенераційні системи забезпечують енергоефективність, надійність та зниження витрат, що критично для комерційних операцій. Наприклад, торгові центри використовують охолодження для кондиціонування, а склади – тепло для зберігання продуктів.",
-              "Системи також підвищують цінність об’єктів завдяки екологічним сертифікатам, таким як LEED."
+              "Logistics and commercial facilities require stable electricity for lighting, equipment, heating, and cooling.",
+              "Cogeneration systems provide energy efficiency, reliability, and cost reduction, critical for commercial operations. For example, shopping centers use cooling for air conditioning, and warehouses use heat for product storage.",
+              "These systems also increase property value through environmental certifications like LEED."
             ]
           },
           "perks": [
             {
-              "title": "Економія:",
-              "text": "До 30% зниження витрат на енергію."
+              "title": "Savings:",
+              "text": "Up to 30% reduction in energy costs."
             },
             {
-              "title": "Надійність:",
-              "text": "Безперебійне постачання для комерційних операцій."
+              "title": "Reliability:",
+              "text": "Uninterrupted supply for commercial operations."
             },
             {
-              "title": "Екологічність:",
-              "text": "Зменшення викидів CO₂."
+              "title": "Environmental Sustainability:",
+              "text": "Reduced CO₂ emissions."
             },
             {
-              "title": "Гнучкість:",
-              "text": "Надає електрику, тепло та холод для різних потреб."
+              "title": "Flexibility:",
+              "text": "Provides electricity, heat, and cooling for various needs."
             }
           ],
           "principle": [
-            "Газопоршневий двигун генерує електроенергію для освітлення та обладнання, а тепло використовується для опалення чи гарячої води. У тригенераційних системах тепло перетворюється на холод для кондиціонування чи холодильних складів. ",
-            "Системи інтегруються з системами управління будівлями для оптимального енерговикористання."
+            "The gas piston engine generates electricity for lighting and equipment, and heat is used for heating or hot water. In trigeneration systems, heat is converted into cooling for air conditioning or refrigerated warehouses.",
+            "The systems integrate with building management systems for optimal energy use."
           ]
         },
         "images": {
@@ -848,52 +947,48 @@
         }
       },
       {
-        "name": "Енергетична інфраструктура",
-        "description": "Потребує гнучких, масштабованих та ефективних енергетичних рішень для великих чи віддалених об’єктів.",
-        "slug": "enerhetyka",
+        "name": "Energy Infrastructure",
+        "description": "Requires flexible, scalable, and efficient energy solutions for large or remote facilities.",
+        "slug": "energy",
         "image": "/images/sectors/industries/enerhetyka.webp",
         "details": {
           "sub_sectors": {
             "tips": [
-              "Індустріальні парки",
-              "Районні енергомережі",
-              "Незалежні виробники електроенергії (IPP)",
-              "Індустріальні парки",
-              "Районні енергомережі",
-              "Незалежні виробники електроенергії (IPP)",
-              "Біогазові підприємства",
-              "Станції пікового навантаження",
-              "Мікромережі",
-              "Об’єкти з використанням стисненого/зрідженого газу"
+              "Industrial parks",
+              "District energy networks",
+              "Independent power producers (IPP)",
+              "Biogas enterprises",
+              "Peak load stations",
+              "Microgrids",
+              "Facilities using compressed/liquefied gas"
             ],
             "paragraph": [
-              "Енергетична інфраструктура потребує гнучких, масштабованих та ефективних енергетичних рішень для великих чи віддалених об’єктів. Когенераційні системи забезпечують електроенергію та тепло для індустріальних парків, районного опалення чи мікромереж, а біогазові підприємства використовують органічні відходи як паливо. Станції пікового навантаження швидко реагують на потреби мережі, а стиснений/зріджений газ забезпечує постачання палива у віддалені райони. Ці системи сприяють переходу до низьковуглецевої енергетики."
+              "Energy infrastructure requires flexible, scalable, and efficient energy solutions for large or remote facilities. Cogeneration systems provide electricity and heat for industrial parks, district heating, or microgrids, while biogas enterprises use organic waste as fuel. Peak load stations respond quickly to grid needs, and compressed/liquefied gas ensures fuel supply in remote areas. These systems support the transition to low-carbon energy."
             ]
           },
           "perks": [
             {
-              "title": "Ефективність:",
-              "text": "До 90% загальної ефективності."
+              "title": "Efficiency:",
+              "text": "Up to 90% total efficiency."
             },
             {
-              "title": "Гнучкість:",
-              "text": "Модульні системи для масштабування та швидкого розгортання."
+              "title": "Flexibility:",
+              "text": "Modular systems for scalability and rapid deployment."
             },
             {
-              "title": "Дохід:",
-              "text": "Продаж надлишкової електроенергії чи тепла."
+              "title": "Income:",
+              "text": "Selling excess electricity or heat."
             },
             {
-              "title": "Екологічність:",
-              "text": "Використання біогазу знижує викиди."
+              "title": "Environmental Sustainability:",
+              "text": "Using biogas reduces emissions."
             }
           ],
           "principle": [
-            "Газопоршневі двигуни генерують електроенергію для мережі чи локального використання, а тепло застосовується для опалення чи промислових процесів. Біогазові підприємства використовують біогаз із відходів. ",
-            "Станції пікового навантаження забезпечують швидкий запуск (2–4 хвилини) для балансування мережі. Стиснений чи зріджений газ забезпечує постачання палива у віддалені райони."
+            "Gas piston engines generate electricity for the grid or local use, and heat is used for heating or industrial processes. Biogas enterprises utilize biogas from waste.",
+            "Peak load stations provide quick startup (2–4 minutes) for grid balancing. Compressed or liquefied gas ensures fuel supply in remote areas."
           ]
         },
-
         "images": {
           "preview": "/images/sectors/industries/enerhetyka.webp",
           "hero": "/images/sectors/industries/enerhetyka.webp",
@@ -904,47 +999,47 @@
         }
       },
       {
-        "name": "Охорона здоров’я та освіта",
-        "description": "Лікарні та університети потребують надійного енергопостачання для обладнання, опалення, охолодження та стерилізації.",
-        "slug": "okhorona",
+        "name": "Healthcare and Education",
+        "description": "Hospitals and universities require reliable energy supply for equipment, heating, cooling, and sterilization.",
+        "slug": "healthcare",
         "image": "/images/sectors/industries/okhorona.webp",
         "details": {
           "sub_sectors": {
             "tips": [
-              "Лікарні",
-              "Університети",
-              "Виробництво медичного обладнання"
+              "Hospitals",
+              "Universities",
+              "Medical equipment manufacturing"
             ],
             "paragraph": [
-              "Лікарні та університети потребують надійного енергопостачання для обладнання, опалення, охолодження та стерилізації.",
-              "Когенераційні системи забезпечують безперебійність та енергоефективність, що критично для цих секторів. Наприклад, лікарні використовують пару для автоклавів, а університети – охолодження для аудиторій.",
-              "Системи дозволяють економити кошти, які можна спрямувати на охорону здоров’я чи освіту."
+              "Hospitals and universities require reliable energy supply for equipment, heating, cooling, and sterilization.",
+              "Cogeneration systems ensure uninterrupted operation and energy efficiency, critical for these sectors. For example, hospitals use steam for autoclaves, and universities use cooling for auditoriums.",
+              "These systems save funds that can be allocated to healthcare or education."
             ]
           },
           "perks": [
             {
-              "title": "Надійність:",
-              "text": "Безперебійне постачання для чутливого обладнання."
+              "title": "Reliability:",
+              "text": "Uninterrupted supply for sensitive equipment."
             },
             {
-              "title": "Економія:",
-              "text": "Зниження витрат на енергію для великих об’єктів."
+              "title": "Savings:",
+              "text": "Reduced energy costs for large facilities."
             },
             {
-              "title": "Екологічність:",
-              "text": "Зменшення викидів CO₂."
+              "title": "Environmental Sustainability:",
+              "text": "Reduced CO₂ emissions."
             },
             {
-              "title": "Гнучкість:",
-              "text": "Надає електрику, тепло та холод для різних потреб."
+              "title": "Flexibility:",
+              "text": "Provides electricity, heat, and cooling for various needs."
             }
           ],
           "principle": [
-            "Газопоршневий двигун генерує електроенергію для обладнання, а тепло використовується для опалення, гарячої води чи стерилізації. У тригенераційних системах тепло перетворюється на холод для кондиціонування чи холодильних систем.",
-            "Системи забезпечують високу надійність із резервними можливостями."
+            "The gas piston engine generates electricity for equipment, and heat is used for heating, hot water, or sterilization. In trigeneration systems, heat is converted into cooling for air conditioning or refrigeration systems.",
+            "The systems ensure high reliability with backup capabilities."
+
           ]
         },
-
         "images": {
           "preview": "/images/sectors/industries/okhorona.webp",
           "hero": "/images/sectors/industries/okhorona.webp",
@@ -955,46 +1050,45 @@
         }
       },
       {
-        "name": "Готельно-туристичний сектор",
-        "description": "Готелі потребують постійного енергопостачання для освітлення, опалення, охолодження та гарячої води.",
-        "slug": "hoteli",
+        "name": "Hospitality and Tourism",
+        "description": "Hotels require constant energy supply for lighting, heating, cooling, and hot water.",
+        "slug": "hospitality",
         "image": "/images/sectors/industries/hoteli.webp",
         "details": {
           "sub_sectors": {
             "tips": [
-              "Готелі",
-              "Курортні комплекси"
+              "Hotels",
+              "Resort complexes"
             ],
             "paragraph": [
-              "Готелі потребують постійного енергопостачання для освітлення, опалення, охолодження та гарячої води.",
-              "Когенераційні системи знижують витрати та підвищують надійність, що важливо для комфорту гостей. Наприклад, курорти використовують охолодження для кондиціонування, а тепло для обігріву приміщень в зимовий період.",
-              "Системи сприяють формуванню екологічного іміджу, залучаючи клієнтів, які цінують сталість."
+              "Hotels require constant energy supply for lighting, heating, cooling, and hot water.",
+              "Cogeneration systems reduce costs and increase reliability, critical for guest comfort. For example, resorts use cooling for air conditioning and heat for room heating in winter.",
+              "These systems contribute to an eco-friendly image, attracting clients who value sustainability."
             ]
           },
           "perks": [
             {
-              "title": "Економія:",
-              "text": "Зниження витрат на енергію завдяки ефективності."
+              "title": "Savings:",
+              "text": "Reduced energy costs through efficiency."
             },
             {
-              "title": "Надійність:",
-              "text": "Безперебійне постачання для комфорту гостей."
+              "title": "Reliability:",
+              "text": "Uninterrupted supply for guest comfort."
             },
             {
-              "title": "Екологічність:",
-              "text": "Зменшення викидів CO₂, що сприяє зеленому іміджу."
+              "title": "Environmental Sustainability:",
+              "text": "Reduced CO₂ emissions, enhancing green branding."
             },
             {
-              "title": "Гнучкість:",
-              "text": "Надає електрику, тепло та холод для різних потреб."
+              "title": "Flexibility:",
+              "text": "Provides electricity, heat, and cooling for various needs."
             }
           ],
           "principle": [
-            "Газопоршневий двигун генерує електроенергію для освітлення та обладнання, а тепло використовується для гарячої води чи опалення. У тригенераційних системах тепло перетворюється на холод для кондиціонування.",
-            "Системи інтегруються з системами управління готелями для оптимального енерговикористання."
+            "The gas piston engine generates electricity for lighting and equipment, and heat is used for hot water or heating. In trigeneration systems, heat is converted into cooling for air conditioning.",
+            "The systems integrate with hotel management systems for optimal energy use."
           ]
         },
-
         "images": {
           "preview": "/images/sectors/industries/hoteli.webp",
           "hero": "/images/sectors/industries/hoteli.webp",
@@ -1005,44 +1099,44 @@
         }
       },
       {
-        "name": "Транспортна та авіаційна інфраструктура",
-        "description": "Аеропорти та логістичні хаби потребують значної кількості електроенергії для освітлення, обладнання, опалення та охолодження.",
+        "name": "Transportation and Aviation Infrastructure",
+        "description": "Airports and logistics hubs require significant electricity for lighting, equipment, heating, and cooling.",
         "slug": "transport",
         "image": "/images/sectors/industries/transport.webp",
         "details": {
           "sub_sectors": {
             "tips": [
-              "Аеропорти",
-              "Логістичні хаби",
-              "Залізничні вокзали"
+              "Airports",
+              "Logistics hubs",
+              "Railway stations"
             ],
             "paragraph": [
-              "Аеропорти та логістичні хаби потребують значної кількості електроенергії для освітлення, обладнання, опалення та охолодження.",
-              "Когенераційні системи забезпечують надійність і економію, що важливо для великих інфраструктурних об’єктів. Наприклад, аеропорти використовують охолодження для терміналів, а логістичні хаби – електроенергію для автоматизованих систем.",
-              "Системи сприяють досягненню екологічних стандартів авіації та логістики."
+              "Airports and logistics hubs require significant electricity for lighting, equipment, heating, and cooling.",
+              "Cogeneration systems ensure reliability and savings, critical for large infrastructure facilities. For example, airports use cooling for terminals, and logistics hubs use electricity for automated systems.",
+              "These systems contribute to meeting environmental standards in aviation and logistics."
             ]
           },
           "perks": [
             {
-              "title": "Надійність:",
-              "text": "Безперебійне постачання для критичної інфраструктури."
+              "title": "Reliability:",
+              "text": "Uninterrupted supply for critical infrastructure."
             },
             {
-              "title": "Економія:",
-              "text": "Зниження витрат на енергію завдяки ефективності."
+              "title": "Savings:",
+              "text": "Reduced energy costs through efficiency."
             },
             {
-              "title": "Екологічність:",
-              "text": "Зменшення викидів CO₂."
+              "title": "Environmental Sustainability:",
+              "text": "Reduced CO₂ emissions."
             },
             {
-              "title": "Гнучкість:",
-              "text": "Надає електрику, тепло та холод для різних потреб."
+              "title": "Flexibility:",
+              "text": "Provides electricity, heat, and cooling for various needs."
             }
           ],
           "principle": [
-            "Газопоршневий двигун генерує електроенергію для обладнання та освітлення, а тепло використовується для опалення чи гарячої води. У тригенераційних системах тепло перетворюється на холод для кондиціонування терміналів.",
-            "Системи можуть працювати в острівному режимі під час відключень мережі."
+            "The gas piston engine generates electricity for equipment and lighting, and heat is used for heating or hot water. In trigeneration systems, heat is converted into cooling for terminal air conditioning.",
+            "The systems can operate in island mode during grid outages."
           ]
         },
         "images": {
@@ -1055,43 +1149,43 @@
         }
       },
       {
-        "name": "Гірничодобувна та нафтогазова промисловість",
-        "description": "Потребують надійного енергопостачання для видобутку, переробки та транспортування ресурсів у віддалених районах.",
-        "slug": "hirnytstvo",
+        "name": "Mining and Oil & Gas Industry",
+        "description": "Require reliable energy supply for extraction, processing, and transportation of resources in remote areas.",
+        "slug": "mining",
         "image": "/images/sectors/industries/hirnytstvo.webp",
         "details": {
           "sub_sectors": {
             "tips": [
-              "Гірничодобувна промисловість",
-              "Нафтогазова промисловість"
+              "Mining industry",
+              "Oil and gas industry"
             ],
             "paragraph": [
-              "Ці галузі потребують надійного енергопостачання для видобутку, переробки та транспортування ресурсів у віддалених районах. ",
-              "Когенераційні системи, що використовують природний газ, біогаз чи стиснений/зріджений газ, забезпечують економію та гнучкість. Наприклад, гірничодобувні підприємства використовують електроенергію для техніки, а нафтогазові – пару для переробки. ",
-              "Системи підвищують енергетичну безпеку в ізольованих регіонах."
+              "These industries require reliable energy supply for extraction, processing, and transportation of resources in remote areas.",
+              "Cogeneration systems using natural gas, biogas, or compressed/liquefied gas provide savings and flexibility. For example, mining enterprises use electricity for machinery, and oil and gas industries use steam for processing.",
+              "These systems enhance energy security in isolated regions."
             ]
           },
           "perks": [
             {
-              "title": "Гнучкість:",
-              "text": "Модульні системи для віддалених локацій."
+              "title": "Flexibility:",
+              "text": "Modular systems for remote locations."
             },
             {
-              "title": "Економія:",
-              "text": "Висока ефективність знижує витрати."
+              "title": "Savings:",
+              "text": "High efficiency reduces costs."
             },
             {
-              "title": "Надійність:",
-              "text": "Швидкий запуск для безперебійності."
+              "title": "Reliability:",
+              "text": "Quick startup for uninterrupted operations."
             },
             {
-              "title": "Екологічність:",
-              "text": "Підтримка низьковуглецевих палив."
+              "title": "Environmental Sustainability:",
+              "text": "Support for low-carbon fuels."
             }
           ],
           "principle": [
-            "Газопоршневі двигуни генерують електроенергію для обладнання, а тепло використовується для технологічних процесів. Стиснений чи зріджений газ забезпечує постачання палива у віддалені райони.",
-            "Тригенераційні системи надають холод для обладнання чи приміщень, підвищуючи ефективність."
+            "Gas piston engines generate electricity for equipment, and heat is used for technological processes. Compressed or liquefied gas ensures fuel supply in remote areas.",
+            "Trigeneration systems provide cooling for equipment or premises, increasing efficiency."
           ]
         },
         "images": {
@@ -1104,44 +1198,44 @@
         }
       },
       {
-        "name": "Інші промислові сектори",
-        "description": "Потребують електроенергію та тепло для виробництва чи тестування обладнання. Когенераційні системи забезпечують економію та надійність.",
-        "slug": "inshi",
+        "name": "Other Industrial Sectors",
+        "description": "Require electricity and heat for production or equipment testing. Cogeneration systems provide savings and reliability.",
+        "slug": "other",
         "image": "/images/sectors/industries/inshi.webp",
         "details": {
           "sub_sectors": {
             "tips": [
-              "Інженерні компанії",
-              "Виробництво обладнання",
-              "Виробництво скла"
+              "Engineering companies",
+              "Equipment manufacturing",
+              "Glass production"
             ],
             "paragraph": [
-              "Ці сектори потребують електроенергію та тепло для виробництва чи тестування обладнання.",
-              "Когенераційні системи забезпечують економію та надійність, сприяючи конкурентоспроможності. Наприклад, скляна промисловість використовує тепло для плавлення, а інженерні компанії – електроенергію для тестування.",
-              "Системи знижують енергетичні витрати та викиди."
+              "These sectors require electricity and heat for production or equipment testing.",
+              "Cogeneration systems provide savings and reliability, enhancing competitiveness. For example, the glass industry uses heat for smelting, and engineering companies use electricity for testing.",
+              "These systems reduce energy costs and emissions."
             ]
           },
           "perks": [
             {
-              "title": "Економія:",
-              "text": "Зниження витрат на енергію."
+              "title": "Savings:",
+              "text": "Reduced energy costs."
             },
             {
-              "title": "Надійність:",
-              "text": "Безперебійне постачання для виробництва."
+              "title": "Reliability:",
+              "text": "Uninterrupted supply for production."
             },
             {
-              "title": "Екологічність:",
-              "text": "Зменшення викидів CO₂."
+              "title": "Environmental Sustainability:",
+              "text": "Reduced CO₂ emissions."
             },
             {
-              "title": "Гнучкість:",
-              "text": "Надає електрику та тепло для різних процесів."
+              "title": "Flexibility:",
+              "text": "Provides electricity and heat for various processes."
             }
           ],
           "principle": [
-            "Газопоршневий двигун генерує електроенергію для обладнання, а тепло використовується для виробництва пари чи гарячої води.",
-            "Системи адаптуються до потреб, таких як високотемпературне тепло для скла чи стабільне живлення для тестування."
+            "The gas piston engine generates electricity for equipment, and heat is used to produce steam or hot water.",
+            "The systems adapt to specific needs, such as high-temperature heat for glass or stable power for testing."
           ]
         },
         "images": {
@@ -1154,48 +1248,48 @@
         }
       },
       {
-        "name": "Державні установи, комунальні об’єкти та критична інфраструктура",
-        "description": "Потребують стабільного й економічного енергопостачання.",
-        "slug": "derzhava",
+        "name": "Public Institutions, Municipal Facilities, and Critical Infrastructure",
+        "description": "Require stable and cost-effective energy supply.",
+        "slug": "public",
         "image": "/images/sectors/industries/derzhava.webp",
         "details": {
           "sub_sectors": {
             "tips": [
-              "Державні установи (адміністративні центри, міністерства, суди, архіви)",
-              "Комунальні об’єкти (водоочисні станції, лікарні, школи, дитячі садки, теплові пункти)",
-              "Критична інфраструктура (аварійні служби, комунікаційні хаби, водоканали, котельні, електропідстанції)"
+              "Public institutions (administrative centers, ministries, courts, archives)",
+              "Municipal facilities (water treatment plants, hospitals, schools, kindergartens, heating stations)",
+              "Critical infrastructure (emergency services, communication hubs, water utilities, boiler plants, electrical substations)"
             ],
             "paragraph": [
-              "Державні установи та комунальні об’єкти потребують стабільного й економічного енергопостачання для забезпечення безперебійного надання громадських послуг, таких як адміністративне управління, освіта чи охорона здоров’я. Критична інфраструктура, включаючи аварійні служби та водоканали, вимагає надійного живлення для підтримки безпеки та функціонування суспільства.",
-              "Когенераційні та тригенераційні системи забезпечують електроенергію, тепло і холод, що дозволяє оптимізувати витрати та гарантувати безперервність роботи навіть під час відключень електромережі. Наприклад, водоочисні станції можуть використовувати біогаз, отриманий із осаду стічних вод, для виробництва енергії, а лікарні – тепло для опалення чи стерилізації.",
-              "Такі системи сприяють досягненню цілей сталого розвитку, знижуючи залежність від викопного палива та зменшуючи викиди. Впровадження когенерації також дозволяє модернізувати застарілу комунальну інфраструктуру, підвищуючи її ефективність і стійкість до надзвичайних ситуацій."
+              "Public institutions and municipal facilities require stable and cost-effective energy supply to ensure uninterrupted public services, such as administrative management, education, or healthcare. Critical infrastructure, including emergency services and water utilities, demands reliable power to maintain safety and societal functions.",
+              "Cogeneration and trigeneration systems provide electricity, heat, and cooling, optimizing costs and ensuring operational continuity even during grid outages. For example, water treatment plants can use biogas from sewage sludge for energy production, and hospitals use heat for heating or sterilization.",
+              "These systems support sustainable development goals, reducing reliance on fossil fuels and emissions. Implementing cogeneration also modernizes outdated municipal infrastructure, enhancing efficiency and resilience to emergencies."
             ]
           },
           "perks": [
             {
-              "title": "Надійність:",
-              "text": "Безперебійне енергопостачання для критичних об’єктів, що забезпечує стабільну роботу в будь-яких умовах."
+              "title": "Reliability:",
+              "text": "Uninterrupted energy supply for critical facilities, ensuring stable operation in any conditions."
             },
             {
-              "title": "Екологічність:",
-              "text": "Використання біогазу та ефективних систем знижує викиди CO₂, відповідаючи державним екологічним стандартам."
+              "title": "Environmental Sustainability:",
+              "text": "Using biogas and efficient systems reduces CO₂ emissions, meeting national environmental standards."
             },
             {
-              "title": "Стійкість:",
-              "text": "Можливість роботи в острівному режимі під час аварійних відключень мережі підвищує резерви критичної інфраструктури."
+              "title": "Resilience:",
+              "text": "Island mode operation during emergency grid outages enhances critical infrastructure reserves."
             },
             {
-              "title": "Економія:",
-              "text": "Зниження витрат на енергію до 40% для бюджетних установ, що дозволяє спрямовувати кошти на соціальні потреби."
+              "title": "Savings:",
+              "text": "Up to 40% reduction in energy costs for public institutions, allowing funds to be allocated to social needs."
             },
             {
-              "title": "Гнучкість:",
-              "text": "Забезпечує електроенергію, тепло і холод для різноманітних потреб, від опалення шкіл до охолодження серверних приміщень комунікаційних хабів."
+              "title": "Flexibility:",
+              "text": "Provides electricity, heat, and cooling for diverse needs, from heating schools to cooling communication hub server rooms."
             }
           ],
           "principle": [
-            "Газопоршневий двигун працює на природному газі або біогазі, генеруючи електроенергію для живлення освітлення, обладнання, комунікаційних систем чи насосів водоканалів. Тепло від двигуна та вихлопних газів використовується для опалення адміністративних будівель, шкіл, лікарень або для технологічних процесів, таких як нагрівання води на водоочисних станціях. У тригенераційних системах тепло перетворюється на холод через абсорбційні чилери для кондиціонування приміщень чи охолодження обладнання, наприклад, у комунікаційних хабах.",
-            "Системи оснащені резервними можливостями та можуть працювати автономно, забезпечуючи стійкість критичної інфраструктури під час відключень електромережі. Сучасні системи очищення вихлопних газів (наприклад, SCR-реактори) гарантують відповідність екологічним нормам."
+            "The gas piston engine runs on natural gas or biogas, generating electricity for lighting, equipment, communication systems, or water utility pumps. Heat from the engine and exhaust gases is used for heating administrative buildings, schools, hospitals, or for technological processes like water heating in treatment plants. In trigeneration systems, heat is converted into cooling via absorption chillers for air conditioning or equipment cooling, such as in communication hubs.",
+            "The systems are equipped with backup capabilities and can operate autonomously, ensuring critical infrastructure resilience during grid outages. Modern exhaust treatment systems (e.g., SCR reactors) ensure compliance with environmental regulations."
           ]
         },
         "images": {
@@ -1211,156 +1305,179 @@
     "list": [
       {
         "href": "/sectors/agriculture",
-        "title": "Агро та сільське господарство"
+        "title": "Agriculture and Livestock"
       },
       {
         "href": "/sectors/industry",
-        "title": "Промислове виробництво"
+        "title": "Industrial Production"
       },
       {
-        "href": "/sectors/processing",
-        "title": "Переробна галузь"
+        "href": "/sectors/waste",
+        "title": "Waste Processing"
       },
       {
-        "href": "/sectors/energy-infrastructure",
-        "title": "Енергетична інфраструктура"
+        "href": "/sectors/energy",
+        "title": "Energy Infrastructure"
       },
       {
-        "href": "/sectors/critical-infrastructure",
-        "title": "Критична інфраструктура"
+        "href": "/sectors/healthcare",
+        "title": "Healthcare and Education"
       }
     ]
   },
   "equipment": {
-    "title": "Лучшие предложения на рынке газопоршневого оборудования",
-    "button": "Детально",
+    "title": "Best Offers on the Gas Piston Equipment Market",
+    "button": "Details",
+    "description": {
+      "details": "Details",
+      "others": "Other unit options"
+    },
     "modal": {
-      "purpose": "Получить предложение",
-      "files": "Документация"
+      "purpose": "Get an Offer",
+      "files": "Documentation"
     },
     "filters": {
-      "title": "Фильтр",
-      "hideFilters": "Скрыть фильтры",
-      "showFilters": "Показать фильтры",
+      "title": "Filter",
+      "hideFilters": "Hide Filters",
+      "showFilters": "Show Filters",
       "items": {
-        "power": "Мощность",
-        "manufacturer": "Производитель",
-        "voltage": "Напряжение",
-        "condition": "Состояние",
-        "release": "Год выпуска",
-        "model": "Модель",
-        "bodyType": "Исполнение",
-        "genType": "Тип установки",
-        "price": "Цена",
-        "working": "Наработка",
+        "power": "Power",
+        "manufacturer": "Manufacturer",
+        "voltage": "Voltage",
+        "condition": "Condition",
+        "release": "Year of Manufacture",
+        "model": "Model",
+        "bodyType": "Design Type",
+        "genType": "Unit Type",
+        "price": "Price",
+        "working": "Operating Hours",
         "sorting": {
-          "title": "Сортировка",
-          "reset": "Сбросить",
-          "search": "Поиск",
+          "title": "Sorting",
+          "reset": "Reset",
+          "search": "Search",
           "values": {
-            "priceToLow": "Сначала дешевые",
-            "priceToHigh": "Сначала дорогие",
-            "powerToLow": "По мощности ↑",
-            "powerToHigh": "По мощности ↓",
-            "latest": "Последние добавленные"
+            "priceToLow": "Cheapest First",
+            "priceToHigh": "Most Expensive First",
+            "powerToLow": "By Power ↑",
+            "powerToHigh": "By Power ↓",
+            "latest": "Latest Added"
           }
         }
       }
     }
   },
   "calculator": {
-    "title": "Рассчитайте выгоду от собственной генерации",
-    "subtitle": "Оцените экономию, рентабельность и сроки окупаемости инвестиций в ГПУ.",
+    "title": "Calculate the Benefits of Your Own Generation",
+    "subtitle": "Estimate savings, profitability, and payback period for investments in gas piston units.",
     "params": {
-      "elecProd": "Потребление электроэнергии (кВт/ч)",
-      "elecPrice": "Цена покупки электроэнергии (за 1 кВт/ч, грн.)",
-      "gasPrice": "Цена покупки газа (за 1 м³/ грн)",
-      "hourlyHeat": "Потребление тепловой энергии (кВт/ч)",
-      "yearlyHeat": "Потребление тепловой энергии в месяцах",
-      "chp": "Когенерация"
+      "elecProd": "Electricity Consumption (kWh)",
+      "elecPrice": "Electricity Purchase Price (per kWh, UAH)",
+      "gasPrice": "Gas Purchase Price (per m³, UAH)",
+      "hourlyHeat": "Heat Energy Consumption (kWh)",
+      "yearlyHeat": "Heat Energy Consumption in Months",
+      "chp": "Cogeneration"
     },
     "estimate": {
-      "title": "Годовые расходы",
-      "subtitle": "Преимущества собственной генерации за год",
+      "title": "Annual Costs",
+      "subtitle": "Benefits of Own Generation Per Year",
       "params": {
-        "gas_gen_price": "Себестоимость 1 кВт генерации",
-        "selfGeneration": "Затраты при собственной генерации",
-        "supplierPurchase": "Затраты при покупке от поставщика",
-        "annualSavings": "Экономия в год",
-        "avgAnnualCost": "Среднегодовая себестоимость выработки электроэнергии",
-        "gpuPaybackPeriod": "Срок окупаемости GPU",
-        "chpPaybackPeriod": "Срок окупаемости CHP"
+        "gas_gen_price": "Cost of 1 kW Generation",
+        "selfGeneration": "Costs with Own Generation",
+        "supplierPurchase": "Costs with Supplier Purchase",
+        "annualSavings": "Annual Savings",
+        "avgAnnualCost": "Average Annual Electricity Generation Cost",
+        "gpuPaybackPeriod": "GPP Payback Period",
+        "chpPaybackPeriod": "CHP Payback Period"
       },
-      "button": "Получить консультацию"
+      "button": "Get a Consultation"
     },
     "unit": {
-      "kw": "кВт",
-      "mw": "мВт",
-      "uah": "грн.",
-      "month": "месяцев",
-      "years_1": "год",
-      "years_2": "года",
-      "years_3": "лет"
+      "kw": "kW",
+      "mw": "MW",
+      "uah": "UAH",
+      "month": "months",
+      "years_1": "year",
+      "years_2": "years",
+      "years_3": "years"
     }
   },
   "cooperation": {
-    "title": "Сотрудничество",
-    "subtitle": "Сектори співпраць",
-    "description": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing.",
+    "title": "Cooperation",
+    "subtitle": "Sectors of Cooperation",
+    "description": "We offer comprehensive energy solutions for various industries, ensuring efficiency, reliability, and sustainability through gas piston and cogeneration systems.",
     "public": {
-      "title": "Державний сектор",
-      "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      "title": "Public Sector",
+      "subtitle": "We provide tailored energy solutions for public institutions and critical infrastructure, ensuring reliable and cost-effective power supply. Our systems support municipalities, hospitals, and schools with electricity, heat, and cooling, reducing costs and enhancing sustainability."
     },
     "private": {
-      "title": "Приватний сектор",
-      "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      "title": "Private Sector",
+      "subtitle": "Our solutions empower businesses with energy independence, reducing operational costs and ensuring uninterrupted operations. From agriculture to manufacturing, our gas piston and cogeneration systems deliver efficient and reliable energy tailored to your needs."
     },
     "topList": {
-      "header": "Сектори реалізації",
-      "buttonAll": "Всі сектори",
+      "header": "Sectors of Implementation",
+      "buttonAll": "All Sectors",
       "data": [
         {
           "href": "/sectors/agriculture",
-          "title": "Агро та сільське господарство"
+          "title": "Agriculture and Livestock"
         },
         {
           "href": "/sectors/industry",
-          "title": "Промислове виробництво"
+          "title": "Industrial Production"
         },
         {
-          "href": "/sectors/processing",
-          "title": "Переробна галузь"
+          "href": "/sectors/waste",
+          "title": "Waste Processing"
         },
         {
-          "href": "/sectors/energy-infrastructure",
-          "title": "Енергетична інфраструктура"
+          "href": "/sectors/energy",
+          "title": "Energy Infrastructure"
         },
         {
-          "href": "/sectors/critical-infrastructure",
-          "title": "Критична інфраструктура"
+          "href": "/sectors/healthcare",
+          "title": "Healthcare and Education"
         }
       ]
     }
   },
-  "contactsModal": {
-    "contactUs": "Свяжитесь с нами",
-    "fullName": "ФИО",
-    "companyName": "Название компании",
-    "contactPhone": "Контактный номер",
-    "email": "Почта (eMail)",
-    "comment": "Комментарий",
-    "enterFullName": "Введите ваше полное имя",
-    "enterCompanyName": "Введите название компании",
-    "enterContactPhone": "Введите контактный номер",
-    "enterWorkEmail": "Введите рабочий email",
-    "enterComment": "Введите ваш комментарий",
-    "submit": "Отправить",
-    "submitting": "Отправка...",
-    "cancel": "Отмена",
-    "close": "Закрыть",
-    "required": "Обязательное поле",
-    "invalidEmail": "Неверный формат email",
-    "formSubmissionSuccess": "Форма успешно отправлена",
-    "formSubmissionError": "Ошибка при отправке формы"
+  "contact_form": {
+    "title": "Cut Costs! We’ll Handle Everything Turnkey",
+    "subtitle": "A reliable partner in transitioning to your own generation. Reduce energy costs by up to 50% and ensure stable business operations.",
+    "tips": [
+      "Full turnkey cycle",
+      "Design and support",
+      "Co-financing",
+      "Equipment purchase"
+    ],
+    "form": {
+      "header": "Get a Consultation",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "details": "Details",
+      "button": "Contact Us",
+      "sending": "Sending...",
+      "yup": {
+        "name": "Name must contain at least 2 characters",
+        "email": "Enter a valid email",
+        "phone": "Enter a valid phone number"
+      },
+      "messages": {
+        "success": "Thank you! Your request has been successfully sent. We will contact you shortly.",
+        "error": "An error occurred while sending the form. Please try again."
+      }
+    }
+  },
+  "footer": {
+    "files": "Files",
+    "business": "For Business",
+    "public": "For Public Sector",
+    "project": "Project Application",
+    "cooperation": "Cooperation",
+    "sectors": "Sectors",
+    "equipment": "Equipment",
+    "calculate": "Calculate Project",
+    "blog": "Blog",
+    "contacts": "Contacts"
   }
 }

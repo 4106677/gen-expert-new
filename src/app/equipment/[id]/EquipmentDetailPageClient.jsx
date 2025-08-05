@@ -196,15 +196,15 @@ export default function EquipmentDetailPageClient() {
 						<div className={styles.description}>
 							<h1 className={styles.description_header}>{item.manufacturer} {item.model}</h1>
 							<ul className={styles.description_spec}>
-								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>Електрична потужність: </span>{item.power}</li>
-								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>Напруга: </span>{item.voltage}</li>
-								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>Частота: </span></li>
-								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>Стан: </span>{item.condition}</li>
-								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>Напрацювання: </span>{item.hours}</li>
-								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>Рік виробництва: </span>{item.year}</li>
-								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>Виконання: </span>{item.bodyType}</li>
+								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>{t('units.power')}: </span>{item.power}</li>
+								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>{t('units.voltage')}: </span>{item.voltage}</li>
+								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>{t('units.frequency')}: </span></li>
+								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>{t('units.condition')}: </span>{item.condition}</li>
+								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>{t('units.condition')}: </span>{item.hours}</li>
+								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>{t('units.release')}: </span>{item.year}</li>
+								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>{t('units.bodyType')}: </span>{item.bodyType}</li>
 							</ul>
-							<span className={styles.details}>Детали:</span>
+							<span className={styles.details}>{t('equipment.description.details')}:</span>
 							<h3 className={styles.details_header}>{header}</h3>
 							{listItems.map((line, index) => (
 								<li key={index} className={styles.details_item}>{line}</li>
@@ -214,7 +214,7 @@ export default function EquipmentDetailPageClient() {
 				</div>
 			</div>
 			<Consultation/>
-			<Tips header="Інші варінти установок"/>
+			<Tips header={t('equipment.description.others')}/>
 			<Fields />
 		</div>
 	);

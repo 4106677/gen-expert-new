@@ -1,8 +1,25 @@
+'use client';
 import styles from "./footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import {useEffect, useState} from "react";
+import {useTranslation} from "react-i18next";
 
 export const Footer = ({ className }) => {
+	const [isMounted, setIsMounted] = useState(false);
+	const { t } = useTranslation('common');
+
+	useEffect(() => {
+		setIsMounted(true);
+	}, []);
+
+	if (!isMounted) {
+		return (
+			<div>
+			</div>
+		);
+	}
+
 	return (
 		<footer className={styles.footer}>
 			<div className={`${styles.container} container`}>
@@ -40,20 +57,20 @@ export const Footer = ({ className }) => {
 					</div>
 				</div>
 				<div >
-					<span className={styles.span}>Файли</span>
+					<span className={styles.span}>{t('footer.files')}</span>
 					<div className={styles.links}>
 						<div className={styles.list}>
-							<Link href='/'>Для бізнесу</Link>
-							<Link href='/'>Для держ сектора</Link>
-							<Link href='/'>Проектна заявка</Link>
+							<Link href='/sectors/private'>{t('footer.business')}</Link>
+							<Link href='/sectors/public'>{t('footer.public')}</Link>
+							<Link href='/calculator'>{t('footer.project')}</Link>
 						</div>
 						<div className={styles.list}>
-							<Link href='/'>Співпраця</Link>
-							<Link href='/'>Галузі</Link>
-							<Link href='/'>Обладнання</Link>
-							<Link href='/'>Прорахувати проект</Link>
-							<Link href='/'>Блог</Link>
-							<Link href='/'>Контакти</Link>
+							<Link href='/cooperation'>{t('footer.cooperation')}</Link>
+							<Link href='/sectors'>{t('footer.sectors')}</Link>
+							<Link href='/equipment'>{t('footer.equipment')}</Link>
+							<Link href='/calculator'>{t('footer.calculate')}</Link>
+							<Link href='/blog'>{t('footer.blog')}</Link>
+							{/*<Link href='/'>{t('footer.contacts')}</Link>*/}
 						</div>
 					</div>
 				</div>

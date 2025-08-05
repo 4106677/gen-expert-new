@@ -1,8 +1,24 @@
+'use client';
 import styles from './banner.module.css'
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Image from "next/image"
+import {useTranslation} from "react-i18next";
 
 const Banner = ({header, direction = 'default', style}) => {
+	const [isMounted, setIsMounted] = useState(false);
+	useEffect(() => {
+		setIsMounted(true);
+	}, []);
+
+	const { t } = useTranslation("common");
+	const tips = t("main_page.banner.tips", { returnObjects: true }) || [];
+
+	if (!isMounted) {
+		return (
+			<div>
+			</div>
+		);
+	}
 	return (
 		<div className={styles.main_banner} style={{
 			height: direction === 'reverse' ? '397px' : '335px', ...style
@@ -28,22 +44,33 @@ const Banner = ({header, direction = 'default', style}) => {
 					}}>
 					<h3 className={styles.main_banner_header}>{header || 'Гнучкі можливості співпраці'}</h3>
 					<div className={styles.main_banner_items}>
-						<div className={styles.main_banner_item}>
-							<Image src='/images/check-verified.svg' width={25} height={25} alt='check verified'></Image>
-							<h5>Повний цикл «під ключ»</h5>
-						</div>
-						<div className={styles.main_banner_item}>
-							<Image src='/images/check-verified.svg' width={25} height={25} alt='check verified'></Image>
-							<h5>Проектування та супровід</h5>
-						</div>
-						<div className={styles.main_banner_item}>
-							<Image src='/images/check-verified.svg' width={25} height={25} alt='check verified'></Image>
-							<h5>Спільне фінансування</h5>
-						</div>
-						<div className={styles.main_banner_item}>
-							<Image src='/images/check-verified.svg' width={25} height={25} alt='check verified'></Image>
-							<h5>Купівля обладнання</h5>
-						</div>
+						{Array.isArray(tips) && tips?.map((tip, index) => (
+							<div className={styles.main_banner_item} key={index}>
+								<Image
+									src="/images/check-verified.svg"
+									width={25}
+									height={25}
+									alt="check verified"
+								/>
+								<h5>{tip}</h5>
+							</div>
+						))}
+						{/*<div className={styles.main_banner_item}>*/}
+						{/*	<Image src='/images/check-verified.svg' width={25} height={25} alt='check verified'></Image>*/}
+						{/*	<h5>Повний цикл «під ключ»</h5>*/}
+						{/*</div>*/}
+						{/*<div className={styles.main_banner_item}>*/}
+						{/*	<Image src='/images/check-verified.svg' width={25} height={25} alt='check verified'></Image>*/}
+						{/*	<h5>Проектування та супровід</h5>*/}
+						{/*</div>*/}
+						{/*<div className={styles.main_banner_item}>*/}
+						{/*	<Image src='/images/check-verified.svg' width={25} height={25} alt='check verified'></Image>*/}
+						{/*	<h5>Спільне фінансування</h5>*/}
+						{/*</div>*/}
+						{/*<div className={styles.main_banner_item}>*/}
+						{/*	<Image src='/images/check-verified.svg' width={25} height={25} alt='check verified'></Image>*/}
+						{/*	<h5>Купівля обладнання</h5>*/}
+						{/*</div>*/}
 					</div>
 				</div>
 			</div>

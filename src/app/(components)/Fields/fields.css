@@ -40,7 +40,8 @@
     flex-direction: column;
     gap: 24px;
     position: relative;
-
+    height: 832px;
+    overflow-y: scroll;
 }
 
 .fields-right__item {

@@ -1,19 +1,189 @@
 {
   "metadata": {
     "title": "Gen Expert",
-    "description": "Новые и б/у газопоршневые генераторы под ключ."
+    "description": "Нові та вживані газопоршневі генератори під ключ."
   },
   "menu": {
-    "equipment": "Оборудование",
-    "sectors": "Отрасли",
+    "equipment": "Обладнання",
+    "sectors": "Галузі",
     "blog": "Блог",
     "calculate": "Прорахувати проект",
     "callback": "Замовити дзвінок",
     "calculator": "Калькулятор",
-    "contacts": "Контакты",
-    "cooperation": "Сотрудничество",
+    "contacts": "Контакти",
+    "cooperation": "Співпраця",
     "details": "Детальніше",
     "back": "Назад"
+  },
+  "units": {
+    "power": "Потужність",
+    "manufacturer": "Виробник",
+    "voltage": "Напруга",
+    "frequency": "Частота",
+    "release": "Рік випуску",
+    "working": "Наробіток",
+    "bodyType": "Тип виконання",
+    "condition": "Стан",
+    "model": "Модель"
+  },
+  "main_page": {
+    "hero": {
+      "title": "Незалежна енергія без ризику зупинок",
+      "subtitle": "Когенераційні рішення для тих, хто не може дозволити зупини процесс. Гарантована автономія для держустанов і бізнесу",
+      "contact": "Звʼязатися",
+      "calculate": "Прорахувати проект",
+      "aspects": [
+        {
+          "title": "до 50%",
+          "subtitle": "економія на електроенергії"
+        },
+        {
+          "title": "250–4500 кВт",
+          "subtitle": "нові та вживані ГПУ"
+        },
+        {
+          "title": "100+",
+          "subtitle": "варіантів ГПУ/ КГУ"
+        },
+        {
+          "title": "15-20%",
+          "subtitle": "економія на вартості ГПУ/КГУ"
+        },
+        {
+          "title": "25+ років",
+          "subtitle": "досвіду в енергетиці"
+        }
+      ]
+    },
+    "fields": {
+      "title": "Енергонезалежність для кожного сектору",
+      "subtitle": "Комплексне обслуговування та постачання ГПУ та сонячних панелей для енергетичної незалежності вашого бізнесу",
+      "tips": [
+        {
+          "title": "Сільське господарство та теплиці",
+          "subtitle": "Дешева енергія та CO₂ для теплиць, що збільшує врожайність. Удобрює рослини, підвищуючи врожайність на 20% та економію 30-50% на електроенергії",
+          "slug": "silgosp"
+        },
+        {
+          "title": "Харчова промисловість",
+          "subtitle": "Тепло, електрика та пар для енергоємних виробництв. Зниження вартості кВт до 50%, стабільні тарифи",
+          "slug": "kharchova"
+        },
+        {
+          "title": "Переробка відходів",
+          "subtitle": "Перетворює відходи на енергію, усуваючи плату за мережі. Зниження витрат до 60%",
+          "slug": "vidhody"
+        },
+        {
+          "title": "Промислове виробництво",
+          "subtitle": "Енергія для важких промислових процесів. Когенерація забезпечує ККД до 95%, без витрат на передачу енергії.",
+          "slug": "promyslovist"
+        },
+        {
+          "title": "Хімічна та фармацевтична промисловість",
+          "subtitle": "Гарантує точне тепло, пар і холод для стерилізації, дистиляції та реакцій у лабораторно чистих умовах",
+          "slug": "khimiya"
+        },
+        {
+          "title": "Центри обробки даних",
+          "subtitle": "Електрика та охолодження для дата-центрів. Зниження вартості кВт, уникнення тарифів, стабільність.",
+          "slug": "tsod"
+        },
+        {
+          "title": "Логістика та комерційна нерухомість",
+          "subtitle": "Енергія для складів і торгових центрів. Економія до 30%, стабільні тарифи, комфорт.",
+          "slug": "lohistyka"
+        },
+        {
+          "title": "Енергетична інфраструктура",
+          "subtitle": "Гнучка енергія для великих об'єктів. Дохід від продажу енергії, економія до 40%, гнучкість.",
+          "slug": "enerhetyka"
+        },
+        {
+          "title": "Охорона здоров'я та освіта",
+          "subtitle": "Резервне живлення, минаючи мережеві тарифи.\nБезперебійність, економія до 50% та безпека.",
+          "slug": "okhorona"
+        },
+        {
+          "title": "Готельно-туристичний сектор",
+          "subtitle": "Забезпечує тепло для готельної інфраструктури без плати за передачу. Зниження витрат, стабільність, привабливий імідж.",
+          "slug": "hoteli"
+        },
+        {
+          "title": "Гірничодобувна та нафтогазова промисловість",
+          "subtitle": "Забезпечує автономність, економію, усуваючи плату за мережі для віддалених операцій",
+          "slug": "hirnytstvo"
+        },
+        {
+          "title": "Держ сектор та критична інфраструктура",
+          "subtitle": "Надійна та безперервна робота для важливих сервісів надаючи тепло, енергію та холод в залежності від потреби установи.",
+          "slug": "derzhava"
+        }
+      ]
+    },
+    "possibilities": {
+      "title": "Гнучкі можливості для вашого бізнесу",
+      "cog": {
+        "title": "Когенерацію",
+        "subtitle": "Оптимізація опалення, пастеризації, варіння — однією системою. Висока ефективність і збереження якості продукту."
+      },
+      "co2": {
+        "title": "Модуль CO₂",
+        "subtitle": "Оптимізація опалення, пастеризації, варіння — однією системою. Висока ефективність і збереження якості продукту."
+      },
+      "container": {
+        "title": "Виконання контейнерного та відкритогоу типу",
+        "subtitle": "Оптимізація опалення, пастеризації, варіння — однією системою. Висока ефективність і збереження якості продукту."
+      },
+      "3gen": {
+        "title": "Тригенерація",
+        "subtitle": "Все з однієї установки — електрика, опалення та охолодження. ККД до 90%. Особливо ефективна влітку та для об’єктів із кондиціюванням"
+      }
+    },
+    "team": {
+      "title": "Досвідчена команда інженерів та менеджерів",
+      "subtitle": "Комплексне обслуговування та постачання ГПУ та сонячних панелей для енергетичної незалежності вашого бізнесу",
+      "units": [
+        {
+          "title": "Віталій Довгаль",
+          "subtitle": "Очолював «Центренерго», лідер стратегічного управління енергетичними підприємствами",
+          "text": "з досвідом понад 25 років. Експерт із керівництва стратегічними підприємствами енергетичної системи України.",
+          "image": "/images/mainPage/team/dovgal.jpg"
+        },
+        {
+          "title": "Данило Єгорченко",
+          "subtitle": "Понад 10 років досвіду в енергетиці,",
+          "text": "постачання енергоресурсів для приватного та комунального секторів України. Провідний експерт з енергогенеруючого обладнання (ГПУ/КГУ) у міжнародній донорській організації.",
+          "image": "/images/mainPage/team/egorc.jpg"
+        },
+        {
+          "title": "Олексій Кононенко",
+          "subtitle": "15 років досвіду в комунальному господарстві та проектному менеджменті",
+          "text": "у сфері критичної інфраструктури, енергетики, та впровадженні рішень для життєзабезпечення громад.",
+          "image": "/images/mainPage/team/konon.jpg"
+        }
+      ]
+    },
+    "banner": {
+      "title": "Гнучкі можливості співпраці",
+      "tips": [
+        "Повний цикл «під ключ»",
+        "Проектування та супровід",
+        "Спільне фінансування",
+        "Купівля обладнання"
+      ]
+    },
+    "consultation": {
+      "title": "Потрібна консультація?",
+      "subtitle": "Наші інженри підберуть краще рішення під вашу потребу та виклики",
+      "form_header": "Залиште телефон для зворотнього звʼязку",
+      "placeholder": "Контактний номер",
+      "button": "Звʼязатися"
+    },
+    "tips": {
+      "title": "ГПУ від 250-4500 кВт",
+      "button": "Всі ГПУ"
+    }
   },
   "blog": {
     "title": "Блог",
@@ -27,7 +197,7 @@
         "href": "bestchoice",
         "image": "/images/blog/bestchoice.jpg",
         "title": "Чому ГПУ – це найкращий вибір для вашого бізнесу?",
-        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. \nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. \n\nIt was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "details": "Тут буде текст статті...",
         "detailsHeader": "Обґрунтування 1",
         "description": "Сільськогосподарські підприємства генерують значні обсяги органічних відходів (гній, рослинні залишки, відходи переробки), які можна переробляти в біогаз шляхом анаеробного зброджування. Ці сектори потребують електроенергію для обладнання, тепло для обігріву приміщень або теплиць, а також гарячу воду для технологічних процесів. \n\nКогенераційні системи забезпечують енергоефективність, знижуючи витрати та сприяючи сталому розвитку. Наприклад, молочні ферми можуть використовувати тепло для пастеризації молока, а рослинницькі ферми – CO₂ для підвищення врожайності. Використання біогазу з відходів дозволяє досягти енергетичної незалежності, що особливо важливо для віддалених сільських регіонів.",
         "descriptionHeader": "Обґрунтування 2",
@@ -38,7 +208,7 @@
         "href": "selection",
         "image": "/images/blog/selection.jpg",
         "title": "Як правильно вибрати газопоршневу установку",
-        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. \nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. \n\nIt was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "details": "Тут буде текст статті...",
         "detailsHeader": "Обґрунтування",
         "description": "Сільськогосподарські підприємства генерують значні обсяги органічних відходів (гній, рослинні залишки, відходи переробки), які можна переробляти в біогаз шляхом анаеробного зброджування. Ці сектори потребують електроенергію для обладнання, тепло для обігріву приміщень або теплиць, а також гарячу воду для технологічних процесів. \n\nКогенераційні системи забезпечують енергоефективність, знижуючи витрати та сприяючи сталому розвитку. Наприклад, молочні ферми можуть використовувати тепло для пастеризації молока, а рослинницькі ферми – CO₂ для підвищення врожайності. Використання біогазу з відходів дозволяє досягти енергетичної незалежності, що особливо важливо для віддалених сільських регіонів.",
         "descriptionHeader": "Обґрунтування",
@@ -335,7 +505,7 @@
               "Когенераційні системи забезпечують енергоефективність, знижуючи витрати та сприяючи сталому розвитку. Наприклад, молочні ферми можуть використовувати тепло для пастеризації молока, а рослинницькі ферми – CO₂ для підвищення врожайності. Використання біогазу з відходів дозволяє досягти енергетичної незалежності, що особливо важливо для віддалених сільських регіонів."
             ]
           },
-          "perks":[
+          "perks": [
             {
               "title": "Еергетична незалежність:",
               "text": "Зменшення залежності від зовнішніх електромереж, що критично для віддалених ферм."
@@ -458,7 +628,6 @@
             ]
           }
         },
-
         "images": {
           "preview": "/images/sectors/industries/teplytsi-preview.webp",
           "hero": "/images/sectors/industries/teplytsi-hero.webp",
@@ -566,7 +735,6 @@
             "Системи очищення вихлопних газів (DeNOx SCR, регенеративні термічні оксидатори) забезпечують екологічність. Цей підхід перетворює переробку відходів на стале джерело енергії."
           ]
         },
-
         "images": {
           "preview": "/images/sectors/industries/vidhody.webp",
           "hero": "/images/sectors/industries/vidhody.webp",
@@ -619,7 +787,6 @@
             "Системи адаптуються до специфічних потреб, наприклад, високотемпературного тепла для кераміки чи діатермічної олії для пластику."
           ]
         },
-
         "images": {
           "preview": "/images/sectors/industries/promyslovist.webp",
           "hero": "/images/sectors/industries/promyslovist.webp",
@@ -669,7 +836,6 @@
             "Системи очищення вихлопів (SCR-реактори) забезпечують відповідність екологічним нормам."
           ]
         },
-
         "images": {
           "preview": "/images/sectors/industries/khimiya.webp",
           "hero": "/images/sectors/industries/khimiya.webp",
@@ -720,7 +886,6 @@
             "Система може працювати паралельно з мережею або автономно, забезпечуючи надійність. Сучасні системи керування оптимізують енерговиробництво відповідно до потреб ЦОД."
           ]
         },
-
         "images": {
           "preview": "/images/sectors/industries/tsod.webp",
           "hero": "/images/sectors/industries/tsod.webp",
@@ -827,7 +992,6 @@
             "Станції пікового навантаження забезпечують швидкий запуск (2–4 хвилини) для балансування мережі. Стиснений чи зріджений газ забезпечує постачання палива у віддалені райони."
           ]
         },
-
         "images": {
           "preview": "/images/sectors/industries/enerhetyka.webp",
           "hero": "/images/sectors/industries/enerhetyka.webp",
@@ -878,7 +1042,6 @@
             "Системи забезпечують високу надійність із резервними можливостями."
           ]
         },
-
         "images": {
           "preview": "/images/sectors/industries/okhorona.webp",
           "hero": "/images/sectors/industries/okhorona.webp",
@@ -928,7 +1091,6 @@
             "Системи інтегруються з системами управління готелями для оптимального енерговикористання."
           ]
         },
-
         "images": {
           "preview": "/images/sectors/industries/hoteli.webp",
           "hero": "/images/sectors/industries/hoteli.webp",
@@ -1144,30 +1306,34 @@
     ],
     "list": [
       {
-        "href": "/sectors/agriculture",
+        "href": "/sectors/silgosp",
         "title": "Агро та сільське господарство"
       },
       {
-        "href": "/sectors/industry",
+        "href": "/sectors/promyslovist",
         "title": "Промислове виробництво"
       },
       {
-        "href": "/sectors/processing",
+        "href": "/sectors/vidhody",
         "title": "Переробна галузь"
       },
       {
-        "href": "/sectors/energy-infrastructure",
+        "href": "/sectors/enerhetyka",
         "title": "Енергетична інфраструктура"
       },
       {
-        "href": "/sectors/critical-infrastructure",
-        "title": "Критична інфраструктура"
+        "href": "/sectors/okhorona",
+        "title": "Охорона здоров’я та освіта"
       }
     ]
   },
   "equipment": {
     "title": "Лучшие предложения на рынке газопоршневого оборудования",
     "button": "Детально",
+    "description": {
+      "details": "Детали",
+      "others": "Інші варінти установок"
+    },
     "modal": {
       "purpose": "Получить предложение",
       "files": "Документация"
@@ -1254,47 +1420,66 @@
       "buttonAll": "Всі сектори",
       "data": [
         {
-          "href": "/sectors/agriculture",
+          "href": "/sectors/silgosp",
           "title": "Агро та сільське господарство"
         },
         {
-          "href": "/sectors/industry",
+          "href": "/sectors/promyslovist",
           "title": "Промислове виробництво"
         },
         {
-          "href": "/sectors/processing",
+          "href": "/sectors/vidhody",
           "title": "Переробна галузь"
         },
         {
-          "href": "/sectors/energy-infrastructure",
+          "href": "/sectors/enerhetyka",
           "title": "Енергетична інфраструктура"
         },
         {
-          "href": "/sectors/critical-infrastructure",
-          "title": "Критична інфраструктура"
+          "href": "/sectors/okhorona",
+          "title": "Охорона здоров’я та освіта"
         }
       ]
     }
   },
-  "contactsModal": {
-    "contactUs": "Свяжитесь с нами",
-    "fullName": "ФИО",
-    "companyName": "Название компании",
-    "contactPhone": "Контактный номер",
-    "email": "Почта (eMail)",
-    "comment": "Комментарий",
-    "enterFullName": "Введите ваше полное имя",
-    "enterCompanyName": "Введите название компании",
-    "enterContactPhone": "Введите контактный номер",
-    "enterWorkEmail": "Введите рабочий email",
-    "enterComment": "Введите ваш комментарий",
-    "submit": "Отправить",
-    "submitting": "Отправка...",
-    "cancel": "Отмена",
-    "close": "Закрыть",
-    "required": "Обязательное поле",
-    "invalidEmail": "Неверный формат email",
-    "formSubmissionSuccess": "Форма успешно отправлена",
-    "formSubmissionError": "Ошибка при отправке формы"
+  "contact_form": {
+    "title": "Скорочуйте витрати! Ми зробимо все під ключ",
+    "subtitle": "Надійний партнер у переході до власної генерації. Скоротіть витрати на енергію до 50% та забезпечте стабільність роботи вашого бізнесу.",
+    "tips": [
+      "Повний цикл «під ключ»",
+      "Проектування та супровід",
+      "Спільне фінансування",
+      "Купівля обладнання"
+    ],
+    "form": {
+      "header": "Отримати консультацію",
+      "name": "Имя",
+      "email": "e-mail",
+      "phone": "Телефон",
+      "details": "Детали",
+      "button": "Связаться",
+      "sending": "Отправка...",
+      "yup": {
+        "name": "Імʼя повинно містити мінімум 2 символи",
+        "email": "Введіть коректний email",
+        "phone": "Введіть коректний номер телефону"
+      },
+      "messages": {
+        "success": "Дякуємо! Ваша заявка успішно відправлена. Ми звʼяжемося з вами найближчим часом.",
+        "error": "Виникла помилка при відправці форми. Будь ласка, спробуйте ще раз."
+      }
+    }
+  },
+  "footer": {
+    "files": "Файли",
+    "business": "Для бізнесу",
+    "public": "Для держ сектора",
+    "project": "Проектна заявка",
+    "cooperation": "Співпраця",
+    "sectors": "Галузі",
+    "equipment": "Обладнання",
+    "calculate": "Прорахувати проект",
+    "blog": "Блог",
+    "contacts": "Контакти"
   }
 }
