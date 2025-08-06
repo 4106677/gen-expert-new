@@ -19,18 +19,18 @@ export default function Header() {
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 	const router = useRouter();
 
+	const handleResize = () => {
+		const width = window.innerWidth;
+		setWindowWidth(width);
+		if (width >= 769 && menuOpen) {
+			setMenuOpen(false);
+			setDropdownOpen(false);
+		}
+	};
 	useEffect(() => {
 		setIsMounted(true);
 		if (typeof window !== 'undefined') {
 			setWindowWidth(window.innerWidth);
-			const handleResize = () => {
-				const width = window.innerWidth;
-				setWindowWidth(width);
-				if (width >= 769 && menuOpen) {
-					setMenuOpen(false);
-					setDropdownOpen(false);
-				}
-			};
 			window.addEventListener('resize', handleResize);
 			return () => window.removeEventListener('resize', handleResize);
 		}
