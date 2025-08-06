@@ -290,7 +290,7 @@ export default function Calculator () {
 									<XAxis lineType dataKey="name" />
 									<YAxis/>
 									<Bar dataKey="pv" stackId="a" fill="#24852A" radius={[0, 0, 16, 16]}/>
-									<Bar dataKey="amt" stackId="b" fill="#89C539"radius={[16, 16, 0, 0]}/>
+									<Bar dataKey="amt" stackId="a" fill="#89C539"radius={[16, 16, 0, 0]}/>
 									<Bar dataKey="uv" fill="#E9EFF1" radius={16}/>
 								</BarChart>
 							</ResponsiveContainer>
