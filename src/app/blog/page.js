@@ -10,6 +10,8 @@ import CustomLink from "@/app/(components)/CustomLink/customLink";
 const Blog = () => {
 	const [isMounted, setIsMounted] = useState(false);
 	const { t } = useTranslation('common');
+	const tips = t("blog.tips", { returnObjects: true }) || [];
+	const bannerTips = t("blog.banner.tips", { returnObjects: true }) || [];
 
 	useEffect(() => {
 		setIsMounted(true);
@@ -28,62 +30,28 @@ const Blog = () => {
 			<div className={`${styles.blog} container`}>
 				<h2 className={styles.head}>{t("blog.pageTitle")}</h2>
 				<ul className={styles.tips}>
-					<li className={styles.tips_item}>
-						Економія на електроенергії до 50%
-						<span className={styles.tips_item__span}>знижені тарифи, відсутність платежів за передачу і розподіл.</span>
-					</li>
-					<li className={styles.tips_item}>
-						Жодних блекаутів
-						<span className={styles.tips_item__span}>незалежність від мережі – стабільна робота навіть при аваріях в мережі.</span>
-					</li>
-					<li className={styles.tips_item}>
-						Ефективність
-						<span className={styles.tips_item__span}>конкурентна перевага – низька собівартість електроенергії дає вам сильну перевагу на ринку.</span>
-					</li>
-					<li className={styles.tips_item}>
-						Рентабельність
-						<span className={styles.tips_item__span}>вище, ніж у дизельних генераторів за рахунок дешевшого палива (газ дешевше дизеля в 3-4 рази), а викидів NOₓ і CO₂ на 80% менше</span>
-					</li>
-					<li className={styles.tips_item}>
-						Низькі експлуатаційні витрати
-						<span className={styles.tips_item__span}>газове паливо забезпечує більш плавну роботу двигуна і знижує знос.</span>
-					</li>
-					<li className={styles.tips_item}>
-						Стабільна вартість палива
-						<span className={styles.tips_item__span}>природний газ має меншу волатильність цін у порівнянні з електроенергією і дизельним паливом.</span>
-					</li>
-					<li className={styles.tips_item}>
-						Комбіноване виробництво
-						<span className={styles.tips_item__span}>електро- і теплової енергії – когенерація дозволяє виробляти одночасно і електричество і тепло, збільшуючи ККД установки до 90%!</span>
-					</li>
-					<li className={styles.tips_item}>
-						Оптимальне рішення
-						<span className={styles.tips_item__span}>під ваші задачі і бюджет – нові та б/в ГПУ в відмінному стані.</span>
-					</li>
+					{Array.isArray(tips) &&
+						tips.map((tip, index) => (
+							<li className={styles.tips_item} key={index}>
+								{tip.title}
+								<span className={styles.tips_item__span}>{tip.subtitle}</span>
+							</li>
+						))
+					}
 				</ul>
 				<div className={styles.slogan}>
-					<h3 className={styles.slogan_head}>ГПУ - це найкраще рішення для таких об’єктів:</h3>
+					<h3 className={styles.slogan_head}>{t("blog.banner.title")}</h3>
 					<ul className={styles.slogan_items}>
-						<li className={styles.slogan_item}>
-							<Image src="/images/check-verified.svg" width={25} height={25} alt="check verified"></Image>
-							Виробничі підприємства
-						</li>
-						<li className={styles.slogan_item}>
-							<Image src="/images/check-verified.svg" width={25} height={25} alt="check verified"></Image>
-							Бізнес-центри
-						</li>
-						<li className={styles.slogan_item}>
-							<Image src="/images/check-verified.svg" width={25} height={25} alt="check verified"></Image>
-							Торгові і логістичні центри
-						</li>
-						<li className={styles.slogan_item}>
-							<Image src="/images/check-verified.svg" width={25} height={25} alt="check verified"></Image>
-							Центри обробки даних
-						</li>
-						<li className={styles.slogan_item}>
-							<Image src="/images/check-verified.svg" width={25} height={25} alt="check verified"></Image>
-							Тепличні комплекси
-						</li>
+						{Array.isArray(bannerTips) &&
+							bannerTips.map((tip, index) => (
+								<li className={styles.slogan_item} key={index}>
+									<Image src="/images/check-verified.svg" width={25} height={25}
+									       alt="check verified"></Image>
+									{tip}
+								</li>
+							))
+						}
+
 					</ul>
 				</div>
 				<h3 className={styles.slug}>{t("blog.pageSlug")}</h3>

@@ -22,7 +22,6 @@ export async function getAllEquipmentIds() {
 				.filter(item => item && (item.article))
 				.forEach(item => {
 					try {
-						// createEquipmentUrl now returns the raw ID without encoding
 						const id = createEquipmentUrl(item.article);
 						if (id) {
 							allEquipmentIds.add(id);
