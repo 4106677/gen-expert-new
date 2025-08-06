@@ -13,7 +13,8 @@
     "contacts": "Contacts",
     "cooperation": "Cooperation",
     "details": "Details",
-    "back": "Back"
+    "back": "Back",
+    "search": "Search"
   },
   "units": {
     "power": "Power",
@@ -1326,7 +1327,7 @@
     ]
   },
   "equipment": {
-    "title": "Best Offers on the Gas Piston Equipment Market",
+    "title": "GPU catalog for business and government agencies",
     "button": "Details",
     "description": {
       "details": "Details",

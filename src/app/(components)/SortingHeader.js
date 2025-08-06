@@ -6,65 +6,45 @@ import styles from "../equipment/equipment.module.css";
 export default function SortingHeader({
 	                                      search,
 	                                      setSearch,
-	                                      // selectedSorting,
-	                                      // setSelectedSorting,
-	                                      // handleResetSorting,
+	                                      searchInput,
+	                                      setSearchInput,
 	                                      isFilterVisible,
 	                                      toggleFilter
                                       }) {
 	const { t } = useTranslation("common");
 
-	// const handleSortingChange = (event) => {
-	// 	setSelectedSorting(event.target.value);
-	// };
-
-	const handleSearch = (event) => {
-		setSearch(event.target.value);
+	const handleInputChange = (event) => {
+		setSearchInput(event.target.value);
 	};
 
-	// Get sorting options from translations
-	const sortingValues = t("equipment.filters.items.sorting.values", { returnObjects: true });
-	const sortingOptions = Object.entries(sortingValues).map(([key, label]) => ({
-		value: key,
-		label: label,
-	}));
+	const handleSearchClick = () => {
+		setSearch(searchInput);
+	};
+
+	const handleKeyPress = (event) => {
+		if (event.key === 'Enter') {
+			handleSearchClick();
+		}
+	};
 
 	return (
 		<>
 			<div className={styles.sortWrapper}>
 				<input
 					type="text"
-					value={search}
-					onChange={handleSearch}
-					placeholder={t("equipment.filters.items.sorting.search")}
+					value={searchInput}
+					onChange={handleInputChange}
+					onKeyDown={handleKeyPress}
+					placeholder={t("menu.search")}
 					className={`${styles.search} ${styles.sortWrapper_input}`}
 				/>
-				{/*<select*/}
-				{/*	name="sorting"*/}
-				{/*	id="sorting"*/}
-				{/*	value={selectedSorting}*/}
-				{/*	onChange={handleSortingChange}*/}
-				{/*	className={styles.sortWrapper_select}*/}
-				{/*>*/}
-				{/*	<option value="" disabled className={styles.select_disabled}>*/}
-				{/*		{t("equipment.filters.items.sorting.title")}*/}
-				{/*	</option>*/}
-				{/*	{sortingOptions.map((option) => (*/}
-				{/*		<option key={option.value} value={option.value}>*/}
-				{/*			{option.label}*/}
-				{/*		</option>*/}
-				{/*	))}*/}
-				{/*</select>*/}
 				<button
 					className='btn btn_outline'
 					style={{color: '#94A3B8', fontSize: '14px', borderColor: '#94A3B8', height: '40px'}}
-					// className={styles.sortWrapper_button}
 					type='button'
-					// disabled={selectedSorting === '' && search === ''}
-					// onClick={handleResetSorting}
+					onClick={handleSearchClick}
 				>
-					Пошук
-					{/*{t("equipment.filters.items.sorting.reset")}*/}
+					{t('menu.search')}
 				</button>
 			</div>
 

@@ -31,25 +31,14 @@ export default function ProductList({ products, onOpenModal }) {
 					<div className={styles.productsSection}>
 						<h3 className={styles.product_h3}>{item.manufacturer} {item.model}</h3>
 						<ul className={styles.productDescription}>
-							<li className={styles.productDescription_item}><span className={styles.productDescription_itemSpan}>Електрична потужність:</span>{item.power} {item.powerUnit}</li>
-							<li className={styles.productDescription_item}><span className={styles.productDescription_itemSpan}>Напруга:</span>{item.price} {item.priceUnit}</li>
-							<li className={styles.productDescription_item}><span className={styles.productDescription_itemSpan}>Text</span>{item.voltage} {item.voltageUnit}</li>
-							<li className={styles.productDescription_item}><span className={styles.productDescription_itemSpan}>Text</span>{item.condition}</li>
-							<li className={styles.productDescription_item}><span className={styles.productDescription_itemSpan}>Text</span>{item.year}</li>
-							<li className={styles.productDescription_item}><span className={styles.productDescription_itemSpan}>Text</span>{item.hours} {item.hoursUnit}</li>
+							<li className={styles.productDescription_item}><span className={styles.productDescription_itemSpan}>{t('units.power')}:</span>{item.power} {item.powerUnit}</li>
+							<li className={styles.productDescription_item}><span className={styles.productDescription_itemSpan}>{t('units.voltage')}:</span>{item.voltage} {item.voltageUnit}</li>
+							<li className={styles.productDescription_item}><span className={styles.productDescription_itemSpan}>{t('units.frequency')}:</span>50Hz</li>
+							<li className={styles.productDescription_item}><span className={styles.productDescription_itemSpan}>{t('units.condition')}:</span>{item.condition}</li>
+							<li className={styles.productDescription_item}><span className={styles.productDescription_itemSpan}>{t('units.release')}:</span>{item.year}</li>
+							<li className={styles.productDescription_item}><span className={styles.productDescription_itemSpan}>{t('units.working')}:</span>{item.hours} {item.hoursUnit}</li>
 						</ul>
-						<CustomLink href={`/equipment/${item.article}`} text='Детально' height={40} style={{border: '1px solid #50AE55', width: 'max-content', marginTop: '15px'}}></CustomLink>
-						{/*<p*/}
-						{/*	dangerouslySetInnerHTML={{__html: item.description}}*/}
-						{/*	className={styles.productsSection_p}*/}
-						{/*/>*/}
-						{/*<button*/}
-						{/*	type="button"*/}
-						{/*	className={styles.product_button}*/}
-						{/*	onClick={(event) => onOpenModal(item, event)}*/}
-						{/*>*/}
-						{/*	{t("equipment.button")}*/}
-						{/*</button>*/}
+						<CustomLink href={`/equipment/${item.article}`} text={t('menu.details')} height={40} style={{border: '1px solid #50AE55', width: 'max-content', marginTop: '15px'}}></CustomLink>
 					</div>
 				</li>
 			))}

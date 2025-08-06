@@ -19,12 +19,20 @@ export default function Equipment({ modalId }) {
 	const [data, setData] = useState(null);
 	const [loading, setLoading] = useState(true);
 	const [itemsPerPage, setItemsPerPage] = useState(12);
+	const [isMount, setIsMount] = useState(false);
+
+	// Состояние поиска в родительском компоненте
+	const [searchInput, setSearchInput] = useState('');
 
 	const { t } = useTranslation("common");
 	const { lang } = useLanguage();
 
 	const { windowWidth, isFilterVisible, toggleFilter, isMounted } = useResponsive();
 	const filters = useEquipmentFilters(data);
+
+	useEffect(() => {
+		setIsMount(true);
+	}, []);
 
 	const filteredData = useMemo(() => {
 		return filters.filterData || [];
@@ -34,6 +42,13 @@ export default function Equipment({ modalId }) {
 
 	const handleItemsPerPageChange = (newItemsPerPage) => {
 		setItemsPerPage(newItemsPerPage);
+	};
+
+	// Функция для сброса всех фильтров и поиска
+	const handleResetAllFilters = () => {
+		setSearchInput(''); // Сбрасываем поле поиска
+		filters.setSearch(''); // Сбрасываем поиск в фильтрах
+		filters.resetAllFilters(); // Сбрасываем все фильтры (эту функцию нужно добавить в хук)
 	};
 
 	useEffect(() => {
@@ -53,17 +68,21 @@ export default function Equipment({ modalId }) {
 		loadSheetData();
 	}, [lang]);
 
-	// Show loading state
 	if (!isMounted || loading) {
 		return (
 			<div className={styles.main}>
 				<div className={`${styles.wrapper} container`}>
 					<div className={styles.loadingContainer}>
 						<div className={styles.loader}></div>
-						<h2>Завантаження даних...</h2>
-						<p>Отримуємо актуальну інформацію з каталогу</p>
 					</div>
 				</div>
+			</div>
+		);
+	}
+
+	if (!isMount) {
+		return (
+			<div>
 			</div>
 		);
 	}
@@ -72,7 +91,7 @@ export default function Equipment({ modalId }) {
 		<div className={styles.main}>
 			<div className={`${styles.wrapper} container`}>
 				<Banner
-					header='Каталог ГПУ під потреби бізнесу та держ установ'
+					header={t('equipment.title')}
 					direction='reverse'
 					style={{ marginBottom: '46px' }}
 				/>
@@ -83,12 +102,15 @@ export default function Equipment({ modalId }) {
 						filters={filters}
 						isFilterVisible={isFilterVisible}
 						windowWidth={windowWidth}
+						onResetAllFilters={handleResetAllFilters}
 					/>
 
 					<div className={styles.right}>
 						<SortingHeader
 							search={filters.search}
 							setSearch={filters.setSearch}
+							searchInput={searchInput}
+							setSearchInput={setSearchInput}
 							isFilterVisible={isFilterVisible}
 							toggleFilter={toggleFilter}
 							totalItems={filteredData.length}

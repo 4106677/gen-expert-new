@@ -9,7 +9,8 @@ import styles from "../equipment/equipment.module.css";
 export default function EquipmentFilter({
 	                                        filters,
 	                                        isFilterVisible,
-	                                        windowWidth
+	                                        windowWidth,
+	                                        onResetAllFilters
                                         }) {
 	const { t } = useTranslation("common");
 
@@ -60,10 +61,8 @@ export default function EquipmentFilter({
 				<button
 					className="btn btn_outline"
 					style={{color: "#94A3B8", fontSize: "14px", borderColor: "#94A3B8", height: "40px"}}
-					// className={styles.sortWrapper_button}
 					type="button"
-					// disabled={selectedSorting === '' && search === ''}
-					// onClick={handleResetSorting}
+					onClick={onResetAllFilters}
 				>
 					{t("equipment.filters.items.sorting.reset")}
 				</button>
@@ -117,7 +116,7 @@ export default function EquipmentFilter({
 								<button type="submit"
 								        className='btn btn_outline'
 								        style={{
-											color: '#50AE55',
+									        color: '#50AE55',
 									        borderColor: '#50AE55',
 									        padding: '10px 17px',
 									        height: '40px',
@@ -179,42 +178,6 @@ export default function EquipmentFilter({
 					</>
 				)}
 			</li>
-
-			{/* Model Filter - Filtered by selected manufacturers */}
-			{/*<li className={`${styles.left_li} ${!showStates.models && styles.left_li__hide} ${styles.filter_model}`}>*/}
-			{/*	<h3*/}
-			{/*		className={styles.left_h3}*/}
-			{/*		onClick={() => toggleFilterSection('models')}*/}
-			{/*	>*/}
-			{/*		{t("equipment.filters.items.model")}*/}
-			{/*		{!isMobile && (*/}
-			{/*			<Image*/}
-			{/*				aria-hidden*/}
-			{/*				src="/images/rounder-right.svg"*/}
-			{/*				alt="Arrow icon"*/}
-			{/*				width={24}*/}
-			{/*				height={24}*/}
-			{/*				className={styles.h3_icon}*/}
-			{/*				style={{transform: `rotate(${showStates.models ? 180 : 0}deg)`}}*/}
-			{/*			/>*/}
-			{/*		)}*/}
-			{/*	</h3>*/}
-			{/*	{showStates.models && (*/}
-			{/*		<>*/}
-			{/*			{filters.availableModels.map((item, index) => (*/}
-			{/*				<div key={index} className={styles.left_input__text}>*/}
-			{/*					<input*/}
-			{/*						className={styles.checkboxes_input}*/}
-			{/*						type="checkbox"*/}
-			{/*						onChange={() => filters.onModelInputClick(item)}*/}
-			{/*						checked={filters.filterModel.includes(item)}*/}
-			{/*					/>*/}
-			{/*					{item}*/}
-			{/*				</div>*/}
-			{/*			))}*/}
-			{/*		</>*/}
-			{/*	)}*/}
-			{/*</li>*/}
 
 			{/* Voltage Filter */}
 			<li className={`${styles.left_li} ${!showStates.voltage && styles.left_li__hide} ${styles.filter_voltage}`}>
@@ -398,158 +361,6 @@ export default function EquipmentFilter({
 					</>
 				)}
 			</li>
-
-			{/* Year Filter */}
-			{/*<li className={`${styles.left_li} ${!showStates.year && styles.left_li__hide} ${styles.filter_year}`}>*/}
-			{/*	<h3*/}
-			{/*		className={styles.left_h3}*/}
-			{/*		onClick={() => toggleFilterSection('year')}*/}
-			{/*	>*/}
-			{/*		{t("equipment.filters.items.release")}*/}
-			{/*		{!isMobile && (*/}
-			{/*			<Image*/}
-			{/*				aria-hidden*/}
-			{/*				src="/images/rounder-right.svg"*/}
-			{/*				alt="Arrow icon"*/}
-			{/*				width={24}*/}
-			{/*				height={24}*/}
-			{/*				className={styles.h3_icon}*/}
-			{/*				style={{transform: `rotate(${showStates.year ? 180 : 0}deg)`}}*/}
-			{/*			/>*/}
-			{/*		)}*/}
-			{/*	</h3>*/}
-			{/*	{showStates.year && (*/}
-			{/*		<div className={styles.inputFilters}>*/}
-			{/*			<form onSubmit={(e) => {*/}
-			{/*				e.preventDefault();*/}
-			{/*				filters.applyYearFilter(*/}
-			{/*					e.target.elements.minYear.value,*/}
-			{/*					e.target.elements.maxYear.value*/}
-			{/*				);*/}
-			{/*			}}>*/}
-			{/*				<div className={styles.inputs}>*/}
-			{/*					<input*/}
-			{/*						className={styles.inputFilters_input}*/}
-			{/*						type="number"*/}
-			{/*						name="minYear"*/}
-			{/*						defaultValue={filters.filterYear.min}*/}
-			{/*						key={`min-${filters.filterYear.min}`}*/}
-			{/*						placeholder="Min year"*/}
-			{/*					/>*/}
-			{/*					<span className={styles.inputFilters_span}>-</span>*/}
-			{/*					<input*/}
-			{/*						className={styles.inputFilters_input}*/}
-			{/*						type="number"*/}
-			{/*						name="maxYear"*/}
-			{/*						defaultValue={filters.filterYear.max}*/}
-			{/*						key={`max-${filters.filterYear.max}`}*/}
-			{/*						placeholder="Max year"*/}
-			{/*					/>*/}
-			{/*					<button type="submit"*/}
-			{/*					        className="btn btn_outline"*/}
-			{/*					        style={{*/}
-			{/*						        color: "#50AE55",*/}
-			{/*						        borderColor: "#50AE55",*/}
-			{/*						        padding: "10px 17px",*/}
-			{/*						        height: "40px",*/}
-			{/*						        marginLeft: "8px"*/}
-			{/*					        }}>OK*/}
-			{/*					</button>*/}
-			{/*				</div>*/}
-			{/*			</form>*/}
-			{/*			<div className={styles.sliderContainer}>*/}
-			{/*				<Slider*/}
-			{/*					range*/}
-			{/*					min={filters.yearRange.min}*/}
-			{/*					max={filters.yearRange.max}*/}
-			{/*					value={[filters.filterYear.min, filters.filterYear.max]}*/}
-			{/*					onChange={(value) => {*/}
-			{/*						const [min, max] = value;*/}
-			{/*						filters.setFilterYear({min, max});*/}
-			{/*					}}*/}
-			{/*					step={1}*/}
-			{/*					allowCross={false}*/}
-			{/*				/>*/}
-			{/*			</div>*/}
-			{/*		</div>*/}
-			{/*	)}*/}
-			{/*</li>*/}
-
-			{/* Price Filter */}
-			{/*<li className={`${styles.left_li} ${!showStates.price && styles.left_li__hide} ${styles.filter_price}`}>*/}
-			{/*	<h3*/}
-			{/*		className={styles.left_h3}*/}
-			{/*		onClick={() => toggleFilterSection('price')}*/}
-			{/*	>*/}
-			{/*		{t("equipment.filters.items.price")}*/}
-			{/*		{!isMobile && (*/}
-			{/*			<Image*/}
-			{/*				aria-hidden*/}
-			{/*				src="/images/rounder-right.svg"*/}
-			{/*				alt="Arrow icon"*/}
-			{/*				width={24}*/}
-			{/*				height={24}*/}
-			{/*				className={styles.h3_icon}*/}
-			{/*				style={{transform: `rotate(${showStates.price ? 180 : 0}deg)`}}*/}
-			{/*			/>*/}
-			{/*		)}*/}
-			{/*	</h3>*/}
-			{/*	{showStates.price && (*/}
-			{/*		<div className={styles.inputFilters}>*/}
-			{/*			<form onSubmit={(e) => {*/}
-			{/*				e.preventDefault();*/}
-			{/*				filters.applyPriceFilter(*/}
-			{/*					e.target.elements.minPrice.value,*/}
-			{/*					e.target.elements.maxPrice.value*/}
-			{/*				);*/}
-			{/*			}}>*/}
-			{/*				<div className={styles.inputs}>*/}
-			{/*					<input*/}
-			{/*						className={styles.inputFilters_input}*/}
-			{/*						type="number"*/}
-			{/*						name="minPrice"*/}
-			{/*						defaultValue={filters.filterPrice.min}*/}
-			{/*						key={`min-${filters.filterPrice.min}`}*/}
-			{/*						placeholder="Min price"*/}
-			{/*					/>*/}
-			{/*					<span className={styles.inputFilters_span}>-</span>*/}
-			{/*					<input*/}
-			{/*						className={styles.inputFilters_input}*/}
-			{/*						type="number"*/}
-			{/*						name="maxPrice"*/}
-			{/*						defaultValue={filters.filterPrice.max}*/}
-			{/*						key={`max-${filters.filterPrice.max}`}*/}
-			{/*						placeholder="Max price"*/}
-			{/*					/>*/}
-			{/*					<button type="submit"*/}
-			{/*					        className="btn btn_outline"*/}
-			{/*					        style={{*/}
-			{/*						        color: "#50AE55",*/}
-			{/*						        borderColor: "#50AE55",*/}
-			{/*						        padding: "10px 17px",*/}
-			{/*						        height: "40px",*/}
-			{/*						        marginLeft: "8px"*/}
-			{/*					        }}>OK*/}
-			{/*					</button>*/}
-			{/*				</div>*/}
-			{/*			</form>*/}
-			{/*			<div className={styles.sliderContainer}>*/}
-			{/*				<Slider*/}
-			{/*					range*/}
-			{/*					min={filters.priceRange.min}*/}
-			{/*					max={filters.priceRange.max}*/}
-			{/*					value={[filters.filterPrice.min, filters.filterPrice.max]}*/}
-			{/*					onChange={(value) => {*/}
-			{/*						const [min, max] = value;*/}
-			{/*						filters.setFilterPrice({min, max});*/}
-			{/*					}}*/}
-			{/*					step={1}*/}
-			{/*					allowCross={false}*/}
-			{/*				/>*/}
-			{/*			</div>*/}
-			{/*		</div>*/}
-			{/*	)}*/}
-			{/*</li>*/}
 		</ul>
 	);
 }

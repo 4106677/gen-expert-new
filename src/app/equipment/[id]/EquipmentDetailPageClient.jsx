@@ -198,7 +198,7 @@ export default function EquipmentDetailPageClient() {
 							<ul className={styles.description_spec}>
 								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>{t('units.power')}: </span>{item.power}</li>
 								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>{t('units.voltage')}: </span>{item.voltage}</li>
-								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>{t('units.frequency')}: </span></li>
+								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>{t('units.frequency')}: </span>50Hz</li>
 								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>{t('units.condition')}: </span>{item.condition}</li>
 								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>{t('units.condition')}: </span>{item.hours}</li>
 								<li className={styles.description_spec__item}><span className={styles.description_spec__span}>{t('units.release')}: </span>{item.year}</li>

@@ -38,6 +38,31 @@ export function useEquipmentFilters(data) {
 		filterManufacturer.length === 0 || filterManufacturer.includes(item.manufacturer)
 	).map(item => item.model) || [])];
 
+	const resetAllFilters = () => {
+		setSearch('');
+		setFilterManufacturer([]);
+		setFilterCondition([]);
+		setFilterBodyType([]);
+		setFilterGenType([]);
+
+		// Сбрасываем числовые фильтры к начальным значениям диапазонов
+		if (data && data.length > 0) {
+			// Получаем минимальные и максимальные значения из данных
+			const powers = data.map(item => parseFloat(item.power || 0)).filter(p => !isNaN(p));
+			const voltages = data.map(item => parseFloat(item.voltage || 0)).filter(v => !isNaN(v));
+
+			setFilterPower({
+				min: Math.min(...powers) || 0,
+				max: Math.max(...powers) || 1000
+			});
+
+			setFilterVoltage({
+				min: Math.min(...voltages) || 0,
+				max: Math.max(...voltages) || 500
+			});
+		}
+	};
+
 	// Initialize ranges on data load
 	useEffect(() => {
 		if (!data) return;
@@ -218,6 +243,7 @@ export function useEquipmentFilters(data) {
 		selectedSorting,
 		setSelectedSorting,
 		handleResetSorting,
+		resetAllFilters,
 
 		// Filters
 		filterManufacturer,
