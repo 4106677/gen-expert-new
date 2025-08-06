@@ -1374,7 +1374,7 @@
     "params": {
       "elecProd": "Потребление электроэнергии (кВт/ч)",
       "elecPrice": "Цена покупки электроэнергии (за 1 кВт/ч, грн.)",
-      "gasPrice": "Цена покупки газа (за 1 м³/ грн)",
+      "gasPrice": "Цена покупки газа (за 1 м³/грн)",
       "hourlyHeat": "Потребление тепловой энергии (кВт/ч)",
       "yearlyHeat": "Потребление тепловой энергии в месяцах",
       "chp": "Когенерация"
@@ -1405,54 +1405,54 @@
   },
   "cooperation": {
     "title": "Сотрудничество",
-    "subtitle": "Сектори співпраць",
-    "description": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing.",
+    "subtitle": "Секторы сотрудничества",
+    "description": "Мы предлагаем решения для различных отраслей, обеспечивая надежные и эффективные энергетические системы с 1960-х годов. Наши технологии адаптированы для современных требований и помогают бизнесам оптимизировать затраты.",
     "public": {
-      "title": "Державний сектор",
-      "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      "title": "Государственный сектор",
+      "subtitle": "Надежные решения для государственных учреждений. Мы предоставляем технологии, которые обеспечивают стабильность и экономию энергии, адаптированные под потребности общественного сектора."
     },
     "private": {
-      "title": "Приватний сектор",
-      "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      "title": "Частный сектор",
+      "subtitle": "Инновационные решения для бизнеса. Наши системы помогают частным предприятиям сократить затраты на энергию и повысить устойчивость производства."
     },
     "topList": {
-      "header": "Сектори реалізації",
-      "buttonAll": "Всі сектори",
+      "header": "Секторы реализации",
+      "buttonAll": "Все секторы",
       "data": [
         {
           "href": "/sectors/silgosp",
-          "title": "Агро та сільське господарство"
+          "title": "Агро и сельское хозяйство"
         },
         {
           "href": "/sectors/promyslovist",
-          "title": "Промислове виробництво"
+          "title": "Промышленное производство"
         },
         {
           "href": "/sectors/vidhody",
-          "title": "Переробна галузь"
+          "title": "Перерабатывающая отрасль"
         },
         {
           "href": "/sectors/enerhetyka",
-          "title": "Енергетична інфраструктура"
+          "title": "Энергетическая инфраструктура"
         },
         {
           "href": "/sectors/okhorona",
-          "title": "Охорона здоров’я та освіта"
+          "title": "Здравоохранение и образование"
         }
       ]
     }
   },
   "contact_form": {
-    "title": "Скорочуйте витрати! Ми зробимо все під ключ",
-    "subtitle": "Надійний партнер у переході до власної генерації. Скоротіть витрати на енергію до 50% та забезпечте стабільність роботи вашого бізнесу.",
+    "title": "Сокращайте расходы! Мы сделаем все под ключ",
+    "subtitle": "Надежный партнер в переходе к собственной генерации. Сократите расходы на энергию до 50% и обеспечьте стабильность работы вашего бизнеса.",
     "tips": [
-      "Повний цикл «під ключ»",
-      "Проектування та супровід",
-      "Спільне фінансування",
-      "Купівля обладнання"
+      "Полный цикл «под ключ»",
+      "Проектирование и сопровождение",
+      "Совместное финансирование",
+      "Покупка оборудования"
     ],
     "form": {
-      "header": "Отримати консультацію",
+      "header": "Получить консультацию",
       "name": "Имя",
       "email": "e-mail",
       "phone": "Телефон",
@@ -1460,26 +1460,26 @@
       "button": "Связаться",
       "sending": "Отправка...",
       "yup": {
-        "name": "Імʼя повинно містити мінімум 2 символи",
-        "email": "Введіть коректний email",
-        "phone": "Введіть коректний номер телефону"
+        "name": "Имя должно содержать минимум 2 символа",
+        "email": "Введите корректный email",
+        "phone": "Введите корректный номер телефона"
       },
       "messages": {
-        "success": "Дякуємо! Ваша заявка успішно відправлена. Ми звʼяжемося з вами найближчим часом.",
-        "error": "Виникла помилка при відправці форми. Будь ласка, спробуйте ще раз."
+        "success": "Спасибо! Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.",
+        "error": "Возникла ошибка при отправке формы. Пожалуйста, попробуйте ещё раз."
       }
     }
   },
   "footer": {
-    "files": "Файли",
-    "business": "Для бізнесу",
-    "public": "Для держ сектора",
-    "project": "Проектна заявка",
-    "cooperation": "Співпраця",
-    "sectors": "Галузі",
-    "equipment": "Обладнання",
-    "calculate": "Прорахувати проект",
+    "files": "Файлы",
+    "business": "Для бизнеса",
+    "public": "Для госсектора",
+    "project": "Проектная заявка",
+    "cooperation": "Сотрудничество",
+    "sectors": "Отрасли",
+    "equipment": "Оборудование",
+    "calculate": "Рассчитать проект",
     "blog": "Блог",
-    "contacts": "Контакти"
+    "contacts": "Контакты"
   }
 }
