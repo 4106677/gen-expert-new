@@ -63,62 +63,62 @@
         {
           "title": "Сельское хозяйство и теплицы",
           "subtitle": "Дешевая энергия и CO₂ для теплиц, что увеличивает урожайность. Удобряет растения, повышая урожайность на 20% и экономию 30-50% на электроэнергии",
-          "slug": "silgosp"
+          "slug": "agriculture"
         },
         {
           "title": "Пищевая промышленность",
           "subtitle": "Тепло, электричество и пар для энергоемких производств. Снижение стоимости кВт до 50%, стабильные тарифы",
-          "slug": "kharchova"
+          "slug": "food"
         },
         {
           "title": "Переработка отходов",
           "subtitle": "Превращает отходы в энергию, устраняя плату за сети. Снижение затрат до 60%",
-          "slug": "vidhody"
+          "slug": "waste"
         },
         {
           "title": "Промышленное производство",
           "subtitle": "Энергия для тяжелых промышленных процессов. Когенерация обеспечивает КПД до 95%, без затрат на передачу энергии",
-          "slug": "promyslovist"
+          "slug": "industry"
         },
         {
           "title": "Химическая и фармацевтическая промышленность",
           "subtitle": "Гарантирует точное тепло, пар и холод для стерилизации, дистилляции и реакций в лабораторно чистых условиях",
-          "slug": "khimiya"
+          "slug": "chemical"
         },
         {
           "title": "Центры обработки данных",
           "subtitle": "Электричество и охлаждение для дата-центров. Снижение стоимости кВт, избежание тарифов, стабильность",
-          "slug": "tsod"
+          "slug": "datacenters"
         },
         {
           "title": "Логистика и коммерческая недвижимость",
           "subtitle": "Энергия для складов и торговых центров. Экономия до 30%, стабильные тарифы, комфорт",
-          "slug": "lohistyka"
+          "slug": "logistics"
         },
         {
           "title": "Энергетическая инфраструктура",
           "subtitle": "Гибкая энергия для крупных объектов. Доход от продажи энергии, экономия до 40%, гибкость",
-          "slug": "enerhetyka"
+          "slug": "energy"
         },
         {
           "title": "Здравоохранение и образование",
           "subtitle": "Резервное питание, минуя сетевые тарифы. Бесперебойность, экономия до 50% и безопасность",
-          "slug": "okhorona"
+          "slug": "healthcare"
         },
         {
           "title": "Гостинично-туристический сектор",
           "subtitle": "Обеспечивает тепло для гостиничной инфраструктуры без платы за передачу. Снижение затрат, стабильность, привлекательный имидж",
-          "slug": "hoteli"
+          "slug": "hospitality"
         },
         {
           "title": "Горнодобывающая и нефтегазовая промышленность",
           "subtitle": "Обеспечивает автономность, экономию, устраняя плату за сети для удаленных операций",
-          "slug": "hirnytstvo"
+          "slug": "mining"
         },
         {
           "title": "Государственный сектор и критическая инфраструктура",
           "subtitle": "Надежная и бесперебойная работа для важных сервисов, предоставляя тепло, энергию и холод в зависимости от потребности учреждения",
-          "slug": "derzhava"
+          "slug": "public"
         }
       ]
     },
@@ -533,7 +533,7 @@
       {
         "name": "Сельское хозяйство и животноводство",
         "description": "Переработка органических отходов (навоз, растительные остатки, отходы переработки) в биогаз путем анаэробного сбраживания.",
-        "slug": "silgosp",
+        "slug": "agriculture",
         "image": "/images/sectors/industries/silgosp.webp",
         "details": {
           "sub_sectors": {
@@ -597,7 +597,7 @@
           "how_it_works": "Как работает когенерация \nв теплицах"
         },
         "description": "Когенерационные и газопоршневые установки (КГУ и ГПУ) обеспечивают энергию и оптимальные условия для роста растений.",
-        "slug": "teplytsi",
+        "slug": "greenhouses",
         "image": "/images/sectors/industries/teplytsi-preview.webp",
         "details": {
           "sub_sectors": {
@@ -686,7 +686,7 @@
       {
         "name": "Пищевая промышленность",
         "description": "Энергоемкая отрасль, требующая электроэнергию для оборудования, тепло для пастеризации, варки или сушки, а также холод для хранения продуктов.",
-        "slug": "kharchova",
+        "slug": "food",
         "image": "/images/sectors/industries/kharchova.webp",
         "details": {
           "sub_sectors": {
@@ -741,7 +741,7 @@
       {
         "name": "Переработка отходов",
         "description": "Производство биогаза из органических отходов, осадка сточных вод или отходов пищевой промышленности (например, барды из дистилляции).",
-        "slug": "vidhody",
+        "slug": "waste",
         "image": "/images/sectors/industries/vidhody.webp",
         "details": {
           "sub_sectors": {
@@ -792,7 +792,7 @@
       {
         "name": "Промышленное производство",
         "description": "Высокое энергопотребление для плавления, сушки или производства пара.",
-        "slug": "promyslovist",
+        "slug": "industry",
         "image": "/images/sectors/industries/promyslovist.webp",
         "details": {
           "sub_sectors": {
@@ -844,7 +844,7 @@
       {
         "name": "Химическая и фармацевтическая промышленность",
         "description": "Требуют электроэнергию, пар и охлаждение для химических реакций, производства лекарств или переработки сырья.",
-        "slug": "khimiya",
+        "slug": "chemical",
         "image": "/images/sectors/industries/khimiya.webp",
         "details": {
           "sub_sectors": {
@@ -893,7 +893,7 @@
       {
         "name": "Центры обработки данных (ЦОД)",
         "description": "Потребляют значительное количество электроэнергии для серверов и охлаждения, требуя высокой надежности.",
-        "slug": "tsod",
+        "slug": "datacenters",
         "image": "/images/sectors/industries/tsod.webp",
         "details": {
           "sub_sectors": {
@@ -943,7 +943,7 @@
       {
         "name": "Логистика и коммерческая недвижимость",
         "description": "Требуют стабильного электроснабжения для освещения, оборудования, отопления и охлаждения.",
-        "slug": "lohistyka",
+        "slug": "logistics",
         "image": "/images/sectors/industries/lohistyka.webp",
         "details": {
           "sub_sectors": {
@@ -994,7 +994,7 @@
       {
         "name": "Энергетическая инфраструктура",
         "description": "Требует гибких, масштабируемых и эффективных энергетических решений для крупных или удаленных объектов.",
-        "slug": "enerhetyka",
+        "slug": "energy",
         "image": "/images/sectors/industries/enerhetyka.webp",
         "details": {
           "sub_sectors": {
@@ -1049,7 +1049,7 @@
       {
         "name": "Здравоохранение и образование",
         "description": "Больницы и университеты требуют надежного энергоснабжения для оборудования, отопления, охлаждения и стерилизации.",
-        "slug": "okhorona",
+        "slug": "healthcare",
         "image": "/images/sectors/industries/okhorona.webp",
         "details": {
           "sub_sectors": {
@@ -1099,7 +1099,7 @@
       {
         "name": "Гостинично-туристический сектор",
         "description": "Гостиницы требуют постоянного энергоснабжения для освещения, отопления, охлаждения и горячей воды.",
-        "slug": "hoteli",
+        "slug": "hospitality",
         "image": "/images/sectors/industries/hoteli.webp",
         "details": {
           "sub_sectors": {
@@ -1198,7 +1198,7 @@
       {
         "name": "Горнодобывающая и нефтегазовая промышленность",
         "description": "Требуют надежного энергоснабжения для добычи, переработки и транспортировки ресурсов в удаленных районах.",
-        "slug": "hirnytstvo",
+        "slug": "mining",
         "image": "/images/sectors/industries/hirnytstvo.webp",
         "details": {
           "sub_sectors": {
@@ -1247,7 +1247,7 @@
       {
         "name": "Другие промышленные сектора",
         "description": "Требуют электроэнергию и тепло для производства или тестирования оборудования. Когенерационные системы обеспечивают экономию и надежность.",
-        "slug": "inshi",
+        "slug": "other",
         "image": "/images/sectors/industries/inshi.webp",
         "details": {
           "sub_sectors": {
@@ -1297,7 +1297,7 @@
       {
         "name": "Государственные учреждения, коммунальные объекты и критическая инфраструктура",
         "description": "Требуют стабильного и экономичного энергоснабжения.",
-        "slug": "derzhava",
+        "slug": "public",
         "image": "/images/sectors/industries/derzhava.webp",
         "details": {
           "sub_sectors": {
@@ -1351,23 +1351,23 @@
     ],
     "list": [
       {
-        "href": "/sectors/silgosp",
+        "href": "/sectors/agriculture",
         "title": "Агро и сельское хозяйство"
       },
       {
-        "href": "/sectors/promyslovist",
+        "href": "/sectors/industry",
         "title": "Промышленное производство"
       },
       {
-        "href": "/sectors/vidhody",
+        "href": "/sectors/waste",
         "title": "Перерабатывающая отрасль"
       },
       {
-        "href": "/sectors/enerhetyka",
+        "href": "/sectors/energy",
         "title": "Энергетическая инфраструктура"
       },
       {
-        "href": "/sectors/okhorona",
+        "href": "/sectors/healthcare",
         "title": "Здравоохранение и образование"
       }
     ]
@@ -1465,23 +1465,23 @@
       "buttonAll": "Все секторы",
       "data": [
         {
-          "href": "/sectors/silgosp",
+          "href": "/sectors/agriculture",
           "title": "Агро и сельское хозяйство"
         },
         {
-          "href": "/sectors/promyslovist",
+          "href": "/sectors/industry",
           "title": "Промышленное производство"
         },
         {
-          "href": "/sectors/vidhody",
+          "href": "/sectors/waste",
           "title": "Перерабатывающая отрасль"
         },
         {
-          "href": "/sectors/enerhetyka",
+          "href": "/sectors/energy",
           "title": "Энергетическая инфраструктура"
         },
         {
-          "href": "/sectors/okhorona",
+          "href": "/sectors/healthcare",
           "title": "Здравоохранение и образование"
         }
       ]

@@ -2,21 +2,21 @@ const fs = require("fs");
 const path = require("path");
 
 const industries = [
-	{ slug: "silgosp" },
-	{ slug: "teplytsi" },
-	{ slug: "kharchova" },
-	{ slug: "vidhody" },
-	{ slug: "promyslovist" },
-	{ slug: "khimiya" },
-	{ slug: "tsod" },
-	{ slug: "lohistyka" },
-	{ slug: "enerhetyka" },
-	{ slug: "okhorona" },
-	{ slug: "hoteli" },
+	{ slug: "agriculture" },
+	{ slug: "greenhouses" },
+	{ slug: "food" },
+	{ slug: "waste" },
+	{ slug: "industry" },
+	{ slug: "chemical" },
+	{ slug: "datacenters" },
+	{ slug: "logistics" },
+	{ slug: "energy" },
+	{ slug: "healthcare" },
+	{ slug: "hospitality" },
 	{ slug: "transport" },
-	{ slug: "hirnytstvo" },
-	{ slug: "inshi" },
-	{ slug: "derzhava" }
+	{ slug: "mining" },
+	{ slug: "other" },
+	{ slug: "public" }
 ];
 
 const baseDir = path.join(__dirname, "src", "app", "sectors");

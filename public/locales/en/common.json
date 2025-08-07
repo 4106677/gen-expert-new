@@ -1000,9 +1000,12 @@
           "sub_sectors": {
             "tips": [
               "Industrial parks",
-              "District energy networks",
+              "Regional power grids",
               "Independent power producers (IPP)",
-              "Biogas enterprises",
+              "Industrial parks",
+              "Regional power grids",
+              "Independent power producers (IPP)",
+              "Biogas plants",
               "Peak load stations",
               "Microgrids",
               "Facilities using compressed/liquefied gas"
@@ -1082,7 +1085,6 @@
           "principle": [
             "The gas piston engine generates electricity for equipment, and heat is used for heating, hot water, or sterilization. In trigeneration systems, heat is converted into cooling for air conditioning or refrigeration systems.",
             "The systems ensure high reliability with backup capabilities."
-
           ]
         },
         "images": {
