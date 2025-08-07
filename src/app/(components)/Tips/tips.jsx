@@ -46,7 +46,7 @@ const Tips = ({ header= 'ГПУ від 250-4500 кВт'}) => {
 			<div className={`${styles.tips_container} container`}>
 				<div className={styles.tips_heading}>
 					<h2 className={styles.tips_header}>{header}</h2>
-					<CustomLink href='/equipment' height={48} text={t('main_page.tips.button')}/>
+					<CustomLink href='/equipment' height={48} text={t('main_page.tips.button')} classname={styles.tips_button}/>
 				</div>
 
 				<div className={styles.slider_wrapper}>

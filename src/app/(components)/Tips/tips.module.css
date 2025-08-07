@@ -129,6 +129,11 @@
         padding: 0 20px;
     }
 
+    .tips_button {
+        width: 100%;
+        justify-content: space-between;
+    }
+
     .slider_wrapper {
         gap: 15px;
         overflow-x: scroll;
@@ -151,7 +156,7 @@
 
 @media (max-width: 480px) {
     .tips_list__item {
-        flex: 0 0 100%; /* Show 1 item on mobile */
+        flex: 0 0 100%;
         min-width: auto;
     }
 

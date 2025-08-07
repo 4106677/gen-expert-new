@@ -32,11 +32,13 @@
     background-color: white;
     border-radius: 12px;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .team-list__item-image {
     width: 100%;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
 .team-list__item-text {
@@ -77,7 +79,7 @@
     }
 
     .team-list {
-        width: fit-content;
+        /*width: fit-content;*/
         overflow-x: scroll;
         gap: 20px;
     }
@@ -89,6 +91,7 @@
 
     .team-list__item-image {
         height: 243px;
+        width: 305px;
     }
 
     .team-list__item-text {

@@ -431,12 +431,12 @@
 /* Small mobile devices */
 @media screen and (max-width: 480px) {
     .header-nav {
-        padding: 0 12px;
+        padding: 0 20px;
     }
 
-    /*.logoLink_image {*/
-    /*    max-height: 35px;*/
-    /*}*/
+    .logoLink_image {
+        width: max-content;
+    }
 
     .nav-list {
         padding: 0 16px;
