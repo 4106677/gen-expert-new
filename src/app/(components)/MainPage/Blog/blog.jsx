@@ -25,7 +25,7 @@ const Blog = () => {
 			<div className={`${styles.blog_container} container`}>
 				<div className={styles.blog_heading}>
 					<h2 className={styles.blog_header}>{t("blog.title")}</h2>
-					<CustomLink href='/blog' height={48} text={t("blog.button")}/>
+					<CustomLink href='/blog' height={48} text={t("blog.button")} classname={styles.blog_button}/>
 				</div>
 				<div className={styles.blog_list}>
 					{Object.values(t("blog.data", { returnObjects: true }) || {})

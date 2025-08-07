@@ -29,7 +29,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 277px
+    width: 277px;
+    flex-shrink: 0;
 }
 
 .list__itemImage {
@@ -51,5 +52,38 @@
     font-size: 16px;
     font-weight: 400;
     margin: 16px 0;
+}
+
+@media (max-width: 768px) {
+    .blog_container {
+        padding: 0 20px;
+    }
+
+    .blog_heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .blog_button {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .blog_list {
+        width: 100%;
+        overflow-x: scroll;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .blog_list__item {
+        width: 204px;
+    }
+
+    .list__itemImage {
+        max-width: 100%;
+        height: 216px;
+    }
 }
 

@@ -35,3 +35,11 @@
         transform: translateX(-50%);
     }
 }
+
+@media (max-width: 768px) {
+    .brands {
+        overflow: hidden;
+        width: 100vw;
+        margin-left: -20px;
+    }
+}

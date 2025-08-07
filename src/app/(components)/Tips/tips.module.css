@@ -32,11 +32,11 @@
     gap: 43px;
     flex: 1;
     justify-content: center;
-    min-height: 500px; /* Мінімальна висота для стабільності */
+    min-height: 500px;
 }
 
 .tips_list__item {
-    flex: 0 0 calc(33.333% - 29px); /* 33.33% width minus gap compensation */
+    flex: 0 0 calc(33.333% - 29px);
     max-width: 386px;
     min-width: 300px;
     padding-bottom: 20px;
@@ -131,6 +131,7 @@
 
     .slider_wrapper {
         gap: 15px;
+        overflow-x: scroll;
     }
 
     .tips_list {
@@ -138,7 +139,7 @@
     }
 
     .tips_list__item {
-        flex: 0 0 calc(50% - 10px); /* Show 2 items on tablets */
+        flex: 0 0 calc(50% - 10px);
         min-width: 250px;
     }
 
