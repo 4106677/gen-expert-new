@@ -58,3 +58,51 @@
 .team-list__item-text-span {
     font-weight: 600;
 }
+
+@media (max-width: 768px) {
+    .team {
+        padding: 40px 0;
+    }
+
+    .team-container {
+        padding: 0 20px;
+    }
+
+    .team-header {
+        font-size: 36px;
+    }
+
+    .team-description {
+        font-size: 16px;
+    }
+
+    .team-list {
+        width: fit-content;
+        overflow-x: scroll;
+        gap: 20px;
+    }
+
+    .team-list__item {
+        width: 306px;
+        padding: 0;
+    }
+
+    .team-list__item-image {
+        height: 243px;
+    }
+
+    .team-list__item-text {
+        font-size: 16px;
+    }
+
+    .team-list__item-text__header {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .team-list__item-text-description {
+    }
+
+    .team-list__item-text-span {
+    }
+}

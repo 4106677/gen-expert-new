@@ -35,7 +35,8 @@ const Banner = ({header, direction = 'default', style}) => {
 					className={styles.main_banner_image}
 					src='/images/mainPage/gpu.webp' alt='GPU'
 					width={703}
-					height={390}>
+					height={390}
+				>
 				</Image>
 				<div
 					className={styles.main_banner_container}
@@ -52,25 +53,9 @@ const Banner = ({header, direction = 'default', style}) => {
 									height={25}
 									alt="check verified"
 								/>
-								<h5>{tip}</h5>
+								<h5 className={styles.main_banner_item__tip}>{tip}</h5>
 							</div>
 						))}
-						{/*<div className={styles.main_banner_item}>*/}
-						{/*	<Image src='/images/check-verified.svg' width={25} height={25} alt='check verified'></Image>*/}
-						{/*	<h5>Повний цикл «під ключ»</h5>*/}
-						{/*</div>*/}
-						{/*<div className={styles.main_banner_item}>*/}
-						{/*	<Image src='/images/check-verified.svg' width={25} height={25} alt='check verified'></Image>*/}
-						{/*	<h5>Проектування та супровід</h5>*/}
-						{/*</div>*/}
-						{/*<div className={styles.main_banner_item}>*/}
-						{/*	<Image src='/images/check-verified.svg' width={25} height={25} alt='check verified'></Image>*/}
-						{/*	<h5>Спільне фінансування</h5>*/}
-						{/*</div>*/}
-						{/*<div className={styles.main_banner_item}>*/}
-						{/*	<Image src='/images/check-verified.svg' width={25} height={25} alt='check verified'></Image>*/}
-						{/*	<h5>Купівля обладнання</h5>*/}
-						{/*</div>*/}
 					</div>
 				</div>
 			</div>

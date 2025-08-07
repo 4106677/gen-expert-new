@@ -34,15 +34,13 @@ const Fields = () => {
 							const safeTitle = title || `no-title-${index}`;
 							const safeSubtitle = subtitle || `no-subtitle-${index}`;
 							return (
-														<Link href={`sectors/${slug}`} className='fields-right__item' key={`${safeTitle}-${safeSubtitle}`}>
-										<h4 className='fields-right__item-header'>
-											{title}
-											<Image className='fields-right__item-image' src='/images/arrow-right.svg' alt='Arrow right' width={14} height={14}></Image>
-										</h4>
-										<span className='fields-right__item-description'>{subtitle}</span>
-
-									</Link>
-
+								<Link href={`sectors/${slug}`} className='fields-right__item' key={`${safeTitle}-${safeSubtitle}`}>
+									<h4 className='fields-right__item-header'>
+										{title}
+										<Image className='fields-right__item-image' src='/images/arrow-right.svg' alt='Arrow right' width={14} height={14}></Image>
+									</h4>
+									<span className='fields-right__item-description'>{subtitle}</span>
+								</Link>
 							);
 						})
 					}

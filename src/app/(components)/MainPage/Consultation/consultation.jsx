@@ -38,7 +38,7 @@ const Consultation = () => {
 					<div className={styles.consultation_form__row}>
 						<input type='number' placeholder={t('main_page.consultation.placeholder')}
 						       className={styles.consultation_form__input}/>
-						<button type='button' className='btn btn_green'>{t('main_page.consultation.button')}</button>
+						<button type='button' className={`${styles.consultation_form__button} btn btn_green`}>{t('main_page.consultation.button')}</button>
 					</div>
 				</div>
 			</div>

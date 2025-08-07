@@ -38,14 +38,16 @@ export default function Hero() {
 				<h1 className='hero-title'>{t('main_page.hero.title')}</h1>
 				<h2 className='hero-subtitle'>{t('main_page.hero.subtitle')}</h2>
 				<div className="hero-buttons">
-					<Link href="/#contactForm" style={{height: '42px', fontSize: '15px'}} className='btn btn_white'>{t('main_page.hero.contact')}</Link>
-					<Link href="/calculator" style={{height: '42px', fontSize: '15px'}} className='btn btn_outline'>{t('main_page.hero.calculate')}</Link>
+					<Link href="/#contactForm" style={{height: '42px', fontSize: '15px'}}
+					      className='btn btn_white'>{t('main_page.hero.contact')}</Link>
+					<Link href="/calculator" style={{height: '42px', fontSize: '15px'}}
+					      className='btn btn_outline'>{t('main_page.hero.calculate')}</Link>
 				</div>
 
 			</div>
 			<ul className='hero-description'>
 				{aspects &&
-					aspects.map(({ title, subtitle }, index) => {
+					aspects.map(({title, subtitle}, index) => {
 						const safeTitle = title || `no-title-${index}`;
 						const safeSubtitle = subtitle || `no-subtitle-${index}`;
 						return (
@@ -56,27 +58,14 @@ export default function Hero() {
 						);
 					})
 				}
-
-
-
-				{/*<li className='hero-description__item'>*/}
-				{/*	<p className='hero-description__bold'>250–4500 кВт</p>*/}
-				{/*	<span>нові та вживані ГПУ</span>*/}
-				{/*</li>*/}
-				{/*<li className='hero-description__item'>*/}
-				{/*	<p className='hero-description__bold'>100+</p>*/}
-				{/*	<span>варіантів ГПУ/ КГУ</span>*/}
-				{/*</li>*/}
-				{/*<li className='hero-description__item'>*/}
-				{/*	<p className='hero-description__bold'>15-20%</p>*/}
-				{/*	<span>економія на вартості ГПУ/КГУ</span>*/}
-				{/*</li>*/}
-				{/*<li className='hero-description__item'>*/}
-				{/*	<p className='hero-description__bold'>25+ років </p>*/}
-				{/*	<span>досвіду в енергетиці</span>*/}
-				{/*</li>*/}
 			</ul>
 		</div>
 		<Stripe/>
+		<div className="hero-buttons__mobile">
+			<Link href="/#contactForm" style={{height: '54px', fontSize: '15px', borderColor: '#41A747', color: '#41A747'}}
+			      className='btn btn_outline'>{t('main_page.hero.contact')}</Link>
+			<Link href="/calculator" style={{height: '54px', fontSize: '15px', color: 'white'}}
+			      className='btn btn_green'>{t('main_page.hero.calculate')}</Link>
+		</div>
 	</div>
 }
