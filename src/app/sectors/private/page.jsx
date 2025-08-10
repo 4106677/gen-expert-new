@@ -7,6 +7,8 @@ import GreenBox from "@/app/(components)/GreenBox/GreenBox";
 import {useTranslation} from "react-i18next";
 import styles from './privatePage.module.scss'
 import Image from "next/image";
+import Hybrid from "@/app/(components)/Sectors/Banner/Hybrid";
+import Combined from "@/app/(components)/Sectors/Banner/Combined";
 
 const PrivateSector = () => {
 	const { t } = useTranslation('common');
@@ -84,6 +86,8 @@ const PrivateSector = () => {
 					       src='/images/sectors/solar.webp' alt='Hero GPU'
 					       width={1235} height={459}/>
 				</div>
+				<Hybrid/>
+				<Combined/>
 				{/*конфігурації*/}
 				<div className={styles.tech}>
 					<h3 className={`${styles.tech_title} ${styles.title}`}>{t('sectors.private.tech.title')}</h3>

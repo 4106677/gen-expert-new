@@ -7,6 +7,9 @@ import Realisation from "@/app/(components)/Realisation/Realisation";
 import Tips from "@/app/(components)/Tips/tips";
 import styles from './publicPage.module.scss'
 import Image from "next/image";
+import Hybrid from "@/app/(components)/Sectors/Banner/Hybrid";
+import Gpu from "@/app/(components)/Sectors/Banner/Gpu";
+import Combined from "@/app/(components)/Sectors/Banner/Combined";
 
 const PublicSector = () => {
 	const { t } = useTranslation('common');
@@ -43,46 +46,9 @@ const PublicSector = () => {
 				{/*Що пропонуємо*/}
 				<h2 className={styles.main_title}>{t("sectors.public.purpose.title")}</h2>
 				<span className={styles.main_subtitle}>{t("sectors.public.purpose.subtitle")}</span>
-				<div className={`${styles.banner} ${styles.gpu}`}>
-					<div className={styles.gpu_description}>
-						<h3 className={styles.banner_header}>{t("sectors.public.purpose.gpu.title")}</h3>
-						<span className={styles.banner_subtitle} style={{color: '#C7F6CA'}}>{t("sectors.public.purpose.gpu.aspect")}</span>
-						<span className={styles.banner_subtitle}>{t("sectors.public.purpose.gpu.subtitle")}</span>
-						<span className={styles.banner_subtitle} style={{color: '#C7F6CA'}}>{t("sectors.public.purpose.gpu.post")}</span>
-					</div>
-					<Image
-						src="/images/sectors/gpu.webp"
-						alt={t("sectors.public.purpose.gpu.title")}
-						width={630}
-						height={247}/>
-
-				</div>
-				<div className={`${styles.banner} ${styles.solar}`}>
-
-					<Image
-						src="/images/sectors/solar.webp"
-						alt={t("sectors.public.purpose.solar.title")}
-						style={{transform: 'scaleX(-1)'}}
-						width={563}
-						height={238}/>
-					<div className={styles.solar_description}>
-						<h3 className={styles.banner_header}>{t("sectors.public.purpose.solar.title")}</h3>
-						<span className={styles.banner_subtitle}>{t("sectors.public.purpose.solar.subtitle")}</span>
-					</div>
-
-				</div>
-				<div className={`${styles.banner} ${styles.hybrid}`}>
-					<div className={styles.hybrid_description}>
-						<h3 className={styles.banner_header}>{t("sectors.public.purpose.hybrid.title")}</h3>
-						<span className={styles.banner_subtitle}>{t("sectors.public.purpose.hybrid.aspect")}</span>
-						<span className={styles.banner_subtitle}>{t("sectors.public.purpose.hybrid.subtitle")}</span>
-					</div>
-					<Image
-						src="/images/sectors/hybrid.webp"
-						alt={t("sectors.public.purpose.hybrid.title")}
-						width={567}
-						height={320}/>
-				</div>
+				<Gpu/>
+				<Hybrid/>
+				<Combined/>
 			</div>
 			<Consultation/>
 			<Tips/>
