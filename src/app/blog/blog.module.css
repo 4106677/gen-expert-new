@@ -134,4 +134,9 @@
     line-height: 1.4;
     margin-bottom: 40px;
     width: 410px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* кол-во строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

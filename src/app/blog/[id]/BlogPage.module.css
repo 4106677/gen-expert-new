@@ -28,6 +28,254 @@
     margin-bottom: 20px;
 }
 
+.links {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    gap: 10px;
+    /*display: grid;*/
+    /*grid-template-columns: 1fr 1fr;*/
+}
+
+.link {
+    border: 1px solid #50AE55;
+    width: 100%;
+    justify-content: space-between;
+
+    &:hover {
+        border-color: #475569;
+        transition: 0.3s;
+    }
+}
+
+/* Таблица сравнения */
+.tableWrapper {
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+.comparisonTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.comparisonTable th {
+    background-color: #f2f2f2;
+    color: #000;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+
+.comparisonTable td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+
+    &:nth-child(5), &:nth-child(6), &:nth-child(7) {
+        text-align: center;
+    }
+}
+
+.comparisonTable tr:nth-child(even) {
+    /*background-color: #f5f5f5;*/
+}
+
+.comparisonTable tr:hover {
+    background-color: #eaeceb;
+}
+
+.highRating {
+    color: #d00;
+    font-weight: 600;
+}
+
+.goodRating {
+    color: #0a0;
+    font-weight: 600;
+}
+
+.mediumRating {
+    color: #d90;
+    font-weight: 600;
+}
+
+.lowRating {
+    color: #d33;
+    font-weight: 600;
+}
+
+/* Стили для секции ТО */
+.maintenanceInfo {
+    margin-top: 30px;
+    /*padding: 20px;*/
+    /*background-color: #f8f8f8;*/
+    /*border-radius: 8px;*/
+}
+
+.maintenanceTitle {
+    font-size: 22px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.serviceInterval_title {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.serviceInterval_item {
+    padding-left: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.serviceInterval_item__span {
+    font-weight: normal;
+}
+
+.maintenanceDescription {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.maintenanceTable {
+    margin-bottom: 30px;
+}
+
+.parameterBlock {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eaeceb;
+    margin-top: 30px;
+}
+
+.parameterTitle {
+    font-size: 22px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.parameterIcon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #85e28f;
+}
+
+.tip {
+    background-color: #eaeceb;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.tipIcon {
+    margin-right: 10px;
+}
+
+/* Итоги и выводы */
+.summaryBlock {
+    margin: 40px 0 20px;
+    padding: 25px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    /*border-left: 5px solid #85e28f;*/
+}
+
+.summaryTitle {
+    font-size: 22px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.summaryList {
+    padding-left: 20px;
+}
+
+.summaryList li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.summaryList li::before {
+    content: '✅';
+    position: absolute;
+    left: -25px;
+}
+
+.conclusion {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.costsList {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.costsList li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.costsList li span {
+    margin-right: 10px;
+}
+
+.maintenanceCosts {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #e9e9e9;
+    border-radius: 8px;
+}
+
+.maintenanceCosts h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.parameterIcon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #85e28f;
+}
+
+.keyPoints {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.keyPoints h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.checkList {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.checkList li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
 .details_p {
     &:not(:last-child) {
         margin-bottom: 20px;
@@ -36,8 +284,7 @@
 
 .news {
     color: #191A1D;
-    padding: 0 100px;
-    /*margin-top: 100px;*/
+    padding: 0 100px
 }
 
 .news_header {

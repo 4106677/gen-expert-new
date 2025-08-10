@@ -257,7 +257,185 @@
         "detailsHeader": "Reason",
         "description": "Agricultural enterprises generate significant amounts of organic waste (manure, crop residues, processing waste), which can be converted into biogas through anaerobic digestion. These sectors require electricity for equipment, heat for heating premises or greenhouses, and hot water for technological processes. Cogeneration systems ensure energy efficiency, reducing costs and promoting sustainable development. For example, dairy farms can use heat for milk pasteurization, while crop farms can use CO₂ to boost yields. Using biogas from waste enables energy independence, which is especially critical for remote rural areas.",
         "descriptionHeader": "Reason",
-        "subtitle": "An efficient solution for autonomous energy supply, reducing costs..."
+        "subtitle": "An efficient solution for autonomous energy supply, reducing costs...",
+        "useful": {
+          "title": "Useful information about gas piston units",
+          "keyQuestions": "Key questions:",
+          "tip": "Tip:",
+          "whatToConsider": "What to consider?",
+          "high": "High",
+          "medium": "Medium",
+          "low": "Low",
+          "good": "Good",
+          "excellent": "Excellent",
+          "economical": "Economical",
+          "complexLogistics": "Complex logistics",
+          "limited": "Limited",
+          "consultationCTA": "Get a consultation",
+          "howToChooseGPU": {
+            "title": "How to choose the right gas piston unit (GPU)",
+            "intro1": "Gas piston units (GPUs) are an effective solution for autonomous power supply, reducing electricity costs, and increasing the energy independence of a business.",
+            "intro2": "However, selecting the optimal GPU requires considering numerous technical parameters and the characteristics of the site where it will be installed. This article explains what to focus on when choosing a gas piston unit to achieve maximum efficiency and reliability.",
+
+            "parameter1": {
+              "title": "1. Determining power and operating mode",
+              "description": "Before purchasing a GPU, it is necessary to accurately calculate the power consumption of the site and select a unit with appropriate characteristics.",
+              "point1": "What is the peak and average daily load at the site?",
+              "point2": "Will the GPU be used as the primary or backup power source?",
+              "point3": "Is it necessary to consider the possibility of parallel operation of multiple units?",
+              "tip": "If the unit will be used as the primary power source, choose a GPU with a 10-15% power reserve to account for load variations. If the GPU will operate in parallel with the grid or as a backup, the power can be calculated more precisely based on critical loads."
+            },
+
+            "parameter2": {
+              "title": "2. Fuel efficiency and gas consumption",
+              "description": "The efficiency of a GPU is measured in electrical efficiency, thermal efficiency, and total efficiency (cogeneration). Higher efficiency means lower operating costs.",
+              "point1": "Electrical efficiency (%) – indicates how much gas energy is converted into electricity. Good models have this figure at 38-46%.",
+              "point2": "Thermal efficiency (%) – if heat utilization is planned, thermal efficiency (typically 40-48%) is important to consider.",
+              "point3": "Total efficiency (%) – with combined electricity and heat production (cogeneration), efficiency can reach 90% or higher.",
+              "point4": "Gas consumption – measured in m³/MW electrical and affects the cost of electricity production.",
+              "tip": "Choose a unit with maximum total efficiency (e.g., Jenbacher, MWM, Bergen, Wärtsilä) for cogeneration solutions. If heat is not used, focus on electrical efficiency."
+            },
+
+            "parameter3": {
+              "title": "3. Gas supply and pressure at the site",
+              "description": "One of the most critical factors is the ability to supply the required amount of gas with the necessary pressure parameters.",
+              "point1": "Is there a connection to the gas network?",
+              "point2": "Is the gas pressure sufficient? (typically 100 mbar to 5 bar, depending on the model)",
+              "point3": "Is the gas supply stable? (important for uninterrupted operation)",
+              "point4": "Possibility of installing a gas pressure regulator to normalize gas parameters.",
+              "consumptionTable": {
+                "title": "Average gas consumption (m³/MW electrical)",
+                "headers": {
+                  "model": "Unit type",
+                  "efficiency": "Electrical efficiency",
+                  "consumption": "Gas consumption (m³/MW electrical)"
+                },
+                "rows": [
+                  {
+                    "model": "Jenbacher J420",
+                    "efficiency": "43%",
+                    "consumption": "220-240"
+                  },
+                  {
+                    "model": "MWM TCG 2020",
+                    "efficiency": "42%",
+                    "consumption": "235-245"
+                  },
+                  {
+                    "model": "MTU 16V4000",
+                    "efficiency": "40%",
+                    "consumption": "250-260"
+                  },
+                  {
+                    "model": "Caterpillar G3516",
+                    "efficiency": "38%",
+                    "consumption": "250-270"
+                  },
+                  {
+                    "model": "Cummins QSK60",
+                    "efficiency": "37%",
+                    "consumption": "270-280"
+                  }
+                ]
+              },
+              "tip": "If the gas pressure at the site is unstable, a pressure regulator or compressor station is required, which will increase initial costs."
+            },
+
+            "parameter4": {
+              "title": "4. Reliability, service life, and maintenance intervals",
+              "description": "Different manufacturers offer GPUs with varying service life and maintenance intervals.",
+              "point1": "Service life before major overhaul – top brands (Jenbacher, MWM, Bergen, Wärtsilä) offer 70,000–100,000 hours.",
+              "point2": "Maintenance intervals – affect maintenance costs (Jenbacher, Wärtsilä require maintenance every 1,500–2,000 hours, while CAT, Cummins require it every 3,000–4,000 hours).",
+              "point3": "Availability of spare parts and service – European brands may require complex maintenance, while American and Asian brands are more accessible in this regard."
+            },
+
+            "parameter5": {
+              "title": "5. Operating conditions and site specifics",
+              "description": "Before installing a GPU, it is important to consider the conditions at the site.",
+              "point1": "Fuel availability – is there a stable supply of natural gas at the required pressure?",
+              "point2": "Temperature conditions – in low temperatures, a heating system must be considered.",
+              "point3": "Noise restrictions – if the GPU is located near residential areas, sound insulation is critical.",
+              "point4": "Dimensions and weight – is there enough space at the site for the unit and its maintenance?",
+              "point5": "Emission restrictions – do NOx, CO, and CO₂ emissions comply with environmental regulations?",
+              "tip": "Conduct a site audit before purchasing to select the right unit and minimize site preparation costs."
+            },
+
+            "parameter6": {
+              "title": "6. Importance of transformer availability and power coordination",
+              "description": "When connecting a GPU to the power grid, it is important to consider the availability of a transformer and the permitted power at the site.",
+              "point1": "Permitted site power – can the GPU be connected to the existing power system?",
+              "point2": "Transformer availability – if the GPU produces 400V and the grid requires 6-10 kV, a transformer is needed.",
+              "point3": "Grid connection type – will the site consume all the electricity or sell part of it to the grid?",
+              "point4": "Documentation for electricity sales – permission for parallel grid operation is required.",
+              "tip": "If selling electricity to the grid is planned, coordinate power limits with the grid operator in advance and install an automatic generation regulation system (AGR)."
+            },
+
+            "parameter7": {
+              "title": "7. Choosing the type of gas piston unit (GPU or CHP)",
+              "description": "There are different types of gas piston units depending on the energy produced.",
+              "point1": "GPU (gas piston units) – generate only electricity.",
+              "point2": "CHP (combined heat and power units) – produce both electricity and heat.",
+              "point3": "Trigeneration – produce electricity, heat, and cooling.",
+              "tip": "If you have a need for heat (e.g., building heating, industrial processes), choose CHP to reduce energy costs."
+            },
+
+            "parameter8": {
+              "title": "8. Budget and payback calculation",
+              "description": "The cost of a GPU ranges from $100,000 to several million dollars, so it is important to consider not only the purchase price but also operating costs.",
+              "costTable": {
+                "title": "Approximate costs for installing a GPU",
+                "headers": {
+                  "factor": "Factor",
+                  "cost": "Cost ($)"
+                },
+                "rows": [
+                  {
+                    "factor": "Gas piston unit (1 MW)",
+                    "cost": "200,000 – 900,000"
+                  },
+                  {
+                    "factor": "Installation and connection",
+                    "cost": "30,000 – 150,000"
+                  },
+                  {
+                    "factor": "Gas pipeline and pressure regulator",
+                    "cost": "10,000 – 50,000"
+                  },
+                  {
+                    "factor": "Transformer and electrical connection",
+                    "cost": "10,000 – 100,000"
+                  },
+                  {
+                    "factor": "Annual maintenance",
+                    "cost": "10,000 – 50,000"
+                  }
+                ]
+              },
+              "tip": "Use a payback calculator to compare the cost of purchasing electricity from the grid versus producing it with a GPU. For example, at a gas price of 18.5 UAH/m³ and grid electricity at 9 UAH/kWh, you can save up to 50% on electricity."
+            },
+
+            "parameter9": {
+              "title": "9. Availability of service support and warranty",
+              "description": "When choosing a GPU, it is important to understand what service support is provided by the manufacturer or its official representatives.",
+              "point1": "Availability of service centers in the region – affects the speed of service.",
+              "point2": "Manufacturer’s warranty – typically 1 to 5 years, but it’s better to choose models with an option to extend the warranty.",
+              "point3": "Availability of remote monitoring systems – allows remote management and diagnostics of the unit.",
+              "tip": "Choose a GPU with a long-term warranty and remote monitoring capabilities to reduce maintenance costs."
+            },
+
+            "summary": {
+              "title": "Summary: How to choose the optimal gas piston unit?",
+              "point1": "Calculate the required power and determine the operating mode (primary/backup).",
+              "point2": "Assess operating conditions and site specifics for GPU installation: availability of electrical and gas infrastructure, and sufficient space.",
+              "point3": "Compare efficiency and fuel consumption across different models.",
+              "point4": "Consider service life and maintenance intervals.",
+              "point5": "Determine the budget and calculate payback.",
+              "point6": "Verify the availability of service support in your region.",
+              "point7": "Choose between GPU or CHP if cogeneration is needed.",
+              "conclusion": "The right choice of a gas piston unit ensures reliable power supply, minimizes fuel and maintenance costs, and accelerates the return on investment."
+            }
+          }
+        }
       },
       {
         "id": "3",
@@ -268,18 +446,147 @@
         "detailsHeader": "Reason",
         "description": "Regular maintenance is critical for maximizing the lifespan of gas piston units. Key maintenance tasks include timely oil changes, inspection of engine components, and monitoring exhaust systems to ensure compliance with environmental standards. Proper care ensures consistent performance and minimizes downtime.",
         "descriptionHeader": "Reason",
-        "subtitle": "Main types of maintenance for gas piston units..."
+        "subtitle": "Main types of maintenance for gas piston units...",
+        "serviceLife": {
+          "title": "Service life of generators by brand before major overhaul, average maintenance intervals, and types of maintenance",
+          "headers": {
+            "title": "Useful information about gas piston units",
+            "keyQuestions": "Key questions:",
+            "tip": "Tip:",
+            "whatToConsider": "What to consider?",
+            "high": "High",
+            "medium": "Medium",
+            "low": "Low",
+            "good": "Good",
+            "excellent": "Excellent",
+            "economical": "Economical",
+            "complexLogistics": "Complex logistics",
+            "limited": "Limited",
+            "consultationCTA": "Get a consultation"
+          },
+          "table": {
+            "manufacturer": "Manufacturer",
+            "electricalEfficiency": "Electrical efficiency (%)",
+            "thermalEfficiency": "Thermal efficiency (%)",
+            "totalEfficiency": "Total efficiency (%)",
+            "reliability": "Reliability",
+            "fuelConsumption": "Fuel consumption",
+            "partsAvailability": "Parts availability",
+            "serviceLifeHours": "Service life before major overhaul (hours)",
+            "maintenanceInterval": "Maintenance interval (hours)",
+            "gasConsumption": "Gas consumption per 1 MW electrical",
+            "overhaul30000Hours": "30,000-hour maintenance (Mid-life Overhaul)",
+            "overhaul60000Hours": "60,000-hour maintenance (Major Overhaul)"
+          },
+          "serviceInterval": {
+            "title": "Main types of maintenance for gas piston units:",
+            "regular": {
+              "title": "Regular maintenance",
+              "subtitle": "",
+              "desc": " – performed every 1,500–3,000 operating hours. Includes oil, filter, and spark plug replacement, as well as diagnostics of the main equipment components."
+            },
+            "middle": {
+              "title": "Midlife Overhaul",
+              "subtitle": "",
+              "desc": " – performed after 25,000–30,000 operating hours. Involves a more thorough inspection and replacement of worn engine components."
+            },
+            "major": {
+              "title": "Major Overhaul",
+              "subtitle": "",
+              "desc": " – carried out after 55,000–60,000 operating hours. Includes complete engine disassembly, replacement of major components, and restoration of the unit’s service life to near-new condition."
+            }
+          },
+          "maintenanceTypes": {
+            "standardTitle": "What is included in standard maintenance (1,500–3,000 hours)",
+            "component": "Component",
+            "works": "Works",
+            "oil": "Oil",
+            "oilChange": "Complete engine oil replacement",
+            "oilFilters": "Oil filters",
+            "oilFiltersChange": "Oil filter replacement",
+            "airFilters": "Air filters",
+            "airFiltersChange": "Air filter replacement or cleaning",
+            "sparkPlugs": "Spark plugs",
+            "sparkPlugsChange": "Replacement (often at every maintenance or every other maintenance)",
+            "engineDiagnostics": "Engine diagnostics",
+            "engineDiagnosticsCheck": "Checking oil pressure, temperatures, vibrations",
+            "oilAnalysis": "Oil analysis",
+            "oilAnalysisCheck": "Checking for metal impurities, wear",
+            "coolant": "Coolant",
+            "coolantCheck": "Checking level, topping up/replacing if necessary",
+            "gasValve": "Gas valve and fuel supply system",
+            "gasValveCheck": "Inspection, leak testing, purging",
+            "generator": "Generator",
+            "generatorCheck": "Checking insulation, load, brushes (if applicable)",
+            "automation": "Automation and signaling",
+            "automationCheck": "Testing, updating logs, checking communication with dispatch",
+            "fasteners": "Inspection of fasteners and connections",
+            "fastenersCheck": "Tightening bolts, inspecting vibration supports",
+
+            "midLifeTitle": "Mid-Life Overhaul (~30,000 operating hours)",
+            "midLifeDescription": "Purpose: Extend engine life until major overhaul, address wear of critical components. Typically performed on-site, duration: 3–10 days.",
+            "mainWorks": "Main works:",
+            "midLife": {
+              "point1": "Replacement of pistons or piston rings",
+              "point2": "Inspection/replacement of crankshaft bearings",
+              "point3": "Replacement or overhaul of cylinder heads",
+              "point4": "Cleaning and inspection of turbocharger",
+              "point5": "Inspection and replacement of injectors, spark plugs, fuel system",
+              "point6": "Replacement of gaskets, seals, filters",
+              "point7": "Inspection of oil system, cooling, gas valves",
+              "point8": "Diagnostics of generator and automation",
+              "point9": "Balancing of rotating elements"
+            },
+
+            "majorTitle": "Major Overhaul (~60,000 operating hours)",
+            "majorDescription": "Purpose: Complete engine restoration with an extension of service life for another 60,000 hours. Often performed at a specialized facility or factory, duration: 2–4 weeks.",
+            "includes": "Includes:",
+            "major": {
+              "point1": "Complete engine disassembly",
+              "point2": "Crankshaft grinding or replacement",
+              "point3": "Inspection/replacement of cylinder block",
+              "point4": "Replacement of cylinder kit (liners, pistons, connecting rods)",
+              "point5": "Repair/replacement of turbocharger, pumps, radiators, thermostats",
+              "point6": "Upgrading gas supply, lubrication, and cooling systems",
+              "point7": "Generator diagnostics, replacement of brushes/bearings",
+              "point8": "Firmware updates for automation (optional)"
+            },
+
+            "averageCosts": "Average costs for:",
+            "standardCost": "Standard maintenance: $5,000 - $10,000",
+            "midLifeCost": "Mid-Life Overhaul: $100,000 - $200,000",
+            "majorCost": "Major Overhaul: $200,000 - $400,000"
+          }
+        }
       },
       {
         "id": "4",
         "href": "strategy",
         "image": "/images/blog/strategy.jpg",
         "title": "Distributed Generation Strategy in Ukraine",
-        "details": "Distributed generation is gaining traction in Ukraine, enabling businesses and communities to produce energy locally. This approach reduces reliance on centralized grids, enhances energy security, and promotes sustainability through the use of gas piston units and renewable sources like biogas and solar.",
-        "detailsHeader": "Reason",
-        "description": "Ukraine is rapidly developing a distributed generation program, which involves installing gas piston units and renewable energy systems. This strategy enhances energy independence, reduces transmission losses, and supports economic growth by providing reliable power to businesses and public institutions.",
-        "descriptionHeader": "Reason",
-        "subtitle": "Ukraine is rapidly advancing its distributed generation program..."
+        "details": "Ukraine is rapidly developing a distributed generation program, which involves installing local energy sources directly at enterprises and in communities. Gas piston units (GPU) play a key role in this process — as an efficient and reliable solution for producing electricity and heat.\n\nGPUs help reduce dependence on centralized networks, cut energy costs, and ensure energy independence during peak loads or crisis situations. The government supports this direction through regulatory mechanisms and encourages enterprises to implement local generation sources, which is especially relevant in times of energy system instability.",
+        "detailsHeader": "",
+        "description": "Currently, for electricity producers using gas piston units, Cabinet of Ministers Resolution No. 222 (PSO contract) applies:\n\n* under a PSO contract for electricity producers using GPUs — price 14 UAH per 1 m³ until 31.10.2025\n* under a PSO contract for electricity and heat producers using GPUs — price 18 UAH per 1 m³ until 31.10.2025\nCurrently, preferential loan rates of 5-7-9% per annum are in effect, approved by the Cabinet of Ministers of Ukraine for the purchase of energy equipment (including gas piston units):",
+        "descriptionHeader": "Current Programs and Tariffs:",
+        "subtitle": "Ukraine is rapidly developing a distributed generation program, which involves installing...",
+        "links": [
+          {
+            "title": "Ministry of Energy: Development of Distributed Generation",
+            "url": "https://www.mev.gov.ua/reforma/rozvytok-rozpodilenoyi-heneratsiyi"
+          },
+          {
+            "title": "Entrepreneurship Development Fund (5-7-9% Program)",
+            "url": "https://fdu.com.ua/yu"
+          },
+          {
+            "title": "ZMINYE: Energy Awareness for Business",
+            "url": "https://www.zminye.in.ua/energosvidomi-for-business"
+          },
+          {
+            "title": "Documentation and Specifics of Connecting GPUs and CHPs",
+            "url": "https://drive.google.com/file/d/1Elmpi2kqpjsU9d-bRtx9BOZJDlRgqIir/view?usp=sharing"
+          }
+        ]
       }
     ]
   },

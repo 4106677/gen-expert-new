@@ -137,8 +137,10 @@ const PrivateSector = () => {
 							return (
 								<div className={styles.cooperation_item} key={key}>
 									<Image src='/images/check-verified-green.svg' width={30} height={30} alt='check verified'/>
-									<h4 className={styles.cooperation_item__title}>{title}</h4>
-									<h5 className={styles.cooperation_item__subtitle}>{subtitle}</h5>
+									<div className={styles.cooperation_item__header}>
+										<h4 className={styles.cooperation_item__title}>{title}</h4>
+										<h5 className={styles.cooperation_item__subtitle}>{subtitle}</h5>
+									</div>
 									<div className={styles.cooperation_itemBox}>
 										<h6 className={styles.cooperation_item__advantages}>{advantages}</h6>
 										<span className={styles.cooperation_item__slug}>{slug}</span>

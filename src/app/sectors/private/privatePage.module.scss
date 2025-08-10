@@ -293,7 +293,8 @@
 
   &_container {
     background-color: #F6F6F6;
-    height: 650px;
+    //height: 650px;
+    height: max-content;
     border-radius: 20px;
     padding: 30px;
     display: flex;
@@ -306,7 +307,7 @@
     border-radius: 20px;
     width: 370px;
     color: #191A1D;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
 
@@ -317,11 +318,16 @@
     }
 
     &Box {
-      margin-top: auto;
+      //margin-top: auto;
+    }
+
+    &__header {
+      height: 200px;
+      padding: 20px 0;
     }
 
     &__title {
-      margin-top: 20px;
+      //margin-top: 20px;
       font-size: 24px;
       line-height: 1;
       font-weight: 600;

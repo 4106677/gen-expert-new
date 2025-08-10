@@ -9,7 +9,19 @@ const GreenBox = ({text='Text', tips = []}) => {
 	return (
 		<div className={styles.box}>
 			<div className={`${styles.container} container`}>
-				<h1 className={styles.header}>{text}</h1>
+				<div className={styles.top}>
+					<h1 className={styles.header}>{text}</h1>
+					{/*<Link href='/' className={styles.header_link}>*/}
+					{/*	<Image*/}
+					{/*		src="/images/pdf-file.svg"*/}
+					{/*		alt="Filter icon"*/}
+					{/*		width={24}*/}
+					{/*		height={24}*/}
+					{/*		className={styles.header_image}*/}
+					{/*	/>*/}
+					{/*	 Презентация*/}
+					{/*</Link>*/}
+				</div>
 				{tips.length > 0 &&
 					<div className={styles.tips}>
 					{tipsArray.map((item, i) => (
