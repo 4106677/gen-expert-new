@@ -340,10 +340,10 @@
     "private": {
       "title": "Private Sector",
       "top_tips": [
-        "Up to 50% savings on electricity",
-        "Reliable power source even during blackouts",
-        "Reliable power source even during blackouts",
-        "Up to 50% savings on electricity"
+        "Up to 50% savings on electricity.",
+        "Independence from the grid, no blackouts.",
+        "Low cost, competitive advantage.",
+        "Environmentally friendly, lower emissions, high profitability."
       ],
       "subtitle": "Target Audience",
       "for": [
@@ -394,8 +394,8 @@
         ]
       },
       "solar": {
-        "title": "Solar Power Plants",
-        "subtitle": "Complementary solutions for enhanced energy autonomy. Grid and hybrid solar power plants.",
+        "title": "Grid-connected and hybrid solar power plants (SPP)",
+        "subtitle": "Equipped with battery packs depending on consumption patterns, they generate clean energy, reduce dependence on fossil fuels, and cut electricity costs by 10-50%.",
         "tips": [
           {
             "title": "Easy Installation on Existing Infrastructure",
