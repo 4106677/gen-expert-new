@@ -137,13 +137,15 @@ const PrivateSector = () => {
 									<Image src='/images/check-verified-green.svg' width={30} height={30} alt='check verified'/>
 									<h4 className={styles.cooperation_item__title}>{title}</h4>
 									<h5 className={styles.cooperation_item__subtitle}>{subtitle}</h5>
-									<h6 className={styles.cooperation_item__advantages}>{advantages}</h6>
-									<span className={styles.cooperation_item__slug}>{slug}</span>
-									<ul className={styles.cooperation_item__list}>
-										{tips?.map((i) => (
-											<li key={i}>{i}</li>
-										))}
-									</ul>
+									<div className={styles.cooperation_itemBox}>
+										<h6 className={styles.cooperation_item__advantages}>{advantages}</h6>
+										<span className={styles.cooperation_item__slug}>{slug}</span>
+										<ul className={styles.cooperation_item__list}>
+											{tips?.map((i) => (
+												<li key={i}>{i}</li>
+											))}
+										</ul>
+									</div>
 								</div>
 							);
 						})}
@@ -151,10 +153,11 @@ const PrivateSector = () => {
 				</div>
 
 			</div>
+			<Consultation/>
 			<Tips/>
 			{/*напрями реалізації*/}
 			<div className={`${styles.realization} container`}>
-				<h3 className={`${styles.title} ${styles.realization_title}`}>{t('sectors.private.realization.title')}</h3>
+				<h3 className={`${styles.title} ${styles.realization_title}`}>{t("sectors.private.realization.title")}</h3>
 				<div className={styles.realization_container}>
 					<div className={styles.realization_item}>
 						<h4 className={styles.realization_item__header}>{t('sectors.private.realization.usage.title')}</h4>
@@ -183,7 +186,7 @@ const PrivateSector = () => {
 				</div>
 			</div>
 			<Realisation/>
-			<Consultation/>
+
 		</>
 	);
 };

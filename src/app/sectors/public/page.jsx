@@ -84,9 +84,10 @@ const PublicSector = () => {
 						height={320}/>
 				</div>
 			</div>
+			<Consultation/>
 			<Tips/>
 			<Realisation/>
-			<Consultation/>
+
 		</>
 	);
 };

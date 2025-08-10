@@ -118,7 +118,7 @@
         {
           "title": "Public Sector and Critical Infrastructure",
           "subtitle": "Reliable and continuous operation for critical services, providing heat, energy, and cooling based on institutional needs.",
-          "slug": "public"
+          "slug": "gov"
         }
       ]
     },
@@ -244,8 +244,8 @@
         "title": "Why Gas Piston Units Are the Best Choice for Your Business?",
         "details": "Gas piston units (GPUs) offer a reliable and efficient solution for businesses seeking energy independence. They provide electricity and heat simultaneously, reducing dependency on external grids and lowering operational costs. With high efficiency and flexibility, GPUs are ideal for various industries, from agriculture to manufacturing, ensuring uninterrupted operations and significant savings.",
         "detailsHeader": "Reason 1",
-        "description": "Agricultural enterprises generate significant amounts of organic waste (manure, crop residues, processing waste), which can be converted into biogas through anaerobic digestion. These sectors require electricity for equipment, heat for heating premises or greenhouses, and hot water for technological processes. Cogeneration systems ensure energy efficiency, reducing costs and promoting sustainable development. For example, dairy farms can use heat for milk pasteurization, while crop farms can use CO₂ to boost yields. Using biogas from waste enables energy independence, which is especially critical for remote rural areas.",
-        "descriptionHeader": "Reason 2",
+        "description": "",
+        "descriptionHeader": "",
         "subtitle": "Up to 50% savings on electricity – reduced tariffs, no transmission or distribution fees..."
       },
       {
@@ -372,7 +372,7 @@
             "subtitle": "Simultaneous production of electricity and heat."
           },
           {
-            "title": "500–4500 kW Power",
+            "title": "250–4500 kW Power",
             "subtitle": "Tailored to community needs."
           },
           {
@@ -475,15 +475,14 @@
             "tips": [
               "Up to 70% energy savings",
               "No transmission costs",
-              "100% energy independence (operation during blackouts)",
-              "Starting from 400,000 EURO"
+              "100% energy independence (operation during blackouts)"
             ]
           },
           {
             "title": "Co-financing",
             "subtitle": "Partnership to reduce risks",
             "advantages": "Advantages",
-            "slug": "We cover 20-50% of costs",
+            "slug": "We cover 20-50% of capital investments",
             "tips": [
               "Up to 50% energy savings",
               "No transmission costs",
@@ -499,8 +498,7 @@
             "tips": [
               "Best prices on the Ukrainian market",
               "Range of new and used units",
-              "Electricity generation, cogeneration, trigeneration",
-              "Prices starting from 50,000 EURO"
+              "Electricity generation, cogeneration, trigeneration"
             ]
           }
         ]
@@ -1297,7 +1295,7 @@
       {
         "name": "Public Institutions, Municipal Facilities, and Critical Infrastructure",
         "description": "Require stable and cost-effective energy supply.",
-        "slug": "public",
+        "slug": "gov",
         "image": "/images/sectors/industries/derzhava.webp",
         "details": {
           "sub_sectors": {

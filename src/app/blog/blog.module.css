@@ -116,6 +116,7 @@
     border-radius: 16px;
     overflow: hidden;
     margin-bottom: 40px;
+    flex-shrink: 0;
 }
 
 .grid__header {

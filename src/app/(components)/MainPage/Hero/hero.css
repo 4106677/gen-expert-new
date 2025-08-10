@@ -81,6 +81,7 @@
 
 .hero-description__item {
     max-width: 220px;
+    height: 100%;
 }
 
 .hero-description__bold {

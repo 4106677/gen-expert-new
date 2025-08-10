@@ -10,7 +10,7 @@
 .brands_track {
     display: flex;
     align-items: center;
-    animation: scroll_brands 30s linear infinite;
+    animation: scroll_brands 40s linear infinite;
     white-space: nowrap;
 }
 

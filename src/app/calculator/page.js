@@ -7,6 +7,8 @@ import {BarChart, Bar, XAxis, YAxis, ResponsiveContainer} from "recharts";
 import dynamic from "next/dynamic"
 import GreenBox from "@/app/(components)/GreenBox/GreenBox";
 import Consultation from "@/app/(components)/MainPage/Consultation/consultation";
+import Link from "next/link";
+import {usePathname, useRouter} from "next/navigation";
 const Slider = dynamic(() => import('rc-slider'), { ssr: false });
 
 export default function Calculator () {
@@ -29,9 +31,46 @@ export default function Calculator () {
 	const gpuPaybackPeriod = elecProd * 460 * 44 / yearly_econom * 12
 	const chpPaybackPeriod = elecProd * 510 * 44 / yearly_econom_chp * 12
 
+	const router = useRouter();
+	const pathname = usePathname();
+
 	useEffect(() => {
 		setIsMounted(true);
 	}, []);
+
+
+	const scrollToContactForm = () => {
+		const maxAttempts = 50;
+		let attempts = 0;
+
+		const tryScroll = () => {
+			const anchor = document.getElementById("contactForm");
+			if (anchor) {
+				anchor.scrollIntoView({ behavior: "smooth" });
+				return;
+			}
+
+			attempts++;
+			if (attempts < maxAttempts) {
+				setTimeout(tryScroll, 100);
+			}
+		};
+
+		tryScroll();
+	};
+
+	const handleClick = (e) => {
+		e.preventDefault();
+
+		if (pathname === "/") {
+			scrollToContactForm();
+		} else {
+			router.push("/");
+			setTimeout(() => {
+				scrollToContactForm();
+			}, 500);
+		}
+	};
 
 
 	const handleInputChange = (field) => (e) => {
@@ -295,8 +334,15 @@ export default function Calculator () {
 								</BarChart>
 							</ResponsiveContainer>
 							{/*<button className={styles.contact_us}*/}
-							<button className={`btn btn_green ${styles.contact_us}`}
-							        onClick={() => setContactsShowModal(true)}>{t("calculator.estimate.button")}</button>
+							{/*<button className={`btn btn_green ${styles.contact_us}`}*/}
+							{/*        onClick={() => setContactsShowModal(true)}*/}
+							{/*>{t("calculator.estimate.button")}</button>*/}
+
+							<Link href="/#contactForm" onClick={handleClick}>
+								<button className={`btn btn_green ${styles.contact_us}`}>
+									{t("calculator.estimate.button")}
+								</button>
+							</Link>
 						</div>
 					</div>
 				</div>

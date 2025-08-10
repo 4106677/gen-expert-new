@@ -36,7 +36,15 @@ export default function Hero() {
 			</div>
 			<div className="video-text-container">
 				<h1 className='hero-title'>{t('main_page.hero.title')}</h1>
-				<h2 className='hero-subtitle'>{t('main_page.hero.subtitle')}</h2>
+				{t('main_page.hero.subtitle')
+					.split('\n')
+					.map((line, index) => (
+						<h2 className='hero-subtitle' key={index}>
+							{line}
+						</h2>
+					))}
+
+
 				<div className="hero-buttons">
 					<Link href="/#contactForm" style={{height: '42px', fontSize: '15px'}}
 					      className='btn btn_white'>{t('main_page.hero.contact')}</Link>
