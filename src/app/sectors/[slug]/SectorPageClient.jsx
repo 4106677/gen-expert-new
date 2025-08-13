@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import BackButton from "@/app/(components)/BackButton/BackButton";
-import styles from './SectorPage.module.scss'
+import styles from '../SectorsPage.module.scss'
 import GreenBox from "@/app/(components)/GreenBox/GreenBox";
 import {useTranslation} from "react-i18next";
 import SectorHead from "@/app/(components)/Sectors/Head/SectorHead";
@@ -25,7 +25,7 @@ const SectorPageClient = ({ slug }) => { // Принимаем slug как пр�
 	}
 
 	return (
-		<div>
+		<>
 			<GreenBox text={sector.name}/>
 			<div className={`${styles.container} container`}>
 				<BackButton/>
@@ -34,7 +34,7 @@ const SectorPageClient = ({ slug }) => { // Принимаем slug как пр�
 				<Principle sector={sector} headers={headers}/>
 			</div>
 			<Consultation/>
-		</div>
+		</>
 	);
 };
 

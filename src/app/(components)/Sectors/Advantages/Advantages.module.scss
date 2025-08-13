@@ -143,3 +143,32 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .advantages {
+    margin-top: 60px;
+
+    &_header {
+      font-size: 36px;
+    }
+
+    &_grid {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      &Item {
+        padding: 20px;
+        height: max-content;
+        min-height: auto;
+
+        &__header {
+          font-size: 20px;
+          min-height: auto;
+
+        }
+      }
+    }
+  }
+}

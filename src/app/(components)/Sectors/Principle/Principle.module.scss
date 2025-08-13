@@ -32,3 +32,20 @@
     margin-top: 16px
   }
 }
+
+@media screen and (max-width: 768px) {
+  .principle {
+    margin-top: 60px;
+    padding: 20px;
+    min-height: 700px;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .header {
+    font-size: 24px;
+  }
+}

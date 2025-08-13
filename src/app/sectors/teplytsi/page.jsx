@@ -6,7 +6,7 @@ import SectorHead from "@/app/(components)/Sectors/Head/SectorHead";
 import BackButton from "@/app/(components)/BackButton/BackButton";
 import GreenBox from "@/app/(components)/GreenBox/GreenBox";
 import {useTranslation} from "react-i18next";
-import styles from '../[slug]/SectorPage.module.scss'
+import styles from '../SectorsPage.module.scss'
 import Solution from "@/app/(components)/Sectors/Solution/Solution";
 import HowItWorks from "@/app/(components)/Sectors/HowItWorks/HowItWorks";
 
