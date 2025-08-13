@@ -190,6 +190,24 @@ input {
 
 span {display: inline-block}
 
+@media screen and (max-width: 768px) {
+  main { margin-top: 60px}
 
+  .recharts-wrapper {
+    .recharts-surface {
+      .recharts-layer {
+        .recharts-bar {
+          .recharts-rectangle {
+
+          }
+        }
+      }
+    }
+
+    .recharts-cartesian-axis-tick {
+      font-size: 12px;
+    }
+  }
+}
 
 

@@ -20,6 +20,8 @@
     line-height: 140%;
     margin-top: 20px;
   }
+
+
 }
 
 .gpu {
@@ -55,6 +57,50 @@
 
     .banner_subtitle {
       color: #475569
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    padding: 20px;
+    flex-direction: column;
+
+    &_header {
+      font-size: 24px;
+      line-height: 28px;
+      width: 100%;
+    }
+
+    &_subtitle {
+      font-size: 16px;
+    }
+
+    &_image {
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .gpu {
+    margin-top: 0;
+
+    &_description {
+      width: 100%;
+    }
+  }
+
+  .solar {
+    flex-direction: column-reverse;
+
+    &_description {
+      width: 100%;
+    }
+  }
+
+  .hybrid {
+    &_description {
+      width: 100%;
     }
   }
 }

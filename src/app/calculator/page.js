@@ -31,6 +31,7 @@ export default function Calculator () {
 	const gpuPaybackPeriod = elecProd * 460 * 44 / yearly_econom * 12
 	const chpPaybackPeriod = elecProd * 510 * 44 / yearly_econom_chp * 12
 
+
 	const router = useRouter();
 	const pathname = usePathname();
 
@@ -286,7 +287,7 @@ export default function Calculator () {
 											     style={{backgroundColor: "#24852A"}}></div>
 											{t("calculator.estimate.params.selfGeneration")}
 										</h4>
-										<span className={styles.calculator_list_item__span}>{Math.round(yearly_gen_price).toLocaleString("ru-RU")} {t("calculator.unit.uah")}</span>
+										<span className={styles.calculator_list_item__span}>{Math.round(yearly_gen_price).toLocaleString("ru-RU")}&nbsp;{t("calculator.unit.uah")}</span>
 									</li>
 									<li className={styles.calculator_list_item}>
 										<h4 className={styles.calculator_list_item_h4}>
@@ -294,7 +295,7 @@ export default function Calculator () {
 											     style={{backgroundColor: "#E9EFF1"}}></div>
 											{t("calculator.estimate.params.supplierPurchase")}
 										</h4>
-										<span className={styles.calculator_list_item__span}>{yearly_elec_price.toLocaleString("ru-RU")} {t("calculator.unit.uah")}</span>
+										<span className={styles.calculator_list_item__span}>{yearly_elec_price.toLocaleString("ru-RU")}&nbsp;{t("calculator.unit.uah")}</span>
 									</li>
 									<li className={styles.calculator_list_item}>
 										<h4 className={styles.calculator_list_item_h4}>
@@ -302,15 +303,15 @@ export default function Calculator () {
 											     style={{backgroundColor: "#89C539"}}></div>
 											{t("calculator.estimate.params.annualSavings")}
 										</h4>
-										<span className={styles.calculator_list_item__span}>{Math.round(chp ? yearly_econom_chp : yearly_econom).toLocaleString('ru-RU')} {t("calculator.unit.uah")}</span>
+										<span className={styles.calculator_list_item__span}>{Math.round(chp ? yearly_econom_chp : yearly_econom).toLocaleString('ru-RU')}&nbsp;{t("calculator.unit.uah")}</span>
 									</li>
 									<li className={styles.calculator_list_item}>
 										<h4 className={styles.calculator_list_item_h4}>{t("calculator.estimate.params.gpuPaybackPeriod")}</h4>
-										<span className={styles.calculator_list_item__span}>{Math.round(gpuPaybackPeriod)} {t("calculator.unit.month")}</span>
+										<span className={styles.calculator_list_item__span}>{Math.round(gpuPaybackPeriod)}&nbsp;{t("calculator.unit.month")}</span>
 									</li>
 									{chp && <li className={styles.calculator_list_item}>
 										<h4 className={styles.calculator_list_item_h4}>{t("calculator.estimate.params.chpPaybackPeriod")}</h4>
-										<span className={styles.calculator_list_item__span}>{Math.round(chpPaybackPeriod)} {t("calculator.unit.month")}</span>
+										<span className={styles.calculator_list_item__span}>{Math.round(chpPaybackPeriod)}&nbsp;{t("calculator.unit.month")}</span>
 									</li>}
 								</ul>
 							</div>
@@ -324,7 +325,7 @@ export default function Calculator () {
 									          bottom: 0,
 								          }}
 								          barGap={8}
-								          barSize={170}
+								          // barSize={170}
 								>
 									<XAxis lineType dataKey="name" />
 									<YAxis/>

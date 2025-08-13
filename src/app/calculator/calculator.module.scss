@@ -29,7 +29,6 @@
     display: grid;
     grid-template-columns: 3fr 3fr;
     gap: 20px;
-
 }
 
 .sliderList {
@@ -244,7 +243,7 @@
 
 @media (max-width: 1249px) {
     .main {
-        margin-top: 20px;
+        //margin-top: 20px;
     }
     .title{
         height: auto;
@@ -265,5 +264,74 @@
     .calculated_wrapper {
         max-width: 700px;
         margin:  0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        padding: 40px 20px;
+    }
+
+    .container {
+        margin-top: 40px;
+        background-color: white;
+        padding: 0;
+    }
+
+    .title {
+        &_header {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+    }
+
+    .sliderList {
+        padding: 0;
+        border-radius: 0;
+
+        .sliderList_item {
+            margin-bottom: 20px;
+        }
+
+        .categoryTop {
+            margin-bottom: 5px;
+            &_header {
+                font-size: 12px;
+            }
+        }
+
+        .sliderList_input {
+            height: 32px;
+            font-size: 12px;
+            width: 60px;
+        }
+
+        .slider_stint {
+            justify-content: space-between;
+            font-size: 12px;
+            height: 32px;
+        }
+    }
+
+    .calculated_wrapper {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .calculator_title {
+        font-size: 18px;
+    }
+
+    .contact_us {
+        margin-left: 0;
+    }
+
+    .calculator_list_item {
+        font-weight: 500;
+        font-size: 12px;
+
+        .calculator_list_item_h4 {
+           font-size: inherit;
+        }
     }
 }

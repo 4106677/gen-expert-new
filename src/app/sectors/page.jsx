@@ -46,8 +46,10 @@ const SectorsPage = () => {
 												<h3 className={styles.list_item_header}>{name}</h3>
 												<span className={styles.list_item_description}>{description}</span>
 												<CustomLink
-													href={`/sectors/${slug}`} text={t('menu.details')}
-													style={{width: "max-content"}}/>
+													href={`/sectors/${slug}`}
+													text={t('menu.details')}
+													classname={styles.list_item_button}
+												/>
 											</div>
 										</li>
 							);

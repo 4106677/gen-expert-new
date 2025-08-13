@@ -277,6 +277,10 @@
     .header-nav {
         height: 60px;
         padding: 0 16px;
+        position: fixed;
+        background-color: white;
+        top: 0;
+        z-index: 2;
     }
 
     .logoLink {
@@ -346,7 +350,7 @@
         position: static;
         display: none;
         box-shadow: none;
-        background-color: #f8f9fa;
+        /*background-color: #f8f9fa;*/
         margin-left: 20px;
         border-radius: 0;
     }

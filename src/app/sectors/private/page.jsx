@@ -8,6 +8,7 @@ import {useTranslation} from "react-i18next";
 import styles from './privatePage.module.scss'
 import Image from "next/image";
 import Combined from "@/app/(components)/Sectors/Banner/Combined";
+import {useMediaQuery} from "@/hooks";
 
 const PrivateSector = () => {
 	const { t } = useTranslation('common');
@@ -18,6 +19,7 @@ const PrivateSector = () => {
 	const tech_body = Object.values(t('sectors.private.tech.body', {returnObjects: true}) || {});
 	const cooperation_tips = Object.values(t('sectors.private.cooperation.tips', {returnObjects: true}) || {});
 	const [isMounted, setIsMounted] = useState(false);
+	const mobile = useMediaQuery("(max-width: 768px)");
 
 	useEffect(() => {
 		setIsMounted(true);
@@ -40,7 +42,8 @@ const PrivateSector = () => {
 						.filter(item => item && typeof item === "object")
 						.map(({image, title, subtitle}, index) => (
 							<div key={index} className={styles.box_item}>
-								<Image className={styles.box_item__image} src={image} alt={title} width={131} height={110}/>
+								<Image className={styles.box_item__image} src={image} alt={title} width={131}
+								       height={110}/>
 								<h3 className={styles.box_item__header}>{title}</h3>
 								<span className={styles.box_item__span}>{subtitle}</span>
 							</div>
@@ -49,25 +52,29 @@ const PrivateSector = () => {
 				{/*Зеленка*/}
 				<div className={styles.hero}>
 					<h3 className={`${styles.hero_title} ${styles.title}`}>{t('sectors.private.hero.title')}</h3>
-					<span className={`${styles.hero_subtitle} ${styles.subtitle}`}>{t('sectors.private.hero.subtitle')}</span>
+					<span
+						className={`${styles.hero_subtitle} ${styles.subtitle}`}>{t('sectors.private.hero.subtitle')}</span>
 					<div className={styles.hero_tips}>
 						{hero_tips?.filter(item => item && typeof item === "object")
 							.map(({image, title, subtitle}, index) => (
 								<div key={index} className={styles.hero_tips__item}>
 									<div className={styles.hero_tips__item_header}>
-										<Image src='/images/check-verified.svg' width={30} height={30} alt='check verified'/>
+										<Image src='/images/check-verified.svg' width={30} height={30}
+										       alt='check verified'/>
 										<h3 className={styles.hero_tips__title}>{title}</h3>
 									</div>
 									<span className={styles.hero_tips__subtitle}>{subtitle}</span>
 								</div>
 							))}
 					</div>
-					<Image className={styles.hero_image} src='/images/sectors/private/hero.webp' alt='Hero GPU' width={1240} height={404} />
+					<Image className={styles.hero_image} src='/images/sectors/private/hero.webp' alt='Hero GPU'
+					       width={1240} height={404}/>
 				</div>
 				{/*Solar*/}
 				<div className={styles.solar}>
 					<h3 className={`${styles.solar_title} ${styles.title}`}>{t('sectors.private.solar.title')}</h3>
-					<span className={`${styles.solar_subtitle} ${styles.subtitle}`}>{t('sectors.private.solar.subtitle')}</span>
+					<span
+						className={`${styles.solar_subtitle} ${styles.subtitle}`}>{t('sectors.private.solar.subtitle')}</span>
 					<div className={styles.solar_tips}>
 						{solar_tips?.filter(item => item && typeof item === "object")
 							.map(({image, title, subtitle}, index) => (
@@ -105,14 +112,17 @@ const PrivateSector = () => {
 												<li key={i}>{i}</li>
 											)}
 										</ul>
-										<Image className={styles.tech_grid__column_image} src={image} alt={title} width={240} height={230}/>
+										<Image className={styles.tech_grid__column_image} src={image} alt={title}
+										       width={240} height={230}/>
 									</div>
 								))}
 						</div>
 						<div className={styles.tech_grid__column}>
 							{tech_body?.filter(item => item && typeof item === "object")
 								.map(({image, title, subtitle, tips}, index) => (
-									<div className={`${styles.tech_grid__column_item} ${styles.tech_grid__column_custom}`} key={index + title}>
+									<div
+										className={`${styles.tech_grid__column_item} ${styles.tech_grid__column_custom}`}
+										key={index + title}>
 										<h4 className={styles.tech_grid__column_title}>{title}</h4>
 										{subtitle !== "" &&
 											<span className={styles.tech_grid__column_subtitle}>{subtitle}</span>
@@ -122,75 +132,80 @@ const PrivateSector = () => {
 												<li key={i}>{i}</li>
 											)}
 										</ul>
-										<Image className={styles.tech_grid__column_image} src={image} alt={title} width={375} height={400}/>
+										<Image className={styles.tech_grid__column_image} src={image} alt={title}
+										       width={375} height={400}/>
 									</div>
 								))}
 						</div>
 					</div>
 				</div>
 				{/*види співпраці*/}
-				<div className={styles.cooperation}>
-					<h3 className={`${styles.title} ${styles.cooperation_title}`}>{t('sectors.private.cooperation.title')}</h3>
-					<div className={styles.cooperation_container}>
-						{cooperation_tips?.map(({title, subtitle, advantages, slug, tips}, index) => {
-							const key = (title && slug) ? `${title}-${slug}` : `cooperation-${index}`;
-							return (
-								<div className={styles.cooperation_item} key={key}>
-									<Image src='/images/check-verified-green.svg' width={30} height={30} alt='check verified'/>
-									<div className={styles.cooperation_item__header}>
-										<h4 className={styles.cooperation_item__title}>{title}</h4>
-										<h5 className={styles.cooperation_item__subtitle}>{subtitle}</h5>
-									</div>
-									<div className={styles.cooperation_itemBox}>
-										<h6 className={styles.cooperation_item__advantages}>{advantages}</h6>
-										<span className={styles.cooperation_item__slug}>{slug}</span>
-										<ul className={styles.cooperation_item__list}>
-											{tips?.map((i) => (
-												<li key={i}>{i}</li>
-											))}
-										</ul>
-									</div>
-								</div>
-							);
-						})}
-					</div>
-				</div>
 
 			</div>
+			<div className={styles.cooperation}>
+				<h3 className={`${styles.title} ${styles.cooperation_title}`}>{t('sectors.private.cooperation.title')}</h3>
+				<div className={styles.cooperation_container}>
+					{cooperation_tips?.map(({title, subtitle, advantages, slug, tips}, index) => {
+						const key = (title && slug) ? `${title}-${slug}` : `cooperation-${index}`;
+						return (
+							<div className={styles.cooperation_item} key={key}>
+								<Image src='/images/check-verified-green.svg' width={30} height={30}
+								       alt='check verified'/>
+								<div className={styles.cooperation_item__header}>
+									<h4 className={styles.cooperation_item__title}>{title}</h4>
+									<h5 className={styles.cooperation_item__subtitle}>{subtitle}</h5>
+								</div>
+								<div className={styles.cooperation_itemBox}>
+									<h6 className={styles.cooperation_item__advantages}>{advantages}</h6>
+									<span className={styles.cooperation_item__slug}>{slug}</span>
+									<ul className={styles.cooperation_item__list}>
+										{tips?.map((i) => (
+											<li key={i}>{i}</li>
+										))}
+									</ul>
+								</div>
+							</div>
+						);
+					})}
+				</div>
+			</div>
 			<Consultation/>
-			<Tips/>
+			{!mobile && <Tips/>}
 			{/*напрями реалізації*/}
 			<div className={`${styles.realization} container`}>
 				<h3 className={`${styles.title} ${styles.realization_title}`}>{t("sectors.private.realization.title")}</h3>
 				<div className={styles.realization_container}>
 					<div className={styles.realization_item}>
 						<h4 className={styles.realization_item__header}>{t('sectors.private.realization.usage.title')}</h4>
-						<span className={styles.realization_item__subtitle}>{t('sectors.private.realization.usage.subtitle')}</span>
+						<span
+							className={styles.realization_item__subtitle}>{t('sectors.private.realization.usage.subtitle')}</span>
 						<ul className={styles.realization_item__list}>
-							{Array.isArray(t('sectors.private.realization.usage.tips', { returnObjects: true })) ?
-								t('sectors.private.realization.usage.tips', { returnObjects: true }).map((tip, index) => (
+							{Array.isArray(t('sectors.private.realization.usage.tips', {returnObjects: true})) ?
+								t('sectors.private.realization.usage.tips', {returnObjects: true}).map((tip, index) => (
 									<li key={index}>{tip}</li>
 								)) : null
 							}
 						</ul>
-						<Image className={styles.realization_item__image} src={"/images/sectors/private/usage.webp"} width={610} height={270} alt={t('sectors.private.realization.usage.title')}/>
+						<Image className={styles.realization_item__image} src={"/images/sectors/private/usage.webp"}
+						       width={610} height={270} alt={t('sectors.private.realization.usage.title')}/>
 					</div>
 					<div className={styles.realization_item}>
 						<h4 className={styles.realization_item__header}>{t('sectors.private.realization.sale.title')}</h4>
-						<span className={styles.realization_item__subtitle}>{t('sectors.private.realization.sale.subtitle')}</span>
+						<span
+							className={styles.realization_item__subtitle}>{t('sectors.private.realization.sale.subtitle')}</span>
 						<ul className={styles.realization_item__list}>
-							{Array.isArray(t('sectors.private.realization.usage.tips', { returnObjects: true })) ?
-								t('sectors.private.realization.sale.tips', { returnObjects: true }).map((tip, index) => (
+							{Array.isArray(t('sectors.private.realization.usage.tips', {returnObjects: true})) ?
+								t('sectors.private.realization.sale.tips', {returnObjects: true}).map((tip, index) => (
 									<li key={index}>{tip}</li>
 								)) : null
 							}
 						</ul>
-						<Image className={styles.realization_item__image} src={"/images/sectors/private/sale.webp"} width={610} height={270} alt={t('sectors.private.realization.sale.title')}/>
+						<Image className={styles.realization_item__image} src={"/images/sectors/private/sale.webp"}
+						       width={610} height={270} alt={t('sectors.private.realization.sale.title')}/>
 					</div>
 				</div>
 			</div>
 			<Realisation/>
-
 		</>
 	);
 };

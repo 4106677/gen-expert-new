@@ -13,7 +13,7 @@ const Realisation = () => {
 		<div className={`${styles.container} container`}>
 			<div className={styles.heading}>
 				<h2 className={styles.header}>{t("cooperation.topList.header")}</h2>
-				<CustomLink href={`/sectors/`} height={40} text={t("cooperation.topList.buttonAll")} style={{border: '1px solid #50AE55'}}/>
+				<CustomLink classname={styles.heading_button} href={`/sectors/`} height={40} text={t("cooperation.topList.buttonAll")} style={{border: '1px solid #50AE55'}}/>
 			</div>
 			{Object.values(t("cooperation.topList.data", { returnObjects: true }) || {})
 				.filter(item => item && typeof item === 'object')
