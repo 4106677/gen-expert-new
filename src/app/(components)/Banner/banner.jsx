@@ -4,7 +4,7 @@ import React, {useEffect, useState} from "react";
 import Image from "next/image"
 import {useTranslation} from "react-i18next";
 
-const Banner = ({header, direction = 'default', style}) => {
+const Banner = ({header, direction = 'default', style, className}) => {
 	const [isMounted, setIsMounted] = useState(false);
 	useEffect(() => {
 		setIsMounted(true);
@@ -20,7 +20,7 @@ const Banner = ({header, direction = 'default', style}) => {
 		);
 	}
 	return (
-		<div className={styles.main_banner} style={{
+		<div className={`${styles.main_banner} ${className}`} style={{
 			height: direction === 'reverse' ? '397px' : '335px', ...style
 		}}>
 			<div className="container">

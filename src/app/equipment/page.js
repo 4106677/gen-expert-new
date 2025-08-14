@@ -14,12 +14,14 @@ import ProductList from "@/app/(components)/ProductList";
 import Pagination from "@/app/(components)/Pagination/Pagination";
 import Banner from "@/app/(components)/Banner/banner";
 import Stripe from "@/app/(components)/Stripe/stripe";
+import {useMediaQuery} from "@/hooks";
 
 export default function Equipment({ modalId }) {
 	const [data, setData] = useState(null);
 	const [loading, setLoading] = useState(true);
 	const [itemsPerPage, setItemsPerPage] = useState(12);
 	const [isMount, setIsMount] = useState(false);
+	const mobile = useMediaQuery("(max-width: 768px)");
 
 	// Состояние поиска в родительском компоненте
 	const [searchInput, setSearchInput] = useState('');
@@ -34,6 +36,15 @@ export default function Equipment({ modalId }) {
 		setIsMount(true);
 	}, []);
 
+	useEffect(() => {
+		if (isFilterVisible && mobile) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = 'unset';
+		}
+		return () => { document.body.style.overflow = 'unset'; };
+	}, [isFilterVisible, mobile]);
+
 	const filteredData = useMemo(() => {
 		return filters.filterData || [];
 	}, [filters.filterData]);
@@ -44,11 +55,10 @@ export default function Equipment({ modalId }) {
 		setItemsPerPage(newItemsPerPage);
 	};
 
-	// Функция для сброса всех фильтров и поиска
 	const handleResetAllFilters = () => {
-		setSearchInput(''); // Сбрасываем поле поиска
-		filters.setSearch(''); // Сбрасываем поиск в фильтрах
-		filters.resetAllFilters(); // Сбрасываем все фильтры (эту функцию нужно добавить в хук)
+		setSearchInput('');
+		filters.setSearch('');
+		filters.resetAllFilters();
 	};
 
 	useEffect(() => {
@@ -94,16 +104,18 @@ export default function Equipment({ modalId }) {
 					header={t('equipment.title')}
 					direction='reverse'
 					style={{ marginBottom: '46px' }}
+					className={styles.banner}
 				/>
-				<Stripe style={{ marginBottom: '46px' }} />
+				<Stripe className={styles.stripe}/>
 
 				<div className={styles.container}>
-					<EquipmentFilter
+					{!mobile &&
+						<EquipmentFilter
 						filters={filters}
 						isFilterVisible={isFilterVisible}
 						windowWidth={windowWidth}
 						onResetAllFilters={handleResetAllFilters}
-					/>
+					/>}
 
 					<div className={styles.right}>
 						<SortingHeader
@@ -116,6 +128,14 @@ export default function Equipment({ modalId }) {
 							totalItems={filteredData.length}
 							showingItems={pagination.paginatedData.length}
 						/>
+
+						{mobile && <EquipmentFilter
+							filters={filters}
+							isFilterVisible={isFilterVisible}
+							windowWidth={windowWidth}
+							toggleFilter={toggleFilter}
+							onResetAllFilters={handleResetAllFilters}
+						/>}
 
 						<ProductList
 							products={pagination.paginatedData}

@@ -62,7 +62,7 @@ const BlogPageClient = ({ id }) => {
 	}
 
 	return (
-		<div>
+		<>
 			<GreenBox text={item?.title}/>
 			<div className={`${styles.container} container`}>
 				<BackButton/>
@@ -202,8 +202,6 @@ const BlogPageClient = ({ id }) => {
 										<td><span className={styles.mediumRating}>🟢 3 000 - 4 000</span></td>
 										<td>280</td>
 									</tr>
-
-									{/* Остальные строки таблицы */}
 									</tbody>
 								</table>
 							</div>
@@ -718,7 +716,7 @@ const BlogPageClient = ({ id }) => {
 			</div>
 
 			<Consultation/>
-		</div>
+		</>
 	);
 };
 

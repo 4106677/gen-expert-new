@@ -14,7 +14,9 @@
     "cooperation": "Співпраця",
     "details": "Детальніше",
     "back": "Назад",
-    "search": "Пошук"
+    "search": "Пошук",
+    "apply": "Застосувати",
+    "cancel": "Скасувати"
   },
   "units": {
     "power": "Потужність",
@@ -553,9 +555,9 @@
             },
 
             "averageCosts": "Середня вартість за:",
-            "standardCost": "Стандартне ТО: 5 000 - 10 000 $",
-            "midLifeCost": "Mid-Life Overhaul: 100 000 - 200 000 $",
-            "majorCost": "Major Overhaul: 200 000 - 400 000 $"
+            "standardCost": "Стандартне ТО: 5000 - 10000$",
+            "midLifeCost": "Mid-Life Overhaul: 100000 - 200000$",
+            "majorCost": "Major Overhaul: 200000 - 400000$"
           }
         }
       },

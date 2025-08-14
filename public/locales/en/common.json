@@ -14,7 +14,9 @@
     "cooperation": "Cooperation",
     "details": "Details",
     "back": "Back",
-    "search": "Search"
+    "search": "Search",
+    "apply": "Apply",
+    "cancel": "Cancel"
   },
   "units": {
     "power": "Power",

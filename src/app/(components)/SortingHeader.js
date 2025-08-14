@@ -49,15 +49,9 @@ export default function SortingHeader({
 			</div>
 
 			<button
-				className={styles.mobileFilterToggle}
+				className={`btn btn_green ${styles.mobileFilterToggle}`}
 				onClick={toggleFilter}
 			>
-				<Image
-					src="/filter-icon.svg"
-					alt="Filter icon"
-					width={24}
-					height={24}
-				/>
 				{isFilterVisible
 					? t("equipment.filters.hideFilters")
 					: t("equipment.filters.showFilters")}

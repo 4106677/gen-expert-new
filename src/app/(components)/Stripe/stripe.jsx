@@ -16,9 +16,9 @@ const brandLogos = [
 	'supermaly.png',
 ];
 
-const Stripe = ({style}) => {
+const Stripe = ({style, className}) => {
 	return (
-		<div className={styles.brands} style={style}>
+		<div className={`${styles.brands} ${className}`} style={style}>
 			<div className={styles.brands_track}>
 				{/* Первый набор логотипов */}
 				{brandLogos.map((logo, index) => (

@@ -63,8 +63,8 @@ const Blog = () => {
 						<div key={id || index} className={styles.grid__item}>
 							<Image className={styles.grid__image} src={image} alt={title} width={570} height={341} />
 							<h4 className={styles.grid__header}>{title}</h4>
-							<span className={styles.grid_description}>{subtitle}</span>
-							<CustomLink href={href} height={40} text={t("blog.details")} style={{border: '1px solid #50AE55', marginTop: 'auto'}}/>
+							<span className={styles.grid__description}>{subtitle}</span>
+							<CustomLink href={href} height={40} text={t("blog.details")} classname={styles.grid__button} />
 						</div>
 					))}
 			</div>
