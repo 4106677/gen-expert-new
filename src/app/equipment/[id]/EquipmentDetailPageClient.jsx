@@ -184,8 +184,8 @@ export default function EquipmentDetailPageClient() {
 												className={[styles.image, styles.preview_image].join(' ')}
 												src={imageUrl}
 												alt={item.manufacturer}
-												width={130}
-												height={130}
+												width={300}
+												height={300}
 												onClick={() => handleImageClick(imageUrl)}
 											/>
 										</div>
@@ -206,9 +206,11 @@ export default function EquipmentDetailPageClient() {
 							</ul>
 							<span className={styles.details}>{t('equipment.description.details')}:</span>
 							<h3 className={styles.details_header}>{header}</h3>
-							{listItems.map((line, index) => (
-								<li key={index} className={styles.details_item}>{line}</li>
-							))}
+							<ul>
+								{listItems.map((line, index) => (
+									<li key={index} className={styles.details_item}>{line}</li>
+								))}
+							</ul>
 						</div>
 					</div>
 				</div>

@@ -141,6 +141,8 @@
 
     .tips_list {
         gap: 20px;
+        flex-shrink: 0;
+        width: 100%;
     }
 
     .tips_list__item {
@@ -149,8 +151,7 @@
     }
 
     .tips_rounder {
-        height: 35px;
-        width: 35px;
+        display: none;
     }
 }
 

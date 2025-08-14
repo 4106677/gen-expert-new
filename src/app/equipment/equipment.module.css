@@ -61,7 +61,6 @@
         /* Специфичные стили для Safari */
         -webkit-appearance: none;
         appearance: none;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         -webkit-text-fill-color: #94A3B8;
 
@@ -286,25 +285,6 @@
     }
 
     &:hover {
-        /*background-color: #eaeceb;*/
-        /*outline: 1px solid #eaeceb;*/
-
-        /*&:after {*/
-        /*    content: "";*/
-        /*    position: absolute;*/
-        /*    bottom: -2px;*/
-        /*    right: -2px;*/
-        /*    width: 0;*/
-        /*    height: 0;*/
-        /*    border-left: 25px solid transparent;*/
-        /*    border-top: 25px solid white;*/
-        /*    rotate: 90deg;*/
-        /*}*/
-
-        /*.product_button {*/
-        /*    display: block;*/
-        /*    color: white !important;*/
-        /*}*/
     }
 
     .img {
@@ -325,22 +305,9 @@
     }
 
     .product_button {
-        cursor: pointer;
-        padding: 10px 20px;
-        margin-bottom: 5px;
-        margin-top: auto;
         width: max-content;
-        background-color: #85e28f;
-        border: none;
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
-        display: none;
-
-        &:hover {
-            clip-path: none;
-        }
+        margin-top: 16px;
+        border: 1px solid #50AE55;
     }
 }
 
@@ -408,7 +375,7 @@
     /*display: none;*/
     position: absolute;
     top: 10px;
-    right: 20px;
+    right: 15px;
     background: none;
     border: none;
     cursor: pointer;
@@ -474,22 +441,7 @@
 }
 
 /* Адаптація для мобільних */
-@media (max-width: 768px) {
-    .loadingContainer {
-        min-height: 300px;
-        padding: 1rem;
-    }
 
-    .loadingContainer h2 {
-        font-size: 1.25rem;
-    }
-
-    .loader {
-        width: 40px;
-        height: 40px;
-        border-width: 4px;
-    }
-}
 
 
 
@@ -548,17 +500,20 @@
         display: flex;
     }
 
-    /*.mobileCloseBtn {*/
-    /*    position: absolute;*/
-    /*    top: 20px;*/
-    /*    right: 20px;*/
-    /*    background: none;*/
-    /*    border: none;*/
-    /*    font-size: 24px;*/
-    /*    cursor: pointer;*/
-    /*    color: #333;*/
-    /*    z-index: 1002;*/
-    /*}*/
+    .loadingContainer {
+        min-height: 300px;
+        padding: 1rem;
+    }
+
+    .loadingContainer h2 {
+        font-size: 1.25rem;
+    }
+
+    .loader {
+        width: 40px;
+        height: 40px;
+        border-width: 4px;
+    }
 
     .filter_bottom_buttons {
         height: 81px;
@@ -567,6 +522,7 @@
         gap: 10px;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 80px;
 
         button {
             width: 100%;
@@ -580,5 +536,41 @@
 
     .right {
         width: 100%;
+    }
+
+    .product {
+        width: 100%;
+        flex-direction: column;
+        height: max-content;
+        max-height: none;
+        gap: 0;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        .img {
+            width: 100%;
+            min-width: 100%;
+            height: 170px;
+            min-height: auto;
+        }
+
+        .product_h3 {
+            font-size: 18px;
+        }
+
+        .productDescription {
+        }
+
+        .productDescription_item, .productDescription_itemSpan {
+            font-size: 12px;
+        }
+
+        .product_button {
+            width: 100%;
+            font-size: 14px;
+            justify-content: space-between;
+        }
     }
 }

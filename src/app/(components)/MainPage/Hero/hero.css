@@ -158,8 +158,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 20px;
-        height: max-content;
+        /*height: max-content;*/
         gap: 30px 20px;
+        height: 223px;
     }
 
     .hero-description__item {

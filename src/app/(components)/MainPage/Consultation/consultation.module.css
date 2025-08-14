@@ -29,6 +29,11 @@
     width: 573px;
 }
 
+.consultation_form__button {
+    font-size: 16px;
+    color: white;
+}
+
 .consultation_form__header {
     color: #191A1D;
     font-size: 18px;

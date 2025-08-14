@@ -100,11 +100,6 @@ export default function Header() {
 		}
 	};
 
-	const closeMenu = () => {
-		setMenuOpen(false);
-		setDropdownOpen(false);
-	};
-
 	const handleDropdownClick = (e) => {
 		if (windowWidth <= 768) {
 			e.preventDefault();
@@ -156,13 +151,37 @@ export default function Header() {
 				</button>
 
 				<div className={`nav-container ${menuOpen ? 'open' : ''}`}>
-					{/* Mobile close button */}
-					{/*<button className="mobile-close-btn" onClick={closeMenu}>*/}
-					{/*	✕*/}
-					{/*</button>*/}
 
 					<ul className="nav-list">
-						<li className={`dropdown ${dropdownOpen ? 'mobile-open' : ''}`}>
+						<div className="mobile-language">
+							<Image
+								src="/images/globe-new.svg"
+								alt="Globe icon"
+								width={20}
+								height={20}
+							/>
+							<div className="mobile-language-selector">
+								<span
+									className={lang === "ru" ? "active" : ""}
+									onClick={(e) => onLangBoxClick(e, "ru")}
+								>
+									RU
+								</span>
+								<span
+									className={lang === "ua" ? "active" : ""}
+									onClick={(e) => onLangBoxClick(e, "ua")}
+								>
+									UA
+								</span>
+								<span
+									className={lang === "en" ? "active" : ""}
+									onClick={(e) => onLangBoxClick(e, "en")}
+								>
+									EN
+								</span>
+							</div>
+						</div>
+						<li className={`dropdown ${dropdownOpen ? "mobile-open" : ""}`}>
 							<Link href="/cooperation" onClick={handleDropdownClick}>
 								{t("menu.cooperation")}
 								<Image
@@ -211,46 +230,47 @@ export default function Header() {
 
 					{/* Mobile extras */}
 					<div className="mobile-extras">
+						<div className='mobile-extras__icons'>
+							<a
+								href="https://t.me/genexpert_ua"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Image
+									aria-hidden
+									src="/images/telegram-green.svg"
+									alt="telegram icon"
+									width={30}
+									height={30}
+								/>
+							</a>
+							<a
+								href="https://www.instagram.com/genexpert_ua/?igsh=ZDVkdmIzNmIyM2d1&utm_source=qr#"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Image
+									aria-hidden
+									src="/images/instagram-green.svg"
+									alt="instagram icon"
+									width={30}
+									height={30}
+								/>
+							</a>
+						</div>
 						<div className="mobile-contacts">
 							<a href="tel:+380732370045">+38(073)237-00-45</a>
 							<a href="mailto:info@genexpert.com.ua">info@genexpert.com.ua</a>
 						</div>
 
-						<div className="mobile-language">
-							<Image
-								src="/images/globe-new.svg"
-								alt="Globe icon"
-								width={20}
-								height={20}
-							/>
-							<div className="mobile-language-selector">
-								<span
-									className={lang === 'ru' ? 'active' : ''}
-									onClick={(e) => onLangBoxClick(e, "ru")}
-								>
-									RU
-								</span>
-								<span
-									className={lang === 'ua' ? 'active' : ''}
-									onClick={(e) => onLangBoxClick(e, "ua")}
-								>
-									UA
-								</span>
-								<span
-									className={lang === 'en' ? 'active' : ''}
-									onClick={(e) => onLangBoxClick(e, "en")}
-								>
-									EN
-								</span>
-							</div>
-						</div>
+
 					</div>
 				</div>
 
 				{/* Desktop extras */}
 				<div className="desktop-extras">
 					<Link href="/#contactForm" onClick={handleClick}>
-						<button className="btn btn_green" style={{ height: '41px' }}>
+						<button className="btn btn_green" style={{height: "41px", fontSize: "14px"}}>
 							{t("menu.callback")}
 						</button>
 					</Link>

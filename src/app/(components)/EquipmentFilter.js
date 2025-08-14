@@ -45,14 +45,15 @@ export default function EquipmentFilter({
 
 	return (
 		<>
-			{(isMobile && isFilterVisible) && (
-				<button className={styles.mobile_menu_btn} onClick={toggleFilter}>
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
-			)}
+
 			<ul className={`${styles.left} ${isFilterVisible ? styles.visible : ""}`}>
+				{(isMobile && isFilterVisible) && (
+					<button className={styles.mobile_menu_btn} onClick={toggleFilter}>
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				)}
 				<div className={styles.left_top}>
 					<h2 className={styles.left_title}>{t("equipment.filters.title")}</h2>
 					<button
@@ -359,7 +360,7 @@ export default function EquipmentFilter({
 						<button className={`btn btn_outline`} onKeyDown={onResetAllFilters} style={{color:'#41A747', borderColor:'#41A747'}} onClick={toggleFilter}>
 							{t('menu.cancel')}
 						</button>
-						<button className={`btn btn_green`} onClick={toggleFilter}>
+						<button className={`btn btn_green`} onClick={toggleFilter} style={{color: 'white'}}>
 							{t('menu.apply')}
 						</button>
 					</div>

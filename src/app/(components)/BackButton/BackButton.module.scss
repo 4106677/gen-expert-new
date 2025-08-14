@@ -18,10 +18,15 @@
   }
 }
 
-
 .back_image {
   transform: rotate(-135deg);
   margin-right: 10px;
   height: 14px;
   width: 14px;
+}
+
+@media (max-width: 768px) {
+  .back {
+    outline: 1px solid #50AE55;;
+  }
 }
