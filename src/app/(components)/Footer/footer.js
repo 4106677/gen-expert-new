@@ -5,7 +5,7 @@ import Link from "next/link";
 import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 
-export const Footer = ({ className }) => {
+export const Footer = () => {
 	const [isMounted, setIsMounted] = useState(false);
 	const { t } = useTranslation('common');
 
@@ -60,13 +60,15 @@ export const Footer = ({ className }) => {
 					<span className={styles.span}>{t('footer.files')}</span>
 					<div className={styles.links}>
 						<div className={styles.list}>
-							<Link href='/sectors/private'>{t('footer.business')}</Link>
-							<Link href='/sectors/public'>{t('footer.public')}</Link>
-							<Link href='/calculator'>{t('footer.project')}</Link>
+							{/*<Link href="/sectors/private">{t("footer.business")}</Link>*/}
+							{/*<Link href="/sectors/public">{t("footer.public")}</Link>*/}
+							<a href="/private.pdf" download className={styles.downloadButton}>{t("footer.business")}</a>
+							<a href="/public.pdf" download className={styles.downloadButton}>{t("footer.public")}</a>
+							<a href="/cooperation.docx" download className={styles.downloadButton}>{t("footer.project")}</a>
 						</div>
 						<div className={styles.list}>
-							<Link href='/cooperation'>{t('footer.cooperation')}</Link>
-							<Link href='/sectors'>{t('footer.sectors')}</Link>
+							<Link href="/cooperation">{t("footer.cooperation")}</Link>
+							<Link href="/sectors">{t("footer.sectors")}</Link>
 							<Link href='/equipment'>{t('footer.equipment')}</Link>
 							<Link href='/calculator'>{t('footer.calculate')}</Link>
 							<Link href='/blog'>{t('footer.blog')}</Link>

@@ -18,6 +18,14 @@ const BlogPageClient = ({ id }) => {
 	const [item, setItem] = useState(null)
 	const [itemLoading, setItemLoading] = useState(true);
 
+	const carriers = {
+		gas: "#ffc931",
+		heating: "#f90101",
+		electricity: "#538135",
+		coolant: "#739dcb",
+		exhaust: "#000000"
+	}
+
 	useEffect(() => {
 		const loadItem = async () => {
 			setItemLoading(true);
@@ -73,10 +81,34 @@ const BlogPageClient = ({ id }) => {
 						{item.details.split("\n").map((line, index) => (
 							<p className={styles.details_p} key={index}>{line}</p>
 						))}
+						{item.whatIsGPU &&
+							<div className={styles.parameterBlock}>
+								<h3 className={styles.parameterTitle}>
+									{/*<span className={styles.parameterIcon}>🔧</span>*/}
+									{item.whatIsGPU.structure.title}
+								</h3>
+								<p className={styles.whatIsGPU_p}>{item.whatIsGPU.structure.typesIntro}</p>
+								<ul className={styles.checkList_simple}>
+									<li>{item.whatIsGPU.structure.type1}</li>
+									<li>{item.whatIsGPU.structure.type2}</li>
+								</ul>
+								<p className={styles.whatIsGPU_p}>{item.whatIsGPU.structure.componentsIntro}</p>
+								<ul className={styles.checkList_simple}>
+									<li>{item.whatIsGPU.structure.component1}</li>
+									<li>{item.whatIsGPU.structure.component2}</li>
+									<li>{item.whatIsGPU.structure.component3}</li>
+									<li>{item.whatIsGPU.structure.component4}</li>
+									<li>{item.whatIsGPU.structure.component5}</li>
+									<li>{item.whatIsGPU.structure.component6}</li>
+									<li>{item.whatIsGPU.structure.component7}</li>
+								</ul>
+							</div>
+
+						}
 					</div>
 				</div>
 				<h3 className={styles.details_header}>{item.descriptionHeader}</h3>
-				{item.description.split('\n').map((line, index) => (
+				{item.description.split("\n").map((line, index) => (
 					<p className={styles.details_p} key={index}>{line}</p>
 				))}
 				{/*links*/}
@@ -223,7 +255,7 @@ const BlogPageClient = ({ id }) => {
 						</div>
 						<div className={styles.maintenanceInfo}>
 							<h3 className={styles.maintenanceTitle}>
-								<span className={styles.parameterIcon}></span>
+								{/*<span className={styles.parameterIcon}></span>*/}
 								{item.serviceLife.maintenanceTypes.standardTitle}
 							</h3>
 
@@ -330,7 +362,7 @@ const BlogPageClient = ({ id }) => {
 							</div>
 
 							<h3 className={styles.maintenanceTitle}>
-								<span className={styles.parameterIcon}>🔧</span>
+								{/*<span className={styles.parameterIcon}>🔧</span>*/}
 								{item.serviceLife.maintenanceTypes.midLifeTitle}
 							</h3>
 							<p className={styles.maintenanceDescription}>{item.serviceLife.maintenanceTypes.midLifeDescription}</p>
@@ -351,7 +383,7 @@ const BlogPageClient = ({ id }) => {
 							</div>
 
 							<h3 className={styles.maintenanceTitle}>
-								<span className={styles.parameterIcon}>🔧</span>
+								{/*<span className={styles.parameterIcon}>🔧</span>*/}
 								{item.serviceLife.maintenanceTypes.majorTitle}
 							</h3>
 							<p className={styles.maintenanceDescription}>{item.serviceLife.maintenanceTypes.majorDescription}</p>
@@ -397,7 +429,7 @@ const BlogPageClient = ({ id }) => {
 						{/* Параметр 1 */}
 						<div className={styles.parameterBlock}>
 							<h3 className={styles.parameterTitle}>
-								<span className={styles.parameterIcon}></span>
+								{/*<span className={styles.parameterIcon}></span>*/}
 								{item.useful.howToChooseGPU.parameter1.title}
 							</h3>
 							<p>{item.useful.howToChooseGPU.parameter1.description}</p>
@@ -420,7 +452,7 @@ const BlogPageClient = ({ id }) => {
 						{/* Параметр 2 */}
 						<div className={styles.parameterBlock}>
 							<h3 className={styles.parameterTitle}>
-								<span className={styles.parameterIcon}></span>
+								{/*<span className={styles.parameterIcon}></span>*/}
 								{item.useful.howToChooseGPU.parameter2.title}
 							</h3>
 							<p>{item.useful.howToChooseGPU.parameter2.description}</p>
@@ -444,7 +476,7 @@ const BlogPageClient = ({ id }) => {
 						{/* Параметр 3 */}
 						<div className={styles.parameterBlock}>
 							<h3 className={styles.parameterTitle}>
-								<span className={styles.parameterIcon}></span>
+								{/*<span className={styles.parameterIcon}></span>*/}
 								{item.useful.howToChooseGPU.parameter3.title}
 							</h3>
 							<p>{item.useful.howToChooseGPU.parameter3.description}</p>
@@ -508,7 +540,7 @@ const BlogPageClient = ({ id }) => {
 						{/* Параметр 4 */}
 						<div className={styles.parameterBlock}>
 							<h3 className={styles.parameterTitle}>
-								<span className={styles.parameterIcon}></span>
+								{/*<span className={styles.parameterIcon}></span>*/}
 								{item.useful.howToChooseGPU.parameter4.title}
 							</h3>
 							<p>{item.useful.howToChooseGPU.parameter4.description}</p>
@@ -525,7 +557,7 @@ const BlogPageClient = ({ id }) => {
 						{/* Параметр 5 */}
 						<div className={styles.parameterBlock}>
 							<h3 className={styles.parameterTitle}>
-								<span className={styles.parameterIcon}></span>
+								{/*<span className={styles.parameterIcon}></span>*/}
 								{item.useful.howToChooseGPU.parameter5.title}
 							</h3>
 							<p>{item.useful.howToChooseGPU.parameter5.description}</p>
@@ -550,7 +582,7 @@ const BlogPageClient = ({ id }) => {
 						{/* Параметр 6 */}
 						<div className={styles.parameterBlock}>
 							<h3 className={styles.parameterTitle}>
-								<span className={styles.parameterIcon}></span>
+								{/*<span className={styles.parameterIcon}></span>*/}
 								{item.useful.howToChooseGPU.parameter6.title}
 							</h3>
 							<p>{item.useful.howToChooseGPU.parameter6.description}</p>
@@ -574,7 +606,7 @@ const BlogPageClient = ({ id }) => {
 						{/* Параметр 7 */}
 						<div className={styles.parameterBlock}>
 							<h3 className={styles.parameterTitle}>
-								<span className={styles.parameterIcon}></span>
+								{/*<span className={styles.parameterIcon}></span>*/}
 								{item.useful.howToChooseGPU.parameter7.title}
 							</h3>
 							<p>{item.useful.howToChooseGPU.parameter7.description}</p>
@@ -596,7 +628,7 @@ const BlogPageClient = ({ id }) => {
 						{/* Параметр 8 */}
 						<div className={styles.parameterBlock}>
 							<h3 className={styles.parameterTitle}>
-								<span className={styles.parameterIcon}></span>
+								{/*<span className={styles.parameterIcon}></span>*/}
 								{item.useful.howToChooseGPU.parameter8.title}
 							</h3>
 							<p>{item.useful.howToChooseGPU.parameter8.description}</p>
@@ -644,7 +676,7 @@ const BlogPageClient = ({ id }) => {
 						{/* Параметр 9 */}
 						<div className={styles.parameterBlock}>
 							<h3 className={styles.parameterTitle}>
-								<span className={styles.parameterIcon}></span>
+								{/*<span className={styles.parameterIcon}></span>*/}
 								{item.useful.howToChooseGPU.parameter9.title}
 							</h3>
 							<p>{item.useful.howToChooseGPU.parameter9.description}</p>
@@ -666,7 +698,7 @@ const BlogPageClient = ({ id }) => {
 						{/* Итоги */}
 						<div className={styles.summaryBlock}>
 							<h3 className={styles.summaryTitle}>
-								<span className={styles.parameterIcon}></span>
+								{/*<span className={styles.parameterIcon}></span>*/}
 								{item.useful.howToChooseGPU.summary.title}
 							</h3>
 							<ul className={styles.summaryList}>
@@ -681,6 +713,164 @@ const BlogPageClient = ({ id }) => {
 							<p className={styles.conclusion}>{item.useful.howToChooseGPU.summary.conclusion}</p>
 
 
+						</div>
+					</div>
+				}
+
+				{/*whatIsGPU*/}
+				{item.whatIsGPU &&
+					<div>
+						{/*<div className={styles.parameterBlock}>*/}
+						{/*	<h3 className={styles.parameterTitle}>*/}
+						{/*/!*		<span className={styles.parameterIcon}>🔧</span>*!/*/}
+						{/*		{item.whatIsGPU.structure.title}*/}
+						{/*	</h3>*/}
+						{/*	<p className={styles.whatIsGPU_p}>{item.whatIsGPU.structure.typesIntro}</p>*/}
+						{/*	<ul className={styles.checkList_simple}>*/}
+						{/*		<li>{item.whatIsGPU.structure.type1}</li>*/}
+						{/*		<li>{item.whatIsGPU.structure.type2}</li>*/}
+						{/*	</ul>*/}
+						{/*	<p className={styles.whatIsGPU_p}>{item.whatIsGPU.structure.componentsIntro}</p>*/}
+						{/*	<ul className={styles.checkList_simple}>*/}
+						{/*		<li>{item.whatIsGPU.structure.component1}</li>*/}
+						{/*		<li>{item.whatIsGPU.structure.component2}</li>*/}
+						{/*		<li>{item.whatIsGPU.structure.component3}</li>*/}
+						{/*		<li>{item.whatIsGPU.structure.component4}</li>*/}
+						{/*		<li>{item.whatIsGPU.structure.component5}</li>*/}
+						{/*		<li>{item.whatIsGPU.structure.component6}</li>*/}
+						{/*		<li>{item.whatIsGPU.structure.component7}</li>*/}
+						{/*	</ul>*/}
+						{/*</div>*/}
+
+						<div className={styles.parameterBlock}>
+							<h3 className={styles.parameterTitle}>
+								{/*<span className={styles.parameterIcon}>⚙️</span>*/}
+								{item.whatIsGPU.principle.title}
+							</h3>
+
+							<h4 className={styles.subTitle}>{item.whatIsGPU.principle.step1.title}</h4>
+							<p className={styles.whatIsGPU_p}>{item.whatIsGPU.principle.step1.description}</p>
+							<ul className={styles.checkList_simple}>
+								<li>{item.whatIsGPU.principle.step1.point1}</li>
+								<li>{item.whatIsGPU.principle.step1.point2}</li>
+								<li>{item.whatIsGPU.principle.step1.point3}</li>
+								<li>{item.whatIsGPU.principle.step1.point4}</li>
+								<li>{item.whatIsGPU.principle.step1.point5}</li>
+								<li>{item.whatIsGPU.principle.step1.point6}</li>
+							</ul>
+
+							<h4 className={styles.subTitle}>{item.whatIsGPU.principle.step2.title}</h4>
+							<p className={styles.whatIsGPU_p}>{item.whatIsGPU.principle.step2.description}</p>
+							<ul className={styles.checkList_simple}>
+								<li>{item.whatIsGPU.principle.step2.point1}</li>
+								<li>{item.whatIsGPU.principle.step2.point2}</li>
+							</ul>
+
+							<h4 className={styles.subTitle}>{item.whatIsGPU.principle.step3.title}</h4>
+							<p className={styles.whatIsGPU_p}>{item.whatIsGPU.principle.step3.description}</p>
+							<ul className={styles.checkList_simple}>
+								<li>{item.whatIsGPU.principle.step3.point1}</li>
+								<li>{item.whatIsGPU.principle.step3.point2}</li>
+								<li>{item.whatIsGPU.principle.step3.point3}</li>
+							</ul>
+
+							<h4 className={styles.subTitle}>{item.whatIsGPU.principle.step4.title}</h4>
+							<p className={styles.whatIsGPU_p}>{item.whatIsGPU.principle.step4.description}</p>
+							<ul className={styles.checkList_simple}>
+								<li>{item.whatIsGPU.principle.step4.point1}</li>
+								<li>{item.whatIsGPU.principle.step4.point2}</li>
+								<li>{item.whatIsGPU.principle.step4.point3}</li>
+							</ul>
+
+							<h4 className={styles.subTitle}>{item.whatIsGPU.principle.step5.title}</h4>
+							<p className={styles.whatIsGPU_p}>{item.whatIsGPU.principle.step5.description}</p>
+							<ul className={styles.checkList_simple}>
+								<li>{item.whatIsGPU.principle.step5.point1}</li>
+								<li>{item.whatIsGPU.principle.step5.point2}</li>
+								<li>{item.whatIsGPU.principle.step5.point3}</li>
+							</ul>
+
+							<h4 className={styles.subTitle}>{item.whatIsGPU.principle.step6.title}</h4>
+							<p className={styles.whatIsGPU_p}>{item.whatIsGPU.principle.step6.description}</p>
+							<ul className={styles.checkList_simple}>
+								<li>{item.whatIsGPU.principle.step6.point1}</li>
+								<li>{item.whatIsGPU.principle.step6.point2}</li>
+								<li>{item.whatIsGPU.principle.step6.point3}</li>
+								<li>{item.whatIsGPU.principle.step6.point4}</li>
+							</ul>
+						</div>
+
+						<div className={styles.parameterBlock}>
+							<h3 className={styles.parameterTitle}>
+								{/*<span className={styles.parameterIcon}>📈</span>*/}
+								{item.whatIsGPU.indicators.title}
+							</h3>
+							<ul className={styles.checkList_simple}>
+								<li>{item.whatIsGPU.indicators.point1}</li>
+								<li>{item.whatIsGPU.indicators.point2}</li>
+								<li>{item.whatIsGPU.indicators.point3}</li>
+								<li>{item.whatIsGPU.indicators.point4}</li>
+								<li>{item.whatIsGPU.indicators.point5}</li>
+							</ul>
+						</div>
+
+						<div className={styles.parameterBlock}>
+							<h3 className={styles.parameterTitle}>
+								{/*<span className={styles.parameterIcon}>♻️</span>*/}
+								{item.whatIsGPU.cogeneration.title}
+							</h3>
+							<p>{item.whatIsGPU.cogeneration.formula}</p>
+							<p className={styles.whatIsGPU_p}>{item.whatIsGPU.cogeneration.sourcesIntro}</p>
+							<ul className={styles.checkList_simple}>
+								<li>{item.whatIsGPU.cogeneration.source1}</li>
+								<li>{item.whatIsGPU.cogeneration.source2}</li>
+							</ul>
+
+							<div className={styles.imageWrapper}>
+								<ul className={styles.imageWrapper_list}>
+									<li style={{borderBottomColor: carriers.gas}}
+									    className={styles.imageWrapper_list__item}>{item.whatIsGPU.carriers.gas}</li>
+									<li style={{borderBottomColor: carriers.heating}}
+									    className={styles.imageWrapper_list__item}>{item.whatIsGPU.carriers.heating}</li>
+									<li style={{borderBottomColor: carriers.electricity}}
+									    className={styles.imageWrapper_list__item}>{item.whatIsGPU.carriers.electricity}</li>
+									<li style={{borderBottomColor: carriers.exhaust}}
+									    className={styles.imageWrapper_list__item}>{item.whatIsGPU.carriers.exhaust}</li>
+								</ul>
+								<Image src="/images/cogeneration.png" alt="cogeneration" width={600} height={400}
+								       className={styles.schemeImage}/>
+							</div>
+						</div>
+
+						<div className={styles.parameterBlock}>
+							<h3 className={styles.parameterTitle}>
+								{/*<span className={styles.parameterIcon}>❄️</span>*/}
+								{item.whatIsGPU.trigeneration.title}
+							</h3>
+							<p>{item.whatIsGPU.trigeneration.description}</p>
+							<p className={styles.whatIsGPU_p}>{item.whatIsGPU.trigeneration.examples}</p>
+							<ul className={styles.checkList_simple}>
+								<li>{item.whatIsGPU.trigeneration.example1}</li>
+								<li>{item.whatIsGPU.trigeneration.example2}</li>
+							</ul>
+
+							<div className={styles.imageWrapper}>
+								<ul className={styles.imageWrapper_list}>
+									<li style={{borderBottomColor: carriers.gas}}
+									    className={styles.imageWrapper_list__item}>{item.whatIsGPU.carriers.gas}</li>
+									<li style={{borderBottomColor: carriers.heating}}
+									    className={styles.imageWrapper_list__item}>{item.whatIsGPU.carriers.heating}</li>
+									<li style={{borderBottomColor: carriers.electricity}}
+									    className={styles.imageWrapper_list__item}>{item.whatIsGPU.carriers.electricity}</li>
+									<li style={{borderBottomColor: carriers.coolant}}
+									    className={styles.imageWrapper_list__item}>{item.whatIsGPU.carriers.coolant}</li>
+									<li style={{borderBottomColor: carriers.exhaust}}
+									    className={styles.imageWrapper_list__item}>{item.whatIsGPU.carriers.exhaust}</li>
+
+								</ul>
+								<Image src="/images/trigeneration.png" alt="trigeneration" width={600} height={400}
+								       className={styles.schemeImage}/>
+							</div>
 						</div>
 					</div>
 				}

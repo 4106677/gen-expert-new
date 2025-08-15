@@ -244,11 +244,109 @@
         "href": "bestchoice",
         "image": "/images/blog/bestchoice.jpg",
         "title": "Why Gas Piston Units Are the Best Choice for Your Business",
-        "details": "Up to 50% savings on electricity – reduced tariffs, no transmission or distribution fees.\nNo blackouts = independence from the grid – stable operation even during network outages.\nEfficiency = competitive advantage – low electricity production cost gives you a strong market edge.\nMore profitable than diesel generators due to cheaper fuel (gas is 3–4 times cheaper than diesel) and 80% lower NOₓ and CO₂ emissions.\nLow operating costs – gas fuel ensures smoother engine operation and reduces wear.\nStable fuel cost – natural gas has lower price volatility compared to electricity and diesel fuel.\nCombined electricity and heat production – cogeneration allows producing both electricity and heat simultaneously, increasing the unit’s efficiency up to 90%!\nOptimal solution for your needs and budget – new and used GPUs in excellent condition.",
+        "details": "",
         "detailsHeader": "A gas piston power plant is an autonomous installation that generates electricity and heat by burning gas in an internal combustion engine. It uses natural gas, biogas, mine gas, or synthetic gas.",
         "description": "",
         "descriptionHeader": "",
-        "subtitle": "Up to 50% savings on electricity – reduced tariffs, no transmission or distribution fees..."
+        "subtitle": "Up to 50% savings on electricity – reduced tariffs, no transmission or distribution fees...",
+        "whatIsGPU": {
+          "title": "What is a Gas-Piston Unit? Operating Principle",
+          "definition": {
+            "title": "What is a Gas-Piston Unit?",
+            "description": "A gas-piston power plant is an autonomous unit that produces electricity and heat by burning gas in an internal combustion engine. It can use natural gas, biogas, mine gas, or synthetic gas."
+          },
+          "structure": {
+            "title": "Design and Systems",
+            "typesIntro": "Gas-piston units come in different configurations:",
+            "type1": "Open design (all components on a frame)",
+            "type2": "Enclosed (in a container or sound-insulated housing)",
+            "componentsIntro": "Key systems of a GPU:",
+            "component1": "Gas and oil supply",
+            "component2": "Starting and control system",
+            "component3": "Exhaust and ventilation",
+            "component4": "Cooling and heat utilization",
+            "component5": "AC generator",
+            "component6": "Automation and signaling",
+            "component7": "Internal combustion engine"
+          },
+          "principle": {
+            "title": "Operating Principle",
+            "step1": {
+              "title": "1. Gas Supply to the Engine and Combustion Process",
+              "description": "Gas (natural, biogas, etc.) is supplied from the gas pipeline through:",
+              "point1": "Gas filter (to remove impurities)",
+              "point2": "Pressure regulator (maintains stable supply pressure)",
+              "point3": "Gas valve (controls flow)",
+              "point4": "Gas mixer/carburetor (mixes gas with air)",
+              "point5": "The mixture then enters the cylinders of the internal combustion engine",
+              "point6": "Ignition of the mixture creates pressure on the pistons"
+            },
+            "step2": {
+              "title": "2. Crankshaft Rotation",
+              "description": "Pistons transfer force to the crankshaft, which:",
+              "point1": "Converts linear motion into rotational motion",
+              "point2": "Rotates the flywheel and clutch connected to the generator"
+            },
+            "step3": {
+              "title": "3. Electricity Generation",
+              "description": "⚡ AC generator (synchronous or asynchronous):",
+              "point1": "Is driven by rotational motion",
+              "point2": "Generates electricity based on electromagnetic induction",
+              "point3": "The signal is sent to the automation system which manages current distribution, parallel operation with the grid, and overload protection"
+            },
+            "step4": {
+              "title": "4. Heat Recovery from the Engine through Heat Exchangers",
+              "description": "During combustion, a large amount of heat is released:",
+              "point1": "From the engine cooling jacket",
+              "point2": "From the oil (through an oil heat exchanger)",
+              "point3": "From exhaust gases"
+            },
+            "step5": {
+              "title": "5. Using Heat for Heating or Hot Water Supply",
+              "description": "Heated water or steam is transferred to:",
+              "point1": "Heating system (premises, production facilities)",
+              "point2": "Hot water supply (showers, restrooms, technological needs)",
+              "point3": "If there is excess heat — it's diverted to a cooling tower or dry cooler"
+            },
+            "step6": {
+              "title": "6. Trigeneration: Producing Cold from Heat",
+              "description": "Part of the thermal energy is supplied to:",
+              "point1": "Absorption refrigeration machine (ABHM)",
+              "point2": "Hot water or steam acts as an energy source in this process",
+              "point3": "Water cooling occurs (without using electricity)",
+              "point4": "Chilled water is supplied to the air conditioning system or for technological equipment cooling"
+            }
+          },
+          "indicators": {
+            "title": "Technical and Economic Indicators",
+            "point1": "Electrical efficiency — up to 45%",
+            "point2": "Total efficiency — up to 90%",
+            "point3": "Share of recovered heat — up to 45%",
+            "point4": "Savings compared to separate production — up to 50%",
+            "point5": "Reduction of energy losses — up to 60%"
+          },
+          "cogeneration": {
+            "title": "Cogeneration = Electricity + Heat",
+            "formula": "Formula: η total = η electrical + η thermal ≈ 45% + 45% = up to 90%",
+            "sourcesIntro": "Heat sources:",
+            "source1": "Cooling system",
+            "source2": "Exhaust gases"
+          },
+          "trigeneration": {
+            "title": "Trigeneration = Electricity + Heat + Cold",
+            "description": "An absorption refrigeration machine (ABHM) converts heat into cold. Instead of electricity, hot water or steam is used as the energy source.",
+            "examples": "Examples:",
+            "example1": "1 MW of hot water → up to 800 kW of cooling capacity",
+            "example2": "1 MW of steam → up to 1400 kW of cooling capacity"
+          },
+          "carriers": {
+            "gas": "Natural gas",
+            "heating": "Heat carrier",
+            "electricity": "Electricity",
+            "coolant": "Coolant",
+            "exhaust": "Exhaust gases"
+          }
+        }
       },
       {
         "id": "2",
